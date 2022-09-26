@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-
+  <info>
+	<name>spell-Tasha's_Mind_Whip</name>
+		<update version="1.0.0">
+			<file name="spell-Tasha's_Mind_Whip.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/spells/spell-Tasha's_Mind_Whip.xml" />
+		</update>
+	</info>
   <element name="Tasha's Mind Whip" type="Spell" source="Tasha's Cauldron of Everything" id="ID_SACOC_STRIXHAVEN_SPELL_TASHAS_MIND_WHIP">
     <supports>Sorcerer, Wizard</supports>
     <description>
