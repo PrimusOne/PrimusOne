@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-
+  <info>
+	<name>spell-Silvery_Barbs</name>
+		<update version="1.0.0">
+			<file name="spell-Silvery_Barbs.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/spells/spell-Silvery_Barbs.xml" />
+		</update>
+	</info>
   <element name="Silvery Barbs" type="Spell" source="Strixhaven: A Curriculum of Chaos" id="ID_SACOC_STRIXHAVEN_SPELL_SILVERY_BARBS">
     <supports>Bard, Sorcerer, Wizard</supports>
     <description>
