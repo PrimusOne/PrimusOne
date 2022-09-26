@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-    <element name="Transmuted Spell" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_PHB_CLASS_FEATURE_SORCERER_METAMAGIC_TRANSMUTED_SPELL">
+	<info>
+	<name>other-Transmuted_Spelln</name>
+		<update version="1.0.0">
+			<file name="Transmuted_Spell.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/other/other-Transmuted_Spell.xml" />
+		</update>
+	</info>
+	<element name="Transmuted Spell" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_PHB_CLASS_FEATURE_SORCERER_METAMAGIC_TRANSMUTED_SPELL">
 		<supports>Metamagic</supports>
 		<description>
 			<p>When you cast a spell that deals a type of damage from the following list, you can spend 1 sorcery point to change that damage type to one of the other listed types: acid, cold, fire, lightning, poison, thunder..</p>
