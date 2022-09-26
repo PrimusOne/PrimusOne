@@ -2,8 +2,8 @@
 <elements>
 	<info>
 		<name>class-Path-of-the-Giant</name>
-		<update version="1.0.0">
-			<file name="class-emyprean_descendant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-emyprean_descendant.xml" />
+		<update version="1.0.2">
+			<file name="class-emyprean_descendant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/class-emyprean_descendant.xml" />
 		</update>
 	</info>
 	<element name="Empyrean Descendant" type="Class" source="Primus One" id="ID_WOTC_PO_CLASS_EMPYREAN_DESCENDANT">
