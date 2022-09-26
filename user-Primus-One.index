@@ -2,13 +2,45 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="1.0.4">
+		<update version="1.0.5">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
 	<files>
-		<file name="class-Abberation-Warlock.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-Abberation-Warlock.xml" />
-		<file name="class-Path_of_the_Giant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-Path_of_the_Giant.xml" />
-		<file name="class-emyprean_descendant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-emyprean_descendant.xml" />
+		<!--Official Content-->
+		<!--races-->
+		<file name="race-chromatic_dragonborn.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/races/race-chromatic_dragonborn.xml" />
+		<file name="race-gem_dragonborn.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/races/race-gem_dragonborn.xml" />
+		<file name="race-metallic_dragonborn.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/races/race-metallic_dragonborn.xml" />
+
+		<!--classes-->
+		<file name="class-Path_of_the_Giant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/classes/class-Path_of_the_Giant.xml" />
+
+		<!--spells-->
+		<file name="spell-Silvery_Barbs.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/spells/spell-Silvery_Barbs.xml" />
+		<file name="spell-Tasha's_Mind_Whip.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/spells/spell-Tasha's_Mind_Whip.xml" />
+		
+		<!--items-->
+		
+		<!--other-->
+		<file name="Unarmed_Fighting.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/other/Unarmed_Fighting.xml" />
+		<file name="other-Transmuted_Spell.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/other/other-Transmuted_Spell.xml" />
+		
+		
+		<!--Homebrew-->
+		<!--races-->
+		
+		<!--classes-->
+		<file name="class-Abberation-Warlock.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/class-Abberation-Warlock.xml" />
+		<file name="class-emyprean_descendant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/class-emyprean_descendant.xml" />
+		
+		<!--spells-->
+		
+		<!--items-->
+		<file name="item-Almir_der_Schlächter.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Almir_der_Schl%C3%A4chter.xml" />
+		
+		<!--other-->
+		<file name="other-kleiner_Pantheon.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/other/kleiner_Pantheon.xml" />
+		
 	</files>
 </index>
