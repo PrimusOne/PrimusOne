@@ -3,7 +3,7 @@
 	<info>
 	<name>other-Transmuted_Spelln</name>
 		<update version="1.0.0">
-			<file name="Transmuted_Spell.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/other/other-Transmuted_Spell.xml" />
+			<file name="other-Transmuted_Spell.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/other/other-Transmuted_Spell.xml" />
 		</update>
 	</info>
 	<element name="Transmuted Spell" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_PHB_CLASS_FEATURE_SORCERER_METAMAGIC_TRANSMUTED_SPELL">
