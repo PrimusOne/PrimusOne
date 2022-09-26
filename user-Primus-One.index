@@ -40,7 +40,7 @@
 		<file name="item-Almir_der_Schlächter.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Almir_der_Schl%C3%A4chter.xml" />
 		
 		<!--other-->
-		<file name="other-kleiner_Pantheon.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/other/kleiner_Pantheon.xml" />
+		<file name="other-kleiner_Pantheon.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/other/other-kleiner_Pantheon.xml" />
 
 		
 	</files>
