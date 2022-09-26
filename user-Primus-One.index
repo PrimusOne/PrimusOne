@@ -8,5 +8,7 @@
 	</info>
 	<files>
 		<file name="class-Abberation-Warlock.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-Abberation-Warlock.xml" />
+		<file name="class-Path_of_the_Giant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-Path_of_the_Giant.xml.xml" />
+		<file name="class-emyprean_descendant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-emyprean_descendant.xml" />
 	</files>
 </index>
