@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+	<info>
+		<name>class-Path-of-the-Giant</name>
+		<update version="1.0.0">
+			<file name="class-emyprean_descendant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-emyprean_descendant.xml" />
+		</update>
+	</info>
 	<element name="Empyrean Descendant" type="Class" source="Primus One" id="ID_WOTC_PO_CLASS_EMPYREAN_DESCENDANT">
 		<description>
 			<p>Empyrean sind als Abkömmlinge der Götter bekannt. Jedoch sind sie untereinander nicht gleich, sondern sind unterschiedlich begabt, je nach Abstammung. Somit wird unterschieden, ob sie von einem True God, einem Demi God, einem Quasi God oder in sehr seltenen Fällen, von einem Außergöttlichem (Godlike Being) abstammen. Darüber hinaus sind sie in ihren Vorstellungen unterschiedlich, weshalb sie ebenfalls nach good, evil, neutral, lawful und chaotic eingeteilt werden. Je nach Abstammung und Alignement erhält ihr Nachfahre magische Kräfte.</p>
