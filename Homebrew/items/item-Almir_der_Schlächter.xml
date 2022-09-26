@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-    <element name="Almir der Schlächter" type="Magic Item" source="Primus One" id="ID_PO_DMG_MAGIC_ITEM_SCHLAECHTER">
+	<info>
+	<name>item-Almir_der-Schlächter</name>
+		<update version="1.0.2">
+			<file name="item-Almir_der_Schlächter.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Almir_der_Schl%C3%A4chter.xml" />
+		</update>
+	</info>
+	<element name="Almir der Schlächter" type="Magic Item" source="Primus One" id="ID_PO_DMG_MAGIC_ITEM_SCHLAECHTER">
 		<description>
 			<p>You gain a +4 bonus to attack and damage rolls made with this magic weapon.</p>
 			<p class="indent">Abgeschossene Bolzen können, wenn das Ziel stirbt, ein hinterliegendes Ziel ebenfalls treffen – dafür müssen sie einen Dexsave schaffen, gegen den Savingthrow von 8 + Proficiency Bonus + Dexterity schaffen und erleiden den regulären Schaden des Schusses, wenn sie den Savingthrow nicht schaffen. Wenn sie ihn schaffen, und kleiner als Large sind, bekommen sie keinen Schaden und wenn sie Huge oder größer sind, nur den halben. </p>
