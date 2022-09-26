@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="1.0.8">
+		<update version="1.0.9">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -40,6 +40,8 @@
 		<file name="item-Almir_der_Schlächter.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Almir_der_Schl%C3%A4chter.xml" />
 		
 		<!--other-->
+		<file name="other-kleiner_Pantheon.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/other/kleiner_Pantheon.xml" />
+
 		
 	</files>
 </index>
