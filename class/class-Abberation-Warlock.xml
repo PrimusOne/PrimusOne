@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>class-Abberation-Warlock</name>
-		<update version="1.0.0">
+		<update version="1.0.1">
 			<file name="class-Abberation-Warlock.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-Abberation-Warlock.xml" />
 		</update>
 	</info>
