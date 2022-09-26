@@ -3,7 +3,7 @@
 	<info>
 		<name>class-Abberation-Warlock</name>
 		<update version="1.0.0">
-			<file name="file1.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-Abberation-Warlock.xml" />
+			<file name="class-Abberation-Warlock.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-Abberation-Warlock.xml" />
 		</update>
 	</info>
 	<element name="Aberrations - Warlock" type="Archetype" source="Primus One" id="ID_WOTC_XGTE_ARCHETYPE_ABERRATIONS_WARLOCK">
