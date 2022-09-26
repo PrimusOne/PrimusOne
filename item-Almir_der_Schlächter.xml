@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="Almir der Schlächter" type="Magic Item" source="Primus One" id="ID_PO_DMG_MAGIC_ITEM_SCHLAECHTER">
+		<description>
+			<p>You gain a +4 bonus to attack and damage rolls made with this magic weapon.</p>
+			<p class="indent">Abgeschossene Bolzen können, wenn das Ziel stirbt, ein hinterliegendes Ziel ebenfalls treffen – dafür müssen sie einen Dexsave schaffen, gegen den Savingthrow von 8 + Proficiency Bonus + Dexterity schaffen und erleiden den regulären Schaden des Schusses, wenn sie den Savingthrow nicht schaffen. Wenn sie ihn schaffen, und kleiner als Large sind, bekommen sie keinen Schaden und wenn sie Huge oder größer sind, nur den halben. </p>
+		</description>
+		<setters>
+			<set name="keywords">any crossbow</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="Crossbow">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+			<set name="enhancement">4</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+		</setters>
+	</element>
+</elements>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<element name="Aberrations - Warlock" type="Archetype" source="Primus One" id="ID_WOTC_XGTE_ARCHETYPE_ABERRATIONS_WARLOCK">
+		<supports>Otherworldly Patron</supports>
+		<description>
+			<p>Aberrations Warlocks, auch von ihren Patronen "Gewürm" genannt, sind zumeist Personen, die einen Gegenstand fanden, in dem die Seele eines Beholders eingesperrt wurde. Arme Seelen, die der Auffassung sind, dass es sich lohnt, mit eben jenen einen Pakt zu schließen, werden verbal geknechtet und spüren sowohl die Macht, als auch den Wahnsinn eines Beholders....</p>
+			<p class="indent"></p>
+            <div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_EXPANDED_SPELL_LIST" />
+			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_EYERAYS_TABELLE" />
+			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_CURSE" />
+			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_KNOWLEDGE" />
+			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_SENSES" />
+			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_MIGHT" />
+		</description>
+		<sheet display="false">
+			<description>Du hast einen Pakt mit einem chaotischem Beholder</description>
+		</sheet>
+		<rules>
+            <grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_EXPANDED_SPELL_LIST" level="1"/>
+			<grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_EYERAYS_TABELLE" level="1" />
+			<grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_CURSE" level="1"/>
+			<grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_KNOWLEDGE" level="6"/>
+			<grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_SENSES" level="10"/>
+			<grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_MIGHT" level="14"/>
+		</rules>
+	</element>
+	<element name="Expanded Spell List" type="Archetype Feature" source="Primus One" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_EXPANDED_SPELL_LIST">
+		<supports>Warlock</supports>
+		<description>
+			<p>The Beholder lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.</p>
+			<h5>Beholder EXPANDED SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead> 
+				<tr><td>1st</td><td><em>chromatic orb, ray of sickness</em></td></tr>
+				<tr><td>2nd</td><td><em>levitate, locate object</em></td></tr>
+				<tr><td>3rd</td><td><em>clairvoyance, speak with the dead</em></td></tr>
+				<tr><td>4th</td><td><em>divination, dominate beast</em></td></tr>
+				<tr><td>5th</td><td><em>legend lore, dominate person</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The Beholder lets you choose from an expanded list of spells when you learn a warlock spell.</description>
+		</sheet>
+		<spellcasting name="Warlock" extend="true">
+			<extend>ID_PHB_SPELL_CHROMATIC_ORB</extend>
+			<extend>ID_PHB_SPELL_RAY_OF_SICKNESS</extend>
+			<extend>ID_PHB_SPELL_LEVITATE</extend>
+			<extend>ID_PHB_SPELL_LOCATE_OBJECT</extend>
+			<extend>ID_PHB_SPELL_CLAIRVOYANCE</extend>
+			<extend>ID_PHB_SPELL_SPEAK_WITH_DEAD</extend>
+			<extend>ID_PHB_SPELL_DIVINATION</extend>
+			<extend>ID_PHB_SPELL_DOMINATE_BEAST</extend>
+			<extend>ID_PHB_SPELL_LEGEND_LORE</extend>
+			<extend>ID_PHB_SPELL_DOMINATE_PERSON</extend>
+		</spellcasting>
+	</element>
+
+	<element name="EyeRays Tabelle" type="Archetype Feature" source="Primus One" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_EYERAYS_TABELLE">
+		<supports>Warlock</supports>
+		<description>
+			<table>
+				<tr><td>1.</td><td><em>Charm Ray: Das Ziel muss einen Wisdom Saving Throw schaffen, sonst wird es für 1 Minute gecharmed. Das Ziel muss erneut Schaden erleiden, damit das der Saving Throw wiederholt werden kann. Das Ziel darf jedoch nicht in extremer Weise zuwiderlaufende Befehle erhalten, sonst endet der Effekt direkt.</em></td></tr>
+				<tr><td>2.</td><td><em>Fear Ray: Das Ziel Wisdom Saving Throw schaffen, sonst hat es für 1 Minute lang Angst vor dem Anwender und muss am Ende jeder Runde den Wurf wiederholen.</em></td></tr>
+				<tr><td>3.</td><td><em>Telecinetic Ray: Das Ziel muss einen Strength Saving Throw schaffen, sonst kann der Anwender das Ziel um bis zu 30feet telekinetisch direkt wegbewegen und bleibt bis zum Ende seiner nächsten Runde in der Telekinese gefangen.</em></td></tr>
+				<tr><td>4.</td><td><em>Enervation Ray: Das Ziel muss einen Constitution Saving Throw schaffen, sonst erleidet es zusätzlich 2d8 nekrotischen Schaden und halb so viel, wenn der Wurf gelingt.</em></td></tr>
+				<tr><td>5.</td><td><em>Sleep Ray: Das Ziel muss einen Wisdom Saving Throw schaffen, sonst wird es für 1 Minute zum Schlafen gebracht. Geweckt wird es direkt, wenn es Schaden erleidet oder eine andere Kondition es beeinträchtigt.</em></td></tr>
+				<tr><td>6.</td><td><em>Slowing Ray: Das Ziel muss einen Dexterity Saving Throw schaffen, sonst werden die Nachteile des Slow Spells über ihn verhängt. Am Ende jeder seiner Runden, darf es den Saving Throw wiederholen.</em></td></tr>
+				<tr><td>7.</td><td><em>Paralyzing Ray: Das Ziel muss einen Constitution Saving Throw schaffen, sonst wird es für 1 Minute paralysiert. Das Ziel muss am Ende jeder Runde den Saving Throw wiederholen.</em></td></tr>
+				<tr><td>8.</td><td><em>Disintegration Ray: Das Ziel muss einen Dexterity Saving Throw schaffen, sonst erleidet es 5d8 Force Damage und die Hälfte, wenn der Wurf geschafft wurde.</em></td></tr>
+				<tr><td>9.</td><td><em>Petrification Ray: Das Ziel muss einen Dexterity Saving Throw schaffen, sonst beginnt das Ziel sich langsam in Stein zu verwandeln. Wenn es in der darauf folgenden Runde wieder den Wurf nicht schafft, wird es versteinert und kann nur durch Spells wie Greater Restoration oder ähnliches befreit werden.</em></td></tr>
+				<tr><td>10.</td><td><em>Death Ray: Das Ziel muss einen Dexterity Saving Throw schaffen, sonst erleidet es 8d10 nekrotischen Schaden und wenn der Wurf gelingt nur die Hälfte. Ziele die damit bewusstlos gebracht werden würden, sterben direkt.</em></td></tr>
+			</table>
+		</description>
+		<sheet>
+			<description>
+				.
+				1. Charm Ray: Das Ziel muss einen Wisdom Saving Throw schaffen, sonst wird es für 1 Minute gecharmed. Das Ziel muss erneut Schaden erleiden, damit das der Saving Throw wiederholt werden kann. Das Ziel darf jedoch nicht in extremer Weise zuwiderlaufende Befehle erhalten, sonst endet der Effekt direkt.
+				2. Fear Ray: Das Ziel Wisdom Saving Throw schaffen, sonst hat es für 1 Minute lang Angst vor dem Anwender und muss am Ende jeder Runde den Wurf wiederholen.
+				3. Telecinetic Ray: Das Ziel muss einen Strength Saving Throw schaffen, sonst kann der Anwender das Ziel um bis zu 30feet telekinetisch direkt wegbewegen und bleibt bis zum Ende seiner nächsten Runde in der Telekinese gefangen.
+				4. Enervation Ray: Das Ziel muss einen Constitution Saving Throw schaffen, sonst erleidet es zusätzlich 2d8 nekrotischen Schaden und halb so viel, wenn der Wurf gelingt.
+				5. Sleep Ray: Das Ziel muss einen Wisdom Saving Throw schaffen, sonst wird es für 1 Minute zum Schlafen gebracht. Geweckt wird es direkt, wenn es Schaden erleidet oder eine andere Kondition es beeinträchtigt.
+				6. Slowing Ray: Das Ziel muss einen Dexterity Saving Throw schaffen, sonst werden die Nachteile des Slow Spells über ihn verhängt. Am Ende jeder seiner Runden, darf es den Saving Throw wiederholen.
+				7. Paralyzing Ray: Das Ziel muss einen Constitution Saving Throw schaffen, sonst wird es für 1 Minute paralysiert. Das Ziel muss am Ende jeder Runde den Saving Throw wiederholen.
+				8. Disintegration Ray: Das Ziel muss einen Dexterity Saving Throw schaffen, sonst erleidet es 5d8 Force Damage und die Hälfte, wenn der Wurf geschafft wurde.
+				9. Petrification Ray: Das Ziel muss einen Dexterity Saving Throw schaffen, sonst beginnt das Ziel sich langsam in Stein zu verwandeln. Wenn es in der darauf folgenden Runde wieder den Wurf nicht schafft, wird es versteinert und kann nur durch Spells wie Greater Restoration oder ähnliches befreit werden.
+				10. Death Ray: Das Ziel muss einen Dexterity Saving Throw schaffen, sonst erleidet es 8d10 nekrotischen Schaden und wenn der Wurf gelingt nur die Hälfte. Ziele die damit bewusstlos gebracht werden würden, sterben direkt.
+			</description>
+		</sheet>
+	</element>
+
+
+	<element name="Beholders Curse" type="Archetype Feature" source="Primus One" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_CURSE">
+		<description>
+			<p>Der innewohnende Beholder gewährt ab Level 1 1mal pro Shortrest einen Teil seiner Macht und verflucht ein Ziel in 90feet Reichweite, als Bonusaktion. Den Fluch springen zu lassen, nach dem Tod des Ziels, verbraucht eine Bonusaktion. Bis der Fluch endet, gewährt er folgende Vorteile:</p>
+			<ul>
+				<li>Wenn das verfluchte Ziel von einem oder mehreren Eldritch Blasts getroffen wird, muss es einen Saving Throw gegen den eigenen Spell Save DC schaffen, sonst erleidet es einen Folgeeffekt, der durch 1d4 zufallsbestimmt darauf erfolgt. Aus der Liste sind die ersten 4 der Beholder Eyerays zu wählen.</li>
+			</ul>
+			<p class="indent">You can’t use this feature again until you finish a short or long rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="{{beholders curse:usage}}/Short Rest">
+			<description>
+            Wähle eine Kreatur in einer 90 feet Reichweite und verfluche es. Bis das Ziel stirbt oder der Fluch springt, erhälst du folgende Effekte: Wenn das Ziel von einem Eldritch Blast getroffen wurde, muss es einen Saving Throw gegen den eigenen Spell Save DC schaffen, sonst erleidet es es einen Folgeeffekt, der durch 1d4 zufallsbestimmt darauf erfolgt. Aus der Liste sind die erste 4 der Beholder Eyerays zu wählen.
+            </description>
+		</sheet>
+		<rules>
+			<stat name="beholders curse:usage" value="1" />
+			<stat name="beholders curse:usage" value="1" bonus="1" level="10" />
+			<stat name="beholders curse:usage" value="1" bonus="2" level="14" />
+		</rules>
+	</element>
+
+	<element name="Beholders Knowledge" type="Archetype Feature" source="Primus One" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_KNOWLEDGE">
+		<description>
+			<p>Beginnend mit Level 6 gewährt der Beholder dem Paktträger Darkvision auf 120feet und lehrt ihn Deep Speech, sowie Undercommon.</p>
+			<p class="indent"> Darüber hinaus steigt die zu erwürfelnde Tabelle um 2 weitere Eye Rays, die das verfluchte Ziel beeinträchtigen können. Ab jetzt wird der Folgeeffekt durch 1d6 determiniert.  </p>
+		</description>
+		<sheet>
+			<description>Der Beholder geährtem dem Paktträger Darkvision auf 120 feet Reichweite und lehrt ihn/ihr Deep Speach und Undercommon.
+                         Darüber hinaus steigt die Eyeraye-Tabelle um 2, die das verfluchte Ziel beeinträchtigen. Ab jetzt wird der Folgeeffekt durch 1d6 determiniert. 
+            </description>
+		</sheet>
+		<rules>
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_DEEP_SPEECH" />
+            <grant type="Language" id="ID_LANGUAGE_UNDERCOMMON" />
+		</rules>
+	</element>
+
+	<element name="Beholders Senses" type="Archetype Feature" source="Primus One" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_SENSES">
+		<description>
+			<p>Ab Level 10 gewährt der Beholder die Fähigkeit durch Willenskraft in bis zu 5feet Höhe permanent zu schweben. Die Schwebegeschwindigkeit liegt bei 20feet. Darüber hinaus steigt auch die Passive Wahrnehmung soweit, dass es auf nicht-magische Art unmöglich ist, überrascht zu werden. Ebenfalls kann der Anwender 2mal pro Shortrest Gegner verfluchen, wobei 2 verschiedene Ziele gleichzeitig verflucht werden können. Zusätzlich wird die Liste auf die ersten 8 Eyerays erweitert und durch 1d8 bestimmt. </p>
+		</description>
+		<sheet>
+			<description>
+			Der Beholder gewährt dir die Fähigkeit mit Willenskraft in bis zu 5feet Höhe zu schweben mit 20feet geschwindigkeit.
+			Deine Passive Wahrnehmung steigt soweit, dass es auf nicht-magische Art unmöglich ist dich zu überraschen.
+			Zusätzlich wird die Liste auf die ersten 8 Eyerays erweitert und durch 1d8 bestimmt.
+			</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed:fly" value="20" bonus="base" equipped="![armor:heavy]" />
+		</rules>
+	</element>
+
+	<element name="Beholders Might" type="Archetype Feature" source="Primus One" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_BEHOLDERS_MIGHT">
+		<description>
+			<p>Der Beholder gestattet dem Paktierenden für 1 Minute die Antimagiesicht, welche mittels Konzentration aufrechterhalten werden muss und beim Einsatz eine Aktion erfordert. In einem 30feet Kegel werden magische Effekte unterbunden, auch die eigenen. Sie funktionieren, jedoch direkt wieder, sobald jemand den Kegel verlässt. Das kann nur 1mal pro Longrest genutzt werden. Darüber hinaus wird die Anzahl der verfluchbaren Ziele auf 3 erhöht pro Shortrest und die ganze Liste, also alle 10 möglichen Eye Rays nutzbar gemacht und durch 1d10 determiniert. </p>
+		</description>
+		<sheet action="Action (Concentration)" usage="1/Long Rest">
+			<description>
+			Der Beholder gestattet dem Pakthalter für 1 Minute die Antimagiesicht. In einem 30feet Kegel werden magische Effekte unterbunden, auch die eigenen. Sie funktionieren jedoch direkt wieder sobald jemand den Kegel verlässt.
+			Darüber hinaus wird die Liste auf alle 10 mögliche Eye Rays nutzbar gemacht und durch 1d10 determiniert.
+			</description>
+		</sheet>
+	</element>
+</elements>

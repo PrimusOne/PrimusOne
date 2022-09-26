@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+
+  <element name="Tiamat" type="Deity" source="Primus One" id="ID_MAX_PRIMUS_ONE_DEITIES_DER_KLEINE_PANTHEON">
+		<description>
+			<p class="flavor">Göttin der chromatischen Drachen</p>
+		</description>
+		<setters>
+			<set name="setting">Avernus</set>
+			<set name="alignment">NE</set>
+			<set name="domains">Nature, Tempest</set>
+			<set name="symbol">Six-pointed snowflake</set>
+			<set name="gender">female</set>
+		</setters>
+		<sheet>
+			<description>Göttin der chromatischen Drachen</description>
+		</sheet>
+	</element>
+</elements>
