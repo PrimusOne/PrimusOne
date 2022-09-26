@@ -2,14 +2,14 @@
 <elements>
 	<info>
 		<name>class-Abberation-Warlock</name>
-		<update version="1.0.1">
+		<update version="1.0.0">
 			<file name="class-Abberation-Warlock.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-Abberation-Warlock.xml" />
 		</update>
 	</info>
 	<element name="Aberrations - Warlock" type="Archetype" source="Primus One" id="ID_WOTC_XGTE_ARCHETYPE_ABERRATIONS_WARLOCK">
 		<supports>Otherworldly Patron</supports>
 		<description>
-			<p>Aberrations Warlocks, auch von ihren Patronen "Abschaum" genannt, sind zumeist Personen, die einen Gegenstand fanden, in dem die Seele eines Beholders eingesperrt wurde. Arme Seelen, die der Auffassung sind, dass es sich lohnt, mit eben jenen einen Pakt zu schließen, werden verbal geknechtet und spüren sowohl die Macht, als auch den Wahnsinn eines Beholders....</p>
+			<p>Aberrations Warlocks, auch von ihren Patronen "Gewürm" genannt, sind zumeist Personen, die einen Gegenstand fanden, in dem die Seele eines Beholders eingesperrt wurde. Arme Seelen, die der Auffassung sind, dass es sich lohnt, mit eben jenen einen Pakt zu schließen, werden verbal geknechtet und spüren sowohl die Macht, als auch den Wahnsinn eines Beholders....</p>
 			<p class="indent"></p>
             <div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_EXPANDED_SPELL_LIST" />
 			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_ABERRATIONS_WARLOCK_EYERAYS_TABELLE" />
