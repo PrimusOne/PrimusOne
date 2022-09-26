@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="1.0.3">
+		<update version="1.0.4">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
