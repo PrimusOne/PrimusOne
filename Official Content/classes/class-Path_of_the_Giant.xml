@@ -3,7 +3,7 @@
 	<info>
 		<name>class-Path-of-the-Giant</name>
 		<update version="1.0.0">
-			<file name="class-Path_of_the_Giant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/class/class-Path_of_the_Giant.xml" />
+			<file name="class-Path_of_the_Giant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/classes/class-Path_of_the_Giant.xml" />
 		</update>
 	</info>
 	<element name="Path of the Giant" type="Archetype" source="Unearthed Arcana" id="ID_WOTC_UA_ARCHETYPE_PATH_OF_THE_GIANT">
