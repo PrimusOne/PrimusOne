@@ -7,26 +7,6 @@
 		</update>
 	</info>
 	<files>
-		<--!<!--Official Content-->
-		<!--races-->
-		<file name="race-chromatic_dragonborn.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/races/race-chromatic_dragonborn.xml" />
-		<file name="race-gem_dragonborn.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/races/race-gem_dragonborn.xml" />
-		<file name="race-metallic_dragonborn.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/races/race-metallic_dragonborn.xml" />
-
-		<!--classes-->
-		<file name="class-Path_of_the_Giant.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/classes/class-Path_of_the_Giant.xml" />
-
-		<!--spells-->
-		<file name="spell-Silvery_Barbs.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/spells/spell-Silvery_Barbs.xml" />
-		<file name="spell-Tasha's_Mind_Whip.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/spells/spell-Tasha's_Mind_Whip.xml" />
-		
-		<!--items-->
-		
-		<!--other-->
-		<file name="Unarmed_Fighting.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/other/Unarmed_Fighting.xml" />
-		<file name="other-Transmuted_Spell.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Official%20Content/other/other-Transmuted_Spell.xml" />
-		-->
-		
 		<!--Homebrew-->
 		<!--races-->
 		
