@@ -2,7 +2,7 @@
 <elements>
     <info>
 		<name>cleric-Dragon-Justice-Domain</name>
-		<update version="1.0.0">
+		<update version="1.0.1">
 			<file name="cleric-Dragon-Justice-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Justice-Domain.xml" />
 		</update>
 	</info>
@@ -106,11 +106,11 @@
     
     <element name="Dragons Might" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_DRAGONS_MIGHT">
         <description>
-            Beginnend mit Level 6 erhöht sich das maximale Leben um 6 und steigt bei jedem weiteren Level in dieser Subklasse um 1. Zusätzlich kannst du, nachdem du einen Cantrip eingesetzt hast, als Bonusaktion, nochmal einen Meleeweaponattack durchführen.
+            Beginnend mit Level 6 erhöht sich das maximale Leben um 6 und steigt bei jedem weiteren Level in dieser Subklasse um 1. Zusätzlich kannst du, nachdem du einen Cantrip eingesetzt hast, als Bonusaktion, nochmal eine Meleeweaponattack durchführen.
         </description>
 
         <sheet>
-            <description>Du kannst, nachdem du einen Cantrip eingesetzt hast, als Bonusaktion, nochmal einen Meleeweaponattack durchführen.</description>
+            <description>Du kannst, nachdem du einen Cantrip eingesetzt hast, als Bonusaktion, nochmal eine Meleeweaponattack durchführen.</description>
         </sheet>
         <rules>
   			<stat name="hp" value="level:cleric" />
