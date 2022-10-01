@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>cleric-Dragon-Justice-Domain</name>
+		<update version="1.0.0">
+			<file name="cleric-Dragon-Justice-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Justice-Domain.xml" />
+		</update>
+	</info>
+    <element name="Dragon Justice Domain" type="Archetype" source="Primus One" id="ID_PO_ARCHETYPE_DRAGON_JUSTICE_DOMAIN">
+        <supports>Divine Domain</supports>
+        <description>
+            <p>Nur edle und aufrichtige Personen treten in den Dienst Bahamuths. Er selbst kümmert sich wie kein anderer um die Belange der Sterblichen. All jene, denen selbstloses Helfen wichtiger ist, als nur das eigene Wohl im Sinn zu haben, nennt er seine Freunde. Asoldeus, Gott des Himmels, nennt ihn den Platindrachen mit dem goldenen Herzen. Seine Anhänger schrecken vor keiner Herausforderung zurück, wenn es dem Schutz Schwächerer dient.</p>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_SPELLS"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_BONUS_CANTRIPS"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_PRIEST_OF_BAHAMUTH"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_CHANNEL_DIVINITY_GODLIKE_RESISTANCE"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_DRAGONS_MIGHT"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_DIVINE_STRIKE"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_PLATINUM_BRILLIANCE"/>
+        </description>
+        <sheet>
+            <description>
+            Kleriker dieser Art suchen die Gerechtigkeit und scheuen nicht die Herausforderung, diese umzusetzen. Sie kämpfen an vorderster Front oftmals, neben ihren Verbündeten.
+            </description>
+        </sheet>
+
+        <rules>
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_SPELLS" level="1" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_BONUS_CANTRIPS" level="1" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_PRIEST_OF_BAHAMUTH" level="1" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_CHANNEL_DIVINITY_GODLIKE_RESISTANCE" level="2" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_DRAGONS_MIGHT" level="6" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_DIVINE_STRIKE" level="8" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_PLATINUM_BRILLIANCE" level="17" />
+        </rules>
+    </element>
+
+    <element name="Domain Spells" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_SPELLS">
+        <description>
+            <table>
+                <thead>
+                <tr><td>Cleric Level</td><td>Spells</td></tr>
+                </thead>
+                    <tr><td>1st</td><td><em>Thounderous Smite, Absorb Elements</em></td></tr>
+                    <tr><td>3rd</td><td><em>Magic Weapon, Branding Smite</em></td></tr>
+                    <tr><td>5th</td><td><em>Blinding Smite, Revivify</em></td></tr>
+                    <tr><td>7th</td><td><em>Guardian of Faith, Staggering Smite</em></td></tr>
+                    <tr><td>9th</td><td><em>Holy Weapon, Mass Cure Wounds</em></td></tr>
+            </table>
+        </description>
+    	<sheet display="false"/>
+        <rules>
+                <grant type="Spell" id="ID_PHB_SPELL_THUNDEROUS_SMITE" level="1" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" level="1" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_MAGIC_WEAPON" level="3" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_BRANDING_SMITE" level="3" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_BLINDING_SMITE" level="5" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_REVIVIFY" level="5" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_GUARDIAN_OF_FAITH" level="7" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_STAGGERING_SMITE" level="7" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_XGTE_SPELL_HOLY_WEAPON" level="9" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_MASS_CURE_WOUNDS" level="9" spellcasting="Cleric" prepared="true" />
+        </rules>
+    </element>
+
+    <element name="Bonus Cantrips" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_BONUS_CANTRIPS">
+        <description>
+            <p>
+                Mit Level 1 erhält der Kleriker zusätzlich noch Booming Blade und Green Flame Blade.
+            </p>
+        </description>
+   		<sheet display="false"/>
+        <rules>
+            <grant type="Spell" id="ID_WOTC_TCOE_SPELL_BOOMING_BLADE" spellcasting="Cleric"/>
+            <grant type="Spell" id="ID_WOTC_TCOE_SPELL_GREENFLAME_BLADE" spellcasting="Cleric"/>
+        </rules>
+    </element>
+
+    <element name="Priest of Bahamuth" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_PRIEST_OF_BAHAMUTH">
+        <description>
+            <p>
+                Bahamuths Kleriker dienen zumeist unmittelbar an der Front. Mit Level 1 an erhalten sie Proficiency für HeavyArmor und Martial Weapons. Zusätzlich lernen sie Draconic und Celestial.
+            </p>
+        </description>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS"/>
+			<grant type="Language" id="ID_LANGUAGE_DRACONIC" />
+			<grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
+        </rules>
+    </element>
+
+    <element name="Channel Divinity: Godlike Resistance" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_CHANNEL_DIVINITY_GODLIKE_RESISTANCE">
+        <description>
+            <p>
+            Ab Level 2 kannst du als Aktion ein Ziel mittels Berührung erwählen. Das Ziel erhält für eine Minute Resistenzen gegen jeglichen Schaden, außer Force,Radiant, Necrotic, Acid und Psychic.
+            </p>
+        </description>
+
+        <sheet alt="Godlike Resistance" action="Action" usage="Channel Divinity">
+            <description>Als Aktion kannst du einem Ziel mittels Berührung Resistenzen für eine Minute gegen jeglichen Schaden geben, außer Force, Radiant, Necrotic, Acid und Psychic.</description>
+        </sheet>
+    </element>
+
+    
+    <element name="Dragons Might" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_DRAGONS_MIGHT">
+        <description>
+            Beginnend mit Level 6 erhöht sich das maximale Leben um 6 und steigt bei jedem weiteren Level in dieser Subklasse um 1. Zusätzlich kannst du, nachdem du einen Cantrip eingesetzt hast, als Bonusaktion, nochmal einen Meleeweaponattack durchführen.
+        </description>
+
+        <sheet>
+            <description>Du kannst, nachdem du einen Cantrip eingesetzt hast, als Bonusaktion, nochmal einen Meleeweaponattack durchführen.</description>
+        </sheet>
+        <rules>
+  			<stat name="hp" value="level:cleric" />
+        </rules>
+    </element>
+
+
+    <element name="Divine Strike" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_DIVINE_STRIKE">
+        <description>
+            Ab Level 8 kannst du deine Waffe mit heiliger Kraft füllen, wodurch die Waffe 1d8 radiant Schaden mehrverursacht. Das steigt auf Level 14 zu 2d8.
+        </description>
+
+        <sheet>
+        <description>Du kannst deine Waffe mit heiliger Kraft füllen. Deine Waffe macht {{Divine Strike:Dice Count}}d8 extra radiant Schaden.</description>
+        </sheet>
+        <rules>
+			<stat name="Divine Strike:Dice Count" value="1" />
+			<stat name="Divine Strike:Dice Count" value="1" bonus="1" level="14"/>
+        </rules>
+    </element>
+
+    <element name="Platinum Brilliance" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_JUSTICE_DOMAIN_PLATINUM_BRILLIANCE">
+        <description>
+            Mit dem Erreichen von Level 17 erhält der Kleriker die Fähigkeit, 1mal pro Longrest, nachdem er auf 0 Leben fallen würde und nicht direkt stirbt, mit halbem maximalen Leben wieder aufzustehen und darf als Reaction dann einen Spell seiner Wahl einsetzen. Zusätzlich werden alle Channel Divinitys wiederhergestellt.
+        </description>
+
+        <sheet>
+            <description>1mal pro Longrest, kannst du nachdem du auf 0 leben fallen würdest und nicht direkt stirbst, mit halbem maximalen Leben wieder aufstehen und darfst als Reaction dann einen Spell deiner Wahl einsetzen. Zusätzlich werden alle Channel Divinitys wiederhergestellt.</description>
+        </sheet>
+    </element>
+
+    
+</elements>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>cleric-Greed-Justice-Domain</name>
+		<update version="1.0.0">
+			<file name="cleric-Greed-Justice-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Greed-Domain.xml" />
+		</update>
+	</info>
+    <element name="Dragon Greed Domain" type="Archetype" source="Primus One" id="ID_PO_ARCHETYPE_DRAGON_Greed_DOMAIN">
+        <supports>Divine Domain</supports>
+        <description>
+            <p>Im Gegensatz zu ihrem Bruder akzeptiert Tiamat nur gierige, machtbesessene und hasserfüllte Kleriker. Sie verlangt nur 2 Dinge, im Gegenzug für einen Teil ihrer Macht. Zum einen das Ansammeln von Schätzen und Ehrerbietung an sie und zum anderen Furcht und Schrecken verbreiten, in ihrem Namen und der ihrer Brut, den chromatischen Drachen. Anders als Bahamuth kann sie nicht frei agieren, da sie in Avernusvon Asmodeus gefangen gehalten wird, weshalb alle ihre Untergebenen grundsätzlich die Agenda verfolgen sollen, sie zu befreien.</p>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_SPELLS"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_PRIEST_OF_TIAMAT"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_CHANNEL_DIVINITY_DESTRUCTION"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_DRAGONS_RESILIENCE"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_POTENT_SPELLCASTING"/>
+            <div element="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_CHROMATIC_WRATH"/>
+        </description>
+        <sheet>
+            <description>
+                Kleriker im Dienste Tiamats sind zumeist an ihrer persönlichen Bereicherung interessiert. Sie streben Reichtum, Macht und Ruhm an, getrieben von Gier und Hass.
+            </description>
+        </sheet>
+
+        <rules>
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_SPELLS" level="1" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_PRIEST_OF_TIAMAT" level="1" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_CHANNEL_DIVINITY_DESTRUCTION" level="2" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_DRAGONS_RESILIENCE" level="6" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_POTENT_SPELLCASTING" level="8" />
+            <grant type="Archetype Feature" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_CHROMATIC_WRATH" level="17" />
+        </rules>
+    </element>
+
+    <element name="Domain Spells" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_SPELLS">
+        <description>
+            <table>
+                <thead>
+                <tr><td>Cleric Level</td><td>Spells</td></tr>
+                </thead>
+                    <tr><td>1st</td><td><em>Chromatic Orb, Absorb Elements</em></td></tr>
+                    <tr><td>3rd</td><td><em>Scorching Ray, Dragon`s Breath</em></td></tr>
+                    <tr><td>5th</td><td><em>Fireball, Ligntning Bolt</em></td></tr>
+                    <tr><td>7th</td><td><em>Ice Storm, Fire Shield</em></td></tr>
+                    <tr><td>9th</td><td><em>Destructive Wave, Cone of Cold</em></td></tr>
+            </table>
+        </description>
+    	<sheet display="false"/>
+        <rules>
+                <grant type="Spell" id="ID_PHB_SPELL_CHROMATIC_ORB" level="1" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" level="1" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="3" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_XGTE_SPELL_DRAGONS_BREATH" level="3" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="5" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_BOLT" level="5" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_ICE_STORM" level="7" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" level="7" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_DESTRUCTIVE_WAVE" level="9" spellcasting="Cleric" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_CONE_OF_COLD" level="9" spellcasting="Cleric" prepared="true" />
+        </rules>
+    </element>
+
+    <element name="Priest of Tiamat" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_PRIEST_OF_TIAMAT">
+        <description>
+            <p>
+                Mit Level 1 erhält der Kleriker die Fähigkeit den Elementarschaden zu ändern. Der Spell oder Cantrip muss dafür Fire, Cold, Acid, Poison oder Lightning Damage verursachen und das Element darf nur in ein anderes der 5 Elemente geändert werden. Zusätzlich erhält der Kleriker Proficiency in Heavy Armor und lernt Draconic und Infernal
+            </p>
+        </description>
+        <sheet>
+            <description>Der Kleriker erhält die Fähigkeit den Elementarschaden eines Spells oder Cantrip zu ändern. Diese müssen aber Fire, Cold, Acid, Poison oder Lightning Damage verursachen und das Element darf nur in ein anderes der 5 Elemente geändert werden. </description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR"/>
+			<grant type="Language" id="ID_LANGUAGE_DRACONIC" />
+			<grant type="Language" id="ID_LANGUAGE_INFERNAL" />
+        </rules>
+    </element>
+
+    <element name="Channel Divinity: Destruction" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_CHANNEL_DIVINITY_DESTRUCTION">
+        <description>
+            <p>
+            Der Kleriker darf ab Level 2 seine Fähigkeit dafür nutzen einen Spell einzusetzen, dieser wird mit Advantage als Spellattack oder für den Gegner (bei Flächenangriffen nur 1 Ziel) mit Disadvantage auf den Rettungswurf gecastet und verursacht den maximal möglichen Schaden, wenn der Spell auch gelingt. Falls bei dem Spellattack eine 20 oder bei dem Rettungswurf des Gegners eine 1 gewürfelt wird, wird der Schaden um die Anzahl des Klerikerlevels nochmal erhöht. Die restlichen Regeln für Krits werden nicht angewendet. Wenn der Spell misslingt, verfällt auch die Channel Divinity.
+            </p>
+        </description>
+
+        <sheet alt="Destruction" action="Bei Spellattack" usage="Channel Divinity">
+            <description>Der Kleriker darf seine Fähigkeit dafür nutzen einen Spell einzusetzen, dieser wird mit Advantage als Spellattack oder für den Gegner (bei Flächenangriffen nur 1 Ziel) mit Disadvantage auf den Rettungswurf gecastet und verursacht den maximal möglichen Schaden, wenn der Spell auch gelingt. Falls bei dem Spellattack eine 20 oder bei dem Rettungswurf des Gegners eine 1 gewürfelt wird, wird der Schaden um die Anzahl des Klerikerlevels nochmal erhöht. Die restlichen Regeln für Krits werden nicht angewendet. Wenn der Spell misslingt, verfällt auch die Channel Divinity. </description>
+        </sheet>
+    </element>
+
+    
+    <element name="Dragons Resilience" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_DRAGONS_RESILIENCE">
+        <description>
+            Ab Level 6 erhälst du Advantage auf Saving Throws gegen die Konditionen: Charmed, Frightened und Poisened. Bei jedem Tagesanbruch darfst du dir aus einem der 5 Elemente Tiamats eines aussuchen, gegenüber dem du Resistenz für den Tag hast. Zusätzlich kannst du als Reaction, wenn du von einem Angriff getroffen wirst, der eines der 5 Elemente enthält, gegen dieses Element, für diesen Angriff, ebenfalls Resistenz zu erhalten.
+        </description>
+
+        <sheet>
+            <description>Du erhälst Advantage auf Saving Throws gegen die Konditionen: Charmed, Frightened und Poisened. Bei jedem Tagesanbruch darfst du dir aus einem der 5 Elemente Tiamats eines aussuchen, gegenüber dem du Resistenz für den Tag hast. Zusätzlich kannst du als Reaction, wenn du von einem Angriff getroffen wirst, der eines der 5 Elemente enthält, gegen dieses Element, für diesen Angriff, ebenfalls Resistenz zu erhalten.</description>
+        </sheet>
+    </element>
+
+
+    <element name="Potent Spellcasting" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_POTENT_SPELLCASTING">
+        <description>
+            Ab Level 8 wird auf Cleric Cantrips der Wisdom Modifier nochmal draufgerechnet.
+        </description>
+    	
+        <sheet>
+            <description>Auf deine Cleric Cantrips wird zusätzlich {{wisdom:modifier}} Schaden draufgerechnet. </description>
+        </sheet>
+    </element>
+
+    <element name="Chromatic Wrath" type="Archetype Feature" source="Primus One" id="ID_PO_ARCHETYPE_FEATURE_CLERIC_DRAGON_GREED_DOMAIN_CHROMATIC_WRATH">
+        <description>
+            Mit Erreichen von Level 17 erhält der Kleriker Zugang zu einem Teil von Tiamats vernichtenden Breath Weapons. 1 mal pro Tag kann der Kleriker diese entladen und sie verursacht jeweils 5d6 pro Element (25d6 insgesamt). Jeder in einem 90 foot Cone muss einen Dexterity Saving Throw würfeln, sonst erleidet er 5d6 jedes Elements nacheinander. Wenn der Saving Throw gelang, nur die Hälfte.
+        </description>
+
+        <sheet alt="Chromatic Wrath" action="Action" usage="1/ Long Rest">
+            <description>Der Kleriker erhält Zugang zu einem Teil von Tiamats vernichtenden Breath Weapons. 1 mal pro Tag kann der Kleriker diese entladen und sie verursacht jeweils 5d6 pro Element (25d6 insgesamt). Jeder in einem 90 foot Cone muss einen {{Chromatic Wrath:dc}} DC Dexterity Saving Throw würfeln, sonst erleidet er 5d6 jedes Elements nacheinander. Wenn der Saving Throw gelang, nur die Hälfte.</description>
+        </sheet>
+        <rules>
+            <stat name="Chromatic Wrath:dc" value="8" />
+			<stat name="Chromatic Wrath:dc" value="proficiency" />
+			<stat name="Chromatic Wrath:dc" value="wisdom:modifier" />
+        </rules>
+
+    </element>
+
+    
+</elements>
