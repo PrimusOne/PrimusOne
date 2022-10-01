@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
     <info>
-		<name>cleric-Greed-Justice-Domain</name>
-		<update version="1.0.0">
+		<name>cleric-Dragon-Greed-Domain</name>
+		<update version="1.0.1">
 			<file name="cleric-Greed-Justice-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Greed-Domain.xml" />
 		</update>
 	</info>
