@@ -3,7 +3,7 @@
     <info>
 		<name>cleric-Dragon-Greed-Domain</name>
 		<update version="1.0.1">
-			<file name="cleric-Greed-Justice-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Greed-Domain.xml" />
+			<file name="cleric-Dragon-Greed-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Greed-Domain.xml" />
 		</update>
 	</info>
     <element name="Dragon Greed Domain" type="Archetype" source="Primus One" id="ID_PO_ARCHETYPE_DRAGON_Greed_DOMAIN">
