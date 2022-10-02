@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.20">
+		<update version="0.0.21">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -21,7 +21,10 @@
 		
 		<!--items-->
 		<file name="item-Almir_der_Schlaechter.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Almir_der_Schlaechter.xml" />
-		
+		<file name="item-Rod-of-Necroticness.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Rod-of-Necroticness.xml" />
+		<file name="item-The-Perfect-Piercer.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-The-Perfect-Piercer.xml" />
+
 		<!--other-->
+		
 	</files>
 </index>
