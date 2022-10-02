@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Rod-of-Necroticness</name>
+		<update version="1.0.0">
+			<file name="item-Rod-of-Necroticness.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Rod-of-Necroticness.xml" />
+		</update>
+	</info>
+    <element name="Rod of Necroticness" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_ROD_OF_NECROTICNESS">
+		<description>
+			<p>11cm langer Zauberstab, aus blassgoldfarbenem Leder, in dem eine schwarze Flüssigkeit fließt, mit 3 Blutkristallen</p>
+            <p class="indent">Überbrückt Nekrotische Immunität.</p>
+			<p class="indent">Enthält beinahe die Breath Weapon eines Antiken Topazdrachen (12d6) pro Tag, auf einem 90 foot cone. Der DC ist ein 19 Dexterity Savingthrow.</p>
+            <p class="indent">Enthält 3 Ladungen, je eine kann einen Spell verbessern und wird bei Tagesanbruch wieder aufgefüllt oder wenn ein nekrotischer Spell einen Gegner tötet, kann eine Ladung wieder aufgefüllt werden.</p>
+            <p class="indent">Wenn ein Spell benutzt wird, der nekrotischen Schaden verursacht, kann eine Ladung aufgebraucht werden und der Anwender heilt sich um den insgesamt verursachten Schaden.</p>
+            <p class="indent">Für insgesamt 2 Ladungen kann das überschüssige Leben in TempHP umgewandelt werden, was eine Minute halten würde, aber es muss vor dem Angriff als Ladung benutzt werden.</p>
+        </description>
+		<setters>
+			<set name="keywords">Rods</set>
+			<set name="category">Rods</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type">Rod</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+			<set name="slot">onehand</set>
+			<set name="enhancement">0</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_ROD</set>
+		</setters>
+	</element>
+</elements>

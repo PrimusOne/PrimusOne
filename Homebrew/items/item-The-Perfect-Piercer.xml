@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>item-The-Perfect-Piercer</name>
+		<update version="1.0.0">
+			<file name="item-The-Perfect-Piercer.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-The-Perfect-Piercer.xml" />
+		</update>
+	</info>
+    <element name="The Perfect Piercer" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_THE_PERFECT_PIERCER">
+		<description>
+			<p>You gain a +6 bonus to attack and damage rolls made with this magic weapon.</p>
+			<p class="indent">Übergeht Piercing-Resistenz </p>
+		</description>
+		<setters>
+			<set name="keywords">any rapier</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="Rapier">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+			<set name="enhancement">6</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE</set>
+		</setters>
+	</element>
+</elements>
