@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.23">
+		<update version="0.0.24">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -23,7 +23,7 @@
 		<file name="item-Rod-of-Necroticness.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Rod-of-Necroticness.xml" />
 		<file name="item-The-Perfect-Piercer.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-The-Perfect-Piercer.xml" />
 		<file name="item-Obsidglass-Plate.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Obsidglass-Plate.xml" />
-		<file name="item-item-Obsidglass-Staff.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-item-Obsidglass-Staff.xml" />
+		<file name="item-Obsidglass-Staff.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-item-Obsidglass-Staff.xml" />
 		
 		<!--other-->
 		
