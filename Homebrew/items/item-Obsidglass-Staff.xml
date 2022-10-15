@@ -3,7 +3,7 @@
     <info>
 		<name>item-Obsidglass-Staff</name>
 		<update version="1.0.0">
-			<file name="item-item-Obsidglass-Staff.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-item-Obsidglass-Staff.xml" />
+			<file name="item-Obsidglass-Staff.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-item-Obsidglass-Staff.xml" />
 		</update>
 	</info>
     <element name="Obsidglass Staff" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_OBSIDGLASS_STAFF">
