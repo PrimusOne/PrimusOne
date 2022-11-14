@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Ring-of-True-Luck</name>
+		<update version="1.0.0">
+			<file name="item-Ring-of-True-Luck.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Ring-of-True-Luck.xml" />
+		</update>
+	</info>
+    <element name="Ring of True Luck" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_RING_OF_TRUE_LUCK">
+		<description>
+			<p>Ein goldener und schlichter Ring, welcher eine Platinlinie innerhalb verlaufen und an einer Stelle eine weiße Marmorkugel eingearbeitet hat. 1 mal pro Tag, kann man einen Wurf, ganz gleich, ob Skill Check, Saving Throw oder Angriff, einen bereits geworfenen Wurf in eine natürliche 20 verwandeln. </p>
+		</description>
+		<setters>
+			<set name="category">Rings</set>
+			<set name="type">Ring</set>
+			<set name="rarity">Legendary</set>
+			<set name="slot">ring</set>
+			<set name="equippable">true</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+</elements>
