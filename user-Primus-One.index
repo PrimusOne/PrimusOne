@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.26">
+		<update version="0.0.27">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -25,6 +25,8 @@
 		<file name="item-Obsidglass-Plate.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Obsidglass-Plate.xml" />
 		<file name="item-Obsidglass-Staff.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Obsidglass-Staff.xml" />
 		<file name="item-Ring-of-True-Luck.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Ring-of-True-Luck.xml" />
+		<file name="item-Unreine-Tarrasqueschuppenruestung.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Unreine-Tarrasqueschuppenruestung.xml" />
+		<file name="item-Obsidglass-Shield_1.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Obsidglass-Shield_1.xml" />
 		<!--other-->
 		
 	</files>
