@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Unreine-Tarrasqueschuppenruestung</name>
+		<update version="1.0.0">
+			<file name="item-Unreine-Tarrasqueschuppenruestung.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Unreine-Tarrasqueschuppenruestung.xml" />
+		</update>
+	</info>
+    <element name="Unreine Tarrasqueschuppenrüstung" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_UNREINE_TARRASQUESCHUPPENRUESTUNG">
+		<description>
+			<p>Eine Plate die bräunlich, leicht elastisch, aber sehr hart aussieht und hat einen leichten Lilastich </p>
+            <p class="indent">+5 AC und psychic-Resistenz</p>
+        </description>
+		<setters>
+			<set name="keywords">plate</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="slot">body</set>
+			<set name="type" addition="plate">Armor</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+			<set name="enhancement">5</set>
+			<set name="armor">Plate</set>
+		</setters>
+        <rules>
+			<stat name="ac:armored:enhancement" value="5" bonus="enhancement" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC"/>
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Obsidglass-Shield_1</name>
+		<update version="1.0.0">
+			<file name="item-Obsidglass-Shield_1.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Obsidglass-Shield_1.xml" />
+		</update>
+	</info>
+	
+    <element name="Obsidglass Shield +1" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_OBSIDGLASS_SHIELD_1">
+		<description>
+			<p>Während du diesen Schild hältst, hast du einen Vorteil bei Rettungswürfen gegen Zauber und andere magische Effekte</p>
+		</description>
+		<setters>
+			<set name="keywords">shield</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="shield">Armor</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+			<set name="enhancement">1</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+		</setters>
+	</element>
+</elements>
