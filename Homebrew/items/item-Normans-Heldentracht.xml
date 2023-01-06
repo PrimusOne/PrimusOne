@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
-    <!--<info>
+    	<info>
 		<name>item-Normans-Heldentracht</name>
-		<update version="1.0.0">
+		<update version="1.0.1">
 			<file name="item-Normans-Heldentracht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Normans-Heldentracht.xml" />
 		</update>
 	</info>
-    -->
+
     <element name="Normans Heldentracht" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_NORMANS_HELDENTRACHT">
 		<description>
 			<p>Besteht aus feinsten leder- und leinensorten, die mit heiligen seinarischen ornamenten und runen abgebildet verziert wurde.</p>
-            <p class="indent">+4 AC</p>
+            <p class="indent">+4 AC und kann als reaktion einkommenden schaden halbieren (keine multihits), nur einzelne angriffe</p>
         </description>
 		<setters>
 			<set name="keywords">studded, leather</set>
@@ -18,7 +18,7 @@
 			<set name="cost" currency="gp">0</set>
 			<set name="slot">body</set>
 			<set name="type" addition="studded leather">Armor</set>
-			<set name="attunement">false</set>
+			<set name="attunement" addition="by a devine being">false</set>
 			<set name="rarity">Artifact</set>
 			<set name="enhancement">4</set>
 			<set name="armor">Studded Leather</set>
