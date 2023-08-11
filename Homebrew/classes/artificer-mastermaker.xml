@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <elements>
     <element name="Mastermaker" type="Archetype" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_MASTERMAKER">
         <supports>Artificer Specialist</supports>
