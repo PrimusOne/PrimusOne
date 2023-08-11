@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <element name="Mastermaker" type="Archetype" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_MASTERMAKER">
+        <supports>Artificer Specialist</supports>
+        <description>
+            <p>A Mastermaker specializes in integrating flesh and steel, creating powerful construct limbs and replacing weak organs of flesh with components of metal and stone. The actions of a few renegade Mastermakers have caused House Cannith to shun this path in Eberron, but an artificer might learn these techniques in Dread Metrol or develop them on their own.</p>
+            <p class="indent"></p>
+            <div element="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_TOOLS_OF_INTEGRATION" />
+            <div element="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_MASTERMAKER_SPELLS" />
+            <div element="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_PROTHESIS_EXPERTISE" />
+            <div element="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_BATTLEFIST" />
+            <div element="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_EXTRA_ATTACK" />
+            <div element="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_IMPROVED_BATTLEFIST" />
+            <div element="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_CONSTRUCT_APOTHEOSIS" />
+
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_TOOLS_OF_INTEGRATION" level="3" />
+            <grant type="Archetype Feature" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_MASTERMAKER_SPELLS" level="3" />
+            <grant type="Archetype Feature" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_PROTHESIS_EXPERTISE" level="3" />
+            <grant type="Archetype Feature" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_BATTLEFIST" level="3" />
+            <grant type="Archetype Feature" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_EXTRA_ATTACK" level="5" />
+            <grant type="Archetype Feature" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_IMPROVED_BATTLEFIST" level="9" />
+            <grant type="Archetype Feature" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_CONSTRUCT_APOTHEOSIS" level="15" />
+
+        </rules>
+    </element>
+        <element name="Tools of Integration" type="Archetype Feature" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_TOOLS_OF_INTEGRATION">
+            <description>
+                <p>At 3rd level, you gain proficiency with heavy armor and smith’s tools. If you already have this tool proficiency, you gain proficiency with one other type of artisan’s tools of your choice.</p>
+            </description>
+            <sheet display="false">
+                <description></description>
+            </sheet>
+            <rules>
+                <grant type="Archetype Feature" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_TOOLS_OF_INTEGRATION_SMITHS_TOOLS" requirements="!ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+                <grant type="Archetype Feature" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_TOOLS_OF_INTEGRATION_ARTISANS_TOOLS" requirements="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS,!ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_TOOLS_OF_INTEGRATION_SMITHS_TOOLS" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR" />
+            </rules>
+        </element>
+            
+            <element name="Tool Proficiency: Smiths Tools" type="Archetype Feature" source="source" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_TOOLS_OF_INTEGRATION_SMITHS_TOOLS">
+                <compendium display="false" />
+                <description />
+                <sheet display="false" />
+                <rules>
+                    <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+                </rules>
+            </element>
+            <element name="Tool Proficiency: Artisan Tools" type="Archetype Feature" source="source" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_TOOLS_OF_INTEGRATION_ARTISANS_TOOLS">
+                <compendium display="false" />
+                <description />
+                <sheet display="false" />
+                <rules>
+                    <select type="Proficiency" name="Tool Proficiency (Mastermaker)" supports="Artisan tools" />
+                </rules>
+            </element>
+
+        <element name="Mastermaker Spells" type="Archetype Feature" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_MASTERMAKER_SPELLS">
+            <description>
+                <p>At 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Mastermaker Spells table. These spells count as artificer spells for you, but they don’t count against the number of artificer spells you prepare.</p>
+                <table>
+                    <thead>
+                        <tr><td>Artificer Level</td><td>Spells</td></tr>
+                    </thead>
+                    <tr><td>3rd</td><td>Absorb Elements, Thunderous Smite</td></tr>
+                    <tr><td>5th</td><td>Enhance Ability, Lesser Restoration</td></tr>
+                    <tr><td>9th</td><td>Blinding Smite, Haste</td></tr>
+                    <tr><td>13th</td><td>Freedom of Movement, Stone Shape</td></tr>
+                    <tr><td>17th</td><td>Banishing Smite, Greater Restoration</td></tr>
+                </table>
+            </description>
+            <sheet display="false">
+                <description></description>
+            </sheet>
+            <rules>
+                <grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" level="3" spellcasting="Artificer" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_THUNDEROUS_SMITE" level="3" spellcasting="Artificer" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_ENHANCE_ABILITY" level="5" spellcasting="Artificer" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_LESSER_RESTORATION" level="5" spellcasting="Artificer" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_BLINDING_SMITE" level="9" spellcasting="Artificer" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_HASTE" level="9" spellcasting="Artificer" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT" level="13" spellcasting="Artificer" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_STONE_SHAPE" level="13" spellcasting="Artificer" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_BANISHING_SMITE" level="17" spellcasting="Artificer" prepared="true" />
+                <grant type="Spell" id="ID_PHB_SPELL_GREATER_RESTORATION" level="17" spellcasting="Artificer" prepared="true" />
+            </rules>
+        </element>
+        
+        <element name="Prosthesis Expertise" type="Archetype Feature" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_PROTHESIS_EXPERTISE">
+            <description>
+                <p>At 3rd level, whenever you finish a long rest, you can touch a nonmagical object and imbue it with your power, creating a permanent magical item that replaces a lost limb—a hand, arm, foot, leg, or similar body part. While the prosthetic is attached, it functions identically to the part it replaces. The wearer can detach or reattach it as an action, and it can’t be removed against the wearer’s will. It detaches if the wearer dies.</p>
+            </description>
+
+            <sheet>
+                <description>
+                    Whenever you finish a long rest, you can touch a nonmagical object and imbue it with your power, creating a permanent magical item that replaces a lost limb—a hand, arm, foot, leg, or similar body part. While the prosthetic is attached, it functions identically to the part it replaces. The wearer can detach or reattach it as an action, and it can’t be removed against the wearer’s will. It detaches if the wearer dies.
+                </description>
+            </sheet>
+        </element>
+
+
+        <element name="Battlefist" type="Archetype Feature" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_BATTLEFIST">
+            <description>
+                <p>At 3rd level you replace one of your arms with a battlefist, a magical prosthetic you created. Your battlefist is a simple melee weapon, and you can use it as a spellcasting focus for your artificer spells. While your battlefist is a magical weapon, it can be infused as if it were a nonmagical weapon.</p>
+                <p>When you attack with your battlefist, you can use your Intelligence modifier instead of Strength for the attack roll. If you hit with it, you deal bludgeoning damage equal to 1d10 + your Strength or Intelligence modifier. At 9th level, the damage dealt by your battlefist increases to 2d10 + your Strength or Intelligence modifier.</p>
+                <p>Additionally, you can choose one of the following weapon properties to add to your battlefist: finesse, thrown (range 20/60), or reach. When you finish a long rest, you can replace this property with a different weapon property from the list.</p>
+            </description>
+            <sheet>
+                <description>
+                    When you attack with your battlefist, you can use your Intelligence modifier instead of Strength for the attack roll. If you hit with it, you deal bludgeoning damage equal to {{battlefist:damage-die}}d10 + your Strength or Intelligence modifier.
+                </description>
+            </sheet>
+            <rules>
+                <stat name="battlefist:damage-die" value="1"/>
+                <stat name="battlefist:damage-die" value="1" bonus="1" level="9"/>
+            </rules>
+        </element>
+
+        <element name="Extra Attack" type="Archetype Feature" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_EXTRA_ATTACK">
+            <description>
+                <p>At 5th level, you can attack twice, rather than once, whenever you take the Attack action on your turn.</p>
+            </description>
+            <sheet>
+                <description>You can attack twice, rather than once, whenever you take the Attack action on your turn.</description>
+            </sheet>
+            <rules>
+			    <stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
+            </rules>
+        </element>
+
+        <element name="Improved Battlefist" type="Archetype Feature" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_IMPROVED_BATTLEFIST">
+            <description>
+                <p>At 9th level, you have modified your battlefist in both mundane and magical ways. It gains the following benefits:</p>
+                <li>When you infuse your battlefist, you can apply two infusions to it at a time. If both infusions grant bonuses to your attack rolls or armor class, you gain only the greater bonus.</li>
+                <li>Your battlefist is also a shield, increasing your armor class by 2. You can wield it as a weapon even if you are using it as a shield. You can infuse it as if it were both a simple melee weapon and a shield.</li>
+                <li>The maximum number of items you can infuse at once increases by 1, but the extra infusion must be applied to your battlefist.</li>
+            </description>
+            <sheet>
+                <description>
+                    When you infuse your battlefist, you can apply two infusions to it at a time. If both infusions grant bonuses to your attack rolls or armor class, you gain only the greater bonus.&#13;
+                    Your battlefist is also a shield, increasing your armor class by 2. You can wield it as a weapon even if you are using it as a shield. You can infuse it as if it were both a simple melee weapon and a shield.&#13;
+                    The maximum number of items you can infuse at once increases by 1, but the extra infusion must be applied to your battlefist.
+            </sheet>
+        </element>
+
+        <element name="Construct Apotheosis" type="Archetype Feature" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_CONSTRUCT_APOTHEOSIS">
+            <description>
+                <p>At 15th level you have modified your form, becoming nearly impervious to the weaknesses of flesh. You gain the following benefits:</p>
+                <li>You gain resistance to poison damage and psychic damage, and you are immune to the poisoned condition.</li>
+                <li>If you are affected by a spell or magical effect, you can choose to consider yourself a construct instead of your other creature types.</li>
+                <li>You can cast the Antilife Shell and Investiture of Stone spells without expending a spell slot, without preparing the spell, and without material components, provided you use your battlefist as the spellcasting focus. Once you cast either spell with this feature, you can’t cast that spell with it again until you finish a long rest.</li>
+            </description>
+            <sheet>
+                <description>
+                    You gain resistance to poison damage and psychic damage, and you are immune to the poisoned condition.&#13;
+                    If you are affected by a spell or magical effect, you can choose to consider yourself a construct instead of your other creature types.&#13;
+                    You can cast the Antilife Shell and Investiture of Stone spells without expending a spell slot, without preparing the spell, and without material components, provided you use your battlefist as the spellcasting focus. Once you cast either spell with this feature, you can’t cast that spell with it again until you finish a long rest.
+                </description>
+            </sheet>
+            <rules>
+                <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+                <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
+                <grant type="Spell" id="ID_PHB_SPELL_ANTILIFE_SHELL"/>            
+                <grant type="Spell" id="ID_XGTE_SPELL_INVESTITURE_OF_STONE"/>            
+            </rules>
+        </element>
+
+
+</elements>
