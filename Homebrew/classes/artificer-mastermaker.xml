@@ -144,7 +144,8 @@
                     When you infuse your battlefist, you can apply two infusions to it at a time. If both infusions grant bonuses to your attack rolls or armor class, you gain only the greater bonus.&#13;
                     Your battlefist is also a shield, increasing your armor class by 2. You can wield it as a weapon even if you are using it as a shield. You can infuse it as if it were both a simple melee weapon and a shield.&#13;
                     The maximum number of items you can infuse at once increases by 1, but the extra infusion must be applied to your battlefist.
-            </sheet>
+            	</description>
+	    </sheet>
         </element>
 
         <element name="Construct Apotheosis" type="Archetype Feature" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_FEATURE_MASTERMAKER_CONSTRUCT_APOTHEOSIS">
