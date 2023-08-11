@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+	<info>
+		<name>artificer-mastermaker</name>
+		<update version="1.0">
+			<file name="artificer-mastermaker.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-mastermaker.xml" />
+		</update>
+	</info>
     <element name="Mastermaker" type="Archetype" source="Dread Metrol" id="ID_PO_DREAD_METROL_ARCHETYPE_MASTERMAKER">
         <supports>Artificer Specialist</supports>
         <description>
