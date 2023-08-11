@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+	<info>
+		<name>artificer-forge_adept</name>
+		<update version="1.0">
+			<file name="artificer-forge_adept.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-forge_adept.xml" />
+		</update>
+	</info>
     <element name="Forge Adept" type="Archetype" source="Exploring Eberron" id="ID_PO_EE_ARCHETYPE_FORGE_ADEPT">
         <supports>Artificer Specialist</supports>
         <description>
