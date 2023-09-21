@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-amulet-of-greater-health</name>
+		<update version="1.0">
+			<file name="item-amulet-of-greater-health.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-amulet-of-greater-health.xml" />
+		</update>
+	</info>
+    <element name="Amulet of Greater Health" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_AMULET_OF_GREATER_HEALTH">
+		<description>
+			<p>Your Constitution score is 23 while you wear this amulet. It has no effect on you if your Constitution is 23 or higher without it.</p>
+		</description>
+		<setters>
+			<set name="keywords">constitution</set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">neck</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very rare</set>
+		</setters>
+		<rules>
+			<stat name="constitution:score:set" value="23" bonus="base" />
+		</rules>
+	</element>
+</elements>
