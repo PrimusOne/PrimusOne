@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.33">
+		<update version="0.0.34">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -16,9 +16,8 @@
 		<file name="cleric-Dragon-Greed-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Greed-Domain.xml" />
 		<file name="artificer-forge_adept.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-forge_adept.xml" />
 		<file name="artificer-mastermaker.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-mastermaker.xml" />	
-		
 		<!--spells-->
-		
+	
 		<!--items-->
 		<file name="item-Almir_der_Schlaechter.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Almir_der_Schlaechter.xml" />
 		<file name="item-Rod-of-Necroticness.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Rod-of-Necroticness.xml" />
