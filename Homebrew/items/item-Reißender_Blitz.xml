@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+	<name>item-Reißender_Blitz</name>
+		<update version="1.0.0">
+			<file name="item-Reißender_Blitz.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Reißender_Blitz.xml" />
+		</update>
+	</info>
+	<element name="Reißender Blitz" type="Magic Item" source="Primus One" id="ID_PO_DMG_MAGIC_ITEM_REIßENDER_BLITZ">
+		<description>
+            <p>Dieses übergroße Großschwert (Large) besteht aus Teilen des blauen Drachen Zafnir. Er ist ein Ahne von Melisto, dem großen General Tiamats. Es besteht aus seinen Zähnen, seinen Schuppen, seinem Gewebe und sonstigen wertvollen Materialien. Die Waffe gilt als verflucht, weil jeder Träger im Kampf verstarb.</p>
+			<p>Diese +3 Waffe verursacht 4d6 slashing und +2d4 lightning + 2d4 thunder und der Movement Speed steigt um 30ft. Man erhält Flyingspeed equal Walkingspeed. Die Waffe hört sich wie ein einschlagender Blitz an und ist in 1. Meile hörbar.</p>
+		</description>
+		<setters>
+			<set name="keywords">Greatsword</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="Greatsword">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+			<set name="enhancement">3</set>
+			<set name="weapon">Greatsword</set>
+            <set name="damage" type="slashing">4d6</set>
+		</setters>
+        <rules>
+            <stat name="innate speed" value="30" bonus="base" />
+            <stat name="speed:fly" value="speed" bonus="base" />
+        </rules>
+	</element>
+</elements>

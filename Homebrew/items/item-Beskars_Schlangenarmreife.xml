@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Beskars_Schlangenarmreife</name>
+		<update version="1.0">
+			<file name="item-Beskars_Schlangenarmreife.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Beskars_Schlangenarmreife.xml" />
+		</update>
+	</info>
+    <element name="Beskars Schlangenarmreife" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_BESKARS_SCHLANGENARMREIFE">
+		<description>
+            <p>Diese Armreife bestehen jeweils aus sich gegenseitig essenden goldenen Schlangen, mit smaragdenen Augen. Nur ein Monk kann sich damit atunen. Bei unarmed Attacks beißen die Schlangen das Ziel, als Teil des selben Angriffs, ebenfalls. Sie sind unbekannter Herkunft.</p>
+			<p>Verbessert Unarmed Attacks, sodass der „to-hit-Wert“ als Expertise behandelt wird, statt einfachem PB. Die Angriffe verursachen zusätzlich 1d10 magical Piercing Damage.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+		</setters>
+		<rules>
+		</rules>
+	</element>
+</elements>

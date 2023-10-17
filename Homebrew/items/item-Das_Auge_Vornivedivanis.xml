@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Das_Auge_Vornivedivanis</name>
+		<update version="1.0">
+			<file name="item-Das_Auge_Vornivedivanis.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Das_Auge_Vornivedivanis.xml" />
+		</update>
+	</info>
+    <element name="Das Auge Vornivedivanis" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_DAS_AUGE_VORNIVEDIVANIS">
+		<description>
+            <p>Ist ein umhängbares Amulett, dass ein einzelnes geschrumpftes Auge des legendären Drachen Vornivedivani, in einem magischen Glas enthält. Es wurde von einer unbekannten Person angefertigt und alten Erzählungen nach gibt es noch ein solches Amulett. Es leuchtet dunkel und die Iris ist komplett schwarz und der Blick ist stechend scharf, so als ob er selbst jemanden noch betrachten würde.</p>
+			<p>Verleiht dem Träger auf 120 ft. Truesight. In diesem Amulett sind die folgenden Spells enthalten, welche 1mal per Longrest, als Aktion genutzt werden können: Foresight, Greater Invisibillity, Invisibillity, Darkness, Maddening Darkness, Control Weather, Death Ward und Regenerate. Niemand mit einem Good Alignement kann es atunen.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+		</setters>
+		<rules>
+            <grant type="Vision" id="ID_VISION_TRUESIGHT" />
+			<stat name="truesight:range" value="120" />
+		</rules>
+	</element>
+</elements>

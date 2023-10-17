@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+	<name>item-Adamantium_Meteor</name>
+		<update version="1.0.0">
+			<file name="item-Adamantium_Meteor.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Adamantium_Meteor.xml" />
+		</update>
+	</info>
+	<element name="Adamantium Meteor" type="Magic Item" source="Primus One" id="ID_PO_DMG_MAGIC_ITEM_ADAMANTIUM_METEOR">
+		<description>
+            <p>Dieser Versatile Adamantiumhammer wurde geschmiedet während des Blutkrieges. In Phlegtos, dem heißesten Ort aller Höllenkreise, musste die Waffe gegossen und geformt werden. Diese legendäre Schmiede brachte derart formidable Waffen hervor, dass die Dämonen während des Krieges all ihre Ressourcen aufwenden mussten, um den Höllenkreis dem Erdboden gleich zu machen und die Meisterschmiede aus der Existenz zu tilgen, sowie alle Schmiedemeister.</p>
+			<p>Dieser +6 Hammer verursacht <b>1d8 / 1d10</b> bludgeoning Schaden, ignoriert Resistenzen zu Bludgeoning, verursacht doppelten Schaden gegen Constructs, sowie Objekte und zerstört jeden abschirmenden Zauber (zB. Shield, Wall of Force, etc.)</p>
+		</description>
+		<setters>
+			<set name="keywords">warhammer</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="Warhammer">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+			<set name="enhancement">6</set>
+			<set name="weapon">Warhammer</set>
+		</setters>
+	</element>
+</elements>

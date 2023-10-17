@@ -2,7 +2,7 @@
 <elements>
 	<info>
 	<name>item-Almir_der-Schlaechter</name>
-		<update version="1.0.3">
+		<update version="1.0.4">
 			<file name="item-Almir_der_Schlaechter.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Almir_der_Schlaechter.xml" />
 		</update>
 	</info>
@@ -12,14 +12,14 @@
 			<p class="indent">Abgeschossene Bolzen können, wenn das Ziel stirbt, ein hinterliegendes Ziel ebenfalls treffen – dafür müssen sie einen Dexsave schaffen, gegen den Savingthrow von 8 + Proficiency Bonus + Dexterity schaffen und erleiden den regulären Schaden des Schusses, wenn sie den Savingthrow nicht schaffen. Wenn sie ihn schaffen, und kleiner als Large sind, bekommen sie keinen Schaden und wenn sie Huge oder größer sind, nur den halben. </p>
 		</description>
 		<setters>
-			<set name="keywords">any crossbow</set>
+			<set name="keywords">crossbow</set>
 			<set name="category">Magic Weapons</set>
 			<set name="cost" currency="gp">0</set>
 			<set name="type" addition="Crossbow">Weapon</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Legendary</set>
 			<set name="enhancement">4</set>
-			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+			<set name="weapon">Crossbow</set>
 		</setters>
 	</element>
 </elements>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+	<name>item-Sensei_Hattori_Hanzos_Katana_des_Meisters_Enttäuschung</name>
+		<update version="1.0.0">
+			<file name="item-Sensei_Hattori_Hanzos_Katana_des_Meisters_Enttäuschung.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Sensei_Hattori_Hanzos_Katana_des_Meisters_Enttäuschung.xml" />
+		</update>
+	</info>
+	<element name="Sensei Hattori Hanzos Katana – des Meisters Enttäuschung" type="Magic Item" source="Primus One" id="ID_PO_DMG_MAGIC_ITEM_SENSEI_HATTORI_HANZOS_KATANA_DES_MEISTERS_ENTTAEUSCHUNG">
+		<description>
+            <p>Diese Waffe wurde geschmiedet in Riben und wird seit der Zeit der Helden weitergereicht, von einem Helden, zu einem weiteren. Über die Jahrtausende kam es auch in falsche Hände und wird seitdem in Riben vermisst. Es gilt als eines der 6 Heiligen Schwerter. Niemand mit einem Evil Alignement kann sich damit atunen.</p>
+			<p>Eine +6 Waffe (1d10), die mit jedem aufeinanderfolgendem Treffer um 1d10 an Schaden steigt. Bei jedem Misserfolg sinkt er um 1d10. Es ist niemals unter 1d10 oder über 6d10. Nach dem Kampf geht es auf 1d10 runter. Sie ist Versatile, also einhändig mit 1d8 stattdessen führbar.</p>
+		</description>
+		<setters>
+			<set name="keywords">katana</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="Katana">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+			<set name="enhancement">6</set>
+			<set name="weapon">Katana</set>
+		</setters>
+	</element>
+</elements>

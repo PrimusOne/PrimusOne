@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.34">
+		<update version="0.0.35">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -29,6 +29,13 @@
 		<file name="item-Obsidglass-Shield_1.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Obsidglass-Shield_1.xml" />
 		<file name="item-Normans-Heldentracht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Normans-Heldentracht.xml" />
 		<file name="item-amulet-of-greater-health.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-amulet-of-greater-health.xml" />
+		<file name="item-Sensei_Hattori_Hanzos_Katana_des_Meisters_Enttäuschung.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Sensei_Hattori_Hanzos_Katana_des_Meisters_Enttäuschung.xml" />
+		<file name="item-Reißender_Blitz.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Reißender_Blitz.xml" />
+		<file name="item-Meteas-Münze.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Meteas-Münze.xml" />
+		<file name="item-Das_Auge_Vornivedivanis.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Das_Auge_Vornivedivanis.xml" />
+		<file name="item-Beskars_Schlangenarmreife.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Beskars_Schlangenarmreife.xml" />
+		<file name="item-Adamantium_Meteor.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Adamantium_Meteor.xml" />
+
 		<!--other-->
 
 		
