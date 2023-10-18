@@ -2,7 +2,7 @@
 <elements>
     <info>
 		<name>item-Meteas-Münze</name>
-		<update version="1.0">
+		<update version="1.1">
 			<file name="item-Meteas-Münze.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Meteas-Münze.xml" />
 		</update>
 	</info>
@@ -21,7 +21,15 @@
 			<set name="rarity">Legendary</set>
 		</setters>
 		<rules>
-
+			<grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_EVIL_AND_GOOD"/>
+			<grant type="Spell" id="ID_PHB_SPELL_BLESS"/>
+			<grant type="Spell" id="ID_PHB_SPELL_HEROISM"/>
+			<grant type="Spell" id="ID_PHB_SPELL_LONGSTRIDER"/>
+			<grant type="Spell" id="ID_PHB_SPELL_FORESIGHT"/>
+			<grant type="Spell" id="ID_DMSG_GRGR_SPELL_IMPROVED_MAGE_ARMOR"/>
+			<grant type="Spell" id="ID_PHB_SPELL_GUIDANCE"/>
+			<grant type="Spell" id="ID_PHB_SPELL_BLADE_WARD"/>
+			<grant type="Spell" id="ID_PHB_SPELL_SANCTUARY"/>
 		</rules>
 	</element>
 </elements>
