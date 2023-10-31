@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Erzteufeltracht</name>
+		<update version="1.0">
+			<file name="item-Erzteufeltracht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Erzteufeltracht.xml" />
+		</update>
+	</info>
+    <element name="Erzteufeltracht" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_ERZTEUFELTRACHT">
+		<description>
+            <p>Diese spezielle Tracht besitzt jeder Erzteufel, in der einen oder anderen Form, als Zeichen der Wertschätzung, die Asmodeus seinen Untergebenen entgegen bringt. Jede einzelne teilt gewisse Eigenschaften. Jede von ihnen ist übersehen mit feinsten Materialien, Höllenornamenten und Verzierungen, für die ein einzelner begabter Schneider Jahre bräuchte.</p> 
+			<p>Diese Robe gewährt dem Träger Resistenz zu Cold, Poison, Necrotic, Acid und Lightning Damage. Bestehen die Resistenzen bereits, werden sie zu Immunitäten aufgewertet. Diese Robe muss atunent werden und kann unter Rüstungen getragen werden. Sie gewährt außerdem +1 auf AC und Savingthrows.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+		</setters>
+		<rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+			
+            <stat name="ac:misc" value="1" />
+			<stat name="strength:save:misc" value="1" />
+			<stat name="dexterity:save:misc" value="1" />
+			<stat name="constitution:save:misc" value="1" />
+			<stat name="intelligence:save:misc" value="1" />
+			<stat name="wisdom:save:misc" value="1" />
+			<stat name="charisma:save:misc" value="1" />
+		</rules>
+	</element>
+</elements>

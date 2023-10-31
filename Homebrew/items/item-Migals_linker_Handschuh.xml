@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Migals_linker_Handschuh</name>
+		<update version="1.0">
+			<file name="item-Migals_linker_Handschuh.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Migals_linker_Handschuh.xml" />
+		</update>
+	</info>
+    <element name="Migals linker Handschuh" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_MIGALS_LINKER_HANDSCHUH">
+		<description>
+            <p>Migal galt als der beeindruckendste Assassine seiner Zeit. Manche behaupten auch jemals. Seine Equipment wurde von ihm sorgfältig zusammengestellt und angefertigt, sodass seine Items bis heute den Ruf haben, ohne gleichen geeignet zu sein, für jeden Rogue. Sein linker Handschuh ist dunkel lilafarben und sehr aufwendig verarbeitet, mit unterschiedlichen Ledergattungen und verziert mit Runen.</p> 
+            <p>Dieser Handschuh erfordert Atunement durch einen Rogue und verbessert den Sneak Attack Damage um 5d6. Der Träger erhält 3 Lucky Punkte, wenn er den Lucky Feat nicht besitzt. Falls er ihn besitzt oder noch erwirbt, hat er 6 Punkte.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement" addition="by rogue">true</set>
+			<set name="rarity">Artifact</set>
+		</setters>
+        <rules>
+            <stat name="sneak-attack:count" value="5" />
+            <grant type="Feat" id="ID_PHB_FEAT_LUCKY"/>
+        </rules>
+	</element>
+</elements>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Mephistopheles_Liber_Opus</name>
+		<update version="1.0">
+			<file name="item-Mephistopheles_Liber_Opus.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Mephistopheles_Liber_Opus.xml" />
+		</update>
+	</info>
+    <element name="Mephistopheles Liber Opus" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_MEPHISTOPHELES_LIBER_OPUS">
+		<description>
+            <p>Dieses Buch ist der Schatz eines jeden Wizards. Das vollständige Sammelsorium von Mephistopheles Zaubern. Seit der ersten Welt trainiert und studiert er die Magie, wodurch sein Zauberbuch, auch enorm wichtig ist. Es ist vollständig in Infernal verfasst und kann nur genutzt und atunent werden von einem Lawful Evil Wizard. Es besteht aus feinem flüssigem Quecksilber, das immer die geforderte Seite abbildet, mit einem ledrigen Einband, der immer brennt.</p>
+			<p>Jeder Zauber der Stufe 1-9 aus den Schulen: Evocation, Abjuration, Enchantment, Divination und Conjuration ist darin enthalten. Das Buch erhöht außerdem die Menge an Spells die man preparen kann um 10. Das Buch erhöht außerdem den Save DC um +6. Dieses Buch enthält auch Mephistopheles Notizen, Forschungen und gesammelte Erkenntnisse. Seine genauen Mechanismen kennt nur Mephistopheles.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+		</setters>
+		<rules>
+        	<stat name="wizard:spellcasting:prepare" value="10" />
+			<stat name="spellcasting:dc" value="6" />
+		</rules>
+	</element>
+</elements>

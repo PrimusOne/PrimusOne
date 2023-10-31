@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Stirnband_der_Vorsehung</name>
+		<update version="1.0">
+			<file name="item-Stirnband_der_Vorsehung.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Stirnband_der_Vorsehung.xml" />
+		</update>
+	</info>
+    <element name="Stirnband der Vorsehung" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_STIRNBAND_DER_VORSEHUNG">
+		<description>
+            <p>Dieses feingearbeitete Stirnband wurde angefertigt von einem unbekannten Meistermagier. Es soll angeblich aus Riben entstammen. Es fühlt sich leichter an, als Seide es je sein könnte. Knallrot mit feinen türkisfarbenen Linien kann es ein jedermanns Haupt zieren.</p> 
+			<p>Man muss die Fähigkeit zum Spellcasten besitzen, damit man es atunen kann (Spells über die Rasse ist dabei das erforderliche Minimum). Es verleiht dem Träger die Eigenschaft, Schlimmeres verhindern zu können. Der Träger erhält +3 AC und +3 auf seine Savingthrows. Falls er von einer Attacke getroffen wird, kann er seine Reaktion nutzen, um den Schaden zu halbieren. Diese Fähigkeit füllt sich nach einer Shortrest wieder auf.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+		</setters>
+		<rules>
+			<stat name="ac:misc" value="3" />
+			<stat name="strength:save:misc" value="3" />
+			<stat name="dexterity:save:misc" value="3" />
+			<stat name="constitution:save:misc" value="3" />
+			<stat name="intelligence:save:misc" value="3" />
+			<stat name="wisdom:save:misc" value="3" />
+			<stat name="charisma:save:misc" value="3" />
+		</rules>
+	</element>
+</elements>

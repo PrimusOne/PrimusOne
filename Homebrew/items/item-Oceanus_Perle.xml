@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Oceanus_Perle</name>
+		<update version="1.0">
+			<file name="item-Oceanus_Perle.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Oceanus_Perle.xml" />
+		</update>
+	</info>
+    <element name="Oceanus Perle" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_OCEANUS_PERLE">
+		<description>
+            <p>Diese runde, glatte und absolut ebene Perle war ein magisches Item, dass Oceanus, zu seiner Heldenzeit, immer bei sich trug, als eine Art Glücksbringer. Während seinen Reisen nahm es immer etwas Magie auf und wurde durch seine Abenteuer und Schlachten immer wieder aufs Neue mächtigen Kräften ausgesetzt. Diese Perle manipuliert den Zufall und gibt dem Träger einen kleinen, aber dennoch nicht unerheblichen Einfluss auf den Zufall der Welt. Ihre genauen Kräfte lassen sich nur schwer ermitteln. Sie braucht Atunement.</p> 
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+		</setters>
+	</element>
+</elements>

@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.36">
+		<update version="0.0.37">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -35,7 +35,15 @@
 		<file name="item-Das_Auge_Vornivedivanis.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Das_Auge_Vornivedivanis.xml" />
 		<file name="item-Beskars_Schlangenarmreife.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Beskars_Schlangenarmreife.xml" />
 		<file name="item-Adamantium_Meteor.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Adamantium_Meteor.xml" />
-
+		<file name="item-Strahlenstab.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Strahlenstab.xml" />
+		<file name="item-Stirnband_der_Vorsehung.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Stirnband_der_Vorsehung.xml" />
+		<file name="item-Oceanus_Perle.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Oceanus_Perle.xml" />
+		<file name="item-Migals_linker_Handschuh.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Migals_linker_Handschuh.xml" />
+		<file name="item-Mephistopheles_Stab.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Mephistopheles_Stab.xml" />
+		<file name="item-Mephistopheles_Liber_Opus.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Mephistopheles_Liber_Opus.xml" />
+		<file name="item-Erzteufeltracht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Erzteufeltracht.xml" />
+		<file name="item-Arachmegs_Meisterdolch.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Arachmegs_Meisterdolch.xml" />
+		
 		<!--other-->
 
 		

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>item-Strahlenstab</name>
+		<update version="1.0">
+			<file name="item-Strahlenstab.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Strahlenstab.xml" />
+		</update>
+	</info>
+    <element name="Strahlenstab" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_STRAHLENSTAB">
+		<description>
+			<p>Dieser Zauberstab wurde von Astralelfen angefertigt. Die Stadt Solas, welche die Sonne umkreist, ist bekannt für ihre seltenen, aber außergewöhnlichen magischen Gegenstände. Er ist sehr schlicht, jedoch wurden hierin mehrere Kristalle miteinander verwoben, wie eine Art Prisma, welches von den Regenbogendrachen inspiriert wurde.</p>
+			<p class="indent">Der Träger dieses Stabes kann jeden Damagetypen außer Necrotic, Force,Psychic und Poison zu Radiant ändern. Immer wenn Radiant Damagedurch einen Spell verursacht wird, wird 1d10 Schaden hinzugefügt (beiSpells mit Multitreffern zählt nur der erste Treffer). Der Träger erhält +3auf Spell Attacks und Save DC. Ebenfalls wird er resistent zu RadiantDamage und wenn diese bereits besteht wird sie zur Immunität. Bis auf60 ft. wird ausgeleuchtet, wenn es dunkel ist. Ebenfalls wird in 60ft.Reichweite jede unsichtbare Person erkannt, da das Licht ihre Silhouettedurch spezielle Lichtreflektion bemerkbar macht.</p>
+		</description>
+		<setters>
+			<set name="keywords">sorcerer, warlock, wizard</set>
+			<set name="category">Staffs</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="4">4 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="weapon">Quarterstaff</set>
+			<set name="type">Staff</set>
+			<set name="attunement" addition="by sorcerer, warlock, or wizard">true</set>
+			<set name="rarity">Artifact</set>
+		</setters>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" />
+
+            <stat name="spellcasting:attack" value="3" />
+			<stat name="spellcasting:dc" value="3" />
+        </rules>
+	</element>
+</elements>

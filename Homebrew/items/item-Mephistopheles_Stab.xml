@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>item-Mephistopheles_Stab</name>
+		<update version="1.0">
+			<file name="item-Mephistopheles_Stab.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Mephistopheles_Stab.xml" />
+		</update>
+	</info>
+    <element name="Mephistopheles Stab" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_MEPHISTOPHELES_STAB">
+		<description>
+			<p>Dieses Meisterwerk wurde lange bevor die legendären Schmieden vonPhlegtos dem Erdboden gleich gemacht wurden (während des Blutkrieges)und gilt als einer der mächtigsten Zauberstäbe. Für diesen Stab wurdeeigens, die in ihm fließende Lava, 1000 Jahre lang magisch angereichert.Dieser Stab ist so heiß, dass jemand, der keine Immunität gegen Feuerbesitzt, ihn nicht atunen kann, da er sonst verbrennen würde. Der Stabbesteht aus massiver Jade, in der die magische Lava fließt, wie wenn sielebendig wäre und ist versehen mit einem Höllenstahlgriff.</p>
+            <p>Der Stab gewährt dem Träger +6 auf Spellattacks. Jeder gewirkte Spell darf den Modifier nochmal hinzufügen (bei Spells mit Multihits auch jedes mal). Spells, die Feuer Schaden verursachen, bekommen pro Treffer nochmal 1d6 zusätzlich (jeder Ray bei Scorching Ray). Jedes mal wenn ein Spell gewirkt wird, erhält der Träger 5d10 Feuer Schaden (kann verhindert werden durch Resistenz, Immunität und Absorption). Im Stab ist auch Level 9 Scorching Ray 10mal enthalten per Longrest.</p>
+        </description>
+		<setters>
+			<set name="keywords">sorcerer, warlock, wizard</set>
+			<set name="category">Staffs</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="4">4 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="weapon">Quarterstaff</set>
+			<set name="type">Staff</set>
+			<set name="attunement" addition="by sorcerer, warlock, or wizard">true</set>
+			<set name="rarity">Artifact</set>
+		</setters>
+        <rules>
+            <stat name="spellcasting:attack" value="6" />
+        </rules>
+	</element>
+</elements>

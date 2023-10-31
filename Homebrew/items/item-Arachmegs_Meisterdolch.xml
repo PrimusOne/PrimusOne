@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Arachmegs_Meisterdolch</name>
+		<update version="1.0">
+			<file name="item-Arachmegs_Meisterdolch.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Arachmegs_Meisterdolch.xml" />
+		</update>
+	</info>
+    <element name="Arachmegs Meisterdolch" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_ARACHMEGS_MEISTERDOLCH">
+		<description>
+            <p>Dieser Dolch wurde geschmiedet vom großen Schmiedemeister Arachmeg. Er besitzt etliche zufallsgenerierte Eigenschaften. Es gilt als einer der mächtigsten Dolche, welcher jemals geschmiedet wurde.</p>
+			<p>Das ist ein +0 Dolch, der beim Angriff einen d100 wirft. Diese Waffe gilt als magisch und benötigt Atunement. Der d100 wird vor dem Treffer gewürfelt, da der „to-hit-Wert“ dadurch beeinflusst werden kann.</p>
+            <br></br>
+            <table>
+				<thead>
+					<tr><td>D100-Wurf</td><td>Effekt</td></tr>
+				</thead> 
+				<tr><td>1</td><td><em>Der Träger explodiert und bekommt unverhinderbar 1d100 Force Damage, 1d100 Fire Damage und 1d100 Bludgeoning Damage.</em></td></tr>
+				<tr><td>2</td><td><em>Der Dolch castet Feeble Mind auf den Träger, mit einem Save DC von 21. Danach wird auch automatisch die Runde des Trägers beendet, ungeachtet seiner restlichen Extra Attacks, Bonusaktionen, etc.</em></td></tr>
+				<tr><td>3-20</td><td><em>Die Waffe wird zu einer -10 Waffe und verursacht bei einem Treffer 1d4 ohne Modifier Damage. Dieser Angriff wird nicht gegen das gewünschte Ziel gerichtet, sondern gegen den weit entferntesten Gegner, zu dem der Dolch den Träger magisch hinteleportiert. Danach hat das Ziel Advantage auf den Träger.</em></td></tr>
+				<tr><td>21-40</td><td><em>Die Waffe wird zu einer +3 Waffe die 2d4 Piercing Damage verursacht. Bei einem Treffer bekommt das Ziel Advantage auf alle Angriffe gegen den Träger dieses Dolches.</em></td></tr>
+				<tr><td>41-60</td><td><em>Die Waffe wird zu +4 und verursacht 4d4 Piercing Damage. Wird das Ziel getroffen, darf man als Reaktion direkt nochmal mit dieser Waffe angreifen.</em></td></tr>
+                <tr><td>61-80</td><td><em>Die Waffe wird zu einer +5 Waffe und verursacht 6d4 Schaden. Wird das Ziel getroffen muss es einen Strengthsavingthrow gegen 21 schaffen, sonst wird es an Ort und Stelle durch Gravitation festgehalten und hat bis zum Ende deiner nächsten Runde 0 Movementspeed.</em></td></tr>
+                <tr><td>81-90</td><td><em>Die Waffe wird zu einer +6 Waffe, die 8d4 Schaden verursacht. Wird das Ziel getroffen, erleidet es 1d100 Force Damage und der Träger ebenfalls (1. Würfelwurf für beide Personen). Dieser Schaden kann nur verhindert werden, wenn Absorption besteht.</em></td></tr>
+                <tr><td>91-99</td><td><em>Die Waffe wird zu einer +6 Waffe und verursacht 10d4 Schaden. Bei einem Treffer kann man am Ende der Runde (nachdem alle Aktionen und Bonusaktionen aufgebraucht sind) als Reaktion nochmal angreifen, bekommt aber -5 auf den Treffer. Bei einem Treffer darf man nochmal angreifen, bekommt aber kumulativ für jeden weiteren Angriff -5, bis vertroffen wird. Der Malus verfällt zum Beginn der nächsten Runde.</em></td></tr>
+                <tr><td>100</td><td><em>Der Anwender darf entscheiden, ob er angreift oder Wish einsetzt. Wenn er angreift, dann gilt die Waffe als +6 und verursacht 20d4 Piercing Damage. Wenn er stattdessen Wish wirkt, kann er das sofort tun, als Free Action. Falls er Wish über den Dolch auf diese Art einsetzt, endet das Atunement automatisch und der Dolch verweigert fortan das Atunement zu dieser Person. Eine andere Person kann sich jedoch jederzeit mit dieser Waffe atunen.</em></td></tr>
+			</table>
+        </description>
+		<setters>
+			<set name="keywords">dagger</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="dagger">Weapon</set>
+			<set name="weapon">Dagger</set>
+			<set name="rarity">Artifact</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+</elements>
