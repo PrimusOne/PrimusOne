@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>warlord-tactician_revised.xml</name>
+		<update version="1.0">
+			<file name="warlord-tactician_revised.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/warlord-tactician_revised.xml" />
+		</update>
+	</info>
+    <element name="Tactician’s Presence Revised" type="Archetype" source="KibblesTasty Warlord" id="ID_KT_KTWC_ARCHETYPE_WARLORD_TACTICIANS_PRESENCE_REVISED">
+        <supports>Warlord Presence</supports>
+        <description>
+            <p>A Tactician may very well tell you they would just as soon not be close enough to the battle to be considered a combatant, preferring to win their fights before it ever gets to that stage, but one would be a fool to underestimate how dangerous they are once on the battlefield.</p>
+            <p class="indent">While they might have laid their plans in advance, their sharp minds can quickly pick apart how their foes try to fight against them and effortlessly pierce the crude tactics that would be used against them and their allies.</p>
+            <p class="indent">What tends to mark a Tactician is a keen mind and a willingness to plan ahead... in great detail. Adventurers with a tactician among them are near impossible to pin down, as they will always find a way to turn the tables.</p>
+            <div element="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_TACTICIANS_CUNNING" />
+            <div element="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_BATTLE_PREPARATION" />
+            <div element="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_TACTICAL_INSIGHT" />
+            <div element="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_INSCRUTABLE_MIND" />
+            <div element="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_TACTICAL_STRIKE" />
+            <div element="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_CONTROL_THE_FIELD" />
+            <div element="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_UNSTOPPABLE_SCHEMES" />
+            <div element="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_MULTILAYERED_TACTICS" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_TACTICIANS_CUNNING" level="1" />
+            <grant type="Archetype Feature" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_BATTLE_PREPARATION" level="1" />
+            <grant type="Archetype Feature" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_TACTICAL_INSIGHT" level="3" />
+            <grant type="Archetype Feature" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_INSCRUTABLE_MIND" level="7" />
+            <grant type="Archetype Feature" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_TACTICAL_STRIKE" level="11" />
+            <grant type="Archetype Feature" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_CONTROL_THE_FIELD" level="15" />
+            <grant type="Archetype Feature" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_UNSTOPPABLE_SCHEMES" level="18" />
+            <grant type="Archetype Feature" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_MULTILAYERED_TACTICS" level="18" />
+        </rules>
+    </element>
+        <element name="Tactician’s Cunning" type="Archetype Feature" source="KibblesTasty Warlord" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_TACTICIANS_CUNNING">
+            <description>
+                <p>When you take this Presence at 1st level, you gain proficiency in the History and Investigation skills. Additionally, if you can take a minute or more making a skill check, you can treat a d20 roll of 4 or lower as a 5.</p>
+            </description>
+            <sheet>
+                <description>
+                    <p>When you take this Presence at 1st level, you gain proficiency in the History and Investigation skills. Additionally, if you can take a minute or more making a skill check, you can treat a d20 roll of 4 or lower as a 5.</p>
+                </description>
+            </sheet>
+            <rules>
+                <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+            </rules>
+        </element>
+        <element name="Battle Preparation" type="Archetype Feature" source="KibblesTasty Warlord" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_BATTLE_PREPARATION">
+            <description>
+                <p>Starting at 1st level, you can give yourself a bonus to your initiative rolls equal to your Intelligence modifier. Additionally, you can exchange your total on this roll with a willing allied creature within 60 feet.</p>
+            </description>
+            <sheet>
+                <description>
+                    <p>Starting at 1st level, you can give yourself a bonus to your initiative rolls equal to your Intelligence modifier. Additionally, you can exchange your total on this roll with a willing allied creature within 60 feet.</p>
+                </description>
+            </sheet>
+            <rules>
+       			<stat name="initiative" value="intelligence:modifier" />
+            </rules>
+        </element>
+        <element name="Tactical Insight" type="Archetype Feature" source="KibblesTasty Warlord" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_TACTICAL_INSIGHT">
+            <description>
+                <p>Starting at 3rd level, you can tactically assess a creature’s options. As a bonus action, make an Intelligence (Investigation) check contested by a Charisma (Deception) check against any creature you can see within 60 feet.</p>
+                <p class="indent">On a success, you can see through their tactics, granting one of the following effects:</p>
+                <ul>
+                    <li><b>Determine Attack: </b>You can cause them to have disadvantage on their next attack against a creature that can see or hear you.</li>
+                    <li><b>Predict Movement: </b>You deduce where they are planning to move on their next turn. They can choose to change their plans, but if they move anywhere else, their movement speed is reduced by 10 feet as they scramble to adapt.</li>
+                    <li><b>Outwit Response: </b>You can find a find their openings, negating their ability to use their reaction until the end of their next turn.</li>
+                    <li><b>Expose Weakness: </b>You can use Helpful Word to grant advantage against that target as part of the bonus action without expending a Leadership Die.</li>
+                </ul>
+                <div class="sidebar">
+                    <h5>PLANNING MOVEMENT... OR NOT</h5>
+                    <p>A DM can choose to read the second bullet point of Tactical insight as simply reducing the targets movement by 10. It is balanced around this assumption, predicting the movement is optional "flavor", but may not fit all DMs styles.</p>
+                </div>
+            </description>
+            <sheet action="Bonus Action">
+                <description>Make an Intelligence (Investigation) check contested by a Charisma (Deception) check against any creature you can see within 60 feet. On a success, you can see through their tactics, granting one of the following effects: Determine Attack, Predict Movement, Outwit Response, or Expose Weakness.</description>
+                <description level="18">Make an Intelligence (Investigation) check contested by a Charisma (Deception) check against any creature you can see within 60 feet. On a success, you can see through their tactics, granting two of the following effects: Determine Attack, Predict Movement, Outwit Response, or Expose Weakness.</description>
+            </sheet>
+        </element>
+        <element name="Inscrutable Mind" type="Archetype Feature" source="KibblesTasty Warlord" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_INSCRUTABLE_MIND">
+            <description>
+                <p>Starting at 7th level, you gain proficiency in Intelligence Saving Throws.</p>
+                <p class="indent">Additionally, as a reaction when being forced to make a Wisdom, Intelligence, or Charisma Saving Throw, you can expend a Leadership Die and add the die result to the saving throw.</p>
+            </description>
+            <sheet usage="Reaction">
+                <description>When being forced to make a Wisdom, Intelligence, or Charisma Saving Throw, you can expend a Leadership Die and add the die result to the saving throw.</description>
+            </sheet>
+            <rules>
+                <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE" />
+            </rules>
+        </element>
+        <element name="Tactical Strike" type="Archetype Feature" source="KibblesTasty Warlord" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_TACTICAL_STRIKE">
+            <description>
+                <p>Starting at 11th level, when you succeed on a Tactical Insight check against a creature, the next attack you or an allied creature makes against it before the start of your next turn deals an additional 2d6 damage.</p>
+            </description>
+            <sheet usage="Tactical Insight">
+                <description>When you succeed on a Tactical Insight check against a creature, the next attack you or an allied creature makes against it before the start of your next turn deals an additional 2d6 damage.</description>
+            </sheet>
+        </element>
+        <element name="Control the Field" type="Archetype Feature" source="KibblesTasty Warlord" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_CONTROL_THE_FIELD">
+            <description>
+                <p>Starting at 15th level, when you take the Shift the Field action, it gains the following properties:</p>
+                <ul>
+                    <li><b>Deceptive Movement: </b>You can attempt to move creatures that are not allies up to 5 feet (or half their movement speed, whichever is less). The creature must make an Intelligence Saving Throw with a DC of 8 + your Proficiency Modifier + your Intelligence modifier, or feel compelled to move to the new position immediately.</li>
+                    <li><b>Flanking Maneuvers: </b>If two allies you move are on opposite sides of an creatures after the movement you grant, the first one to attack that enemy has advantage on their first attack if they attack before the creature moves.</li>
+                    <li><b>Coordinated Transitions: </b>Allies can move through each other’s spaces during the movement you grant without it being difficult terrain.</li>
+                </ul>
+            </description>
+            <sheet usage="Shift the Field">
+                <description>When you take the Shift the Field action, it gains the following properties: Deceptive Movement, Flanking Maneuvers, and Coordinated Transitions.</description>
+            </sheet>
+        </element>
+        <element name="Unstoppable Schemes" type="Archetype Feature" source="KibblesTasty Warlord" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_UNSTOPPABLE_SCHEMES">
+            <description>
+                <p>Starting at 18th level, standing in your way becomes a pointless endeavor. When you move your allies with Shift the Field, they can move through spaces occupied by hostile creatures so long as they do not end their movement in an occupied space.</p>
+            </description>
+            <sheet usage="Shift the Field">
+                <description>When you move your allies with Shift the Field, they can move through spaces occupied by hostile creatures so long as they do not end their movement in an occupied space.</description>
+            </sheet>
+        </element>
+        <element name="Multilayered Tactics" type="Archetype Feature" source="KibblesTasty Warlord" id="ID_KT_KTWC_ARCHETYPE_FEATURE_TACTICIAN_REVISED_MULTILAYERED_TACTICS">
+            <description>
+                <p>Additionally at 18th level, when you succeed on a Tactical Insight check against a creature, you can choose two of the listed effects.</p>
+            </description>
+            <sheet display="false">
+                <description></description>
+            </sheet>
+        </element>
+        </elements>

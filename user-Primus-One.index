@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.38">
+		<update version="0.0.39">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -16,6 +16,7 @@
 		<file name="cleric-Dragon-Greed-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Greed-Domain.xml" />
 		<file name="artificer-forge_adept.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-forge_adept.xml" />
 		<file name="artificer-mastermaker.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-mastermaker.xml" />	
+		<file name="warlord-tactician_revised.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/warlord-tactician_revised.xml" />
 		<!--spells-->
 	
 		<!--items-->
