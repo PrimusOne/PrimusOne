@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.39">
+		<update version="0.0.4">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -45,7 +45,8 @@
 		<file name="item-Erzteufeltracht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Erzteufeltracht.xml" />
 		<file name="item-Arachmegs_Meisterdolch.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Arachmegs_Meisterdolch.xml" />
 		<file name="rogue-wild_card.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/rogue-wild_card.xml" />
-		
+		<file name="item-Bracelet_of_the_Raven_Queen.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Bracelet_of_the_Raven_Queen.xml" />
+
 		<!--other-->
 
 		

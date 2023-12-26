@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Bracelet_of_the_Raven_Queen</name>
+		<update version="1.0">
+			<file name="item-Bracelet_of_the_Raven_Queen.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Bracelet_of_the_Raven_Queen.xml" />
+		</update>
+	</info>
+    <element name="Bracelet of the Raven Queen" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_BRACELET_OF_THE_RAVEN_QUEEN">
+		<description>
+			<p>Das Bracelet of the Raven Queen ist ein spezielles Item, dass die Raven Queen an ihre getreuen Untergebenen verteilt, die geheime Aufträge für sie erledigen - es ist unsichtbar und kann nur durch den Investigationcheck aufgespürt werden</p>
+            <p>Gibt SpellsaveDC und Spellattack +1</p> 
+            <p>Gibt eine zusätzliche Channeldivinity und ist unsichtbar für andere und kann mit einem Investigation Check (20) erst gefunden werden.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+		    <set name="attunement" addition="by a Cleric of the Raven Queen">true</set>
+			<set name="rarity">Very rare</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="1" />
+			<stat name="spellcasting:dc" value="1" />
+            <stat name="channel divinity:count" value="1"/>
+		</rules>
+	</element>
+</elements>
