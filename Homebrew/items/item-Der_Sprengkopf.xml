@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+	<name>item-Der_Sprengkopf</name>
+		<update version="1.0.4">
+			<file name="item-Der_Sprengkopf.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Der_Sprengkopf.xml" />
+		</update>
+	</info>
+	<element name="Der Sprengkopf" type="Magic Item" source="Primus One" id="ID_PO_DMG_MAGIC_ITEM_DER_SPRENGKOPF">
+		<description>
+			<p>Dieser Bogen verleiht +4 auf Angriffe und Schadenswürfe, verusacht 2d10 extra Bludgeoning Damage und umgeht Resistenzen. .</p>
+		</description>
+		<setters>
+			<set name="keywords">longbow</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="Longbow">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+			<set name="enhancement">4</set>
+			<set name="weapon">Longbow</set>
+		</setters>
+	</element>
+</elements>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>item-Kartoffelbrei</name>
+		<update version="1.0">
+			<file name="item-Erzteufeltracht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Kartoffelbrei.xml" />
+		</update>
+	</info>
+    <element name="Eins, Zwei Kartoffelbrei" type="Magic Item" source="Primus One" id="ID_PO_MAGIC_ITEM_KARTOFFELBREI">
+		<description>
+            <p>Das Erbstück der Familie Blocksberg. Im Holz ist der Name "Bibi" eingraviert. </p> 
+			<p>Pro Tag kann ein Spellslot aufgewendet werden, um Kartoffelbrei zu verstärken. Die Höhe des benutzen Spellsslots mal 10, ergibt einen Bonus auf die Flying Speed. Dieser Bonus hält 24 Stunden. Zusätzlich erhält man einen Level 9 Spellslot.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement" addition="by a chaotic character">true</set>
+			<set name="rarity">Unique</set>
+		</setters>
+            <rules>
+                <stat name="speed:fly" value="30"/>
+    			<stat name="ac:misc" value="1" />
+                <stat name="strength:save:misc" value="1" />
+                <stat name="dexterity:save:misc" value="1" />
+                <stat name="constitution:save:misc" value="1" />
+                <stat name="intelligence:save:misc" value="1" />
+                <stat name="wisdom:save:misc" value="1" />
+                <stat name="charisma:save:misc" value="1" />
+                
+                <stat name="spellcasting:attack" value="2" />
+                <stat name="spellcasting:dc" value="2" />
+
+            </rules>
+	</element>
+</elements>

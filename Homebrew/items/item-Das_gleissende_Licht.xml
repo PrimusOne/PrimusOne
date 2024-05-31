@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+	<name>item-Das_gleissende_Licht</name>
+		<update version="1.0.0">
+			<file name="item-Das_gleissende_Licht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Das_gleissende_Licht.xml" />
+		</update>
+	</info>
+	<element name="Das gleissende Licht" type="Magic Item" source="Primus One" id="ID_PO_DMG_MAGIC_ITEM_DAS_GLEISSENDE_LICHT">
+		<description>
+			<p>Diese +3 Pike verursacht <b>4d10</b> radiant Schaden. Mit der Pike kann radiant Schaden zu feuer umgewandelt werde, auch von Quellen außer der Waffe (Smite zum Beispiel).</p>
+		</description>
+		<setters>
+			<set name="keywords">pike</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="pike">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Artifact</set>
+			<set name="enhancement">3</set>
+			<set name="weapon">Pike</set>
+		</setters>
+	</element>
+</elements>
