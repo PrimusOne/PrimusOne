@@ -51,7 +51,7 @@
 		<file name="item-Das_gleissende_Licht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Das_gleissende_Licht.xml" />
 
 		<!--other-->
-		<file name="item-Das_gleissende_Licht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus_Two/backgrounds.xml" />
+		<file name="item-Das_gleissende_Licht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/backgrounds.xml" />
 		
 	</files>
 </index>
