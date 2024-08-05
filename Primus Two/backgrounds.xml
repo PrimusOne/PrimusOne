@@ -3,7 +3,7 @@
 	<info>
 		<name>Backgrounds</name>
 		<update version="0.1">
-			<file name="backgrounds.xml" url="" />
+			<file name="backgrounds.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/backgrounds.xml" />
 		</update>
 	</info>
 
