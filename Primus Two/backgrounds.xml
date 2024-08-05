@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Backgrounds</name>
+		<update version="0.1">
+			<file name="backgrounds.xml" url="" />
+		</update>
+	</info>
+
+    <element name="Harte Lebenbedingungen" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_HARTE_LEBENSBEDINGUNGEN">
+        <description>
+            <p>Du hast eine extreme Kindheit und Jugend erlebt. Diese Herausforderungen haben dafür gesorgt, dass du um einiges belastbarer wurdest, als andere.</p>
+        </description>
+
+        <rules>
+            <stat name="tough:hp" value="level" />
+            <stat name="tough:hp" value="level" />
+            <stat name="hp" value="tough:hp" />
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill" />
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Extreme Umweltbedingungen" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_">
+        <description>
+            <p>Du bist aufgewachsen in einer Region, die schwierige Umweltbedingungen hatte. Sei es ein Vulkan oder ein Moorgebiet, das dafür sorgte, dass du an die Bedingungen dich anpassen musstest.</p>
+        </description>
+
+        <rules>
+            <select type="Background Feature" name="Background (Umweltresistenz)" supports="Extreme Umweltbedingungen" />
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill"/>
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Cold" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_UMWELTRESISTENZ_COLD">
+        <supports>Extreme Umweltbedingungen</supports>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+        </rules>
+    </element>
+    <element name="Poison" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_UMWELTRESISTENZ_POISON">
+        <supports>Extreme Umweltbedingungen</supports>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+        </rules>
+    </element>
+    <element name="Acid" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_UMWELTRESISTENZ_ACID">
+        <supports>Extreme Umweltbedingungen</supports>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+        </rules>
+    </element>
+    <element name="Fire" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_UMWELTRESISTENZ_FIRE">
+        <supports>Extreme Umweltbedingungen</supports>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+        </rules>
+    </element>
+
+    <element name="Abenteurer/Reisender" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_ABENTEURER">
+        <description>
+            <p>Du bist häufig unterwegs und lernst die Welt und ihre Vorzüge, sowie Nachteile kennen. Du bist versiert in kulturellen Gepflogenheiten und Sprachen und kennst immer ein gutes Örtchen zum übernachten.</p>
+        </description>
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="3"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2" />
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_LAND" />
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Akademiker" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_AKADEMIKER">
+        <description>
+            <p>Dein Bizeps bemisst sich an der Anzahl an gleichzeitig getragenen Büchern. Du lebtest die meist Zeit in einer Bibliothek oder Akademie und bist bewandert in allem, was theoretisch ist.</p>
+        </description>
+
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLUNG|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_SURVIVAL" number="2" />
+            <select type="Class Feature" name="Akademiker Expertise" supports="ID_EXPERTISE_SKILL_ANIMALHANDLUNG|ID_EXPERTISE_SKILL_ARCANA|ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_INSIGHT|ID_EXPERTISE_SKILL_INVESTIGATION|ID_EXPERTISE_SKILL_MEDICINE|ID_EXPERTISE_SKILL_NATURE|ID_EXPERTISE_SKILL_PERCEPTION|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SURVIVAL" />
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Handwerker" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_HANDWERKER">
+        <description>
+            <p>Du bist derjenige, der etwas macht, baut und kreiert. Die schaffende Person für den richtigen Job! Handwerker sind der Grundstein einer jeden fortschrittliche Zivilisation und nahezu überall wertgeschätzt.</p>
+        </description>
+
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
+            <select type="Proficiency" name="Tool Proficiency" supports="Artisan tools" number="2" />
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2" />
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Wissenschaftler/Forscher" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_WISSENSCHAFTLER">
+        <description>
+            <p>Du bist Experte für dein Thema. Anders als der Akademiker, bist du mit Feldforschung betraut und kennst dich aus. Deine Zielstrebigkeit wird manchmal vielleicht als Obsession bezeichnet.</p>
+        </description>
+
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
+            <select type="Proficiency" name="Tool Proficiency" supports="Artisan tools" />
+            <select type="Proficiency" name="Skill Proficiency" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLUNG|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_SURVIVAL" number = "2"/>
+            <select type="Class Feature" name="Akademiker Expertise" supports="ID_EXPERTISE_SKILL_ANIMALHANDLUNG|ID_EXPERTISE_SKILL_ARCANA|ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_INSIGHT|ID_EXPERTISE_SKILL_INVESTIGATION|ID_EXPERTISE_SKILL_MEDICINE|ID_EXPERTISE_SKILL_NATURE|ID_EXPERTISE_SKILL_PERCEPTION|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SURVIVAL" />
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Seefahrer" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_SEEFAHRER">
+        <description>
+            <p>Du bist ein Reisender zur See. Hafenstädte sind deine zweite Heimat und die See kann keiner so gut einschätzen wie du. Der Seefahrer verbindet die Länder und Kontinente, er ist das Glied, der den Welthandel zusammenhält!</p>
+        </description>
+
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_WATER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Krimineller" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_KRIMINELLER">
+        <description>
+            <p>Gibts was zu klauen? Der Kriminelle weist sich durch sein unendliches Geschick aus, Profit aus einer Sache herauszuholen. Moral ist ein einziger Balanceakt, auf dem man genüsslich mit Diebesgut stolzieren kann...</p>
+        </description>
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency" supports="ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND|ID_PROFICIENCY_SKILL_STEALTH" number = "2"/>
+            <select type="Class Feature" name="Expertise" supports="ID_EXPERTISE_SKILL_ACROBATICS|ID_EXPERTISE_SKILL_DECEPTION|ID_EXPERTISE_SKILL_INTIMIDATION|ID_EXPERTISE_SKILL_PERFORMANCE|ID_EXPERTISE_SKILL_PERSUASION|ID_EXPERTISE_SKILL_SLEIGHTOFHAND|ID_EXPERTISE_SKILL_STEALTH" />
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+             <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Akolyth" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_AKOLYTH">
+        <description>
+            <p>Du bist von einem hochrangigen Kleriker beauftragt, das Werk deines Patrons/Gottes zu verrichten und bist mit der Autorität ausgestattet, die Welt ändern zu können. Akolythen trainieren und reisen durch die Welt und wollen in der Gunst ihres Patrons/Gottes aufsteigen.</p>
+        </description>
+
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
+            <select type="Proficiency" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLUNG|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_SURVIVAL" number="3"/>
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Krieger" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_KRIEGER">
+        <description>
+            <p>Du kämpfst für Ehre, Geld oder aufgrund von persönlichen Gründen. Kampf ist dein leben, deine Philosophie und Religion. Ein Krieger versteht sich wie kein anderer in den Kampfkünsten und ehrt und respektiert diese.</p>
+        </description>
+
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="3" />
+            <select type="Class Feature" name="Expertise" supports="ID_EXPERTISE_SKILL_ACROBATICS|ID_EXPERTISE_SKILL_ATHLETICS"/>
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Entertainer" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_ENTERTAINER">
+        <description>
+            <p>Keine Party ist eine Party, ohne einen Entertainer, der allen ein Lächeln ins Gesicht zaubert. Manche Entertainer erzählen die Geschichten anderer, manche wurden selbst Stoff aus dem Legenden sind!</p>
+        </description>
+
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2" />
+            <select type="Proficiency" name="Tool Proficiency" supports="Musical Instrument"/>
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Custom" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_COSTUM">
+        <description>
+            <p>Du hast eigene Vorstellungen und Bedürfnisse, die sonst nicht abgedeckt werden können.</p>
+        </description>
+
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2" />
+            <select type="Proficiency" name="Tool Proficiency" supports="Tool"/>
+            <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
+            <stat name="religion:misc" value="wisdom:modifier"/>
+            <stat name="religion:misc" value="-intelligence:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Gilden- oder Clansmitglied" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_GILDENMITGLIED">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du bist Mitglied einer Gilde oder eines Clans und kennst deren Hierarchie und Gepflogenheiten, kannst dich ausweisen und kannst auf ihr Netzwerk zugreifen.
+        </description>
+    </element>
+
+    <element name="Adliger" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_ADLIGER">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du genießt die Vorteile gehobeneren Standes und wirst in den meisten Ländern besser behandelt, genießt Ansehen und kannst in höheren Kreisen einfacher verkehren - in deiner Heimat genießt du partielle Exekutivgewalt, bist aber an deinen Clan gebunden!
+        </description>
+    </element>
+
+    <element name="Spion" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_SPION">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du handelst im Auftrag deines Herrn und kannst auf seine Ressourcen, soweit er es gestattet, zugreifen, erhälst Zugang zu Tarnidentitäten und kannst effektiv infiltrieren.
+        </description>
+    </element>
+
+    <element name="Kultist" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_KULTIS">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du bist im Bunde mit einer mächtigen, zumeist bösartigen Entität, die irgendwann ihren Tribut fordert! Du erkennst Personen, die Teil deines Kultes sind und erhälst Infos durch ihr Netzwerk.
+        </description>
+    </element>
+
+    <element name="Dunkles Omen" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_DUNKLES_OMEN">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du leidest an etwas, das sich deinem Verstand entzieht. Entweder bist du verflucht, krank oder wirst irre! Manchmal wachst du an den merkwürdigsten Orten auf. Etwas stimmt mit dir nicht und du musst herausfinden was!
+        </description>
+    </element>
+
+    <element name="Detektiv" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_DETEKTIV">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du bist erfahrener Ermittler und kannst Tatorte, wie auch Personen besser deuten, als andere. Dein Gespür führt dich auch manchmal zur Antwort, noch bevor dein Verstand es vollends begreift.
+        </description>
+    </element>
+
+    <element name="Diplomat" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_DIPLOMAT">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du handelst im Auftrag eines Adligen, einer Herrschers, eines Landes, einer Kirche, etc. Du kannst auf dessen/deren Netzwerk zugreifen und versuchst deinen Auftrag auszuführen und akzeptierst kein nein!
+        </description>
+    </element>
+
+    <element name="Weltenbummler" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_WELTENBUMMLER">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du warst schon auf etlichen Welten und hast ein beinahe übernatürliches Gespür für die Konjunktionen zweier Welten und kannst deren Orte einfacher erkennen und bewerten.
+        </description>
+    </element>
+
+    <element name="Magieexperte" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_MAGIEEXPERTE">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du studierst schon lange Magieintensität. Du kannst magiearme Orte klassifizieren und einschätzen, sowie besonders reichhaltige Orte.
+        </description>
+    </element>
+
+    <element name="Spieler" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_SPIELER">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du kannst dich schnell in neue Arten von Spielen einfinden, kannst überzeugend beim Spielen wirken und bist besonders gut darin, dich in Tavernen herumzutreiben und Infos zu sammeln.
+        </description>
+    </element>
+
+    <element name="Katastrophenüberlebender" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_KATASTROPHENUEBERLEBENDER">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du hast eine heftige Katastrophe überstanden und konntest dein Leben retten. Diese Erfahrungen haben sich in deinen Verstand eingebrannt. Du entwickeltest für solche Katastrophen eine Art 6. Sinn und kannst diese leichter erkennen!
+        </description>
+    </element>
+
+    <element name="Händler" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_HAENDLER">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du kannst Preise, Marktwerte und Betriebskosten besser einschätzen, Scharlatane leichter identifizieren und bist geübter im Handel mit anderen. Ebenfalls kannst du leichter Kontakte knüpfen, als andere.
+        </description>
+    </element>
+
+    <element name="Ehemaliger Gefangener" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_EHEMALIGER_GEFANGENER">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du warst mal Kriegsgefangener, Gefängnisinsasse oder sogar ein entflohener oder freigekaufter Sklave. Du bist geübt darin, unauffällig zu sein, deinem Herrn zu schmeicheln, zu verstehen, wie du überleben kannst und trickreich genug bist, auch in den schwierigsten Situationen einen Weg zu finden, dich aus der Gefahr zu begeben.
+        </description>
+    </element>
+
+    <element name="Volksheld" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_VOLKSHELD">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du bist bekannt geworden, durch besondere Heldentaten in deiner Vergangenheit - zumeist eher als lokaler oder regionaler Held gefeiert. Geschichten über deine Ruhmestaten verbreiten sich schneller und du wirst schneller wiedererkannt, wenn deine Ruhmestaten sich mehren.
+        </description>
+    </element>
+
+    <element name="Kauziger Bergeremit" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_KAUZIGER_BERGEREMIT">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du lebst eigentlich außerhalb der Zivilisation und kennst dich eher in der Natur aus. Dein Auge ist viel geübter darin, nützliche Pflanzen von gefährlichen zu unterscheiden. Du bist auch wesentlich überlebensfähiger, außerhalb von Städten. Zivilisierte Regionen sind eher befremdlich für dich, aber für dich ist so gut wie jeder Boden in der freien Natur bequem genug, um zu longresten.
+        </description>
+    </element>
+
+    <element name="Vermächtnisträger" type="Background Feature" source="Primus Two" id="ID_PT_BACKGROUND_FEATURE_VERMAECHTNISTRAEGER">
+        <supports>Background Feature, Optionale Backgroundfeatures</supports>
+        <description>
+            Du bist der Erbe eines speziellen Gegenstands, übernimmst die leidvolle/ehrbare Aufgabe deiner Familie, besitzt besonderes Blut, bist von einer Prophezeiung oder bist in irgend einer anderen Variation vom Schicksal betroffen und kannst diesem nicht entkommen. Du hast einen harten, aber lohnenden Weg vor dir.
+        </description>
+    </element>
+
+</elements>

@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.5">
+		<update version="0.0.6">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -51,7 +51,7 @@
 		<file name="item-Das_gleissende_Licht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Das_gleissende_Licht.xml" />
 
 		<!--other-->
-
+		<file name="item-Das_gleissende_Licht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus_Two/backgrounds.xml" />
 		
 	</files>
 </index>
