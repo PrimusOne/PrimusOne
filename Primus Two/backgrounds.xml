@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Backgrounds</name>
-        <update version="0.2">
+        <update version="0.3">
             <file name="backgrounds.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/backgrounds.xml" />
         </update>
     </info>
@@ -11,7 +11,9 @@
         <description>
             <p>Du hast eine extreme Kindheit und Jugend erlebt. Diese Herausforderungen haben dafür gesorgt, dass du um einiges belastbarer wurdest, als andere.</p>
         </description>
-
+        <setters>
+            <set name="short">Tough feat, 1 Language, 1 Skill Proficiency und 1 Bonusfeat </set>
+        </setters>
         <rules>
             <stat name="tough:hp" value="level" />
             <stat name="tough:hp" value="level" />
@@ -29,7 +31,9 @@
         <description>
             <p>Du bist aufgewachsen in einer Region, die schwierige Umweltbedingungen hatte. Sei es ein Vulkan oder ein Moorgebiet, das dafür sorgte, dass du an die Bedingungen dich anpassen musstest.</p>
         </description>
-
+        <setters>
+            <set name="short">Resistenz zu Fire, Acid, Cold oder Poison, 1 Language, 1 Skill Proficiency und 1 Bonusfeat </set>
+        </setters>
         <rules>
             <select type="Background Feature" name="Background (Umweltresistenz)" supports="Extreme Umweltbedingungen" />
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
@@ -70,6 +74,9 @@
         <description>
             <p>Du bist häufig unterwegs und lernst die Welt und ihre Vorzüge, sowie Nachteile kennen. Du bist versiert in kulturellen Gepflogenheiten und Sprachen und kennst immer ein gutes Örtchen zum übernachten.</p>
         </description>
+        <setters>
+            <set name="short">3 Languages, 2 Skill Proficiency und 1 Bonusfeat </set>
+        </setters>
         <rules>
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="3"/>
             <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2" />
@@ -85,11 +92,13 @@
         <description>
             <p>Dein Bizeps bemisst sich an der Anzahl an gleichzeitig getragenen Büchern. Du lebtest die meist Zeit in einer Bibliothek oder Akademie und bist bewandert in allem, was theoretisch ist.</p>
         </description>
-
+        <setters>
+			<set name="short">2 Languages, 2 Skill Proficiencies (Wisdom or Intelligence), 1 Expertise (Wisdom or Intelligence) und 1 Bonusfeat </set>
+		</setters>
         <rules>
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
             <select type="Proficiency" name="Skill Proficiency" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLUNG|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_SURVIVAL" number="2" />
-            <select type="Class Feature" name="Akademiker Expertise" supports="ID_EXPERTISE_SKILL_ANIMALHANDLUNG|ID_EXPERTISE_SKILL_ARCANA|ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_INSIGHT|ID_EXPERTISE_SKILL_INVESTIGATION|ID_EXPERTISE_SKILL_MEDICINE|ID_EXPERTISE_SKILL_NATURE|ID_EXPERTISE_SKILL_PERCEPTION|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SURVIVAL" />
+            <select type="Class Feature" name="Expertise" supports="ID_EXPERTISE_SKILL_ANIMALHANDLUNG|ID_EXPERTISE_SKILL_ARCANA|ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_INSIGHT|ID_EXPERTISE_SKILL_INVESTIGATION|ID_EXPERTISE_SKILL_MEDICINE|ID_EXPERTISE_SKILL_NATURE|ID_EXPERTISE_SKILL_PERCEPTION|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SURVIVAL" />
             <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
             <select type="Feat" name="Bonus Feat (1st Level)" />
             <stat name="religion:misc" value="wisdom:modifier"/>
@@ -101,7 +110,9 @@
         <description>
             <p>Du bist derjenige, der etwas macht, baut und kreiert. Die schaffende Person für den richtigen Job! Handwerker sind der Grundstein einer jeden fortschrittliche Zivilisation und nahezu überall wertgeschätzt.</p>
         </description>
-
+        <setters>
+			<set name="short">1 Language, 2 Skill Proficiencies, 2 Tool Proficiencies und 1 Bonusfeat </set>
+		</setters>
         <rules>
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
             <select type="Proficiency" name="Tool Proficiency" supports="Artisan tools" number="2" />
@@ -117,12 +128,14 @@
         <description>
             <p>Du bist Experte für dein Thema. Anders als der Akademiker, bist du mit Feldforschung betraut und kennst dich aus. Deine Zielstrebigkeit wird manchmal vielleicht als Obsession bezeichnet.</p>
         </description>
-
+        <setters>
+			<set name="short">1 Language, 1 Tool Proficiency, 2 Skill Proficiencies (Wisdom or Intelligence), 1 Expertise (Wisdom or Intelligence) und 1 Bonusfeat </set>
+		</setters>
         <rules>
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
             <select type="Proficiency" name="Tool Proficiency" supports="Artisan tools" />
             <select type="Proficiency" name="Skill Proficiency" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLUNG|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_SURVIVAL" number = "2"/>
-            <select type="Class Feature" name="Akademiker Expertise" supports="ID_EXPERTISE_SKILL_ANIMALHANDLUNG|ID_EXPERTISE_SKILL_ARCANA|ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_INSIGHT|ID_EXPERTISE_SKILL_INVESTIGATION|ID_EXPERTISE_SKILL_MEDICINE|ID_EXPERTISE_SKILL_NATURE|ID_EXPERTISE_SKILL_PERCEPTION|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SURVIVAL" />
+            <select type="Class Feature" name="Expertise" supports="ID_EXPERTISE_SKILL_ANIMALHANDLUNG|ID_EXPERTISE_SKILL_ARCANA|ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_INSIGHT|ID_EXPERTISE_SKILL_INVESTIGATION|ID_EXPERTISE_SKILL_MEDICINE|ID_EXPERTISE_SKILL_NATURE|ID_EXPERTISE_SKILL_PERCEPTION|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SURVIVAL" />
             <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
             <select type="Feat" name="Bonus Feat (1st Level)" />
             <stat name="religion:misc" value="wisdom:modifier"/>
@@ -134,7 +147,9 @@
         <description>
             <p>Du bist ein Reisender zur See. Hafenstädte sind deine zweite Heimat und die See kann keiner so gut einschätzen wie du. Der Seefahrer verbindet die Länder und Kontinente, er ist das Glied, der den Welthandel zusammenhält!</p>
         </description>
-
+        <setters>
+			<set name="short">2 Languages, Vehicles (Water), Cartographers Tools , 2 Skill Proficiencies und 1 Bonusfeat </set>
+		</setters>
         <rules>
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
             <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2" />
@@ -151,6 +166,9 @@
         <description>
             <p>Gibts was zu klauen? Der Kriminelle weist sich durch sein unendliches Geschick aus, Profit aus einer Sache herauszuholen. Moral ist ein einziger Balanceakt, auf dem man genüsslich mit Diebesgut stolzieren kann...</p>
         </description>
+        <setters>
+			<set name="short">2 Skill Proficiencies, 1 Expertise (Charisma or Dexterity) und 1 Bonusfeat </set>
+		</setters>        
         <rules>
             <select type="Proficiency" name="Skill Proficiency" supports="ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND|ID_PROFICIENCY_SKILL_STEALTH" number = "2"/>
             <select type="Class Feature" name="Expertise" supports="ID_EXPERTISE_SKILL_ACROBATICS|ID_EXPERTISE_SKILL_DECEPTION|ID_EXPERTISE_SKILL_INTIMIDATION|ID_EXPERTISE_SKILL_PERFORMANCE|ID_EXPERTISE_SKILL_PERSUASION|ID_EXPERTISE_SKILL_SLEIGHTOFHAND|ID_EXPERTISE_SKILL_STEALTH" />
@@ -165,7 +183,9 @@
         <description>
             <p>Du bist von einem hochrangigen Kleriker beauftragt, das Werk deines Patrons/Gottes zu verrichten und bist mit der Autorität ausgestattet, die Welt ändern zu können. Akolythen trainieren und reisen durch die Welt und wollen in der Gunst ihres Patrons/Gottes aufsteigen.</p>
         </description>
-
+        <setters>
+			<set name="short">2 Languages, 3 Skill Proficiencies und 1 Bonusfeat </set>
+		</setters>      
         <rules>
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
             <select type="Proficiency" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLUNG|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_SURVIVAL" number="3"/>
@@ -180,7 +200,9 @@
         <description>
             <p>Du kämpfst für Ehre, Geld oder aufgrund von persönlichen Gründen. Kampf ist dein leben, deine Philosophie und Religion. Ein Krieger versteht sich wie kein anderer in den Kampfkünsten und ehrt und respektiert diese.</p>
         </description>
-
+        <setters>
+			<set name="short">1 Language, 3 Skill Proficiencies, 1 Expertise (Atheletics or Acrobatics) und 1 Bonusfeat </set>
+		</setters>      
         <rules>
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
             <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="3" />
@@ -196,7 +218,9 @@
         <description>
             <p>Keine Party ist eine Party, ohne einen Entertainer, der allen ein Lächeln ins Gesicht zaubert. Manche Entertainer erzählen die Geschichten anderer, manche wurden selbst Stoff aus dem Legenden sind!</p>
         </description>
-
+        <setters>
+			<set name="short">2 Languages, 2 Skill Proficiencies, Musical Instrument und 1 Bonusfeat </set>
+		</setters>  
         <rules>
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
             <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2" />
@@ -212,7 +236,9 @@
         <description>
             <p>Du hast eigene Vorstellungen und Bedürfnisse, die sonst nicht abgedeckt werden können.</p>
         </description>
-
+        <setters>
+			<set name="short">2 Languages, 2 Skill Proficiencies, 1 Tool Proficiency und 1 Bonusfeat </set>
+		</setters>  
         <rules>
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
             <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2" />

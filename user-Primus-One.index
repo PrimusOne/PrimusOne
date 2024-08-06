@@ -2,23 +2,23 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.9">
+		<update version="0.0.10">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
 	<files>
 		<!--Homebrew-->
 		<!--races-->
-		
+
 		<!--classes-->
 		<file name="class-Abberation-Warlock.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/class-Abberation-Warlock.xml" />
 		<file name="cleric-Dragon-Justice-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Justice-Domain.xml" />
 		<file name="cleric-Dragon-Greed-Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/cleric-Dragon-Greed-Domain.xml" />
 		<file name="artificer-forge_adept.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-forge_adept.xml" />
-		<file name="artificer-mastermaker.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-mastermaker.xml" />	
+		<file name="artificer-mastermaker.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-mastermaker.xml" />
 		<file name="warlord-tactician_revised.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/warlord-tactician_revised.xml" />
 		<!--spells-->
-	
+
 		<!--items-->
 		<file name="item-Almir_der_Schlaechter.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Almir_der_Schlaechter.xml" />
 		<file name="item-Rod-of-Necroticness.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Rod-of-Necroticness.xml" />
@@ -52,6 +52,6 @@
 
 		<!--other-->
 		<file name="backgrounds.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/backgrounds.xml" />
-		
+
 	</files>
 </index>
