@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Feats</name>
+        <update version="0.1">
+            <file name="feats.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/feats.xml" />
+        </update>
+    </info>
+    <element name="Supperior Battler" type="Feat" source="Primus Two" id="ID_PT_FEAT_SUPPERIOR_BATTLER">
+        <description>
+            <p>
+                Erhalte 3 Superiority Dices (d8) per Shortrest und 2 Manoveur aus der Battlemaster Subklasse. Sie skalieren auf folgenden Leveln mit: Level 10 zu d10 und auf 18 zu d12.
+            </p>
+        </description>
+        <prerequisite>4 Level in Martial Klasse(n)</prerequisite>
+        <sheet>
+            <description>{{martial adept:dice:amount}}d{{martial adept:dice:size}} superiority dice / short rest. DC {{martial adept:dc}}</description>
+        </sheet>
+        <rules>
+            <stat name="martial adept:ability" value="strength:modifier" bonus="martial adept:ability" />
+            <stat name="martial adept:ability" value="dexterity:modifier" bonus="martial adept:ability" />
+
+            <stat name="martial adept:dc" value="8" />
+            <stat name="martial adept:dc" value="proficiency" />
+            <stat name="martial adept:dc" value="martial adept:ability" />
+
+            <stat name="martial adept:dice:amount" value="3" />
+            <stat name="martial adept:dice:amount" value="3" requirements="ID_PT_FEAT_SUPPERIOR_BATTLEEXPERT"/>
+            <stat name="martial adept:dice:size" value="8" />
+            <stat name="martial adept:dice:size" value="2" level ="10"/>
+            <stat name="martial adept:dice:size" value="2" level ="18"/>
+
+
+            <select type="Archetype Feature" name="Supperior Battler" supports="Maneuver,Battle Master" number="2" />
+            <select type="Archetype Feature" name="Supperior Battleexpert" supports="Maneuver,Battle Master" number="1" requirements="ID_PT_FEAT_SUPPERIOR_BATTLEEXPERT"/>
+
+            <!-- battle master -->
+            <stat name="superiority dice:amount" value="1" requirements="ID_ARCHETYPE_FEATURE_BATTLE_MASTER_COMBAT_SUPERIORITY" />
+        </rules>
+    </element>
+
+    <element name="Supperior Battleexpert" type="Feat" source="Primus Two" id="ID_PT_FEAT_SUPPERIOR_BATTLEEXPERT">
+        <description>Erhalte 3 zusätzliche Superiority Dices per Shortrest und 1 weiteres Manoveur aus der Battlemaster Subklasse.</description>
+        <prerequisite>12 Level in Martial Klasse(n) und den Feat Superior Battler bereits ausgewählt</prerequisite>
+        <requirements>ID_PT_FEAT_SUPPERIOR_BATTLER</requirements>
+        <sheet display="false"/>
+    </element>
+
+    <element name="Action Surge" type="Feat" source="Primus Two" id="ID_PT_FEAT_ACTION_SURGE">
+        <description>Du erhälst 1xUse von Action Surge per Longrest zusätzlich.</description>
+        <prerequisite>8 Level in Martial Klasse(n)</prerequisite>
+        <sheet usage="1/Long Rest">
+        </sheet>
+    </element>
+
+    <element name="Heavy Armor Combatant" type="Feat" source="Primus Two" id="ID_PT_FEAT_HEAVY_ARMOR_COMBATANT">
+        <description>Wenn du eine Heavy Armor trägst, darfst du jeglichen Slashing, Piercing und Bludgeoning Damage (sowohl magisch als auch nicht-magisch), um 3 reduzieren. Ebenfalls wird Strength um +1 erhöht.</description>
+        <prerequisite>4 Level in Martial Klasse(n) und Heavy Armor Proficiency</prerequisite>
+        <requirements>ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR</requirements>
+        <sheet>
+            <description>Wenn du eine Heavy Armor trägst, darfst du jeglichen Slashing, Piercing und Bludgeoning Damage (sowohl magisch als auch nicht-magisch), um 3 reduzieren.</description>
+        </sheet>
+        <rules>
+            <stat name="strength" value="1" />
+        </rules>
+    </element>
+
+    <element name="Heavy Armor Expert" type="Feat" source="Primus Two" id="ID_PT_FEAT_HEAVY_ARMOR_EXPERT">
+        <description>Zusätzlich zu der bereits bestehenden Schadensreduktion, wird jeglicher Schaden um 3 reduziert (bei Slashing, etc. also 6) und Strength um +1 erhöht.</description>
+        <prerequisite>12 Level in Martial Klasse(n) und den Heavy Armor Fighter Feat</prerequisite>
+        <requirements>ID_PT_FEAT_HEAVY_ARMOR_COMBATANT</requirements>
+        <sheet>
+            Zusätzlich zu der bereits bestehenden Schadensreduktion, wird jeglicher Schaden um 3 reduziert (bei Slashing, etc. also 6).
+        </sheet>
+        <rules>
+            <stat name="strength" value="1" />
+        </rules>
+    </element>
+
+    <element name="Kissed by the Gods" type="Feat" source="Primus Two" id="ID_PT_FEAT_KISSED_BY_THE_GODS">
+        <description>Du erhälst 3 zusätzliche Lucky Punkte.</description>
+        <prerequisite>Lucky Feat und Level 19</prerequisite>
+        <requirements>ID_PHB_FEAT_LUCKY</requirements>
+        <sheet>
+            <description>Du erhälst 3 zusätzliche Lucky Punkte.</description>
+        </sheet>
+    </element>
+
+    <element name="Overcome Limits" type="Feat" source="Primus Two" id="ID_PT_FEAT_OVERCOME_LIMITS">
+        <description>1x/Longrest kann ein Stat für eine Stunde künstlich um +4 erhöht werden (außer Constitution) und temporär von Limitbreaks profitieren. Zusätzlich wird ein 1 Stat um +1 erhöht (außer Constitution). In einem Kampf kostet die Nutzung eine Aktion.</description>
+        <prerequisite>Level 8</prerequisite>
+        <sheet usage="1/Longrest">
+            <description>Du kann ein Stat für eine Stunde künstlich um +4 erhöht werden (außer Constitution) und temporär von Limitbreaks profitieren.</description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Overcome Limits" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+        </rules>
+    </element>
+
+    <element name="Trained Spellcaster" type="Feat" source="Primus Two" id="ID_PT_FEAT_TRAINED_SPELLCASTER">
+        <description>Dein SpellsaveDC und dein Spellattack steigen um +1.</description>
+        <prerequisite>Level 8, Ability to cast Spells</prerequisite>
+        <sheet>
+            <description>Dein SpellsaveDC und dein Spellattack steigen um +1.</description>
+        </sheet>
+        <rules>
+            <stat name="spellcasting:dc" value="1" />
+            <stat name="spellcasting:attack" value="1" />
+        </rules>
+    </element>
+
+    <element name="Spellcasting Expert" type="Feat" source="Primus Two" id="ID_PT_FEAT_SPELLCASTING_EXPERT">
+        <description>Dein SpellsaveDC und dein Spellattack steigen nochmal um +1.</description>
+        <prerequisite>Level 16, Ability to cast Spells und Trained Spellcaster Feat</prerequisite>
+        <requirements>ID_PT_FEAT_TRAINED_SPELLCASTER</requirements>
+        <sheet>
+            <description>Dein SpellsaveDC und dein Spellattack steigen nochmal um +1.</description>
+        </sheet>
+        <rules>
+            <stat name="spellcasting:dc" value="1" />
+            <stat name="spellcasting:attack" value="1" />
+        </rules>
+    </element>
+
+    <element name="Presicion Hitter" type="Feat" source="Primus Two" id="ID_PT_FEAT_PRESICION_HITTER">
+        <description>Der Kritwert steigt um +1 für Weapon und Unarmed Attacks (zB. Von 20 auf 19 oder bei niedrigerer Chance von 17 auf 16, etc.).</description>
+        <prerequisite>Level 16, Martial Klasse</prerequisite>
+        <sheet>
+            <description>Der Kritwert steigt um +1 für Weapon und Unarmed Attacks (zB. Von 20 auf 19 oder bei niedrigerer Chance von 17 auf 16, etc.).</description>
+        </sheet>
+    </element>
+
+    <element name="Exceptionally Mobile" type="Feat" source="Primus Two" id="ID_PT_FEAT_EXCEPTIONALLY_MOBILE">
+        <description>Dein Movementspeed steigt um 10 ft. und wenn du das erste mal in einem Kampf dran bist, erhälst du eine zusätzliche Aktion, die du zum Dashen, Dodgen oder Disengagen benutzen kannst. Wenn du Prone geworfen wurdest, kostet es dich nur halbes Movement, statt dem vollen, um wieder aufzustehen.</description>
+        <prerequisite>8 Level in Martial Klasse(n) und den Mobile Feat</prerequisite>
+        <requirements>ID_PHB_FEAT_MOBILE</requirements>
+        <sheet>
+            <description>Du erhälst im Kampf in der ersten Runde eine zusätzliche Action zum Dashen, Dodgen oder Disengagen. Wenn du Prone geworfen wurdest, kostet es dich nur halbes Movement, statt dem vollen, um wieder aufzustehen.</description>
+        </sheet>
+        <rules>
+            <stat name="innate speed:misc" value="10" />
+            <stat name="innate speed:climb:misc" value="10" requirements="[innate speed:climb:1]" />
+            <stat name="innate speed:fly:misc" value="10" requirements="[innate speed:fly:1]" />
+            <stat name="innate speed:swim:misc" value="10" requirements="[innate speed:swim:1]" />
+            <stat name="innate speed:burrow:misc" value="10" requirements="[innate speed:burrow:1]" />
+        </rules>
+    </element>
+
+    <element name="Accuracy Master" type="Feat" source="Primus Two" id="ID_PT_FEAT_ACCURACY_MASTER">
+        <description>Wenn du Advantage bekommst, bei einem Angriff, darfst du einen dritten Würfel benutzen und aus den 3 das beste Ergebnis erwählen.</description>
+        <prerequisite>Level 8</prerequisite>
+        <sheet>
+            <description>Wenn du Advantage bekommst, bei einem Angriff, darfst du einen dritten Würfel benutzen und aus den 3 das beste Ergebnis erwählen.</description>
+        </sheet>
+    </element>
+
+    <element name="Unparalleled Combatant" type="Feat" source="Primus Two" id="ID_PT_FEAT_UNPARALLELED_COMBATANT">
+        <description>Du kannst 1. mal per Longrest einen Special Martial Move erneut benutzen, ohne Konsequenzen wie Exhaustion, etc. zu erleiden (zB. Great Slashing Attack).</description>
+        <prerequisite>19 Level in Martial Klasse(n)</prerequisite>
+        <sheet usage="1/Longrest">
+            <description>Du kannst einen Special Martial Move benutzen, ohne Konsequenzen wie Exhaustion, etc. zu erleiden (zB. Great Slashing Attack).</description>
+        </sheet>
+    </element>
+
+    <element name="Trained Duelist" type="Feat" source="Primus Two" id="ID_PT_FEAT_TRAINED_DUELIST">
+        <description>Dein „to-hit“ Wert steigt um +2 und du kannst Strength oder Dexterity um +1 erhöhen.</description>
+        <prerequisite>4 Level in Martial Klasse(n) und den Dueling Fighting Style</prerequisite>
+        <requirements>ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_DUELING</requirements>
+        <sheet>
+            <description>Dein „to-hit“ Wert steigt um +2</description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Trained Duelist" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY"/>
+        </rules>
+    </element>
+
+    <element name="Savage Attacker (Reworked)" type="Feat" source="Primus Two" id="ID_PT_FEAT_SAVAGE_ATTACKER">
+        <description>Du kannst einen Würfelwurf, bei der Schadensberechnung eines Weaponattacks, pro Angriff neuwürfeln. Die Änderungen sind: 1mal pro Zug zu 1mal pro Angriff (nur Nahkampf).</description>
+        <sheet>
+            <description>Du kannst einen Würfelwurf, bei der Schadensberechnung eines Weaponattacks, pro Angriff neuwürfeln.</description>
+        </sheet>
+    </element>
+
+    <element name="Exchangepact" type="Feat" source="Primus Two" id="ID_PT_FEAT_EXCHANGEPACT">
+        <description>Eine Person, die diesen Feat gewählt hat, kann mit einer Person, die ebenfallsüber diesen Feat verfügt, einen Tauschpakt eingehen. Beide müssen ebenfallsSpellcasten können und über mindestens 1 Spellslot verfügen. Beide Personenkönnen ein einstündiges Ritual durchführen und jeweils einen Spell, den siebesitzen und prepared haben, mit der anderen tauschen. Bei diesem Tauschmüssen beide Zauber auf dem selben Level sein (zB. Bless und Ray of Sickness)und dürfen keine Cantrips sein. Beide Personen verlieren, solange der Paktwirkt, den eigenen Zauber und können ihn nicht mehr benutzen. Den Zauberden sie erhalten zählt nicht zu den Spells, die prepared werden müssen, da siefortan immer prepared sind. Dieser Spell gilt dann für dich auch als ein Zauber,der gewirkt wird, als dein eigener und profitiert von deinem Modifier. Der Paktwird aufgelöst, wenn: einer der beiden stirbt, einen anderen Tauschpakt überdiesen Feat oder ähnliches eingeht, einer willentlich ihn nicht mehraufrechterhalten möchte oder beide auf unterschiedlichen Planes sind.</description>
+        <prerequisite>Level 8</prerequisite>
+        <sheet>
+            <description>Du hast einen Zauber mit deinem Exchangepactpartner ausgetauscht.</description>
+        </sheet>
+    </element>
+
+    <element name="Deepened Exchangepact" type="Feat" source="Primus Two" id="ID_PT_FEAT_DEEPEND_EXCHANGEPACT">
+        <description>Eine Person, die diesen Feat gewählt hat, kann mit einer Person, die ebenfallsüber diesen Feat verfügt, einen Tauschpakt eingehen. Beide müssen ebenfallsSpellcasten können und über mindestens 1 Spellslot verfügen. Beide Personenkönnen ein einstündiges Ritual durchführen und jeweils einen Spell, den siebesitzen und prepared haben, mit der anderen tauschen. Bei diesem Tauschmüssen beide Zauber auf dem selben Level sein (zB. Bless und Ray of Sickness)und dürfen keine Cantrips sein. Beide Personen verlieren, solange der Paktwirkt, den eigenen Zauber und können ihn nicht mehr benutzen. Den Zauberden sie erhalten zählt nicht zu den Spells, die prepared werden müssen, da siefortan immer prepared sind. Dieser Spell gilt dann für dich auch als ein Zauber,der gewirkt wird, als dein eigener und profitiert von deinem Modifier. Der Paktwird aufgelöst, wenn: einer der beiden stirbt, einen anderen Tauschpakt überdiesen Feat oder ähnliches eingeht, einer willentlich ihn nicht mehraufrechterhalten möchte oder beide auf unterschiedlichen Planes sind.</description>
+        <prerequisite>Level 16 und Exchangepact Feat</prerequisite>
+        <requirements>ID_PT_FEAT_EXCHANGEPACT</requirements>
+        <sheet>
+            <description>Du hast einen zweiten Zauber mit deinem Exchangepactpartner ausgetauscht.</description>
+        </sheet>
+    </element>
+
+    <element name="Colourful Bardmagic" type="Feat" source="Primus Two" id="ID_PT_FEAT_COLOURFUL_BARDMAGIC">
+        <description>
+        Eine Reihe an Fertigkeiten verbessern sich, durch den Erwerb dieses Feats:
+            <ol>
+                <li>Vicious Mockery ist auf 2 Ziele gleichzeitig anwendbar, solange sie sich in maximal 10ft. voneinander befinden.</li>
+                <li>Du kannst 1x/Shortrest einem Ziel statt einer, direkt zwei Bardic Inspirations geben.</li>
+                <li>Du darfst dir einen Spell aussuchen, aus einer der folgenden Spelllisten: Wizard, Cleric, Sorcerer oder Druid. Dieser Spell zählt zusätzlich zu deinen Spells known und wird mit deinem Spellcastingmodifier (Charisma) gecastet. Es muss ein Spell des Levels 1 oder 2 sein oder ein Cantrip.</li>
+            </ol>
+        </description>
+        <prerequisite>4 Level in Barde</prerequisite>
+        <sheet>
+            <description>
+                <ol>
+                    <li>Vicious Mockery ist auf 2 Ziele gleichzeitig anwendbar, solange sie sich in maximal 10ft. voneinander befinden.</li>
+                    <li>Du kannst 1x/Shortrest einem Ziel statt einer, direkt zwei Bardic Inspirations geben.</li>
+                </ol>
+            </description>
+        </sheet>
+        <rules>
+            <select type="Feat Feature" name="Colourful Bardmagic" supports="Colourful Bardmagic" />
+        </rules>
+    </element>
+
+    <element name="Cleric" type="Feat Feature" source="Primus Two" id="ID_PT_FEAT_COLOURFUL_BARDMAGIC_CLERIC">
+        <supports>Colourful Bardmagic</supports>
+        <description>
+            <p>Du darfst dir einen Spell aussuchen, aus der folgenden Spellliste: Cleric</p>
+        </description>
+        <sheet>
+            <description>Spellcasting ability: Charisma.</description>
+        </sheet>
+        <rules>
+            <select type="Spell" name="Cantrip, 1st- oder 2nd-level Spell (Colourful Bardmagic)" supports="(0||1||2),Cleric" />
+        </rules>
+    </element>
+    <element name="Druid" type="Feat Feature" source="Primus Two" id="ID_PT_FEAT_COLOURFUL_BARDMAGIC_DRUID">
+        <supports>Colourful Bardmagic</supports>
+        <description>
+            <p>Du darfst dir einen Spell aussuchen, aus der folgenden Spellliste: Druid</p>
+        </description>
+        <sheet>
+            <description>Spellcasting ability: Charisma.</description>
+        </sheet>
+        <rules>
+            <select type="Spell" name="Cantrip, 1st- oder 2nd-level Spell (Colourful Bardmagic)" supports="(0||1||2),Druid" />
+        </rules>
+    </element>
+    <element name="Sorcerer" type="Feat Feature" source="Primus Two" id="ID_PT_FEAT_COLOURFUL_BARDMAGIC_SORCERER">
+        <supports>Colourful Bardmagic</supports>
+        <description>
+            <p>Du darfst dir einen Spell aussuchen, aus der folgenden Spellliste: Sorcerer</p>
+        </description>
+        <sheet>
+            <description>Spellcasting ability: Charisma.</description>
+        </sheet>
+        <rules>
+            <select type="Spell" name="Cantrip, 1st- oder 2nd-level Spell (Colourful Bardmagic)" supports="(0||1||2),Sorcerer" />
+        </rules>
+    </element>
+    <element name="Warlock" type="Feat Feature" source="Primus Two" id="ID_PT_FEAT_COLOURFUL_BARDMAGIC_WARLOCK">
+        <supports>Colourful Bardmagic</supports>
+        <description>
+            <p>Du darfst dir einen Spell aussuchen, aus der folgenden Spellliste: Warlock</p>
+        </description>
+        <sheet>
+            <description>Spellcasting ability: Charisma.</description>
+        </sheet>
+        <rules>
+            <select type="Spell" name="Cantrip, 1st- oder 2nd-level Spell (Colourful Bardmagic)" supports="(0||1||2),Warlock" />
+        </rules>
+    </element>
+    <element name="Wizard" type="Feat Feature" source="Primus Two" id="ID_PT_FEAT_COLOURFUL_BARDMAGIC_WIZARD">
+        <supports>Colourful Bardmagic</supports>
+        <description>
+            <p>Du darfst dir einen Spell aussuchen, aus der folgenden Spellliste: Wizard</p>
+        </description>
+        <sheet>
+            <description>Spellcasting ability: Charisma.</description>
+        </sheet>
+        <rules>
+            <select type="Spell" name="Cantrip, 1st- oder 2nd-level Spell (Colourful Bardmagic)" supports="(0||1||2),Wizard" />
+        </rules>
+    </element>
+
+    <element name="Deepen the Pact" type="Feat" source="Primus Two" id="ID_PT_FEAT_DEEPEN_THE_PACT">
+        <description>Durch den Feat bekommst du die Fähigkeit, eine stärkere Verbindung zudeinem Patron aufzubauen. In Rücksprache mit deinem DM kannst du dir einenSpell aussuchen, den du 1mal per Shortrest umsonst benutzen kannst und auchüber Eldritch Master wiederhergestellt wird, der die Art des Paktes bzw. deinenPatron thematisch widerspiegelt (Spell der Stufe 5 oder niedriger). DieserZauber gilt als Warlockspell für dich und wird mit deinem Spellcastingmodifier(Charisma) gecastet. Nach der Nutzung kann man fortan auch immer einenSpellslot benutzen, um diesen Spell zu zaubern. Zusätzlich kannst du einen Statum +1 erhöhen und einen Skill, in dem du proficient bist, zu 1. Expertiseaufwerten.</description>
+        <prerequisite>8 Level in Warlock</prerequisite>
+        <sheet usage="{{pact:usage}}/Shortrest">
+            <description>Dein ausgesuchter Spell.</description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Deepen the Pact" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+            <select type="Class Feature" name="Expertise" supports="ID_EXPERTISE_SKILL_ACROBATICS|ID_EXPERTISE_SKILL_ANIMALHANDLUNG|ID_EXPERTISE_SKILL_ARCANA|ID_EXPERTISE_SKILL_ATHLETICS|ID_EXPERTISE_SKILL_DECEPTION|ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_INSIGHT|ID_EXPERTISE_SKILL_INTIMIDATION|ID_EXPERTISE_SKILL_INVESTIGATION|ID_EXPERTISE_SKILL_MEDICINE|ID_EXPERTISE_SKILL_NATURE|ID_EXPERTISE_SKILL_PERCEPTION|ID_EXPERTISE_SKILL_PERFORMANCE|ID_EXPERTISE_SKILL_PERSUASION|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SLEIGHTOFHAND|ID_EXPERTISE_SKILL_STEALTH|ID_EXPERTISE_SKILL_SURVIVAL" />
+            <stat name="pact:usage" value="1"/>
+            <stat name="pact:usage" value="1" requirements="ID_PT_FEAT_PERFECT_SERVANT_OFF"/>
+        </rules>
+    </element>
+
+    <element name="Perfect Servant (Defensive)" type="Feat" source="Primus Two" id="ID_PT_FEAT_PERFECT_SERVANT_DEF">
+        <description>Du erhälst einen Boon, der repräsentativ für die Art des Paktes mit deinem Patron steht. Darüber hinaus gewährt er dir Zugang zu einem wesentlichen Teil seiner Kräfte: Du erhälst 2. Resistenzen und eine Savingthrowproficiency.</description>
+        <prerequisite>19 Level in Warlock und den Deepen the Pact</prerequisite>
+        <requirements>ID_PT_FEAT_DEEPEN_THE_PACT</requirements>
+        <sheet>
+        </sheet>
+        <rules>
+            <select type="Feat Feature" name="Saving throw proficiency" supports="Perfect Servant"/>
+            <select type="Feat Feature" name="Resistenzen" supports="Resistance" number="2"/>
+        </rules>
+    </element>
+
+    <!--Perfect Servant-->
+    <element name="Perfect Servant (Strength)" type="Feat Feature" source="Player’s Handbook" id="ID_PHB_FEAT_RESILIENT_PERFECT_SERVANT_STRENGTH">
+        <compendium display="false" />
+        <supports>Perfect Servant</supports>
+        <description>
+            <p>You gain proficiency with Strength saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" />
+        </rules>
+    </element>
+    <element name="Perfect Servant (Dexterity)" type="Feat Feature" source="Player’s Handbook" id="ID_PHB_FEAT_RESILIENT_PERFECT_SERVANT_DEXTERITY">
+        <compendium display="false" />
+        <supports>Perfect Servant</supports>
+        <description>
+            <p>You gain proficiency with Dexterity saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" />
+        </rules>
+    </element>
+    <element name="Perfect Servant (Constitution)" type="Feat Feature" source="Player’s Handbook" id="ID_PHB_FEAT_RESILIENT_PERFECT_SERVANT_CONSTITUTION">
+        <compendium display="false" />
+        <supports>Perfect Servant</supports>
+        <description>
+            <p>You gain proficiency with Constitution saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CONSTITUTION" />
+        </rules>
+    </element>
+    <element name="Perfect Servant (Intelligence)" type="Feat Feature" source="Player’s Handbook" id="ID_PHB_FEAT_RESILIENT_PERFECT_SERVANT_INTELLIGENCE">
+        <compendium display="false" />
+        <supports>Perfect Servant</supports>
+        <description>
+            <p>You gain proficiency with Intelligence saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE" />
+        </rules>
+    </element>
+    <element name="Perfect Servant (Wisdom)" type="Feat Feature" source="Player’s Handbook" id="ID_PHB_FEAT_RESILIENT_PERFECT_SERVANT_WISDOM">
+        <compendium display="false" />
+        <supports>Perfect Servant</supports>
+        <description>
+            <p>You gain proficiency with Wisdom saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_WISDOM" />
+        </rules>
+    </element>
+    <element name="Perfect Servant (Charisma)" type="Feat Feature" source="Player’s Handbook" id="ID_PHB_FEAT_RESILIENT_PERFECT_SERVANT_CHARISMA">
+        <compendium display="false" />
+        <supports>Perfect Servant</supports>
+        <description>
+            <p>You gain proficiency with Charisma saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CHARISMA" />
+        </rules>
+    </element>
+    <!-- /resilient -->
+    <element name="Perfect Servant (Offensive)" type="Feat" source="Primus Two" id="ID_PT_FEAT_PERFECT_SERVANT_OFF">
+        <description>Du erhälst einen Boon, der repräsentativ für die Art des Paktes mit deinem Patron steht. Darüber hinaus gewährt er dir Zugang zu einem wesentlichen Teil seiner Kräfte: Cantrips werden 1. Stufe besser (Fire Bolt = 5d10, statt 4d10 und Eldritch Blast = 5 Beams, statt 4 zB.) und du darfst den Deepen the Pact Spell 2x/Shortrest umsonst casten.</description>
+        <prerequisite>19 Level in Warlock und den Deepen the Pact</prerequisite>
+        <requirements>ID_PT_FEAT_DEEPEN_THE_PACT</requirements>
+        <sheet>
+            <description></description>
+        </sheet>
+    </element>
+
+    <element name="Dual Wield Expert" type="Feat" source="Primus Two" id="ID_PT_FEAT_DUAL_WIELD_EXPERT">
+        <description>Wenn du 2 einhändige Waffen trägst, steigt dein „to-hit“ Wert und dein Schaden um +2.</description>
+        <prerequisite>12 Level in Martial Klasse(n)</prerequisite>
+        <sheet>
+            <description>Wenn du 2 einhändige Waffen trägst, steigt dein „to-hit“ Wert und dein Schaden um +2.</description>
+        </sheet>
+    </element>
+
+    <element name="Curing Healer" type="Feat" source="Primus Two" id="ID_PT_FEAT_CURING_HEALER">
+        <description>Zauber, die jemanden heilen oder temporäre Leben geben, nehmen statt deines Spellcastingmodifiers, deinen Medicinewert. Du kannst entweder Wisdom, Intelligence oder Charisma um +1 erhöhen.</description>
+        <prerequisite>Level 4 und über Spellcasting verfügen</prerequisite>
+        <sheet>
+            <description>Zauber, die jemanden heilen oder temporäre Leben geben, nehmen statt deines Spellcastingmodifiers, deinen Medicinewert.</description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Curing Healer" supports="ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA|ID_PHB_FEAT_ASI_INTELLIGENCE" />
+        </rules>
+    </element>
+
+    <element name="Healing Expert" type="Feat" source="Primus Two" id="ID_PT_FEAT_HEALING_EXPERT">
+        <description>Immer wenn du jemanden heilst, erhält er 1d6 zusätzliche temporäre Lebenspunkte, durch den Spell (außer er profitiert bereits durch einen höheren Wert). Wenn du temporäre Leben gibst, wird das auch um 1d6 erhöht. Wenn jemand bewusstlos wurde und Deathsavingthrows würfelt und du ihn heilst, kann er in der darauffolgenden Runde auch wieder seine Aktion benutzen, statt nur der Bonusaktion.</description>
+        <prerequisite>Level 8 und Curing Healer Feat</prerequisite>
+        <sheet>
+            <description>Immer wenn du jemanden heilst, erhält er 1d6 zusätzliche temporäre Lebenspunkte, durch den Spell. Wenn du temporäre Leben gibst, wird das auch um 1d6 erhöht. Wenn jemand bewusstlos wurde und Deathsavingthrows würfelt und du ihn heilst, kann er in der darauffolgenden Runde auch wieder seine Aktion benutzen, statt nur der Bonusaktion.</description>
+        </sheet>
+    </element>
+
+    <element name="Living Light" type="Feat" source="Primus Two" id="ID_PT_FEAT_LIVING_LIGHT">
+        <description>
+            <ul>
+                <li>Du kannst die gewürfelte Heilung maximieren. Das kannst du (PB.x/Longrest) vor dem Wirken des Spells ansagen.</li>
+                <li>Jedes mal, wenn du jemanden heilst, durch das Wirken eines Spells, kannst du 1d10 würfeln. Bei einer 10 erhälst du den Spellslot wieder zurück. Das funktioniert mit Zaubern der Stufe 6 oder darunter.</li>
+            </ul>
+        </description>
+        <prerequisite>Level 16 und Healing Expert Feat</prerequisite>
+        <requirements>ID_PT_FEAT_HEALING_EXPERT</requirements>
+        <sheet usage="{{proficiency}}/Longrest">
+            <description>
+                <ul>
+                    <li>Du kannst die gewürfelte Heilung maximieren.</li>
+                    <li>Jedes mal, wenn du jemanden heilst, durch das Wirken eines Spells, kannst du 1d10 würfeln. Bei einer 10 erhälst du den Spellslot wieder zurück. Das funktioniert mit Zaubern der Stufe 6 oder darunter.</li>
+                </ul>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Revengeseeker" type="Feat" source="Primus Two" id="ID_PT_FEAT_REVENGESEEKER">
+        <description>
+            <ul>
+                <li>Du hegst einen Hass auf eine bestimmte Person oder Gruppe. Wenn du einen Skillcheck würfelst, der in irgendeiner Form Informationen zu der Zielperson oder Gruppe beinhaltet, kannst du deinen PB. nochmal auf diesen hinzufügen.</li>
+                <li>Opportunity Attacks von deinen Zielen haben Disadvantage gegen dich.</li>
+                <li>Du kannst einen Stat um +1 erhöhen.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>
+                <ul>
+                    <li>Du hegst einen Hass auf eine bestimmte Person oder Gruppe. Wenn du einen Skillcheck würfelst, der in irgendeiner Form Informationen zu der Zielperson oder Gruppe beinhaltet, kannst du deinen PB. nochmal auf diesen hinzufügen.</li>
+                    <li>Opportunity Attacks von deinen Zielen haben Disadvantage gegen dich.</li>
+                </ul>
+            </description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Revengeseeker" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY|ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+        </rules>
+    </element>
+
+    <element name="Feel The Magic" type="Feat" source="Primus Two" id="ID_PT_FEAT_FEEL_THE_MAGIC">
+        <description>
+            <ul>
+                <li>Wenn du eine Shortrest, im für dich wahrnehmbaren Bereich eines Knotenpunktes, nimmst, kannst du einen Spellslot wiederherstellen, der nicht höher als dein PB. sein darf. Besonderheiten: Als Kleriker und Paladine kann man das auch, wenn man an geweihten Orten shortrestet, als Druide an einem Zirkel oder ähnlichem und als Warlock kann man den ersten gewirkten Spell danach spellslotfrei casten (da diese sowieso per Shortrest ihre Slots erhalten).</li>
+                <li>Wenn du dich 30 Tage lang täglich für 8 Stunden auf einen Knotenpunkt einstimmst, hast du eine 5% Chance (Natural 20), ein spezielles Blessing zu erhalten. Wenn das Einstimmen scheitert, kannst du es bei dem Knotenpunkt nie wieder versuchen.</li>
+            </ul>
+        </description>
+        <prerequisite>8 Level in Spellcasterclassen</prerequisite>
+        <sheet>
+            <description>Wenn du eine Shortrest, im für dich wahrnehmbaren Bereich eines Knotenpunktes, nimmst, kannst du einen Spellslot wiederherstellen, der nicht höher als {{proficiency}}. sein darf. Besonderheiten: Als Kleriker und Paladine kann man das auch, wenn man an geweihten Orten shortrestet, als Druide an einem Zirkel oder ähnlichem und als Warlock kann man den ersten gewirkten Spell danach spellslotfrei casten (da diese sowieso per Shortrest ihre Slots erhalten).</description>
+        </sheet>
+    </element>
+
+    <element name="Parrying" type="Feat" source="Primus Two" id="ID_PT_FEAT_PARRYING">
+        <description>Wenn du Schaden erleidest, der nicht von Radiant, Acid oder Psychic Damage her rührt, kannst du als Reaction (PBx/Longrest) den Schaden reduzieren, durch eine gezielte Parierung. Der eingehende Schaden wird reduziert um: Weapon Die(+Rarität)+Constitution+PB. Größere Waffen bieten daher besseren Schutz, als kleinere.</description>
+        <sheet action="Reaction" usage="{{proficiency}}/Longrest">
+            <description>Wenn du Schaden erleidest, der nicht von Radiant, Acid oder Psychic Damage her rührt, kannst du als Reaction den Schaden um Weapon Die(+Rarität)+{{constitution:modifier}}+{{proficiency}} reduzieren, durch eine gezielte Parierung.</description>
+        </sheet>
+    </element>
+
+    <!--Resitances-->
+    <element name="Resistance (Bludgeoning)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" />
+        </rules>
+    </element>
+
+    <element name="Resistance (Piercing)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_PIERCING">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PIERCING"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Slashing)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_SLASHING">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Acid)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_ACID">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Cold)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_COLD">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Fire)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_FIRE">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Force)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_FORCE">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FORCE"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Lightning)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_LIGHTNING">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Necrotic)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_NECROTIC">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Poison)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_POISON">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Psychic)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_PSYCHIC">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Radiant)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_RADIANT">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Thunder)" type="Feat Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_THUNDER">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER"/>
+        </rules>
+
+    </element>
+
+</elements>
+
