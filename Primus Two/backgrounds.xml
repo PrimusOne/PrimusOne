@@ -2,12 +2,12 @@
 <elements>
     <info>
         <name>Backgrounds</name>
-        <update version="0.3">
+        <update version="0.4">
             <file name="backgrounds.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/backgrounds.xml" />
         </update>
     </info>
 
-    <element name="Harte Lebenbedingungen" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_HARTE_LEBENSBEDINGUNGEN">
+    <element name="Harte Lebensbedingungen" type="Background" source="Primus Two" id="ID_PT_BACKGROUND_HARTE_LEBENSBEDINGUNGEN">
         <description>
             <p>Du hast eine extreme Kindheit und Jugend erlebt. Diese Herausforderungen haben dafür gesorgt, dass du um einiges belastbarer wurdest, als andere.</p>
         </description>
@@ -15,9 +15,9 @@
             <set name="short">Tough feat, 1 Language, 1 Skill Proficiency und 1 Bonusfeat </set>
         </setters>
         <rules>
-            <stat name="tough:hp" value="level" />
-            <stat name="tough:hp" value="level" />
-            <stat name="hp" value="tough:hp" />
+            <stat name="hart:hp" value="level" />
+            <stat name="hart:hp" value="level" />
+            <stat name="hp" value="hart:hp" />
             <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
             <select type="Proficiency" name="Skill Proficiency" supports="Skill" />
             <select type="Background Feature" name="Optionale Backgroundfeature" supports="Optionale Backgroundfeatures"/>
