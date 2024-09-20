@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+		<name>Bloodhunter PT</name>
+		<update version="0.1">
+			<file name="class-bloodhunterPT.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/class-bloodhunterPT.xml" />
+		</update>
+	</info>
+    <element name="Bloodhunter PT" type="Class" source="Primus Two" id="ID_PT_CLASS_BLOODHUNTER_PT">
+        <description>
+            <p></p>
+            <h2>CLASS FEATURES</h2>
+            <p>As an bloodhunter, you gain the following class features.</p>
+            <h5 class="caption">HIT POINTS</h5>
+            <ul class="unstyled">
+                <li>
+                    <strong>Hit Dice:</strong> 1d10 per bloodhunter level</li>
+                <li>
+                    <strong>Hit Points at 1st Level:</strong> 10 + your Constitution modifier</li>
+                <li>
+                    <strong>Hit Points at Higher Levels:</strong> 1d10 (or 6) + your Constitution modifier per bloodhunter level after 1st</li>
+            </ul>
+            <h5 class="caption">PROFICIENCIES</h5>
+            <ul class="unstyled mb">
+                <li><strong>Armor:</strong> Light armor, medium armor, heavy armor</li>
+                <li><strong>Weapons:</strong> simple und martial weapons</li>
+                <li><strong>Tools:</strong> 1 Tool Proficiency deiner Wahl</li>
+            </ul>
+            <ul class="unstyled">
+                <li><strong>Saving Throws:</strong> Dexterity und Constitution</li>
+                <li><strong>Skills:</strong> Wähle 3 aus Arcana, Athletics, History, Insight, Perception, Investigation, Religion und Survival</li>
+            </ul>
+            <h5 class="caption">EQUIPMENT</h5>
+            <p>You start with the following equipment, in addition to the equipment granted by your background:</p>
+            <ul>
+				<li>(a) a martial weapon or (b) two simple weapons</li>
+				<li>(a) a light crossbow and 20 bolts or (b) hand crossbow and 20 bolts</li>
+				<li>(a) studded leather armor or (b) scale mail armor</li>
+				<li>an explorer’s pack</li>
+            </ul>
+            <h5 class="caption">THE BLOOD HUNTER</h5>
+			<table class="class-features">
+				<thead>
+					<tr><td class="col-5">Level</td><td class="col-15">Hemocraft Die</td><td class="left">Features</td></tr>
+				</thead>
+				<tr><td> 1st</td><td>1d4</td><td class="left">Hunter’s Bane, Fighting Styl</td></tr>
+				<tr><td> 2nd</td><td>1d4</td><td class="left">Crimson Rite</td></tr>
+				<tr><td> 3rd</td><td>1d4</td><td class="left">Brotherhood</td></tr>
+				<tr><td> 4th</td><td>1d4</td><td class="left">Ability Score Improvement</td></tr>
+				<tr><td> 5th</td><td>1d6</td><td class="left">Extra Attack</td></tr>
+				<tr><td> 6th</td><td>1d6</td><td class="left">Hunters Branding</td></tr>
+				<tr><td> 7th</td><td>1d6</td><td class="left">Brotherhood feature</td></tr>
+				<tr><td> 8th</td><td>1d6</td><td class="left">Ability Score Improvement</td></tr>
+				<tr><td> 9th</td><td>1d6</td><td class="left">Psychometry</td></tr>
+				<tr><td>10th</td><td>1d6</td><td class="left">Dark Augmentation</td></tr>
+				<tr><td>11th</td><td>1d8</td><td class="left">Brotherhood feature</td></tr>
+				<tr><td>12th</td><td>1d8</td><td class="left">Ability Score Improvement</td></tr>
+				<tr><td>13th</td><td>1d8</td><td class="left">Improved Hunters Branding</td></tr>
+				<tr><td>14th</td><td>1d8</td><td class="left">Hardened Soul</td></tr>
+				<tr><td>15th</td><td>1d8</td><td class="left">Brotherhood feature</td></tr>
+				<tr><td>16th</td><td>1d8</td><td class="left">Ability Score Improvement</td></tr>
+				<tr><td>17th</td><td>1d10</td><td class="left">Improved Augmentation</td></tr>
+				<tr><td>18th</td><td>1d10</td><td class="left">Brotherhood feature</td></tr>
+				<tr><td>19th</td><td>1d10</td><td class="left">Ability Score Improvement</td></tr>
+				<tr><td>20th</td><td>1d10</td><td class="left">Alpha Predator</td></tr>
+			</table>
+            <!-- class table here -->
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HUNTERS_BANE" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_CRIMSON_RITE" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_BROTHERHOOD" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_ASI" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_EXTRA_ATTACK" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HUNTERS_BRANDING" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PSYCHOMETRY" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_DARK_AUGMENTATION" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_IMPROVED_HUNTERS_BRANDING" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HARDENED_SOUL" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_IMPROVED_AUGMENTATION" />
+            <div element="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_ALPHA_PREDATOR" />
+
+        </description>
+        <setters>
+			<set name="short">Ein Jäger der seine eigene Lebenskraft aufopfert um seine Beute zu jagen.</set>
+            <set name="hd">d10</set>
+        </setters>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+            <select type="Proficiency" name="Tool Proficiency" supports="Artisan tools" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HUNTERS_BANE" level="1" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_CRIMSON_RITE" level="2" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_BROTHERHOOD" level="3" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_ASI" level="4" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_EXTRA_ATTACK" level="5" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HUNTERS_BRANDING" level="6" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PSYCHOMETRY" level="9" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_DARK_AUGMENTATION" level="10" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_IMPROVED_HUNTERS_BRANDING" level="13" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HARDENED_SOUL" level="14" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_IMPROVED_AUGMENTATION" level="17" />
+            <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_ALPHA_PREDATOR" level="20" />
+            <select type="Class Feature" name="Hemocraftmodifier" supports="Huntercasting"/>
+        </rules>
+        <multiclass id="ID_PT_MULTICLASS_BLOODHUNTER">
+            <prerequisite>Strength 13 oder Dexterity 13, und Wisdom 13 oder Intelligence 13</prerequisite>
+            <requirements>([str:13]||[dex:13]),([wis:13]||[int:13]),!ID_PT_CLASS_BLOODHUNTER_PT,!ID_PT_MULTICLASS_BLOODHUNTER</requirements>
+            <setters>
+                <set name="multiclass proficiencies">Light armor, medium armor, shields, simple weapons, martial weapons</set>
+            </setters>
+            <rules>
+                <grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS" />
+                <select type="Proficiency" name="Tool Proficiency" supports="Artisan tools" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+                <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+            </rules>
+        </multiclass>
+    </element>
+
+    <element name="Intelligence" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_INTELLIGENCE">
+        <supports>Huntercasting</supports>
+        <description>
+            <p>Dein Hemocraftmodifier ist intelligence.</p>
+        </description>
+        <sheet display="false"/>
+
+        <rules>
+    	    <stat name="hemocraft:modifier" value="intelligence:modifier"/>
+        </rules>
+    </element>
+    
+    <element name="Wisdom" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_WISDOM">
+        <supports>Huntercasting</supports>
+        <description>
+            <p>Dein Hemocraftmodifier ist wisdom.</p>
+        </description>
+        <sheet display="false"/>
+
+        <rules>
+    	    <stat name="hemocraft:modifier" value="wisdom:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Constitution" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_CONSTITUTION">
+        <supports>Huntercasting</supports>
+        <requirements>ID_PT_ARCHETYPE_BLOODHUNTER_PT_DIE_BRUDERSCHAFT_DER_ARMATIER</requirements>
+        <description>
+            <p>Dein Hemocraftmodifier ist Constitution.</p>
+        </description>
+        <sheet display="false"/>
+
+        <rules>
+    	    <stat name="hemocraft:modifier" value="constitution:modifier"/>
+        </rules>
+    </element>
+
+    <element name="Hunter’s Bane" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HUNTERS_BANE">
+        <description>
+            <p>Auf Level 1 wird der Blood Hunter, nach Jahren desTrainings, in die Reihen der Jäger aufgenommen. Der Jägerverpflichtet sich einem Orden, Bruderschaft genannt und ehrtund wahrt ihre Traditionen. Dir wurde Zugang zureinzigartigen Fluchmagie gewährt. Einige Jäger fandenheraus, wie man das Hex benutzen kann, ohne direktkorrumpiert zu werden, wodurch Blood Hunter einebesondere Physis entwickeln können und ihr Blut als Waffenutzen können. Dafür durchleben sie Jahre des Trainings undvollziehen ein sehr schmerzhaftes Ritual.</p>
+            <p class="indent">Sie benutzen sogenannte Hemocraft Dies, also Blutwürfel. Sie können das für eine Reihe an Fähigkeiten nutzen, wie Crimson Rite, Dark Augmentation, etc. Jeder Jäger entscheidet, ob er zur Berechnung Wisdom oder Intelligence nutzt. Wenn ein Savingthrow verlangt wird, wird dieser wie folgt berechnet: 8 + PB. + Wisdom/Intelligence.</p>
+            <p class="indent">Auf Level 1 kann sich der Blood Hunter ebenfalls einen Fighting Style aussuchen (gleiche Auswahl wie der Fighter).</p>
+        </description>
+        <sheet display="false">
+        </sheet>
+        <rules>
+            	<select type="Class Feature" name="Fighting Style" supports="Fighting Style, Fighter" />
+        </rules>
+    </element>
+    
+    
+    <element name="Crimson Rite" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_CRIMSON_RITE">
+        <description>
+            <p>Ab Level 2 erhält er die Fähigkeit seine eigene Lebenskraft einzusetzen und seine Waffe(n) zu verstärken.</p>
+            <p class="indent">Als Bonusaktion würfelt er einen Hemocraft Die und fügt sich das Ergebnis (unverhinderbar) als nekrotischen Schaden zu.</p>
+            <p class="indent">Für die kommende Minute verursacht er, wenn er seine Waffen zum angreifen nutzt, zusätzlichen Schaden in Höhe des Hemocraft Dies.</p>
+            <p>Der Zusatzschaden des Crimson Rites ist elementar und man kann ein Rite auswählen. Auf Level 9 einen weiteren, sowie auf Level 17.</p>
+            <table class="class-features">
+				<thead>
+					<tr><td class="col-5">Rite</td><td class="col-15">Damage</td></tr>
+			    </thead>
+                <tr><td> Flame</td><td>Fire</td></tr>
+                <tr><td> Frozen</td><td>Cold</td></tr>
+                <tr><td> Storm</td><td>Lightning</td></tr>
+                <tr><td> Venom</td><td>Poison</td></tr>
+                <tr><td> Caustic</td><td>Acid</td></tr>
+                <tr><td> Roar</td><td>Thunder (9)</td></tr>
+                <tr><td> Dead</td><td>Necrotic (9)</td></tr>
+                <tr><td> Oracle</td><td>Psychic (9)</td></tr>
+                <tr><td> Light</td><td>Radiant (17)</td></tr>
+                <tr><td> Impact</td><td>Force (17)</td></tr>
+            </table>
+        </description>
+        <sheet action = "Bonus Action">
+            <description usage ="1d{{crimson rite:damage die}} nekrotischen Schaden">
+                <p>Du durchdringst eine einzelne Waffe bis zu deiner nächsten short oder long rest mit der Elementarenergie eines bekannten Ritus. Für die kommende Minute verursacht er, wenn er seine Waffen zum angreifen nutzt, zusätzlichen Schaden in Höhe des Hemocraft Dies.</p>
+            </description>
+            
+            <description usage = "2d{{crimson rite:damage die}} nekrotischen Schaden" level="20">
+                <p>Du durchdringst eine einzelne Waffe bis zu deiner nächsten short oder long rest mit der Elementarenergie eines bekannten Ritus. Für die kommende Minute verursacht er, wenn er seine Waffen zum angreifen nutzt, zusätzlichen Schaden in Höhe des Hemocraft Dies.</p>
+            </description>
+        </sheet>
+        <rules>
+            <select type="Class Feature" name="Crimson Rite" supports="Primus Hunter" level="1" />
+            <select type="Class Feature" name="Crimson Rite" supports="Primus Hunter" level="9" />
+            <select type="Class Feature" name="Crimson Rite" supports="Primus Hunter" level="17" />
+            <select type="Class Feature" name="Crimson Rite" supports="Primus Hunter" requirements="ID_PT_ARCHETYPE_FEATURE_EXTRA_RITE" />
+            <select type="Class Feature" name="Crimson Rite" supports="Primus Hunter" requirements="ID_PT_ARCHETYPE_FEATURE_PEERLESS" />
+
+            <stat name="crimson rite:damage die" value="4" bonus="crimson rite" level="1" />
+            <stat name="crimson rite:damage die" value="6" bonus="crimson rite" level="6" />
+            <stat name="crimson rite:damage die" value="8" bonus="crimson rite" level="11" />
+            <stat name="crimson rite:damage die" value="10" bonus="crimson rite" level="16" />
+        </rules>
+    </element>
+    <!-- Primal Rites -->
+    <element name="Rite of the Flame" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_FLAME">
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is fire type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is fire type.</description>
+        </sheet>
+    </element>
+    <element name="Rite of the Frozen" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_FROZEN">
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is cold type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is cold type.</description>
+        </sheet>
+    </element>
+    <element name="Rite of the Storm" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_STORM">
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is lightning type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is lightning type.</description>
+        </sheet>
+    </element>
+    <element name="Rite of Venom" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_VENOM">
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is poison type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is poison type.</description>
+        </sheet>
+    </element>
+    <element name="Rite of the Caustic" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_CAUSTIC">
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is acid type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is acid type.</description>
+        </sheet>
+    </element>
+    <element name="Rite of the Roar" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_ROAR">
+        <requirements>[level:9]</requirements>
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is thunder type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is thunder type.</description>
+        </sheet>
+    </element>
+    <element name="Rite of the Dead" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_DEAD">
+        <requirements>[level:9]</requirements>
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is necrotic type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is necrotic type.</description>
+        </sheet>
+    </element>
+    <element name="Rite of the Oracle" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_ORACLE">
+        <requirements>[level:9]</requirements>
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is psychic type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is psychic type.</description>
+        </sheet>
+    </element>
+    <element name="Rite of the Light" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_LIGHT">
+        <requirements>[level:17]</requirements>
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is radiant type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is radiant type.</description>
+        </sheet>
+    </element>
+    <element name="Rite of the Impact" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PRIMAL_RITE_IMPACT">
+        <requirements>[level:17]</requirements>
+        <supports>Primus Hunter</supports>
+        <description>
+            <p>Your rite damage is force type.</p>
+        </description>
+        <sheet>
+            <description>Your rite damage is force type.</description>
+        </sheet>
+    </element>
+
+    <element name="Brotherhood" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_BROTHERHOOD">
+        <description>
+            <p>Durch Level 3 erhälst du Zugang zu den besonderen Fähigkeiten der Bruderschaft in der du ausgebildet wurdest. Zur Auswahl stehen die Bruderschaften: </p>
+            <ul>
+                <li>der Sanguiniker</li>
+                <li>der Venatier </li>
+                <li>der Armatier und der Pericler.</li>
+            </ul>
+        </description>
+        <rules>
+            <select type="Archetype" name="Brotherhood" supports="Brotherhood"/>
+        </rules>
+    </element>
+
+    <element name="Ability Score Improvement" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_ASI">
+		<compendium display="false" />
+		<description>
+			<p>Auf Level 4, 8, 12, 16 und 19 erhälst du ein Abillity Score Improvement oder darfst einen Feat stattdessen wählen.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Class Feature" name="Improvement Option (Bloodhunter 4)" supports="Improvement Option,Bloodhunter PT,4" level="4" />
+			<select type="Class Feature" name="Improvement Option (Bloodhunter 8)" supports="Improvement Option,Bloodhunter PT,8" level="8" />
+			<select type="Class Feature" name="Improvement Option (Bloodhunter 12)" supports="Improvement Option,Bloodhunter PT,12" level="12" />
+			<select type="Class Feature" name="Improvement Option (Bloodhunter 16)" supports="Improvement Option,Bloodhunter PT,16" level="16" />
+			<select type="Class Feature" name="Improvement Option (Bloodhunter 19)" supports="Improvement Option,Bloodhunter PT,19" level="19" />
+		</rules>
+	</element>
+
+    <element name="Extra Attack" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_EXTRA_ATTACK">
+        <description>
+			<p>Beginnend mit Level 5 erhälst du Extrattack..</p>
+		</description>
+		<sheet>
+			<description level="5">You can attack twice, instead of once, whenever you take the Attack action on your turn</description>
+		</sheet>
+		<rules>
+			<stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
+		</rules>
+	</element>
+
+
+    <element name="Hunters Branding" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HUNTERS_BRANDING">
+        <description>
+            <p>Durch Level 6 erhält der Blood Hunter Zugang zu seinem Branding. Wenn er ein Ziel mit einer Meleeweapon angreift und Schaden verursacht mit seinem Crimson Rite, kann er, ohne dass es eine Aktion kostet, das Ziel markieren. Er weiß fortan wo es sich befindet und kennt immer die Richtung (vergleichbar mit einer inneren Kompassnadel). Markierte Ziele erleiden jedes mal, wenn sie dich angreifen und wenn sie einen Verbündeten in 30ft. um dich herum angreifen Psychic Damage in Höhe eines Hemocraft Die Wurfes. Das kann nicht mehr als 1mal pro Runde passieren und triggert auch nicht mehrfach durch den Einsatz von AOE-Effekten. Ziele, die immun gegen Psychic Damage sind, können von diesem Effekt nicht betroffen werde. Wenn das Branding genutzt wird, um ein solches Ziel zu betreffen, wird der Use nicht verbraucht und der Blood Hunter erfährt von der Immunität. Es kann immer nur 1. Ziel gleichzeitig davon markiert sein.</p>
+            <p>Um das Branding wieder zu entfernen, muss man die Plane wechseln, sodass man nicht auf derselben ist, wie der Blood Hunter (wenn er sie auch wechselt verfällt es ebenfalls) oder Remove Curse muss gewirkt werden. Remove Curse muss abhängig von dem Spelllevel des Blood Hunters upgecastet werden. Berechnet wird das zu erreichende Level durch Blood Hunter Level/2 abgerundet (zB. Level 15 = Remove Curse Level 7 erforderlich).</p>
+        </description>
+		<sheet>
+            <description usage="1/Short Rest">
+                <p>Wenn er ein Ziel mit einer Meleeweapon angreift und Schaden verursacht mit seinem Crimson Rite, kann er, ohne dass es eine Aktion kostet, das Ziel markieren. Er weiß fortan wo es sich befindet und kennt immer die Richtung</p>
+                <p>Markierte Ziele erleiden jedes mal, wenn sie dich angreifen und wenn sie einen Verbündeten in 30ft. um dich herum angreifen Psychic Damage in Höhe von 1d{{crimson rite:damage die}}. Das kann nicht mehr als 1mal pro Runde passieren</p>
+                <p>Ziele, die immun gegen Psychic Damage sind, können von diesem Effekt nicht betroffen werde. Wenn das Branding genutzt wird, um ein solches Ziel zu betreffen, wird der Use nicht verbraucht und der Blood Hunter erfährt von der Immunität. Es kann immer nur 1. Ziel gleichzeitig davon markiert sein.</p>
+            </description>
+            <description usage="1/Short Rest" level="13">
+                <p>Wenn er ein Ziel mit einer Meleeweapon angreift und Schaden verursacht mit seinem Crimson Rite, kann er, ohne dass es eine Aktion kostet, das Ziel markieren. Er weiß fortan wo es sich befindet und kennt immer die Richtung</p>
+                <p>Markierte Ziele erleiden jedes mal, wenn sie dich angreifen und wenn sie einen Verbündeten in 30ft. um dich herum angreifen Psychic Damage in Höhe von 2d{{crimson rite:damage die}}. Das kann nicht mehr als 1mal pro Runde passieren</p>
+                <p>Ziele, die immun gegen Psychic Damage sind, können von diesem Effekt nicht betroffen werde. Wenn das Branding genutzt wird, um ein solches Ziel zu betreffen, wird der Use nicht verbraucht und der Blood Hunter erfährt von der Immunität. Es kann immer nur 1. Ziel gleichzeitig davon markiert sein.</p>
+            </description>
+        </sheet>
+	</element>
+
+    <element name="Psychometry" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_PSYCHOMETRY">
+        <description>
+			<p>Ab Level 9 kann der Bloodhunter seine übernatürlichgeschärften Sinne nutzen, um an besonders erinnerungsträchtigen Orten Eindrücke zu gewinnen, indem er sich 1. Minute lang auf ein Objekt oder einen Ort konzentriert. Das kann von nachhallenden Geräuschen einer kürzlich verstorbenen Person, durch das Berühren der Leiche, bis hin zum Wiedererleben von starken Erinnerungen, alles eintreffen. Abhängige Faktoren: Wie lange ist das Ereignis her, wie viele waren betroffen, wie intensiv waren die Gefühle, etc. Der DM entscheidet in jedem Fall, wie und was als Information zugänglich wird.</p>
+		</description>
+		<sheet>
+			<description  usage="1/Long Rest">Du kannst dich 1 Minute lang auf ein Objekt oder Ort konzentrieren um wage Informationen erhalten. Je zeitlich näher oder stärker die Wucht das Ereignis, desto besser sind die gewonnen Informationen</description>
+			<description  usage="1/Short Rest" requirements="ID_PT_ARCHETYPE_FEATURE_HUNTERS_KNOWLEDGE">Du kannst dich 1 Minute lang auf ein Objekt oder Ort konzentrieren um wage Informationen erhalten. Je zeitlich näher oder stärker die Wucht das Ereignis, desto besser sind die gewonnen Informationen</description>
+        </sheet>
+	</element>
+
+    <element name="Dark Augmentation" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_DARK_AUGMENTATION">
+        <description>
+			<p>Durch Level 10 erhälst du eine allgemeine Verbesserung der Physis. Der Movementspeed steigt um +5 ft. und jedes mal wenn du einen Strength oder Dexterity Savingthrow würfelst, darfst du deinen Hemocraft Die draufrechnen. Ob du die Fähigkeit nutzt, kannst du ansagen, nachdem du gewürfelt hast, aber bevor mitgeteilt wird, ob das ein Erfolg oder Misserfolg ist. Man muss sich das als Kontrolle des eigenen Blutflusses vorstellen, um sich temporäre Vorteile zu verschaffen.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>
+                <p>Jedes mal wenn du einen Strength oder Dexterity Savingthrow würfelst, darfst du 1d{{crimson rite:damage die}} draufrechnen. Ob du die Fähigkeit nutzt, kannst du ansagen, nachdem du gewürfelt hast, aber bevor mitgeteilt wird, ob das ein Erfolg oder Misserfolg ist.</p>
+            </description>
+            <description level="17" usage="{{proficiency}}/Long Rest">Jedes mal wenn du einen Savingthrow würfelst, darfst du 1d{{crimson rite:damage die}} draufrechnen. Ob du die Fähigkeit nutzt, kannst du ansagen, nachdem du gewürfelt hast, aber bevor mitgeteilt wird, ob das ein Erfolg oder Misserfolg ist.</description>
+        </sheet>
+        <rules>
+            <stat name="innate speed:misc" value="5"/>
+        </rules>
+	</element>
+
+    <element name="Improved Hunters Branding" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_IMPROVED_HUNTERS_BRANDING">
+        <description>
+			<p>Durch das Erreichen von Level 13 kann der Blood Hunter 2 Hemocraft Dies würfeln, wenn er den Schaden seines Brandings berechnet. Eine markierte Kreatur kann nicht mehr die Disengage Action benutzen, um aus der Reichweite des Blood Hunters zu laufen. Wenn das Ziel sich wegteleportieren will (Teleport, Planeshift Spells undähnliche Effekte), um dem Kampf zu entkommen (zB. MistyStep zählt also nicht), muss es einen Wisdomsavingthrow schaffen. Falls das misslingt, erleidet das Ziel 4d6 Psychic Damage und der Teleport schlägt fehl. Bei Erfolg erleidet es nur die Hälfte des Schadens und der Teleport geht erfolgreich durch. Dieser Effekt triggert als letztes, unmittelbar, bevor der Teleport wirkt. Nachdem also dieser Effekt wirkte, kann man nicht mehr nachträglich counterspellen oder andere Effekte nutzen, um diesen Teleport zu verhindern - alle die also den Zauber verhindern wollen, durch ihre Reaction, müssen das ankündigen, bevor dieser Effekt wirkt.</p>
+		</description>
+		<sheet>
+			<description>Eine markierte Kreatur kann nicht mehr die Disengage Action benutzen, um aus der Reichweite des Blood Hunters zu laufen. Wenn das Ziel sich wegteleportieren will (Teleport, Planeshift Spells und ähnliche Effekte), um dem Kampf zu entkommen (zB. MistyStep zählt also nicht), muss es einen Wisdomsavingthrow schaffen. Falls das misslingt, erleidet das Ziel 4d6 Psychic Damage und der Teleport schlägt fehl. Bei Erfolg erleidet es nur die Hälfte des Schadens und der Teleport geht erfolgreich durch. Dieser Effekt triggert als letztes, unmittelbar, bevorder Teleport wirkt.</description>
+            <description level="20">
+                <p>Eine markierte Kreatur kann nicht mehr die Disengage Action benutzen, um aus der Reichweite des Blood Hunters zu laufen. Wenn das Ziel sich wegteleportieren will (Teleport, Planeshift Spells und ähnliche Effekte), um dem Kampf zu entkommen (zB. MistyStep zählt also nicht), muss es einen Wisdomsavingthrow mit Disadvantage schaffen. Falls das misslingt, erleidet das Ziel 8d6 Psychic Damage und der Teleport schlägt fehl. Bei Erfolg erleidet es nur die Hälfte des Schadens und der Teleport geht erfolgreich durch. Dieser Effekt triggert als letztes, unmittelbar, bevorder Teleport wirkt.</p>
+                <p>Das Branding ist nicht mehr durch Remove Curse entfernbar und schwindet auch nicht, wenn das Ziel die Plane wechselt. Selbst nach dem Tod, wird es aktiv sein und wenn er reanimiert wirst, weiß der Blood Hunter das. Nur noch Wish oder göttliche Kräfte können das Branding entfernen.</p>
+            </description>
+        </sheet>
+	</element>
+
+    <element name="Hardened Soul" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HARDENED_SOUL">
+        <description>
+			<p>Ab Level 14 erhält der Blood Hunter Advantage auf Savingthrows die Frightened oder Charmed verursachen.</p>
+		</description>
+		<sheet>
+			<description>Du hast Advantage auf Savingthrows die Frightened oder Charmed verursachen.</description>
+		</sheet>
+	</element>
+
+    <element name="Improved Augmentation" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_IMPROVED_AUGMENTATION">
+        <description>
+			<p>Durch Level 17 erhält der Blood Hunter zusätzliche 5 ft. mehr Movementspeed und er kann seine Hemocraft Dies jetzt für jeden Savingthrow benutzen, den er würfeln muss.</p>
+		</description>
+		<sheet display="false">
+		</sheet>
+        <rules>
+            <stat name="innate speed:misc" value="5"/>
+        </rules>
+	</element>
+
+    <element name="Alpha Predator" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_ALPHA_PREDATOR">
+        <description>
+			<p>Durch das Erreichen von Level 20 erreicht der Blood Hunter ungeahnte Kräfte.</p>
+            <ol>
+                <li>Das Branding verursacht jetzt 8d6 statt 4d6 Psychic Damage und hat Disadvantage auf den Wisdomsavingthrow, wenn er versucht sich weg zu teleportieren.</li>
+                <li>Das Branding ist nicht mehr durch Remove Curse entfernbar und schwindet auch nicht, wenn das Ziel die Plane wechselt (der innere Kompass verrät dem Blood Hunter nicht, wohin das Ziel wechselte, nur dass es wechselte). Selbst nach dem Tod, wird es aktiv sein und wenn er reanimiert wirst, weiß der Blood Hunter das. Nur noch Wish oder göttliche Kräfte können das Branding entfernen.</li>
+                <li>Dein Crimson Rite verursacht jetzt 2 Hemocraft Dies, statt einem, Schaden.</li>
+                <li>Dein maximales Leben kann nicht mehr reduziert werden.</li>
+                <li>Wenn du dein Improved Augmentation Feature nutzt, erhälst du Advantage auf den Wurf.</li>
+            </ol>
+		</description>
+		<sheet>
+            <description>
+                <p>Das Branding verursacht jetzt 8d6 statt 4d6 Psychic Damage und hat Disadvantage auf den Wisdomsavingthrow, wenn er versucht sich weg zu teleportieren.</p>
+                <p>Das Branding ist nicht mehr durch Remove Curse entfernbar und schwindet auch nicht, wenn das Ziel die Plane wechselt</p>
+                <p>Dein Crimson Rite verursacht jetzt 2 Hemocraft Dies, statt einem, Schaden.</p>
+                <p>Dein maximales Leben kann nicht mehr reduziert werden.</p>
+                <p>Wenn du dein Improved Augmentation Feature nutzt, erhälst du Advantage auf den Wurf.</p>
+            </description>
+        </sheet>
+	</element>
+
+    <!--Bruderschaften-->
+
+    <element name="Die Bruderschaft der Sanguiniker" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_BLOODHUNTER_PT_DIE_BRUDERSCHAFT_DER_SANGUINIKER">
+        <supports>Brotherhood</supports>
+        <description>
+            <p>Die Sanguiniker sind diejenigen, die sich dem Training mit ihrer verfluchten Blutmagie widmen. Sie nutzen dabei auch mehr Techniken, die sich selbst schaden, jedoch im Gegenzug auch mehr Kräfte bieten. Sie sind eher als defensive Kämpfer bekannt, die mit Einhandwaffen und Schilden herumlaufen, da sie viel mit ihren Fähigkeiten arbeiten.</p>
+            <table>
+                <thead>
+                    <tr><td>Class Level</td><td>Feature</td></tr>
+                </thead>
+                <tr><td>3</td><td>Bloodmanipulation</td></tr>
+                <tr><td>7</td><td>Substract Blood</td></tr>
+                <tr><td>11</td><td>Blood Extraction</td></tr>
+                <tr><td>15</td><td>Greater Blood Manipulation</td></tr>
+                <tr><td>18</td><td>Supreme Blood Art</td></tr>
+            </table>
+            <div element="ID_PT_ARCHETYPE_FEATURE_BLOODMANIPULATION"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_BLOODBANK"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_BLOOD_EXTRACTION"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_GREATER_BLOOD_MANIPULATION"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_SUPREME_BLOODART"/>
+        </description>
+        <sheet>
+            Du gehörst zur Bruderschaft der Sanguiniker.
+        </sheet>
+        <rules>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_BLOODMANIPULATION" level="3"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_BLOODBANK" level="7"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_BLOOD_EXTRACTION" level="11"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_GREATER_BLOOD_MANIPULATION" level="15"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_SUPREME_BLOODART" level="18"/>
+        </rules>
+    </element>
+
+    <element name="Bloodmanipulation" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_BLOODMANIPULATION">
+        <description>
+            <p>Durch Erreichen von Level 3 lernt der Blood Hunter die Fähigkeit, sein Blut auch offensiver zu nutzen. Er kann als Bonusaktion einen Hemocraft Die würfeln und sich das Ergebnis unverhinderbar als nekrotischen Schaden zufügen. Durch den Einsatz kreiert er eine Blutwaffe die den Hemocraft Die + Hemocraftmodifier (Intelligence oder Wisdom) als Schaden zufügt. Die Waffe kann nie weiter als 30ft. von dir entfernt sein und du kannst jede Runde deine Bonusaktion nutzen, um mit ihr anzugreifen. Der "to-hit-Wert" bildet sich aus Hemocraftmodifier+PB. Sie kann alles in 30 ft. angreifen, dass du sehen kannst. In der Beschwörungsrunde, kannst du als Teil der Beschwörung auch direkt mitangreifen (Vgl. Spiritual Weapon). Ihr Schadenstyp ist entweder Slashing, Piercing oder Bludgeoning, je nach gewähltem Design. Die Waffe ist unzerstörbar und hält 1. Minute oder bis du sie auflöst.</p>
+            <p>Wenn du bewusstlos gehen solltest, und nicht direkt stirbst, löst sich die Waffe auf und du stehst mit 1. Leben wieder auf. Dieser Effekt funktioniert nur 1.x/Shortrest. Aufstehen auf diese Art hat zur Folge, dass du direkt wieder in deiner Runde Aktion und Bonusaktion nutzen kannst.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description usage ="1d{{crimson rite:damage die}} nekrotischen Schaden">Du kreierst eine Blutwaffe die 1d{{crimson rite:damage die}}+{{hemocraft:modifier}} Schaden zufüht. Die Wafe kann nie weiter als 30ft von dir enfert sein und kann jede Runde mit deiner Bonusaktion angreifen. Der to-hit ist {{to-hit:bloodmanipulation}}. Ihr Schadenstyp ist entweder Slashing, Piercing oder Bludgeoning, je nach gewähltem Design. Die Waffe ist unzerstörbar und hält 1. Minute oder bis du sie auflöst.</description>
+            <description usage ="1d{{crimson rite:damage die}} nekrotischen Schaden" level="7" >Du kreierst eine Blutwaffe die 2d{{crimson rite:damage die}}+{{hemocraft:modifier}} Schaden zufüht. Die Wafe kann nie weiter als 60ft von dir enfert sein und kann jede Runde mit deiner Bonusaktion angreifen. Der to-hit ist {{to-hit:bloodmanipulation}}. Ihr Schadenstyp ist entweder Slashing, Piercing oder Bludgeoning, je nach gewähltem Design. Die Waffe ist unzerstörbar und hält 1. Minute oder bis du sie auflöst.</description>
+            <description usage ="2d{{crimson rite:damage die}} nekrotischen Schaden" level="15">Du kreierst eine Blutwaffe die 4d{{crimson rite:damage die}}+{{hemocraft:modifier}} Schaden zufüht. Die Wafe kann nie weiter als 90ft von dir enfert sein und kann jede Runde mit deiner Bonusaktion angreifen. Der to-hit ist {{to-hit:bloodmanipulation}}. Ihr Schadenstyp ist entweder Slashing, Piercing oder Bludgeoning, je nach gewähltem Design. Die Waffe ist unzerstörbar und hält 1. Minute oder bis du sie auflöst.</description>
+        
+        </sheet>
+        <rules>
+            <stat name="to-hit:bloodmanipulation" value="hemocraft:modifier"/>
+            <stat name="to-hit:bloodmanipulation" value="proficiency"/>
+        </rules>
+    </element>
+
+    <element name="Bloodbank" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_BLOODBANK">
+        <description>
+            <p>Ab Level 7 kann der Blood Hunter Blut von freiwilligen Personen in sich aufnehmen. Jede Person, die auf die Art Blut spendet erhält 1. Hemocraft Die an unverhinderbaren nekrotischen Schaden. Diese Blutspende dauert 1. Minute .Die Anzahl der Personen, von denen er Blut auf diese Art zusich nehmen kann, ist abhängig von seinem Hemocraftmodifier. Wenn einer dieser Personen, im Umkreis von 60ft. um dich herum down geht und nicht direkt stirbt, kann der BloodHunter, das Blut aufbrauchen, um die Person erneut aufstehen zu lassen mit 1. Leben. Auf diese Art aufzustehen gibt der Person in der Runde wieder ihre Aktion und Bonusaktion.</p>
+            <p>Die Waffe, die durch Blood Manipulation kreiert wird, nimmt 2 Hemocraft Dies, statt einem, bei der Berechnung das  Schadens und kostet dich weiterhin nur 1. Wurf an nekrotischen Schaden bei der Beschwörung. Sie kann nun in 60ft.  um dich herum bewegen und angreifen.</p>
+        </description>
+        <sheet action="Reaction">
+            <description usage="{{proficiency}}/Longrest" >Du kannst Blutspenden von {{hemocraft:modifier}} Personen aufnehmen. Jede Person, die auf die Art Blut spendet erhält 1. Hemocraft Die an unverhinderbaren nekrotischen Schaden. Diese Blutspende dauert 1. Minute. Wenn einer dieser Personen, im Umkreis von 60ft. um  dich herum down geht und nicht direkt stirbt, kann der Blood  Hunter, das Blut aufbrauchen, um die Person erneut aufstehen zu lassen mit 1. Leben. Auf diese Art aufzustehen gibt der Person in der Runde wieder ihre Aktion und Bonusaktion.</description>
+            <description usage="{{proficiency}}/Longrest" level="15">Du kannst Blutspenden von {{hemocraft:modifier}} Personen aufnehmen. Jede Person, die auf die Art Blut spendet erhält 1. Hemocraft Die an unverhinderbaren nekrotischen Schaden. Diese Blutspende dauert 1. Minute. Wenn einer dieser Personen, im Umkreis von 90ft. um  dich herum down geht und nicht direkt stirbt, kann der Blood  Hunter, das Blut aufbrauchen, um die Person erneut aufstehen zu lassen mit 1. Leben. Auf diese Art aufzustehen gibt der Person in der Runde wieder ihre Aktion und Bonusaktion.</description>
+        </sheet>
+    </element>
+
+    <element name="Blood Extraction" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_BLOOD_EXTRACTION">
+        <description>
+            <p>Auf Level 11 kann der Blood Hunter einen Gegner in 90 ft. Reichweite anvisieren und versuchen ihm Lebenskraft zu entziehen. Das Ziel muss einen Constitutionsavingthrow würfeln und wenn es das Hunters Branding auf sich hat, hat das Ziel Disadvantage auf den Wurf. Wenn es den Save nicht schafft, erleidet es 10d10+Hemocraftmodifier an Piercing Damage, durch das Blut, dass sich aus dem Körper auf den Blood Hunter zubewegt. Wenn es den Save schafft, verursacht es nur die Hälfte des Schadens. Constructs und alle Kreaturen, die über kein Blut verfügen (einige Undeads,Oozes, etc.) können nicht von diesem Angriff betroffen werden. Der Blood Hunter erhält temporäre Lebenspunkt in Höhe der Hälfte des verursachten Schadens, das wie eine Art Blutschutzschild fungiert.</p>
+        </description>
+        <sheet action="Action">
+            <description usage="1/Longrest">
+                Du kannst auf 90ft einen Gegner anvisieren und versuchen ihm Lebenskraft zu entziehen. Das Ziel muss einen Constitutionsavingthrow würfeln und wenn es das Hunters Branding auf sich hat, hat das Ziel Disadvantage auf den Wurf. Wenn es den Save nichtschafft, erleidet es 10d10+{{hemocraft:modifier}} an Piercing Damage, durch das Blut, dass sich aus dem Körper auf den Blood Hunter zubewegt. Wenn es den Save schafft, verursacht es nur die Hälfte des Schadens. Constructs und alle Kreaturen, die über kein Blut verfügen (einige Undeads,Oozes, etc.) können nicht von diesem Angriff betroffen werden. Du erhälst die Hälfte an verursachten Schaden als temporäre Lebenspunkte.
+            </description>
+            <description usage="1/Longrest" level="15">
+                Du kannst auf 90ft einen Gegner anvisieren und versuchen ihm Lebenskraft zu entziehen. Das Ziel muss einen Constitutionsavingthrow würfeln und wenn es das Hunters Branding auf sich hat, hat das Ziel Disadvantage auf den Wurf. Wenn es den Save nichtschafft, erleidet es 15d10+{{hemocraft:modifier}} an Piercing Damage, durch das Blut, dass sich aus dem Körper auf den Blood Hunter zubewegt. Wenn es den Save schafft, verursacht es nur die Hälfte des Schadens. Constructs und alle Kreaturen, die über kein Blut verfügen (einige Undeads,Oozes, etc.) können nicht von diesem Angriff betroffen werden. Du erhälst die Hälfte an verursachten Schaden als temporäre Lebenspunkte.
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Greater Bloodmanipulation" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_GREATER_BLOOD_MANIPULATION">
+        <description>
+            <p>Ab Level 15 verbessern sich die Sanguiniker Features. Die Waffe, die sich durch Blood Manipulation kreieren lässt, verursacht bei der Beschwörung 2 Hemocraft Dies an unverhinderbaren nekrotischen Schaden an dir und 4 Hemocraft Dies, wenn du angreifst. Die Reichweite, in der du die Waffe nutzen kannst, ist 90ft. Die Reichweite von Bloodbank geht auch auf 90ft. hoch. Blood Extraction verursacht 15d10 Schaden.</p>
+        </description>
+        <sheet>
+        </sheet>
+    </element>
+
+    <element name="Supreme Bloodart" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_SUPREME_BLOODART">
+        <description>
+            <p>Ab Level 18 kann der Blood Hunter seine gesamten Lebenspunkte in temporäre Lebenspunkte umwandeln, sodass er nur noch 1. Leben hat. Während das der Fall ist, kann er Blood Extraction unlimitiert nutzen, solange Supreme Blood Art anhält. Der Schaden steigt auf 20d10 mit einer Reichweite von 120ft, jedoch verliert Blood Extraction dafür den Effekt temporäre Lebenspunkt geben zu können. Bloodmanipulation hat während dessen auch eine Reichweite von 120ft. Durch den Einsatz von Supreme BloodArt aktiviert sich auch der Death Ward Spelleffekt. Die temporären Leben bleiben 1. Minute bestehen. Nachdem der Effekt endet, muss der Blood Hunter einen DC30 Constitutionsavingthrow würfeln. Bei Misserfolg erleidet er 1 Level an Exhaustion und bei Erfolg passiert nichts.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>Du kannst Hunter deine gesamten Lebenspunkte in temporäre Lebenspunkte umwandeln, sodass er nur noch 1. Leben hat um folgende Fähigkeiten zu erhalten:</p>
+                <p>Blood Extraction kann unlimitiert oft verwendet werden, solange Supreme Bloodart aktiv ist</p>
+                <p>Der Schaden von Blood Extraction steigt auf 20d10 mit einer Reichweite von 120ft, aber gewährt keine tempor Lebenspunkte</p>
+                <p>Bloodmanipulation hat während dessen auch eine Reichweite von 120ft</p>
+                <p>Durch den Einsatz von Supreme Blood Art aktiviert sich auch der Death Ward Spelleffekt.</p>
+                <p>Die temporären Leben bleiben 1. Minute bestehen. Nachdem der Effekt endet, muss der Blood Hunter einen DC30 Constitutionsavingthrow würfeln. Bei Misserfolg erleidet er 1 Level an  Exhaustion und bei Erfolg passiert nichts.</p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Die Bruderschaft der Venatier" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_BLOODHUNTER_PT_DIE_BRUDERSCHAFT_DER_VENATIER">
+        <supports>Brotherhood</supports>
+        <description>
+            <p>Die Bruderschaft der Venatier sind die spezialisertesten Jäger unter den Blood Huntern. Sie schreiben den HUNTER Anteil groß. Sie trainieren das Spurenlesen und jagen von bestimmten Rassen und Kreaturenarten. Sie sind zumeist geschickte Kämpfer, die ihre Wendigkeit und Finesse nutzen im Kampf.</p>
+            <table>
+                <thead>
+                    <tr><td>Class Level</td><td>Feature</td></tr>
+                </thead>
+                <tr><td>3</td><td>Hunters Call</td></tr>
+                <tr><td>7</td><td>Punish Branding</td></tr>
+                <tr><td>11</td><td>Hunters Knowledge</td></tr>
+                <tr><td>15</td><td>Perfect Enemy</td></tr>
+                <tr><td>18</td><td>Greatest Hunter</td></tr>
+            </table>
+            <div element="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_PUNISH_BRANDING"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_HUNTERS_KNOWLEDGE"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_PERFECT_ENEMY"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_GREATEST_HUNTER"/>
+        </description>
+        <sheet>
+            Du gehörst zur Bruderschaft der Venatier.
+        </sheet>
+        <rules>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL" level="3"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_PUNISH_BRANDING" level="7"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_KNOWLEDGE" level="11"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_PERFECT_ENEMY" level="15"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_GREATEST_HUNTER" level="18"/>
+        </rules>
+    </element>
+
+    <element name="Hunters Call" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL">
+        <description>
+            <p>Ab Level 3 erhält der Blood Hunter Proficiency in Survival, History oder Religion. Alternativ kann er sich in einem der 3. Skills, wenn er bereits proficient ist, Expertise geben. Zusätzlich kann sich der Blood Hunter 2 Gruppen an Kreaturtypen aussuchen. Das sind seine Hauptziele, für dessen Jagd er lange übte und sich auf den Kampf mit ihnen spezialisierte. Zur Auswahl stehen:</p>
+            <ol>
+                <li>Dragons</li>
+                <li>Oozes</li>
+                <li>Undeads</li>
+                <li>Monstrosities</li>
+                <li>Plants</li>
+                <li>Fiends</li>
+                <li>Beasts</li>
+                <li>Elementals</li>
+                <li>Aberrations</li>
+                <li>Giants</li>
+                <li>Feys</li>
+                <li>Celestials</li>
+                <li>Hexcreatures</li>
+            </ol>
+            <p>Gegen diese gewählten Gruppen hat er Advantage, wenn es darum geht, Informationen über sie einzuholen (Survival, Religion und History Checks). Im Kampf gegen Gegner aus den gewählten Gruppen kann er, wenn sie ihn angreifen oder einen Verbündeten und er in Reichweite steht, als Reaction, nach ihrem Angriff, einen Weaponattack als Opportunity  Attack ausführen. Im Kampf gegen diese Gegner ist sein "to- hit-Wert" um +1 verbessert.</p>
+        </description>
+
+        <sheet>
+            <description>
+                <p>Du hast Advantage, wenn es darum geht Informationen über deine Beute zu erfahren (Survival, Religion, History)</p>
+                <p>Im Kampf gegen Gegner aus den gewählten Gruppen kann er, wenn sie ihn angreifen oder einen Verbündeten und er in Reichweite steht, als Reaction, nach ihrem Angriff, einen Weaponattack als Opportunity Attack ausführen.</p>
+                <p>Im Kampf gegen diese Gegner ist sein "to- hit-Wert" um +1 verbessert.</p>
+            </description>
+            <description level="11">
+                <p>Du hast Advantage, wenn es darum geht Informationen über deine Beute zu erfahren (Survival, Religion, History)</p>
+                <p>Im Kampf gegen Gegner aus den gewählten Gruppen kann er, wenn sie ihn angreifen oder einen Verbündeten und er in Reichweite steht, als Reaction, nach ihrem Angriff, einen Weaponattack als Opportunity Attack ausführen.</p>
+                <p>Im Kampf gegen diese Gegner ist sein "to- hit-Wert" um +2 verbessert.</p>
+            </description >
+            <description level="18">
+                <p>Du hast Advantage, wenn es darum geht Informationen über deine Beute zu erfahren (Survival, Religion, History)</p>
+                <p>Im Kampf gegen Gegner aus den gewählten Gruppen kann er, wenn sie ihn angreifen oder einen Verbündeten und er in Reichweite steht, als Reaction, nach ihrem Angriff, einen Weaponattack als Opportunity Attack ausführen.</p>
+                <p>Im Kampf gegen diese Gegner ist sein "to- hit-Wert" um +3 verbessert.</p>
+            </description >
+        </sheet>
+        <rules>
+            <select name="Hunters Call" type="Archetype Feature" supports="hunters call" number="2"/>
+            <select name="Hunters Knowledge" type="Archetype Feature" supports="hunters call" level="11"/>
+            <select name="Greatest Hunter" type="Archetype Feature" supports="hunters call" level="18"/>
+            <select type="Class Feature" name="Expertise" supports="ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SURVIVAL" />
+        </rules>
+    </element>
+
+    <element name="Dragons" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_DRAGONS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Drachen.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Drachen.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Oozes" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_OOZES">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Drachen.
+        </description>
+        <sheet>
+            <description>        
+                Deine Beute sind Oozes.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Undeads" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_UNDEADS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Undeads.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Undeads.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Monstrosities" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_MONSTROSITIES">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Monstrosities.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Monstrosities.
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Plants" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_PLANTS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Plants.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Plants.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Fiends" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_FIENDS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Fiends.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Fiends.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Beasts" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_BEASTS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Beasts.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Beasts.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Elementals" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_ELEMENTALS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Elementals.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Elementals.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Aberrations" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_ABERRATIONS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Aberrations.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Aberrations.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Giants" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_GIANTS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Giants.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Giants.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Feys" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_FEYS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Feys.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Feys.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Celestials" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_CELESTIALS">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Celestials.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Celestials.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Hexcreatures" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_HEXCREATURES">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Hexcreatures.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Hexcreatures.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Shapeshifter" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_CALL_SHAPESHIFTER">
+        <supports>hunters call</supports>
+        <description>
+            Deine Beute sind Shapeshifter.
+        </description>
+        <sheet>
+            <description>
+                Deine Beute sind Shapeshifter.
+            </description>
+        </sheet>
+    </element>
+    
+    <element name="Punish Branding" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_PUNISH_BRANDING">
+        <description>
+            <p>Ab Level 7 kann der Blood Hunter ein Ziel in 60ft. Reichweite auswählen, sich zu ihm hinteleportieren und einen Angriff mit Advantage ausführen. Auf dem Level 11 steigt es auf 90ft. und auf 15 auf 120 ft. Wird es durch diesen Angriff gebrandet oder durch spätere Angriffe (durch Hunters Branding), kann der Blood Hunter, solange es in 30ft. Reichweite ist, immer als Bonusaktion zu ihm hinteleportieren.</p>
+            <p>Seine Reactionattacks (Opportunity Attacks oder Hunters Call) werden mit Advantage ausgeführt, solange das Ziel gebrandet ist. Der Crimson Rite Schaden kann nicht unter 3 sein, solange das Branding auf dem Ziel ist. Wenn der Blood Hunter sein gebrandetes Ziel tötet, füllt sich sein Hunters Branding wieder auf.</p>
+        </description>
+        <sheet action="Action">
+            <description usage="1/Short Rest">
+                <p>Du kannst dich einem Ziel in 60ft Reichweite hinteleportieren und kannst einen Angriff mit Advantage ausführen. Wird es durch diesen Angriff gebrandet oder durch spätere Angriffe (durch Hunters Branding), kann der Blood Hunter, solange es in 30ft. Reichweite ist, immer als Bonusaktion zu ihm hinteleportieren. Seine Reactionattacks (Opportunity Attacks oder Hunters Call) werden mit Advantage ausgeführt, solange das Ziel gebrandet ist. Der Crimson Rite Schaden kann nicht unter 3 sein, solange das Branding auf dem Ziel ist. Wenn der Blood Hunter sein gebrandetes Ziel tötet, füllt sich sein Hunters Branding wieder auf.</p>
+            </description>
+            <description usage="1/Short Rest" level="11">
+                <p>Du kannst dich einem Ziel in 90ft Reichweite hinteleportieren und kannst einen Angriff mit Advantage ausführen. Wird es durch diesen Angriff gebrandet oder durch spätere Angriffe (durch Hunters Branding), kann der Blood Hunter, solange es in 60ft. Reichweite ist, immer als Bonusaktion zu ihm hinteleportieren. Seine Reactionattacks (Opportunity Attacks oder Hunters Call) werden mit Advantage ausgeführt, solange das Ziel gebrandet ist. Der Crimson Rite Schaden kann nicht unter 3 sein, solange das Branding auf dem Ziel ist. Wenn der Blood Hunter sein gebrandetes Ziel tötet, füllt sich sein Hunters Branding wieder auf.</p>
+            </description>
+            <description usage="1/Short Rest" level="15">
+                <p>Du kannst dich einem Ziel in 120ft Reichweite hinteleportieren und kannst einen Angriff mit Advantage ausführen. Wird es durch diesen Angriff gebrandet oder durch spätere Angriffe (durch Hunters Branding), kann der Blood Hunter, solange es in 60ft. Reichweite ist, immer als Bonusaktion zu ihm hinteleportieren. Seine Reactionattacks (Opportunity Attacks oder Hunters Call) werden mit Advantage ausgeführt, solange das Ziel gebrandet ist. Der Crimson Rite Schaden kann nicht unter 3 sein, solange das Branding auf dem Ziel ist. Wenn der Blood Hunter sein gebrandetes Ziel tötet, füllt sich sein Hunters Branding wieder auf.</p>
+            </description>
+            <description usage="2/Short Rest" level="18">
+                <p>Du kannst dich einem Ziel in 120ft Reichweite hinteleportieren und kannst einen Angriff mit Advantage ausführen. Wird es durch diesen Angriff gebrandet oder durch spätere Angriffe (durch Hunters Branding), kann der Blood Hunter, solange es in 90ft. Reichweite ist, immer als Bonusaktion zu ihm hinteleportieren. Seine Reactionattacks (Opportunity Attacks oder Hunters Call) werden mit Advantage ausgeführt, solange das Ziel gebrandet ist. Der Crimson Rite Schaden kann nicht unter 3 sein, solange das Branding auf dem Ziel ist. Wenn der Blood Hunter sein gebrandetes Ziel tötet, füllt sich sein Hunters Branding wieder auf.</p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Hunters Knowledge" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HUNTERS_KNOWLEDGE">
+        <description>
+            <p>Durch Erreichen von Level 11 kann der Blood Hunter eine  weitere Gruppe zu seiner Zielliste hinzufügen. Sein "to-hit- Wert" gegen diese Ziele steigt auf +2. Die Reichweite seines  Bonusaktionsteleports durch Punish Branding steigt auf 60ft.</p>
+            <p>Der Blood Hunter kann außerdem sein Psychometry Feature per Shortrest nutzen. Zusätzlich kann er die Nutzung davon verbrauchen um im Kampf eine Information von einem für ihn wahrnehmbaren Gegner zu erfragen, als Bonusaktion in seinem Zug. Diese Information ist nicht detailliert, aber nützlich (genaue Lebenspunkte sind nicht abfragbar, aber relatives Verhältnis zu dem eigenen Leben beispielsweise). Kleinere Informationen, wie Resistenzen sind dadurch eher abfragbar. Wurde das Feature genutzt, hat der Blood Hunter in dieser Runde auf alle Angriffe Advantage, gegen das Ziel.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>Du kannst Psychometry im Kampf als Bonusaktion verwenden um für einen wahrnehmbaren Gegner Informationen zu erfragen, wie relatives Leben, Reistenzen, etc. Verwendes du dieses Feature, hast in dieser Runde Advantage auf alle Angriffe in dieser Runde.</p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Perfect Enemy" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_PERFECT_ENEMY">
+        <description>
+            <p>Mit Level 15 kann der Blood Hunter sich 2 Resistenzen aussuchen, aus der ganzen Schadenstabelle, die seine Kämpfe gegen seine Zielgruppen reflektieren sollen.</p>
+        </description>
+        <sheet display="false">
+            <description>
+                <p>Du kannst Psychometry im Kampf als Bonusaktion verwenden um für einen wahrnehmbaren Gegner Informationen zu erfragen, wie relatives Leben, Reistenzen, etc. Verwendes du dieses Feature, hast in dieser Runde Advantage auf alle Angriffe in dieser Runde.</p>
+            </description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Perfect Enemy - Resistance" supports="Resistance" number="2"/>
+        </rules>
+    </element>
+
+    <element name="Greatest Hunter" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_GREATEST_HUNTER">
+        <description>
+            <p>Ab Level 18 kann er sich noch eine Gegnergruppe aussuchen und bekommt auf seinen "to-hit-Wert" gegen seine Zielgruppen +3. Er kann sein Hunters Branding und sein Punish Branding 2 mal per Shortrest nutzen, aber nie mehr  als 1. Ziel gleichzeitig branden und die Teleportations- reicheweite geht auf 90.ft hoch.</p>
+            <p>Seine Angriffe gegen gebrandete Ziele haben eine +1 Chance auf kritische Treffer. Gebrandete Ziele haben Disadvantage mit ihren Angriffen, gegen den Blood Hunter. Der Blood Hunter hat Advantage auf Savingthrows, die von seinen grebrandeten Zielen verursacht werden.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>Deine Brandings haben sich verbessert Du kanst Hunters Branding und Punish Branding 2 mal per Shortrestnutzen, aber du kannst nie mehr 1 Ziel gleichzeitig branden. Zusätzlich haben deine Angriffe eine +1 Chance kritisch zu treffen. Gebrandete Ziele haben Disadvantage mit ihren Angriffen gegen dich und du hast Advantage gegen die Savingthrows durch das gebrandete Ziel.</p>
+            </description>
+        </sheet>
+    </element>
+
+
+
+
+
+    <!--Resitances-->
+    <element name="Resistance (Bludgeoning)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" />
+        </rules>
+    </element>
+
+    <element name="Resistance (Piercing)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_PIERCING">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PIERCING"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Slashing)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_SLASHING">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Acid)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_ACID">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Cold)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_COLD">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Fire)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_FIRE">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Force)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_FORCE">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FORCE"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Lightning)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_LIGHTNING">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Necrotic)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_NECROTIC">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Poison)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_POISON">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Psychic)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_PSYCHIC">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Radiant)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_RADIANT">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT"/>
+        </rules>
+
+    </element>
+
+    <element name="Resistance (Thunder)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_THUNDER">
+        <supports>Resistance</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER"/>
+        </rules>
+
+    </element>
+    
+        <element name="Die Bruderschaft der Armatier" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_BLOODHUNTER_PT_DIE_BRUDERSCHAFT_DER_ARMATIER">
+        <supports>Brotherhood</supports>
+        <description>
+            <p>Von allen Blood Huntern sind sie die untypischsten. Sie nutzen schwere Rüstungen und schwere Waffen und sind weit weniger agil, als die Venatier beispielsweise. Dafür sind sie eher für ihre Überlebenskraft und die Härte ihrer Zweihandwaffen bekannt oder mit Schild ausgestattet als undurchdringliche laufende Festungen, die an vorderster Front stehen und einstecken.</p>
+            <table>
+                <thead>
+                    <tr><td>Class Level</td><td>Feature</td></tr>
+                </thead>
+                <tr><td>3</td><td>Heavy Blood</td></tr>
+                <tr><td>7</td><td>Charger</td></tr>
+                <tr><td>11</td><td>Very Heavy Blood</td></tr>
+                <tr><td>15</td><td>Juggernaut</td></tr>
+                <tr><td>18</td><td>Bulldozer</td></tr>
+            </table>
+            <div element="ID_PT_ARCHETYPE_FEATURE_HEAVY_BLOOD"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_CHARGER"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_VERY_HEAVY_BLOOD"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_JUGGERNAUT"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_BULLDOZER"/>
+        </description>
+        <sheet>
+            Du gehörst zur Bruderschaft der Armatier.
+        </sheet>
+        <rules>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_HEAVY_BLOOD" level="3"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CHARGER" level="7"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_VERY_HEAVY_BLOOD" level="11"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_JUGGERNAUT" level="15"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_BULLDOZER" level="18"/>
+            <stat name="armatier" value="hemocraft:modifier"/>
+            <stat name="armatier" value="proficiency"/>
+        </rules>
+    </element>
+    
+
+    <element name="Heavy Blood" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_HEAVY_BLOOD">
+        <description>
+            <p>Mit Level 3 erhält der Blood Hunter Proficiency in Heavy Armor. Außerdem benutzt er seinen Constitutionwert als Hemocraftmodifier, statt Intelligence oder Wisdom. Außerdem erhält er 3 mehr maximales Leben und für jedes weitere Level in dieser Klasse zusätzlich 1. Leben mehr.</p>
+            <p>Zusätzlich kann er einen Hemocraft Die+Hemocraftmodifier würfeln und sich dadurch unverhinderbar das Ergebnis als nekrotischen Schaden verursachen. Das gewürfelte Ergebnis wird mit der Höhe des Proficiencybonus multipliziert und dient über der Schweren Rüstung als Schutzschild in Form von temporären Lebenspunkten.</p>
+            <p>Solange diese temporären Lebenspunkte bestehen, wird jede Schadensinstanz um den Constitutionmodifier reduziert. Diese Effekte funktionieren nur, wenn der Blood Hunter eine schwere Rüstung benutzt.</p>
+        </description>
+        <sheet action="Bonus Action" usage="{{proficiency}}/Longrest">
+            <description>
+                <p>Du kannst dir selbst 1d{{crimson rite:damage die}}+{{hemocraft:modifier}} unverhinderbar nekrotischen Schaden verursachen und das Ergebnis mit {{proficiency}} multipliziert, als temporäre Lebenspunkte dir selber geben. Solange diese temporären Lebenspunkte bestehen, wird jede Schadensinstanz um den {{constitution:modifier}} reduziert. </p>
+                <p>Diese Effekte funktionieren nur, wenn der Blood Hunter eine schwere Rüstung benutzt.</p>
+            </description>
+            <description level="7">
+                <p>Du kannst dir selbst 1d{{crimson rite:damage die}}+{{hemocraft:modifier}} unverhinderbar nekrotischen Schaden verursachen und das Ergebnis mit {{proficiency}} multipliziert, als temporäre Lebenspunkte dir selber geben. Solange diese temporären Lebenspunkte bestehen, wird jede Schadensinstanz um den {{constitution:modifier}} reduziert. </p>
+                <p>Während Heavy Blood aktiv ist, steigt der AC um +1. </p>
+                <p>Diese Effekte funktionieren nur, wenn der Blood Hunter eine schwere Rüstung benutzt.</p>
+            </description>
+            <description level="11">
+                <p>Du kannst dir selbst 1d{{crimson rite:damage die}}+{{hemocraft:modifier}} unverhinderbar nekrotischen Schaden verursachen und das Ergebnis mit {{proficiency}} multipliziert, als temporäre Lebenspunkte dir selber geben. Solange diese temporären Lebenspunkte bestehen, wird jede Schadensinstanz um den {{constitution:modifier}} reduziert. </p>
+                <p>Während Heavy Blood aktiv ist, steigt der AC um +2. </p>                
+                <p>Diese Effekte funktionieren nur, wenn der Blood Hunter eine schwere Rüstung benutzt.</p>
+            </description>
+            <description level="15">
+                <p>Du kannst dir selbst 1d{{crimson rite:damage die}}+{{hemocraft:modifier}} unverhinderbar nekrotischen Schaden verursachen und das Ergebnis mit {{proficiency}} multipliziert, als temporäre Lebenspunkte dir selber geben. Solange diese temporären Lebenspunkte bestehen, wird jede Schadensinstanz um den {{constitution:modifier}} reduziert. </p>
+                <p>Während Heavy Blood aktiv ist, steigt der AC um +3. </p>
+                <p>Diese Effekte funktionieren nur, wenn der Blood Hunter eine schwere Rüstung benutzt.</p>
+            </description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR"/>
+            <stat name="hp" value="3"/>
+            <stat name="hp" value="level"/>
+        </rules>
+    </element>
+
+    <element name="Charger" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CHARGER">
+        <description>
+            <p>Ab Level 7, wenn der Blood Hunter auf einen Gegnermindestens 20ft. linear zurennt, kann er einen Weaponattack ausführen, der mit Advantage ausgefürt wird und einen weiteren Hemocraft Die zusätzlich Schaden zufügt. Trifft er das Ziel, muss es einen Strengthsavingthrow würfeln. Bei Erfolg passiert sonst nichts weiter. Bei Misserfolg wird das Ziel entweder Prone geworfen oder um 10ft. verschoben (deine Wahl). Gegner ab Gargantuangröße haben Advantage auf den Savingthrow. Während des Charges, haben Opportunity Attacks Disadvantage auf ihn.</p>
+            <p>Während Heavy Blood aktiv ist, steigt der AC um +1</p>
+        </description>
+    
+        <sheet usage="Attackaction">
+            <description>
+                <p>Wenn der Blood Hunter auf einen Gegnermindestens 20ft. linear zurennt, kann er einen Weaponattack ausführen, der mit Advantage ausgeführt wird und 1d{{crimson rite:damage die}} zusätzlich Schaden zufügt. Trifft er das Ziel, muss es einen Strengthsavingthrow würfeln. Bei Erfolg passiert sonst nichts weiter. Bei Misserfolg wird das Ziel entweder Prone geworfen oder um 10ft. verschoben (deine Wahl). gegner ab Gargantuangröße haben Advantage auf den Savingthrow. Während des Charges, haben Opportunity Attacks Disadvantage auf ihn. </p>
+            </description>
+            <description level="15">
+                <p>Wenn der Blood Hunter auf einen Gegnermindestens 20ft. linear zurennt, kann er einen Weaponattack ausführen, der mit Advantage ausgeführt wird und 2d{{crimson rite:damage die}} zusätzlich Schaden zufügt. Trifft er das Ziel, muss es einen Strengthsavingthrow würfeln. Bei Erfolg passiert sonst nichts weiter. Bei Misserfolg wird das Ziel entweder Prone geworfen oder um 10ft. verschoben (deine Wahl). gegner ab Gargantuangröße haben Advantage auf den Savingthrow. Während des Charges, haben Opportunity Attacks Disadvantage auf ihn. </p>
+            </description>
+            <description level="18">
+                <p>Wenn der Blood Hunter auf einen Gegnermindestens 20ft. linear zurennt, kann er einen Weaponattack ausführen, der mit Advantage ausgeführt wird und 3d{{crimson rite:damage die}} zusätzlich Schaden zufügt. Trifft er das Ziel, muss es einen Strengthsavingthrow würfeln. Bei Erfolg passiert sonst nichts weiter. Bei Misserfolg wird das Ziel entweder Prone geworfen oder um 10ft. verschoben (deine Wahl). gegner ab Gargantuangröße haben Advantage auf den Savingthrow. Während des Charges, haben Opportunity Attacks Disadvantage auf ihn. </p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Very Heavy Blood" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_VERY_HEAVY_BLOOD">
+        <description>
+            <p>Durch Level 11 steigt der AC, während Heavy Blood aktiv ist, auf +2. Solange Heavy Blood aktiv ist, erhält der Blood Hunter Resistance zu Poison Damage und darf sich, bei jeder Nutzung von Heavy Blood, eine Resistenz aus Bludgeoning, Slashing und Piercing aussuchen.</p>
+            <p>Wenn ein Ziel, das von dir gebrandet wurde, jemanden anderen als dich angreift, hat er Disadvantage darauf.</p>
+        </description>
+        <sheet>
+            <p>Der Blood Hunter erhält während Heavy Blood Resistance zu Poison Damage und darf sich, bei jeder Nutzung von Heavy Blood, eine Resistenz aus Bludgeoning, Slashing und Piercing aussuchen.</p>
+        </sheet>
+    </element>
+
+    <element name="Juggernaut" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_JUGGERNAUT">
+        <description>
+            <p>Mit Erreichen von Level 15 erhält der Blood Hunter, während Heavy Blood aktiv ist, +3 auf den AC. Er hat, solange Heavy Blood aktiv ist, Advantage auf alle Savingthrows und Skill Checks die folgende Konditionen bei Misserfolg verursachen würden:</p>  
+            <p>
+                <ol>
+                    <li>Paralyzed</li>
+                    <li>Stunned</li>
+                    <li>Prone</li>
+                    <li>Poisoned</li>
+                    <li>Grappled</li>
+                </ol>
+            </p>
+            <p>Charger verursacht auch zusätzliche 2 Hemocraft Dies an Schaden. Wenn du initial ein Ziel brandest, muss es einen Strengthsavingthrow würfeln. Bei Misserfolg wird der Movementspeed des Ziels bis zum Ende seiner nächsten Runde auf 0 gesetzt. Bei Erfolg kann er nur die Hälfte seines Movementspeeds nutzen.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>Du hast solange Heavy Blood aktiv ist, Advantage auf alle Savingthrows und Skill Checks die folgende Konditionen bei Misserfolg verursachen würden: Paralyzed, Stunned, Prone, Poisoned, Grappled</p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Bulldozer" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_BULLDOZER">
+        <description>
+            <p>Ab Level 18 kann der Blood Hunter für 1. Minute, durch den Einsatz eines Hemocraft Dies, der unverhinderbaren nekrotischen Schaden verursacht, in einen sehr mächtigen Zustand wechseln. Während dieser anhält, bekommt der Blood Hunter folgende Eigenschaften:</p>  
+            <p>
+                <ol>
+                    <li>Movementspeed geht um 20ft. hoch</li>
+                    <li>Charger verursacht 3 Hemocraft Dies an Zusatzschaden</li>
+                    <li>Während Heavy Blood aktiv ist, hat der Blood Hunter Resistance zu: Slashing, Piercing, Bludgeoning, Poison, Fire und Cold Damage</li>
+                    <li>Jegliches Würfelergebnis, während der Schadensberechnung, unter 3 zählt als 3</li>
+                    <li>Wenn du auf 0 Leben fallen würdest, ohne direkt zu sterben, kannst du einen Constitutionsavingthrow gegen 10 würfeln und bei Erfolg nicht down gehen. Bei jedem weiteren Down steigt der SaveDC um +5, bis zur nächsten Longrest.</li>
+                </ol>
+            </p>
+            <p>Nachdem dieser Effekt endet, muss der Blood Hunter einen DC30 Constitutionsavingthrow würfeln und bei Misserfolg erleidet er 1 Level an Exhaustion.</p>
+        </description>
+        <sheet action="Bonus Action" usage="1/Longrest">
+            <description>
+                <p>Für 1 Minute erhälst du folgende Effekte
+                Während Heavy Blood aktiv ist, hat der Blood Hunter Resistance zu: Slashing, Piercing, Bludgeoning, Poison, Fire und Cold Damage. Jegliches Würfelergebnis, während der Schadensberechnung, unter 3 zählt als 3. Wenn du auf 0 Leben fallen würdest, ohne direkt zu sterben, kannst du einen Constitutionsavingthrow gegen 10 würfeln und bei Erfolg nicht down gehen. Bei jedem weiteren Down steigt der SaveDC um +5, bis zur nächsten Longrest. 
+                Nachdem dieser Effekt endet, muss der Blood Hunter einen DC30 Constitutionsavingthrow würfeln und bei Misserfolg erleidet er 1 Level an Exhaustion.
+                </p>
+            </description>
+        </sheet>
+        <rules>
+            <stat name="innate speed:misc" value="20"/>
+        </rules>
+    </element>
+
+    <element name="Die Bruderschaft der Pericler" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_BLOODHUNTER_PT_DIE_BRUDERSCHAFT_DER_PERICLER">
+    <supports>Brotherhood</supports>
+        <description>
+            <p>Die Pericler-Bruderschaft hat die wenigsten Anhänger, da sie den gefährlichsten Stil nutzen. Die Sanguiniker fokussieren sich auf ihre Blutnutzung, die Venatier auf das Branding und die Armatier auf Schwere Rüstungen mit defensiver Nutzung von Blut und Branding. Die Pericler konzentrieren sich auf ihr Crimson Rite Fähigkeit. Die Pericler findet man in diversen Ausführungen, was ihren Kampfstil anbelangt, aber selten mit Schild.</p>
+            <table>
+                <thead>
+                    <tr><td>Class Level</td><td>Feature</td></tr>
+                </thead>
+                <tr><td>3</td><td>Extra Rite</td></tr>
+                <tr><td>7</td><td>Risky Attacker</td></tr>
+                <tr><td>11</td><td>Frenzy</td></tr>
+                <tr><td>15</td><td>Peerless</td></tr>
+                <tr><td>18</td><td>Enhanced Frenzy</td></tr>
+            </table>
+            <div element="ID_PT_ARCHETYPE_FEATURE_EXTRA_RITE"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_RISKY_ATTACKER"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_FRENZY"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_PEERLESS"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_ENHANCED_FRENZY"/>
+        </description>
+        <sheet>
+            Du gehörst zur Bruderschaft der Pericler.
+        </sheet>
+        <rules>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_EXTRA_RITE" level="3"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_RISKY_ATTACKER" level="7"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_FRENZY" level="11"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_PEERLESS" level="15"/>
+            <grant type = "Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_ENHANCED_FRENZY" level="18"/>
+            <stat name="pericler" value="hemocraft:modifier"/>
+            <stat name="pericler" value="proficiency"/>
+        </rules>
+    </element>
+
+    <element name="Extra Rite" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_EXTRA_RITE">
+        <description>
+            <p>Mit Level 3 kann sich der Blood Hunter ein weiteres Rite aussuchen, aus der ihm zur Verfügung stehenden Liste. Nach einer Longrest kann der Blood Hunter einen Hemocraft Die würfeln. Er kann um die Höhe des gewürfelten Ergebnisses folgendes Feature benutzen: Zum Beginn seiner Attackaction, ohne dass es ihn eine Aktion kostet, kann der Blood Hunter sich selbst Schaden zufügen, durch einen Hemocraft Die und für diese Runde Advantage auf alle Angriffe bekommen.</p>
+        </description>
+        <sheet>
+            <description usage="1d{{crimson rite:damage die}} nekrotischen Schaden/Long Rest">
+                <p>Nach einer Longrest kann der Blood Hunter einen Hemocraft Die würfeln. Er kann um die Höhe des gewürfelten Ergebnisses folgendes Feature benutzen: Zum Beginn seiner Attackaction, ohne dass es ihn eine Aktion kostet, kann der Blood Hunter sich selbst Schaden zufügen, durch einen Hemocraft Die und für diese Runde Advantage auf alle Angriffe bekommen.</p>
+            </description>
+            <description usage="2d{{crimson rite:damage die}} nekrotischen Schaden/Long Rest" level="7">
+                <p>Nach einer Longrest kann der Blood Hunter zwei Hemocraft Die würfeln und das höhere Ergebnis wählen zur Bestimmung der Anzahl der Uses. Er kann um die Höhe des gewürfelten Ergebnisses folgendes Feature benutzen: Zum Beginn seiner Attackaction, ohne dass es ihn eine Aktion kostet, kann der Blood Hunter sich selbst Schaden zufügen, durch einen Hemocraft Die und für diese Runde Advantage auf alle Angriffe bekommen.</p>
+            </description>
+            <description usage="3d{{crimson rite:damage die}} nekrotischen Schaden/Long Rest" level="7">
+                <p>Nach einer Longrest kann der Blood Hunter zwei Hemocraft Die würfeln und das höchste Ergebnis wählen zur Bestimmung der Anzahl der Uses. Er kann um die Höhe des gewürfelten Ergebnisses folgendes Feature benutzen: Zum Beginn seiner Attackaction, ohne dass es ihn eine Aktion kostet, kann der Blood Hunter sich selbst Schaden zufügen, durch einen Hemocraft Die und für diese Runde Advantage auf alle Angriffe bekommen.</p>
+            </description>
+        </sheet>
+        <rules>
+        </rules>
+    </element>
+
+    <element name="Risky Attacker" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_RISKY_ATTACKER">
+        <description>
+            <p>Ab Level 7 kann der Pericler mehr Kraft in seine Angriffe stecken und dabei etwas an Präzision einbüßen. Er kann fortan, wenn er jemanden angreift, entscheiden, ob er einen -3 Malus auf den Angriff in Kauf nimmt, um +6 Schaden zusätzlich hinzu zu fügen.</p>
+            <p>Wenn er sein Crimson Rite Feature aktiviert, kann er einen weiteren Hemocraft Die aufwenden und sich dadurch Schaden hinzufügen, um sich ein zweites Element auzusuchen. Deine Waffe(n) verursacht jetzt jeweils einen Hemocraft Die des jeweiligen Elements an Schaden (es müssen unterschiedliche Elemente sein).</p>
+            <p>Fortan kann der Blood Hunter zu Tagesbeginn 2 Hemocraft Dies würfeln und das höhere Ergebnis wählen, wenn es um die Bestimmung der Anzahl an Uses des Extra Rite Features geht.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>Du kannst fortan, wenn du jemanden angreift, entscheiden, ob du einen -3 Malus auf den Angriff in Kauf nimmst, um +6 Schaden zusätzlich zu verursachen. Wenn du ein Crimson Rite Feature aktivierst, kannst du einen weiteren Hemocraft Die aufwenden und dir dadurch Schaden hinzufügen, um ein zweites Element auzusuchen. Deine Waffe(n) verursacht jetzt jeweils einen Hemocraft Die des jeweiligen Elements an Schaden (es müssen unterschiedliche Elemente sein).</p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Frenzy" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_FRENZY">
+        <description>
+            <p>Mit Erreichen von Level 11 kann der Blood Hunter sich ein weiteres Rite aussuchen. Ebenfalls kann er für 1. Minute, in einen Blutrausch verfallen, sobald er sein Crimson Rite Feature benutzt, indem er 3 Hemocraft Dies würfelt und sich  selbst dadurch Schaden zufügt. Während dieses Blut- rausches genießt er einige Vorteile:</p>
+            <ol>
+                <li>Sein Movementspeed geht um 30ft. hoch</li>
+                <li>Risky Attacker verändert sich auf -4 und +8</li>
+                <li>alle 1. und 2. bei der Schadensberechnung werden einmal neugewürfelt und das neue Ergebnis wird genommen</li>
+                <li>Er kann sich bei der Aktivierung ein 3. Rite aussuchen</li>
+            </ol>
+            <p>Nach der ersten Nutzung, kann der Blood Hunter, vor der nächsten Longrest Frenzy wieder benutzen, nimmt aber jedes mal, wenn Frenzy endet, ein Level an unverhinderbarer Exhaustion in Kauf.</p>
+        </description>
+        <sheet>
+            <description action="3d{{crimson rite:damage die}} nekrotischen Schaden" usage="1/Longrest"> 
+                <p>Für 1. Minute verfällst du in einen Blutrausch, sobald du dein Crimson Rite Feature benutzt, indem du 3 Hemocraft Dies würfelt und dir selbst dadurch Schaden zufügst. Während dieses Blut- rausches genießt du einige Vorteile: 
+                Movementspeed geht um 30ft. hoch. Risky Attacker verändert sich auf -4 und +8. Alle 1. und 2. bei der Schadensberechnung werden einmal neugewürfelt und das neue Ergebnis wird genommen. Er kann sich bei der Aktivierung ein 3. Rite aussuchen.
+                Nach der ersten Nutzung, kann der Blood Hunter, vor der nächsten Longrest Frenzy wieder benutzen, nimmt aber jedes mal, wenn Frenzy endet, ein Level an unverhinderbarer Exhaustion in Kauf.
+                </p>
+            </description>
+            <description action="3d{{crimson rite:damage die}} nekrotischen Schaden" usage="1/Longrest" level="18"> 
+                <p>Für 1. Minute verfällst du in einen Blutrausch, sobald du dein Crimson Rite Feature benutzt, indem du 3 Hemocraft Dies würfelt und dir selbst dadurch Schaden zufügst. Während dieses Blut- rausches genießt du einige Vorteile: 
+                Movementspeed geht um 60ft. hoch. Risky Attacker verändert sich auf -5 und +10. Alle 1. und 2. bei der Schadensberechnung werden einmal neugewürfelt und das neue Ergebnis wird genommen. Er kann sich bei der Aktivierung ein 4. Rite aussuchen. Er erhält Advantage mit Weaponattacks auf sein gebrandetes Ziel. Er erhält +6 auf alle Savingthrows. Wenn er auf 0 Leben fällt, würfelt er zwar Deathsavingthrows, aber er geht nicht down und kann weiter kämpfen, bis er stirbt. Wenn er sterben sollte, verfällt das Feature und er geht erst dann regulär down.
+                Sobald Enhanced Frenzy endet, muss der Blood Hunter einen DC30 Constitutionsavingthrow würfeln. Bei Misserfolg erleidet er 1 unverhinderbares Level an Exhaustion. Bei Erfolg passiert nichts. Wenn er vor einer Longrest erneut Enhanced Frenzy benutzen will, erhält er zu Beginn des Frenzys direkt 1 Level an Exhaustion und wenn der Frenzy endet, muss er erneut den Consave wiederholen.
+                </p>
+            </description>
+        </sheet>
+        <rules>
+        </rules>
+    </element>
+
+
+    <element name="Peerless" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_PEERLESS">
+        <description>
+            <p>Durch Level 15 erhält der Blood Hunter die Fähigkeit, wenn er von einer Kondition betroffen werden sollte (Charmed, Stunnend, etc. zählen und Curses, Diseases, Exhaustion, etc. zählen nicht), kann er diese beenden. Vor der nächsten Shortrest, kann er nach der ersten Nutzung, dieses Feature erneut nutzen, nur kostet es jedes mal 1. Hemocraft Die an Leben. Zusätzlich erhält er ein weiteres Crimson Rite. </p>
+            <p>Fortan kann der Blood Hunter zu Tagesbeginn 3 Hemocraft Dies würfeln und das höchste Ergebnis wählen, wenn es um die Bestimmung der Anzahl an Uses des Extra Rite Features geht.</p>
+        </description>
+        <sheet>
+            <description action="Reaction" usage="1/Shortrest"> 
+                <p>Wenn du von einer Kondition betroffen werden solltest (Charmed, Stunnend, etc. zählen und Curses, Diseases, Exhaustion, etc. zählen nicht), kannst du diese beenden. Vor der nächsten Shortrest, kannst du nach der ersten Nutzung, dieses Feature erneut nutzen, nur kostet es jedes mal 1. Hemocraft Die an Leben.</p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Enhanced Frenzy" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_ENHANCED_FRENZY">
+        <description>
+            <p>Mit Level 18 wird das Frenzy Feature verstärkt. Der Blood Hunter muss nun 4 Hemocraft Dies würfeln, wenn er den Effekt aktivieren will. Er erhält folgende Effekte:</p>
+            <ol>
+                <li>Der Movementspeed erhöht sich um 60 ft.</li>
+                <li>Risky Attacker verändert sich zu -5 und +10</li>
+                <li>Er erhält Advantage mit Weaponattacks auf sein gebrandetes Ziel</li>
+                <li>Er erhält +6 auf alle Savingthrows</li>
+                <li>Bei der Aktivierung kann er sich ein 4. Rite aussuchen</li>
+                <li>Wenn er auf 0 Leben fällt, würfelt er zwar Deathsavingthrows, aber er geht nicht down und kann weiter kämpfen, bis er stirbt. Wenn er sterben sollte, verfällt das Feature und er geht erst dann regulär down.</li>
+            </ol>
+            <p>Sobald Enhanced Frenzy endet, muss der Blood Hunter einen DC30 Constitutionsavingthrow würfeln. Bei Misserfolg erleidet er 1 unverhinderbares Level an Exhaustion. Bei Erfolg passiert nichts. Wenn er vor einer Longrest erneut Enhanced Frenzy benutzen will, erhält er zu Beginn des Frenzys direkt 1 Level an Exhaustion und wenn der Frenzy endet, muss er erneut den Consave wiederholen.</p>
+        </description>
+        <sheet>
+            <description> 
+                <p>Dein Frenzy Feature wurde verstärkt.</p>
+            </description>
+        </sheet>
+    </element>
+</elements>
