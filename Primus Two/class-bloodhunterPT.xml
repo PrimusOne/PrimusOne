@@ -2,7 +2,7 @@
 <elements>
     <info>
 		<name>Bloodhunter PT</name>
-		<update version="0.1">
+		<update version="0.2">
 			<file name="class-bloodhunterPT.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/class-bloodhunterPT.xml" />
 		</update>
 	</info>
@@ -107,6 +107,7 @@
             <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_ALPHA_PREDATOR" level="20" />
             <select type="Class Feature" name="Hemocraftmodifier" supports="Huntercasting"/>
         </rules>
+        <!--
         <multiclass id="ID_PT_MULTICLASS_BLOODHUNTER">
             <prerequisite>Strength 13 oder Dexterity 13, und Wisdom 13 oder Intelligence 13</prerequisite>
             <requirements>([str:13]||[dex:13]),([wis:13]||[int:13]),!ID_PT_CLASS_BLOODHUNTER_PT,!ID_PT_MULTICLASS_BLOODHUNTER</requirements>
@@ -123,6 +124,7 @@
                 <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
             </rules>
         </multiclass>
+        -->
     </element>
 
     <element name="Intelligence" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_INTELLIGENCE">
@@ -1214,7 +1216,7 @@
                 Nach der ersten Nutzung, kann der Blood Hunter, vor der nächsten Longrest Frenzy wieder benutzen, nimmt aber jedes mal, wenn Frenzy endet, ein Level an unverhinderbarer Exhaustion in Kauf.
                 </p>
             </description>
-            <description action="3d{{crimson rite:damage die}} nekrotischen Schaden" usage="1/Longrest" level="18"> 
+            <description action="4d{{crimson rite:damage die}} nekrotischen Schaden" usage="1/Longrest" level="18"> 
                 <p>Für 1. Minute verfällst du in einen Blutrausch, sobald du dein Crimson Rite Feature benutzt, indem du 3 Hemocraft Dies würfelt und dir selbst dadurch Schaden zufügst. Während dieses Blut- rausches genießt du einige Vorteile: 
                 Movementspeed geht um 60ft. hoch. Risky Attacker verändert sich auf -5 und +10. Alle 1. und 2. bei der Schadensberechnung werden einmal neugewürfelt und das neue Ergebnis wird genommen. Er kann sich bei der Aktivierung ein 4. Rite aussuchen. Er erhält Advantage mit Weaponattacks auf sein gebrandetes Ziel. Er erhält +6 auf alle Savingthrows. Wenn er auf 0 Leben fällt, würfelt er zwar Deathsavingthrows, aber er geht nicht down und kann weiter kämpfen, bis er stirbt. Wenn er sterben sollte, verfällt das Feature und er geht erst dann regulär down.
                 Sobald Enhanced Frenzy endet, muss der Blood Hunter einen DC30 Constitutionsavingthrow würfeln. Bei Misserfolg erleidet er 1 unverhinderbares Level an Exhaustion. Bei Erfolg passiert nichts. Wenn er vor einer Longrest erneut Enhanced Frenzy benutzen will, erhält er zu Beginn des Frenzys direkt 1 Level an Exhaustion und wenn der Frenzy endet, muss er erneut den Consave wiederholen.
