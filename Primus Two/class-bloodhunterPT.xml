@@ -2,7 +2,7 @@
 <elements>
     <info>
 		<name>Bloodhunter PT</name>
-		<update version="0.2">
+		<update version="0.3">
 			<file name="class-bloodhunterPT.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/class-bloodhunterPT.xml" />
 		</update>
 	</info>
@@ -107,10 +107,10 @@
             <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_ALPHA_PREDATOR" level="20" />
             <select type="Class Feature" name="Hemocraftmodifier" supports="Huntercasting"/>
         </rules>
-        <!--
+        
         <multiclass id="ID_PT_MULTICLASS_BLOODHUNTER">
             <prerequisite>Strength 13 oder Dexterity 13, und Wisdom 13 oder Intelligence 13</prerequisite>
-            <requirements>([str:13]||[dex:13]),([wis:13]||[int:13]),!ID_PT_CLASS_BLOODHUNTER_PT,!ID_PT_MULTICLASS_BLOODHUNTER</requirements>
+            <requirements>([str:13]||[dex:13]),([wis:13]||[int:13])</requirements>
             <setters>
                 <set name="multiclass proficiencies">Light armor, medium armor, shields, simple weapons, martial weapons</set>
             </setters>
@@ -124,7 +124,6 @@
                 <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
             </rules>
         </multiclass>
-        -->
     </element>
 
     <element name="Intelligence" type="Class Feature" source="Primus Two" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_INTELLIGENCE">
@@ -634,7 +633,7 @@
             <select name="Hunters Call" type="Archetype Feature" supports="hunters call" number="2"/>
             <select name="Hunters Knowledge" type="Archetype Feature" supports="hunters call" level="11"/>
             <select name="Greatest Hunter" type="Archetype Feature" supports="hunters call" level="18"/>
-            <select type="Class Feature" name="Expertise" supports="ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SURVIVAL" />
+            <select name="Expertise" type="Class Feature" supports="ID_EXPERTISE_SKILL_HISTORY|ID_EXPERTISE_SKILL_RELIGION|ID_EXPERTISE_SKILL_SURVIVAL" />
         </rules>
     </element>
 
@@ -853,6 +852,8 @@
         </rules>
     </element>
 
+
+
     <element name="Greatest Hunter" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_GREATEST_HUNTER">
         <description>
             <p>Ab Level 18 kann er sich noch eine Gegnergruppe aussuchen und bekommt auf seinen "to-hit-Wert" gegen seine Zielgruppen +3. Er kann sein Hunters Branding und sein Punish Branding 2 mal per Shortrest nutzen, aber nie mehr  als 1. Ziel gleichzeitig branden und die Teleportations- reicheweite geht auf 90.ft hoch.</p>
@@ -870,7 +871,7 @@
 
 
     <!--Resitances-->
-    <element name="Resistance (Bludgeoning)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING">
+    <element name="Resistance (Bludgeoning)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
@@ -878,112 +879,100 @@
         </rules>
     </element>
 
-    <element name="Resistance (Piercing)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_PIERCING">
+    <element name="Resistance (Piercing)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_PIERCING">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PIERCING"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Slashing)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_SLASHING">
+    <element name="Resistance (Slashing)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_SLASHING">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Acid)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_ACID">
+    <element name="Resistance (Acid)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_ACID">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Cold)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_COLD">
+    <element name="Resistance (Cold)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_COLD">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Fire)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_FIRE">
+    <element name="Resistance (Fire)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_FIRE">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Force)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_FORCE">
+    <element name="Resistance (Force)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_FORCE">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FORCE"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Lightning)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_LIGHTNING">
+    <element name="Resistance (Lightning)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_LIGHTNING">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Necrotic)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_NECROTIC">
+    <element name="Resistance (Necrotic)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_NECROTIC">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Poison)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_POISON">
+    <element name="Resistance (Poison)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_POISON">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Psychic)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_PSYCHIC">
+    <element name="Resistance (Psychic)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_PSYCHIC">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Radiant)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_RADIANT">
+    <element name="Resistance (Radiant)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_RADIANT">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT"/>
         </rules>
-
     </element>
 
-    <element name="Resistance (Thunder)" type="Archetype Feature" source="Internal" id="ID_PERFECT_SERVANT_CONDITION_DAMAGE_RESISTANCE_THUNDER">
+    <element name="Resistance (Thunder)" type="Archetype Feature" source="Internal" id="ID_PERFECT_ENEMY_CONDITION_DAMAGE_RESISTANCE_THUNDER">
         <supports>Resistance</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER"/>
         </rules>
-
     </element>
     
         <element name="Die Bruderschaft der Armatier" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_BLOODHUNTER_PT_DIE_BRUDERSCHAFT_DER_ARMATIER">
