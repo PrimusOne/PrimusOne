@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <!-- Additional Ability Check Improvement Items -->
+    <info>
+		<name>Additional Ability Check Improvement</name>
+		<update version="0.1">
+			<file name="other-ability_check_improvements.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/other-ability_check_improvements.xml" />
+		</update>
+	</info>
+    <element name="Additional Ability Check Improvement, Athletics" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_ATHLETICS_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your athletics ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="athletics:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Acrobatics" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_ACROBATICS_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your acrobatics ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="acrobatics:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Sleight of Hand" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_SLEIGHTOFHAND_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your sleight of hand ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="sleight of hand:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Stealth" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_STEALTH_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your stealth ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="stealth:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Arcana" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_ARCANA_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your arcana ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="arcana:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, History" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_HISTORY_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your history ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="history:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Investigation" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_INVESTIGATION_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your investigation ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="investigation:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Nature" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_NATURE_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your nature ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="nature:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Religion" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_RELIGION_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your religion ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="religion:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Animal Handling" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_ANIMALHANDLING_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your animal handling ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="animal handling:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Insight" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_INSIGHT_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your insight ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="insight:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Medicine" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_MEDICINE_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your medicine ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="medicine:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Perception" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_PERCEPTION_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your perception ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="perception:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Survival" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_SURVIVAL_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your survival ability checks by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="survival:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Initiative" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_INITIATIVE_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your initiative rolls by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="initiative" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Deception" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_DECEPTION_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your deception rolls by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="deception:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+    <element name="Additional Ability Check Improvement, Intimidation" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_INTIMIDATION_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your intimidation rolls by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="intimidation:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+    <element name="Additional Ability Check Improvement, Performance" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_PERFORMANCE_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your performance rolls by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="performance:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+
+    <element name="Additional Ability Check Improvement, Persuasion" type="Item" source="Primus Two" id="ID_Primus Two_ITEM_ACI_PERSUASION_INCREASE_1">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Increases your persuasion rolls by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Additional Ability Check Improvement</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="persuasion:misc" value="1" alt="Ability Check Increase" />
+        </rules>
+    </element>
+</elements>
