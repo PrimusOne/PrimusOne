@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Aasimar (Mond)</name>
+        <update version="0.1">
+            <file name="race-aasimar_mond.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/race-aasimar_mond.xml" />
+        </update>
+    </info>
+	<element name="Aasimar (Mond)" type="Race" source="Primus Two" id="ID_PT_RACE_AASIMAR_MOND">
+		<description>
+			<p>Whether descended from a celestial being or infused with heavenly power, aasimar are mortals who carry a spark of the Upper Planes within their souls. They can fan that spark to bring light, ease wounds, and unleash the fury of the heavens.</p>
+			<p class="indent">Aasimar can arise among any population of mortals. They resemble their parents, but they live for up to 160 years and often have features that hint at their celestial heritage. These often begin subtle and become more obvious when the aasimar gains the ability to reveal their full celestial nature. The Aasimar Celestial Features table has examples you can choose or use as inspiration to create your own.</p>
+			<h5>Aasimar Celestial Features</h5>
+			<table>
+				<thead>
+					<tr><td>d6</td><td>Celestial Feature</td></tr>
+				</thead>
+				<tr><td>1</td><td>A dusting of metallic, white, or charcoal freckles</td></tr>
+				<tr><td>2</td><td>Metallic, luminous, or dark eyes</td></tr>
+				<tr><td>3</td><td>Starkly colored hair</td></tr>
+				<tr><td>4</td><td>An unusual hue tinting your shadow</td></tr>
+				<tr><td>5</td><td>A ghostly halo crowning your head</td></tr>
+				<tr><td>6</td><td>Rainbows gleaming on your skin</td></tr>
+			</table>
+			<h4>AASIMAR TRAITS</h4>
+			<p>As an aasimar, you have the following racial traits.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid.</p>
+			<p class="indent"><strong><em>Size.</em></strong> You are Medium or Small. You choose the size when you select this race.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed and flying speed is 30 feet.</p>
+			<p class="indent"><strong><em>Celestial Resistance.</em></strong> You have resistance to necrotic damage and radiant damage.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray.</p>
+			<p class="indent"><strong><em>Lunar Magic.</em></strong> Level 1 Light Cantrip, Level 3 Bless, Level 5 Moonbeam und der Spellcasting Modifier ist Int.,Wis. oder Cha.</p>
+			<p class="indent"><strong><em>Lunar Knowledge.</em></strong> 2 Proficiencies in Skills der Wahl oder 2 Sprache oder von beidem 1..</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Aasimar)" supports="Custom Ability Score Improvement Option" />
+			<stat name="innate speed" value="30" bonus="base" />
+  			<stat name="speed:fly" value="30" bonus="base" />
+			<select type="Racial Trait" name="Size (Aasimar)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+   			<grant type="Language" id="ID_LANGUAGE_CELESTIAL" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			
+			<grant type="Racial Trait" id="ID_PT_RACE_AASIMAR_MOND_CELESTIAL_RESISTANCE" />
+			<grant type="Racial Trait" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_MAGIC" />
+			<grant type="Racial Trait" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_KNOWLEDGE" />
+		</rules>
+	</element>
+
+    <element name="Celestial Resistance" type="Racial Trait" source="Primus Two" id="ID_PT_RACE_AASIMAR_MOND_CELESTIAL_RESISTANCE">
+		<description>
+			<p>You have resistance to cold damage and radiant damage.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" />
+		</rules>
+    </element>
+    
+    <element name="Lunar Magic" type="Racial Trait" source="Primus Two" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_MAGIC">
+		<description>
+			<p>Level 1 Light Cantrip, Level 3 Bless, Level 5 Moonbeam und der Spellcasting Modifier ist Int.,Wis. oder Cha.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_LIGHT" />
+			<grant type="Spell" id="ID_PHB_SPELL_BLESS" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_MOONBEAM" level="5" />
+			<select type="Racial Trait" name="Spellcasting Ability" supports="ID_PT_RACE_AASIMAR_MOND_LUNAR_MAGIC_INTELLIGENCE|ID_PT_RACE_AASIMAR_MOND_LUNAR_MAGIC_WISDOM|ID_PT_RACE_AASIMAR_MOND_LUNAR_MAGIC_CHARISMA" />
+		</rules>
+	</element>
+	<element name="Intelligence" type="Racial Trait" source="Monsters of the Multiverse" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_MAGIC_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for these spells is Intelligence.</p>
+		</description>
+		<sheet alt="Aasimar Magic">
+			<description>You know the Light cantrip. &#13;
+			Your spellcasting ability for this spell is Intelligence.</description>
+			<description level="3">You know the Light cantrip, and you can cast the Bless spell once per long rest. You can also cast this spell using any spell slots you have of the appropriate level. &#13;
+			Your spellcasting ability for these spells is Intelligence.</description>
+			<description level="5">You know the Light cantrip, and you can cast the Bless and Moonbeam spells once per long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. &#13;
+			Your spellcasting ability for these spells is Intelligence.</description>
+		</sheet>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="Monsters of the Multiverse" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_MAGIC_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for these spells is Wisdom.</p>
+		</description>
+		<sheet alt="Aasimar Magic">
+			<description>You know the Light cantrip. &#13;
+			Your spellcasting ability for this spell is Wisdom.</description>
+			<description level="3">You know the Light cantrip, and you can cast the Bless spell once per long rest. You can also cast this spell using any spell slots you have of the appropriate level. &#13;
+			Your spellcasting ability for these spells is Wisdom.</description>
+			<description level="5">You know the Light cantrip, and you can cast the Bless and Moonbeam spells once per long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. &#13;
+			Your spellcasting ability for these spells is Wisdom.</description>
+		</sheet>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="Monsters of the Multiverse" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_MAGIC_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for these spells is Charisma.</p>
+		</description>
+		<sheet alt="Aasimar Magic">
+			<description>You know the Light cantrip. &#13;
+			Your spellcasting ability for this spell is Charisma.</description>
+			<description level="3">You know the Light cantrip, and you can cast the Bless spell once per long rest. You can also cast this spell using any spell slots you have of the appropriate level. &#13;
+			Your spellcasting ability for these spells is Charisma.</description>
+			<description level="5">You know the Light cantrip, and you can cast the Bless and Moonbeam spells once per long rest. You can also cast either of those spells using any spell slots you have of the appropriate level. &#13;
+			Your spellcasting ability for these spells is Charisma.</description>
+		</sheet>
+	</element>
+
+    <element name="Lunar Knowledge" type="Racial Trait" source="Primus Two" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_KNOWLEDGE">
+		<description>
+			<p>2 Proficiencies in Skills der Wahl oder 2 Sprache oder von beidem 1.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select name="Lunar Knowledge" type="Racial Trait" supports="Lunar Knowledge" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+		</rules>
+    </element>
+
+    <element name="2 Proficiencies" type="Racial Trait" source="Primus Two" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_KNOWLEDGE_PROFICIENCIES">
+        <supports>Lunar Knowledge</supports>
+        <description>
+			<p>2 Proficiencies in Skills der Wahl.</p>
+		</description>
+		<sheet display="false" />
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill" number="2"/>
+        </rules>
+    </element>
+    
+    <element name="2 Sprachen" type="Racial Trait" source="Primus Two" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_KNOWLEDGE_LANGUAGE">
+        <supports>Lunar Knowledge</supports>
+        <description>
+			<p>2 Sprachen deiner Wahl.</p>
+		</description>
+		<sheet display="false" />
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" number="2"/>
+        </rules>
+    </element>
+
+    <element name="1 Sprache und 1 Proficiency" type="Racial Trait" source="Primus Two" id="ID_PT_RACE_AASIMAR_MOND_LUNAR_KNOWLEDGE_PROFIECIENY_LANGUAGE">
+        <supports>Lunar Knowledge</supports>
+        <description>
+			<p>1 Sprache und 1 Proficiency.</p>
+		</description>
+		<sheet display="false" />
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill"/>
+        </rules>
+    </element>
+</elements>
