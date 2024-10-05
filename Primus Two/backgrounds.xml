@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Backgrounds</name>
-        <update version="0.4">
+        <update version="0.5">
             <file name="backgrounds.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/backgrounds.xml" />
         </update>
     </info>
@@ -167,7 +167,7 @@
             <p>Gibts was zu klauen? Der Kriminelle weist sich durch sein unendliches Geschick aus, Profit aus einer Sache herauszuholen. Moral ist ein einziger Balanceakt, auf dem man genüsslich mit Diebesgut stolzieren kann...</p>
         </description>
         <setters>
-			<set name="short">2 Skill Proficiencies, 1 Expertise (Charisma or Dexterity) und 1 Bonusfeat </set>
+			<set name="short">2 Skill Proficiencies, 1 Expertise (Charisma or Dexterity), 1 Bonusfeat und Thieves Cant</set>
 		</setters>        
         <rules>
             <select type="Proficiency" name="Skill Proficiency" supports="ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND|ID_PROFICIENCY_SKILL_STEALTH" number = "2"/>
@@ -176,6 +176,7 @@
             <select type="Feat" name="Bonus Feat (1st Level)" />
             <stat name="religion:misc" value="wisdom:modifier"/>
             <stat name="religion:misc" value="-intelligence:modifier"/>
+			<grant type="Language" id="ID_WOTC_PHB_LANGUAGE_THIEVES_CANT" />
         </rules>
     </element>
 
