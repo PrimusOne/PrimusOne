@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Special Martial Moves</name>
+        <update version="0.1">
+            <file name="martial_moves.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/martial_moves.xml" />
+        </update>
+    </info>
+    <element name="Barbarian - Beyond Limits" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_BEYOND_LIMITS">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (1x/Shortrest – Bonusaktion) kann man 1xRageuse aufbrauchen und sich temporäre Lebenspunkte geben, die dem Barbarenlevelx5 entsprechen (Level 9x5 = 45). Ab Level 17, während die temporären Leben bestehen, gilt: (Attackaction – Attacks x3).</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Barbarian</set>
+        </setters>
+    </element>
+
+    <element name="Barbarian - No Risk No Reward" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_NO_RISK_NO_REWARD">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9, wenn er Reckless Attack benutzt, kann er auf 19-20 einen kritischen Treffer landen. Auf Level 17 ändert es sich zu 18-20 und er ignoriert Disadvantage vollständig, wenn er Reckless Attack benutzt.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Barbarian</set>
+        </setters>
+    </element>
+
+
+    <element name="Barbarian - God of War" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_GOD_OF_WAR">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest - Bonusaktion) zu Beginn seines Rages, kann er entscheiden, ob er diese Fähigkeit benutzen will. Wenn er sie einsetzt, wird sein PB. auf den Ragedamage draufgerechnet (+6) und er verdoppelt seine Geschwindigkeit für 1. Minute, außerdem kann er in jeder weiteren Runde seinen Hit Dice + Con. als Heilung bekommen, wenn er seine Bonusaktion dafür einsetzt. Wenn er sich dadurch heilt, erhält er Advantage auf jeden Savingthrow, bis zum Anfang seiner nächster Runde. Nach dem ersten Einsatz, kann er die Fähigkeit erneut nutzen, nimmt jedoch 1 Level an Erschöpfung in kauf.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Barbarian</set>
+        </setters>
+    </element>
+
+    <element name="Bloodhunter - Blooddrinker" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_BLOODDRINKER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 kann der Bloodhunter, für jedes getötete Ziel, sich heilen, wenn er sein Crimson Rite Feature aktiv hat, um 2d10+Con. (Constructs und andere blutlose Lebewesen ausgenommen), 4d10+Con. ab Level 17.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Blood Hunter</set>
+        </setters>
+    </element>
+
+    <element name="Bloodhunter - Additional Crimson Rites" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_ADDITIONAL_CRIMSON_RITES">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 erhält der Blood Hunter einen weiteren Crimson Rite. Auf Level 17 erhält er noch einen weiteren.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Blood Hunter</set>
+        </setters>
+    </element>
+
+    <element name="Bloodhunter - Be the Fear" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_BE_THE_FEAR">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest), wenn der Blood Hunter auf 0 Leben fallen würde, ohne direkt zu sterben, kann er mit halber maximaler HP (aufgerundet) wieder aufstehen. Der nächste Treffer, nachdem er wieder aufgestanden ist, trifft kritisch (er muss jedoch zunächst regulär treffen, vergleichbar mit dem Assassin Rogue) und verursacht zusätzlichen Schaden in Höhe seines Blood Hunter Levels. 
+            Er kann die Fähigkeit erneut benutzen, nimmt aber direkt 2 Stufen Erschöpfung in Kauf.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Blood Hunter</set>
+        </setters>
+    </element>
+
+    <element name="Fighter - I can do this all day long" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_I_CAN_DO_THIS_ALL_DAY_LONG">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Longrest – Bonusaktion) verbessert sich Second Wind auf 2d10+Fighterlevel. Ab Level 17 verbessert es sich weiter auf 3d10+Fighterlevel.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Fighter</set>
+        </setters>
+    </element>
+
+    <element name="Fighter - Truely Indomitable" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_TRUELY_INDOMITABLE">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (Shortrest – Bonusaktion) verbessert sich Indomitable. Es lässt dich den Wurf nicht nur wiederholen, sondern fügt den PB erneut zum Saving Throw hinzu. Falls der PB bereits auf den Saving Throw gerechnet wird, wird er nochmal hinzugefügt (analog zur Expertise). Jede weitere Nutzung auf höheren Leveln frischt sich ebenfalls nach einer Shortrest auf. Ab Level 17 kann der Fighter eine zusätzliche Saving Throw Proficiency auswählen.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Fighter</set>
+        </setters>
+    </element>
+
+    <element name="Fighter - More is not enough" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_MORE_IS_NOT_ENOUGH">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 kann der Fighter sich einen zusätzlichen ASI oder Feat geben. Ab Level 17 kann er dies erneut tun.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Fighter</set>
+        </setters>
+    </element>
+
+    <element name="Monk - Hit the Weak Points" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_HIT_THE_WEAK_POINTS">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 kann der Monk seine Ki Punkte aufbrauchen, um seine kritische Trefferchance zu erhöhen. Als Bonusaktion kann er 5 Ki Punkte opfern, um für 1 Minute auf 19 zu kritten. Für 10 Ki Punkte kann er auf 18 kritten und für 15 Ki Punkte auf 17 kritten. Ab Level 17 kann er 20 Ki Punkte aufbrauchen, um ab 16 zu kritten.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Monk</set>
+        </setters>
+    </element>
+
+    <element name="Monk - Mind controls Body" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_MIND_CONTROLS_BODY">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 kann der Monk Ki Punkte aufbrauchen, um sich zu heilen. Als Bonusaktion kann er einen Ki Punkt opfern, um sich um 1d10+Monklevel zu heilen. Er darf beliebig viele Ki Punkte pro Bonusaktion einsetzen, um sich für jeden Punkt um 1d10 zusätzlich zu heilen. Ab Level 17 kann der Monk auch seine Hit Dice statt Ki Punkten zur Heilung einsetzen, aber nicht beides gleichzeitig nutzen.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Monk</set>
+        </setters>
+    </element>
+
+    <element name="Monk - Secret Art of Destruction" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SECRET_ART_OF_DESTRUCTION">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest – Aktion) kann der Monk einen gezielten Angriff ausführen, bei dem er beliebig viele Ki Punkte aufwendet, um einen gewaltigen Angriff auszuführen. Dieser muss entweder unbewaffnet oder mit einer Monk Weapon durchgeführt werden. Für jeden Ki Punkt steigt der Schaden um 2d6 und der Schadenstyp ist entweder Force oder Psychic (z.B. 7 Ki Punkte = 14d6+Dexterity/Strength). Danach muss das Ziel einen Strength Saving Throw gegen den Monk DC schaffen. Misslingt dieser, wird das Ziel 30 ft. weggeworfen und zu Boden geworfen (Prone). Dieser Angriff kann nur bei einer natürlichen 20 kritisch treffen. Der Schaden berechnet sich ausschließlich durch 2d6 pro Ki Punkt + Attackmodifier; andere Effekte wie der Monk Weapon Die werden nicht berücksichtigt. Die Anzahl der Ki Punkte, die für diesen Angriff genutzt werden können, darf das Level des Monks nicht überschreiten (max. 20 Ki Punkte). Nach der ersten Nutzung kann dieser Angriff erneut ausgeführt werden, führt jedoch zu 1 Stufe Erschöpfung.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Monk</set>
+        </setters>
+    </element>
+
+    <element name="Paladin - Efficient Spellsmiter" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_EFFICIENT_SPELLSMITER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 kann der Paladin seine Smite-Spells (z.B. Branding Smite) verstärken. Er erhält für jeden dieser Smite-Spells einen zusätzlichen Würfel für den Schaden, den der Zauber verursacht (z.B. verursacht Searing Smite auf Level 1 statt 1d6 nun 2d6 Initialschaden).</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Paladin</set>
+        </setters>
+    </element>
+
+    <element name="Paladin - Healing Hand" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_HEALING_HAND">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 kann der Paladin Lay on Hands (1x/Shortrest) einsetzen.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Paladin</set>
+        </setters>
+    </element>
+
+    <element name="Paladin - Master Frontliner" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_MASTER_FRONTLINER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 kann der Paladin sich eine weitere Gegnerkategorie aussuchen, auf die er 1d8 zusätzlichen Smite-Schaden verursachen kann, ähnlich wie bei Fiends und Untoten. Zur Auswahl stehen: Aberrations, Dragons, Oozes, Beasts, Monstrosities, Elementals, Fey und Hexcreatures. Zusätzlich kann der Paladin eine Resistenz wählen, die die gewählte Gegnerkategorie widerspiegelt: Poison, Fire, Cold, Lightning, Acid, Psychic, Radiant oder Necrotic.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Paladin</set>
+        </setters>
+    </element>
+
+    <element name="Ranger - Enhanced Senses" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_ENHANCED_SENSES">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 erhält der Ranger eine Verbesserung seiner natürlichen Wahrnehmung. Er kann entweder 30ft. Tremorsense oder Blindsense wählen. Zusätzlich erhält er Advantage auf Initiative Rolls. Ab Level 17 kann er entweder einen der beiden Sinne um +30ft. verbessern oder die andere Wahrnehmungsoption auswählen. Außerdem erhöht sich seine passive Wahrnehmung um +5.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Ranger</set>
+        </setters>
+    </element>
+
+    <element name="Ranger - Special Fighting Style" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SPECIAL_FIGHTING_STYLE">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 erhält der Ranger den einzigartigen Fighting Style „Warrior of Nature“. Durch diesen kann der Ranger Smite-Spells konzentrationsfrei wirken, aber maximal nur einen gleichzeitig aufrechterhalten. Ansonsten ändern sich die Spells in ihrer Funktion nicht. Die Spells „Wrathful Smite“, „Branding Smite“ und „Blinding Smite“ werden zu seinen Spells Known hinzugefügt. Ab Level 17 erhält er zusätzlich „Staggering Smite“ und „Banishing Smite“.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Ranger</set>
+        </setters>
+    </element>
+
+    <element name="Ranger - Natures Hunter" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_NATURES_HUNTER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 kann der Ranger Hunters Mark speziell upcasten. Wenn er einen Spellslot der Stufe 3 oder höher verwendet, kostet Hunters Mark keine Konzentration mehr, kann aber nur einmal gleichzeitig aktiv sein. Für alle 2 zusätzlichen Spellslotlevel erhöht sich der Schaden um 1d6 (z.B. Level 3 Spellslot = 2d6, Level 5 = 3d6). Ab Level 17, wenn der Ranger Hunters Mark mit einem Level-5-Spellslot upcastet und sein markiertes Ziel tötet, kann er als Bonusaktion ein neues Ziel in Reichweite markieren, sich zu diesem teleportieren (bei Fernkampf auf passende Reichweite, falls nötig), und eine Weaponattack ausführen, als Teil derselben Bonusaktion.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Ranger</set>
+        </setters>
+    </element>
+
+    <element name="Rogue - Multitasker" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_MULTITASKER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 kann der Rogue zwei Bonusaktionen pro Runde verwenden, jedoch keine doppelt ausführen (z.B. nicht zweimal Cunning Action: Dash).</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Rogue</set>
+        </setters>
+    </element>
+
+    <element name="Rogue - Damage is better than Schaden" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_DAMAGE_IS_BETTER_THAN_SCHADEN">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 erhält der Rogue zusätzliche 3d6 für seinen Sneak Attack Schaden. Ab Level 17 steigt der zusätzliche Schaden um weitere 2d6 (auf Level 20 = 15d6).</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Rogue</set>
+        </setters>
+    </element>
+
+    <element name="Rogue - Weakness Exploiter" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_WEAKNESS_EXPLOITER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 kann der Rogue bei einer 19-20 einen kritischen Treffer landen. Ab Level 17 kann er auch bei einer 18-20 kritten.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Rogue</set>
+        </setters>
+    </element>
+
+    <element name="Piercing – Precision Sting" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_PIERCING_PRECISION_STING">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Longrest – Attackaction) kann der Charakter einen speziellen Angriff ausführen, der eine erhöhte Präzision und mehr Schaden verursacht. Der PB. wird für diesen Angriff zusätzlich auf den „to-hit“-Wurf gerechnet und der Angriff wird mit Advantage ausgeführt. Der Schaden wird um das Charakterlevel erhöht. Dieser Angriff krittet auf 19-20, und wenn die Kritchance höher ist, steigt sie um 1 (z.B. von 18 zu 17).</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Piercing</set>
+        </setters>
+    </element>
+
+    <element name="Piercing – Perfect Sting" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_PIERCING_PERFECT_STING">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest - Action) kann der Charakter einen speziellen Angriff mit Advantage ausführen. Der Gegner erhält -3 AC für diesen Angriff. Wenn er trifft, wird doppelter Schaden verursacht. Der Angriff krittet bei einer 17-20.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Piercing</set>
+        </setters>
+    </element>
+
+    <element name="Slashing – Cleaving" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SLASHING_CLEAVING">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Longrest - Action) kann der Charakter bis zu 4 Gegner mit einem einzigen Schwung treffen, wenn sie nicht weiter als seine Reichweite entfernt sind. Jeder Angriff wird separat gewürfelt und verursacht 1d8 zusätzlichen Schaden.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Slashing</set>
+        </setters>
+    </element>
+
+    <element name="Slashing – Great Slashing Attack" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SLASHING_GREAT_SLASHING_ATTACK">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest - Action) kann der Charakter einen mächtigen Angriff ausführen, der auf ein einzelnes Ziel abzielt. Der Angriff hat -5 auf den Treffer, verursacht aber 1d8 zusätzlichen Schaden pro Charakterlevel. Trifft der Angriff, kann der Gegner eine Runde lang nicht regenerieren und verliert 1d4 AC bis zu einer Short- oder Longrest. Nach dem Angriff wird die Geschwindigkeit bis zur nächsten Runde auf 0 reduziert. Der Angriff kann erneut verwendet werden, verursacht aber danach 1 Level Exhaustion.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Slashing</set>
+        </setters>
+    </element>
+
+    <element name="Bludgeoning – Impact Attack" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_BLUDGEONING_IMPACT_ATTACK">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Longrest - Attackaction) kann der Charakter einen speziellen Angriff mit zusätzlicher Wucht ausführen, der 1d8 zusätzlichen Schaden verursacht. Ab Level 17 steigt der Schaden auf 2d8. Trifft der Angriff, muss das Ziel einen Strengthsavingthrow (8+PB.+Strength) schaffen, sonst wird es um 10ft. weggestoßen.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Bludgeoning</set>
+        </setters>
+    </element>
+
+    <element name="Bludgeoning – Blasting Shot" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_BLUDGEONING_BLASTING_SHOT">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest - Action) kann der Charakter einen gewaltigen Angriff mit Advantage ausführen, der 240ft. Reichweite hat und auf den das Ziel einen Strengthsavingthrow gegen (8+PB.+Strength) bestehen muss. Misslingt der Wurf, fällt das Ziel zu Boden und wird 30ft. weggestoßen. Der Schaden basiert auf den Weapon Dices und dem Charakterlevel mal 3. Der Angriff kann wiederholt werden, aber jede weitere Nutzung verursacht 1 Level nicht verhinderbarer Exhaustion.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Bludgeoning</set>
+        </setters>
+    </element>
+
+    <element name="Deadeye" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_DEADEYE">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PBx/Longrest - Attackaction) kann der Charakter vor einem Attackroll ansagen, dass dieser speziell ausgeführt wird. Dieser Angriff besitzt eine verbesserte Kritrate (+2) und verursacht +5 zusätzlichen Schaden. Ab Level 17 steigt der zusätzliche Schaden auf +10.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Deadeye</set>
+        </setters>
+    </element>
+
+    <element name="Master Shooter" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_MASTER_SHOOTER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest – Bonusaktion) kann der Charakter für 1 Minute den PB auf den Schaden draufrechnen. Nach dem ersten Einsatz der Fähigkeit kann sie erneut genutzt werden, jedoch nimmt man 1 Level an Erschöpfung in Kauf. Jeder Wurf, bei der Schadensberechnung, der unter 2 liegt, kann als 2 gerechnet werden.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Master Shooter</set>
+        </setters>
+    </element>
+
+    <element name="Dagger – Distracting Throw" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_DAGGER_DISTRACTING_THROW">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (1x/Enemy - Attackaction) kann der Charakter einen Angriff ausführen, bei dem er den Dagger auf ein Ziel in Reichweite wirft und ohne Opportunity Attacks zu kassieren hinterherrennt, den Dolch fängt und präzise zusticht. Dieser Angriff wird mit Advantage ausgeführt und kritisiert von 18-20. Falls die Kritchance bereits besteht, wird sie um 1 erhöht. Wenn das Ziel getroffen wird, ist es verwirrt und der Charakter hat bis zum Ende seiner nächsten Runde Advantage auf Angriffe gegen es.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Dagger</set>
+        </setters>
+    </element>
+
+    <element name="Dagger – Dirty Attack" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_DAGGER_DIRTY_ATTACK">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Enemy – Attackaction) kann der Charakter einen perfekt ausgeführten Angriff nutzen, welcher unveränderbar von 15-20 kritisiert und das Charakterlevel auf den Schaden draufrechnet. Das Ziel erleidet eine fatale Wunde, die es für 1d4+1 Runden daran hindert, sich zu heilen. Ausgenommen sind Level 9 Magie, Nekromantie und ähnliche „unnatürliche“ Effekte. Ist das Ziel kein Construct, verliert es 1d4 AC, bis es eine Short- oder Longrest nimmt.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Dagger</set>
+        </setters>
+    </element>
+
+    <element name="Spear, Gleve, Pike – Thrust Shot" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SPEAR_THRUST_SHOT">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Longrest - Attackaction) kann der Charakter einen gewaltigen Stoßangriff ausführen, der bis zu 90ft. Reichweite hat. Der Angriff trifft das Ziel wie ein Projektil. Bei fehlender „Line of Sight“ trifft der Angriff das erste Ziel in Sicht. Das Ziel erleidet Bludgeoning Schaden, den ein Nahkampfangriff verursachen würde, und muss zusätzlich einen Strengthsavingthrow gegen den Save DC (8+Strength+PB.) würfeln. Schafft es den Save nicht, wird es um 10ft. linear weggestoßen und liegt Prone. Gegner ab Gargantuangröße haben Advantage auf den Savingthrow.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Spear</set>
+        </setters>
+    </element>
+
+    <element name="Greataxe – Formationbreaker" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_GREATAXE_FORMATIONBREAKER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (1x/Shortrest – Action) kann der Charakter einen Angriff ausführen, bei dem er mit einem harten Schwung einen Luftschnittangriff ausführt, der jeden Gegner in einem 60 ft. Cone trifft. Jeder Gegner muss einen Strengthsavingthrow gegen den Save DC (Strength+PB.+8) würfeln. Jeder, der den Save nicht schafft, erleidet 4d12+Strength Slashing Damage, wird um 10ft. linear nach hinten geworfen und liegt Prone. Schafft der Gegner den Save, erleidet er nur halben Schaden, und es gibt keinen Rückstoß oder die Pronekondition. Gegner ab Gargantuangröße haben Advantage auf den Savingthrow. Ab Level 17 steigt der Schaden auf 8d12, der Cone wird auf 120ft. vergrößert und der Rückstoß auf 20ft.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Greataxe</set>
+        </setters>
+    </element>
+
+    <element name="Quarterstaff – Master Stance" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_QUARTERSTAFF_MASTER_STANCE">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (1x/Longrest) kann der Charakter eine spezielle, aber anstrengende Kampfhaltung einnehmen, die ihm mehrere Vorteile für 1 Minute bietet: Der AC steigt um 2, der Charakter erhält den Angriff „Jump Attack“, bekommt das Zweifache seines Levels an temporären Lebenspunkten und +1d4 auf Savingthrows. Der Jump Attack ist ein 30ft. hoher und weiter Sprung, der keine Opportunity Attacks triggert und als Teil der Attackaction genutzt werden kann. Ab Level 17 verbessert sich die Kampfhaltung: Der AC steigt um 3, der Jump Attack wird auf 60ft. erhöht, der Charakter erhält das Dreifache seines Levels an temporären Lebenspunkten und +1d6 auf Savingthrows. Nach dem ersten Einsatz erleidet der Charakter 1 Level an Erschöpfung, wenn die Fertigkeit erneut verwendet wird.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Quarterstaff</set>
+        </setters>
+    </element>
+
+    <element name="Katana, Longsword, Greatsword – Lightning Strike" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_KATANA_LIGHTNING_STRIKE">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest – Action) kann der Charakter einen Angriff ausführen, bei dem jeder Gegner in einer 100ft. langen und 10ft. breiten Linie blitzartig getroffen wird. Bei diesem Angriff, der keine Opportunity Attacks provoziert, wird jeder Gegner einzeln angegriffen, und am Ende steht der Charakter entweder hinter dem letzten Gegner oder am Ende der 100ft. Linie. Dieser Angriff kann nach dem ersten Mal erneut genutzt werden, erfordert jedoch für jede weitere Nutzung ein Level an Erschöpfung. Alternativ kann der Charakter blitzartig ein einzelnes Ziel in 100ft. Reichweite treffen und 5 konsekutive Angriffe ausführen. Generell kann man bis zu 100ft. in die Luft angreifen!</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Katana</set>
+        </setters>
+    </element>
+
+    <element name="Mace, Warhammer, Lighthammer, Maul – Heavy Stance" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_MACE_HEAVY_STANCE">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (1x/Shortrest – Bonusaktion) kann der Charakter die Wucht seiner Angriffe verbessern, indem er für 1 Minute stärker, aber unpräziser zuschlägt. Während dieser Zeit wird der Schaden um +5 verbessert, der „to-hit“ Wert um -2 gesenkt, und wenn Angriffe treffen, kommt mindestens der Strengthmodifier als Schaden an. Ab Level 17 steigert sich der Bonus auf +10 und der Malus auf -4.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Mace</set>
+        </setters>
+    </element>
+
+    <element name="Shortsword, Longsword, Greatsword, Katana – Air Cut" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SHORTSWORD_AIR_CUT">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Longrest – Attackaction) kann der Charakter einen Gegner in 60ft. Reichweite mit einem gezielten Luftschnitt angreifen. Dieser Angriff funktioniert wie ein Nahkampfangriff in Bezug auf „to-hit“ Kalkulation und Schaden. Es muss „Line of Sight“ bestehen; andernfalls wird das erste Ziel in Sicht angevisiert. Ab Level 17 steigt die Reichweite auf 90ft.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Shortsword</set>
+        </setters>
+    </element>
+
+    <element name="Maul – Absolute Destruction" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_MAUL_ABSOLUTE_DESTRUCTION">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest – Aktion + Bonusaktion) kann der Charakter einen Angriff ausführen, der sein Movementspeed auf 0 setzt und 1 Level an Erschöpfung nach der Ausführung verursacht. Diese spezielle Attacke kritisiert (unveränderbar) von 15-20, wird mit Advantage ausgeführt und verursacht den dreifachen Schaden des Weaponattacks. Trifft der Angriff, muss das Ziel einen Constitutionsavingthrow gegen einen Save DC von 30 würfeln. Misslingt der Wurf, verliert das Ziel bis zu seiner nächsten Short- oder Longrest 1d6 AC. Ist das Ziel ein Construct, Undead oder hat es eine andere Verwundbarkeit gegen Bludgeoning Damage, verliert es 2d6 AC bei einem misslungenen Savingthrow und immer noch 1d6, falls das Ziel den Save schafft. Wird ein Objekt angegriffen, wird es automatisch destabilisiert und stürzt ein (bei härteren Materialien definiert der DM den Schaden). Nach der ersten Nutzung kann dieser Angriff auch erneut eingesetzt werden, was jedes Mal ein weiteres Level an Erschöpfung kostet.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Maul</set>
+        </setters>
+    </element>
+
+    <element name="Whip, Flail – Consecutive Pain" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_WHIP_CONSECUTIVE_PAIN">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Shortrest - Attackaction) kann der Charakter einen Angriff ausführen, der 2d6 zusätzlichen Schaden hinzufügt. Ein Gegner, der auf diese Weise getroffen wurde, wird für jeden weiteren Treffer bis zum Ende des Kampfes leichter zu treffen (für dich). Nach dem ersten Treffer steigt der „to-hit“ und der Schaden gegen das Ziel um +1, und für jeden weiteren Treffer durch diese speziellen Angriffe steigt es kumulativ um +1 (max. +6). Ab Level 17 beträgt der zusätzliche Schaden 4d6.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Flail</set>
+        </setters>
+    </element>
+
+    <element name="Scythe – Bloodslash" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SCYTHE_BLOODSLASH">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Shortrest – Attackaction) kann der Charakter einen speziellen Angriff ausführen, der zusätzliche 2d12 Schaden zufügt. Wird ein Ziel getroffen und ist in der Lage zu bluten, erhält es die Kondition „Bleeding“. Bleeding verursacht zu Beginn jeder Runde des blutenden Ziels 1d6 Blutungsschaden (Piercing) und benötigt eine Action, um die Wunde wieder abzudecken oder Heilung durch Tränke, Magie oder Fähigkeiten (z.B. Second Wind). Bleeding endet auch nach 1 Minute von selbst. Kann das Ziel nicht bluten, erleidet es die Kondition nicht, erhält aber stattdessen 3d12 Schaden. Der Schaden steigt auf Level 17 auf 4d12 und 5d12.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Scythe</set>
+        </setters>
+    </element>
+
+    <element name="Scythe – Deathcircle" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SCYTHE_DEATHCIRCLE">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest – Action) kann der Charakter einen speziellen Angriff ausführen, bei dem ein Drehangriff mit aller Wucht und Geschwindigkeit eingesetzt wird, der jede Person in 60ft. Reichweite mit einem verheerenden Luftschnitt trifft. Dieser Angriff wird mit Advantage ausgeführt, kritisiert von 15-20 und gilt für alle Ziele gleichzeitig (nur 1 Angriff für alle). Dieser Angriff verursacht 8d12 extra Schaden. Nach dem ersten Einsatz kann der Angriff erneut ausgeführt werden, jedoch kostet jeder Einsatz 1 Level an Erschöpfung. Bloodslash ist damit kombinierbar!</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Scythe</set>
+        </setters>
+    </element>
+
+    <element name="Unarmed – Fistgatling" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_UNARMED_FISTGATLING">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Longrest - Attackaction) kann der Charakter einen Angriff pro Runde zur Attackaction hinzufügen, solange keine Waffe getragen wird. Zusätzlich verursacht jeder Angriff, wenn die Fistgatling diese Runde benutzt wurde, +2 mehr Schaden.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Unarmed</set>
+        </setters>
+    </element>
+
+    <element name="Unarmed – All Mighty Comboattack" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_UNARMED_ALL_MIGHTY_COMBOATTACK">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest - Aktion + Bonusaktion) kann der Charakter eine spezielle Angriffsausführung starten, die all die Energie kanalisiert und bis zur nächsten Runde 0 Movementspeed hat. Der Charakter greift so oft er trifft, aufeinanderfolgend mit Advantage an. Der „to-hit“ Wert steigt für den ersten Angriff um +5. Für jeden weiteren Angriff sinkt der „to-hit“ Wert um -5. Jeder Angriff verursacht zusätzlich +10 Schaden. Die Angriffskombo geht so lange, bis nicht getroffen wird, der Gegner tot ist oder das Ziel aus der Reichweite fliehen kann. Nach dem ersten Einsatz kann die Komboattacke erneut ausgeführt werden, kostet jedoch 1 Level an Erschöpfung nach der Ausführung.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Unarmed</set>
+        </setters>
+    </element>
+
+    <element name="Longbow, Shortbow – Ricochet" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_LONGBOW_RICOCHET">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Longrest - Attackaction) kann der Charakter 1. Schuss pro Runde die Ricocheteigenschaft verleihen. Der Schuss prallt von dem ersten Ziel ab und trifft bis zu 3 Gegner in 30ft. Reichweite um das Ziel herum (bei mehr als 3 darfst du entscheiden). Jedes dieser 3 weiteren Ziele muss einen Dexteritysavingthrow gegen den SaveDC (Dexterity + PB + 8) schaffen. Bei Misserfolg bekommen die Ziele den halben Schaden des ersten Ziels. Bei Erfolg bekommen sie keinen Schaden. Ab Level 17 ändert es sich von Longrest zu Shortrest.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Bow</set>
+        </setters>
+    </element>
+
+    <element name="Longbow, Shortbow – Ricochet" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_LONGBOW_RICOCHET">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PB.x/Longrest - Attackaction) kann der Charakter 1. Schuss pro Runde die Ricocheteigenschaft verleihen. Der Schuss prallt von dem ersten Ziel ab und trifft bis zu 3 Gegner in 30ft. Reichweite um das Ziel herum (bei mehr als 3 darfst du entscheiden). Jedes dieser 3 weiteren Ziele muss einen Dexteritysavingthrow gegen den SaveDC (Dexterity + PB + 8) schaffen. Bei Misserfolg bekommen die Ziele den halben Schaden des ersten Ziels. Bei Erfolg bekommen sie keinen Schaden. Ab Level 17 ändert es sich von Longrest zu Shortrest.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Bow</set>
+        </setters>
+    </element>
+
+    <element name="Shield – Defensive Supporter" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SHIELD_DEFENSIVE_SUPPORTER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 beginnt der Charakter, den defensiven Stil zu verbessern und seine Mitglieder dadurch zu unterstützen. Jeder in 5ft. Reichweite erhält +2 auf seinen AC. Als Reaction kannst du jemanden, der in 5ft. Reichweite ist, den AC um +4 verbessern, wodurch du einen tatsächlichen Treffer eines Gegners verhindern könntest. Nachdem verlautbart wurde, dass der Gegner trifft, kannst du die Reaction nutzen, aber ohne zu wissen, ob der zusätzliche AC den Angriff verhindern würde. Ab Level 17 steigt der Passiv-AC für die Verbündeten auf +3, die Reichweite beträgt 10ft. und die Reaction verbessert den AC um +6.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Shield</set>
+        </setters>
+    </element>
+
+    <element name="Shield – Lifesaver" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_SHIELD_LIFESAVER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (2x/Longrest – Reaction) kannst du das Unmögliche real werden lassen. Falls jemand in 10ft. Entfernung oder du gekrittet wirst, kannst du diese Reaction nutzen und den vollständigen Krit durch eine gezielte Blockade unterbrechen, sodass kein Schaden entsteht.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Shield</set>
+        </setters>
+    </element>
+
+    <element name="Rapier – Riposte a la Gracie" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_RAPIER_RIPOSTE_A_LA_GRACIE">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (PBx/Longrest - Reaction) kann der Charakter einen gezielten Gegenangriff starten, wenn der Gegner ihn mit einem Nahkampfangriff trifft und er selbst in Reichweite ist. Dieser Gegenangriff wird mit Advantage ausgeführt und hat +1 Kritchance. Ist dieser Treffer kritisch, verliert das Ziel bis zum Ende deiner nächsten Runde 1d4 AC, außer es besitzt Piercing Resistance oder ist ein Construct. Ab Level 17 geht die Kritchance auf +2 hoch, die AC Senkung auf 1d6 und der Schaden dieses Gegenangriffs wird um +6 (PB) erhöht.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Rapier</set>
+        </setters>
+    </element>
+
+    <element name="Zwei einhändige Waffen - Attackdancer" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_DUAL_WIELD_ATTACKDANCER">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 9 (1x/Longrest – Special Action) kannst du für 1 Minute eine zusätzliche Bonusaktion erhalten, die du nur verwenden kannst, um einen Offhandattack zu nutzen. Ab Level 17 wird es zu 1x/Shortrest.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Dual Wield</set>
+        </setters>
+    </element>
+
+    <element name="Zwei einhändige Waffen – Defensive Dance" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_SMM_DUAL_WIELD_DEFENSIVE_DANCE">
+        <compendium display="false" />
+        <description>
+            <p>
+                <i>Ab Level 17 (1x/Longrest – Bonusaktion) kannst du einen speziellen Tanz ausführen, der die defensiven Qualitäten verbessert: +1d4 auf Savingthrows, +30 mehr Movementspeed, +6 AC und Opportunity Attacks werden mit Disadvantage gegen dich ausgeführt.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Special Martial Moves</set>
+            <set name="slot">misc</set>
+            <set name="rarity">Dual Wield</set>
+        </setters>
+    </element>
+
+</elements>
