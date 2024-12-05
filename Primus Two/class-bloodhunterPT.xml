@@ -2,7 +2,7 @@
 <elements>
     <info>
 		<name>Bloodhunter PT</name>
-		<update version="0.3">
+		<update version="0.4">
 			<file name="class-bloodhunterPT.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/class-bloodhunterPT.xml" />
 		</update>
 	</info>
@@ -90,7 +90,7 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
             <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
             <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
-            <select type="Proficiency" name="Tool Proficiency" supports="Artisan tools" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+            <select type="Proficiency" name="Tool Proficiency" supports="Tool" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
             <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
             <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
             <grant type="Class Feature" id="ID_PT_CLASS_FEATURE_BLOODHUNTER_PT_HUNTERS_BANE" level="1" />
@@ -116,7 +116,8 @@
             </setters>
             <rules>
                 <grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS" />
-                <select type="Proficiency" name="Tool Proficiency" supports="Artisan tools" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+                <select type="Proficiency" name="Tool Proficiency" supports="Tool" requirements="!ID_PT_MULTICLASS_BLOODHUNTER"/>
+                <select type="Proficiency" name="Skill Proficiency (Blood Hunter)" supports="ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_SURVIVAL|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_RELIGION" number="3"/>
                 <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
                 <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
                 <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
@@ -201,11 +202,11 @@
         </description>
         <sheet action = "Bonus Action">
             <description usage ="1d{{crimson rite:damage die}} nekrotischen Schaden">
-                <p>Du durchdringst eine einzelne Waffe bis zu deiner nächsten short oder long rest mit der Elementarenergie eines bekannten Ritus. Für die kommende Minute verursacht er, wenn er seine Waffen zum angreifen nutzt, zusätzlichen Schaden in Höhe des Hemocraft Dies.</p>
+                <p>Du durchdringst eine einzelne Waffe mit der Elementarenergie eines bekannten Ritus. Für die kommende Minute verursacht er, wenn er seine Waffen zum angreifen nutzt, zusätzlichen Schaden in Höhe des Hemocraft Dies.</p>
             </description>
             
             <description usage = "2d{{crimson rite:damage die}} nekrotischen Schaden" level="20">
-                <p>Du durchdringst eine einzelne Waffe bis zu deiner nächsten short oder long rest mit der Elementarenergie eines bekannten Ritus. Für die kommende Minute verursacht er, wenn er seine Waffen zum angreifen nutzt, zusätzlichen Schaden in Höhe des Hemocraft Dies.</p>
+                <p>Du durchdringst eine einzelne Waffe mit der Elementarenergie eines bekannten Ritus. Für die kommende Minute verursacht er, wenn er seine Waffen zum angreifen nutzt, zusätzlichen Schaden in Höhe des Hemocraft Dies.</p>
             </description>
         </sheet>
         <rules>
@@ -384,8 +385,7 @@
 			<p>Ab Level 9 kann der Bloodhunter seine übernatürlichgeschärften Sinne nutzen, um an besonders erinnerungsträchtigen Orten Eindrücke zu gewinnen, indem er sich 1. Minute lang auf ein Objekt oder einen Ort konzentriert. Das kann von nachhallenden Geräuschen einer kürzlich verstorbenen Person, durch das Berühren der Leiche, bis hin zum Wiedererleben von starken Erinnerungen, alles eintreffen. Abhängige Faktoren: Wie lange ist das Ereignis her, wie viele waren betroffen, wie intensiv waren die Gefühle, etc. Der DM entscheidet in jedem Fall, wie und was als Information zugänglich wird.</p>
 		</description>
 		<sheet>
-			<description  usage="1/Long Rest">Du kannst dich 1 Minute lang auf ein Objekt oder Ort konzentrieren um wage Informationen erhalten. Je zeitlich näher oder stärker die Wucht das Ereignis, desto besser sind die gewonnen Informationen</description>
-			<description  usage="1/Short Rest" requirements="ID_PT_ARCHETYPE_FEATURE_HUNTERS_KNOWLEDGE">Du kannst dich 1 Minute lang auf ein Objekt oder Ort konzentrieren um wage Informationen erhalten. Je zeitlich näher oder stärker die Wucht das Ereignis, desto besser sind die gewonnen Informationen</description>
+			<description  usage="1/Long Rest">Du kannst dich 1 Minute lang auf ein Objekt oder Ort konzentrieren um wage Informationen erhalten. Je zeitlich näher oder stärker die Wucht das Ereignis, desto besser sind die gewonnen Informationen (Mit Hunters Knowledge ist es pro Short Rest!).</description>
         </sheet>
 	</element>
 
@@ -1166,7 +1166,7 @@
             <description usage="2d{{crimson rite:damage die}} nekrotischen Schaden/Long Rest" level="7">
                 <p>Nach einer Longrest kann der Blood Hunter zwei Hemocraft Die würfeln und das höhere Ergebnis wählen zur Bestimmung der Anzahl der Uses. Er kann um die Höhe des gewürfelten Ergebnisses folgendes Feature benutzen: Zum Beginn seiner Attackaction, ohne dass es ihn eine Aktion kostet, kann der Blood Hunter sich selbst Schaden zufügen, durch einen Hemocraft Die und für diese Runde Advantage auf alle Angriffe bekommen.</p>
             </description>
-            <description usage="3d{{crimson rite:damage die}} nekrotischen Schaden/Long Rest" level="7">
+            <description usage="3d{{crimson rite:damage die}} nekrotischen Schaden/Long Rest" level="15">
                 <p>Nach einer Longrest kann der Blood Hunter zwei Hemocraft Die würfeln und das höchste Ergebnis wählen zur Bestimmung der Anzahl der Uses. Er kann um die Höhe des gewürfelten Ergebnisses folgendes Feature benutzen: Zum Beginn seiner Attackaction, ohne dass es ihn eine Aktion kostet, kann der Blood Hunter sich selbst Schaden zufügen, durch einen Hemocraft Die und für diese Runde Advantage auf alle Angriffe bekommen.</p>
             </description>
         </sheet>
