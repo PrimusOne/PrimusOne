@@ -2,7 +2,7 @@
 <elements>
     <info>
 		<name>Neue Magic Items</name>
-		<update version="0.1">
+		<update version="0.2">
 			<file name="neue-magic-items.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/neue-magic-items.xml" />
 		</update>
 	</info>
@@ -196,7 +196,7 @@
 
     <element name="Divine Protector +1" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DIVINE_PROTECTOR1">
         <description>
-            <p>Ein besonderer Gegenstand, getränkt von der magischen Kraft eines Naturheiligtums. Rituell eingewirkt über einen langen Zeitraum, ist dieses Symbol ein guter Begleiter eines jeden Druiden. Die Anzahl der Wildshapeuses steigt um +1. Wenn der Druide eine Wildshape benutzt, erhält er zusätzliche TempHP in Höhe seines Levels. Seine Consaves, um Konzentration zu halten, sind um +3 verbessert. Er kann 1x/Longrest einen seiner prepared Ritualzauber, ohne einen Spellslot zu verbrauchen, regulär casten.</p>
+            <p>Diese magische +1 Rüstung wird aus einem speziellen Metall gefertigt, das lange Zeit Weihwasser ausgesetzt war. Es kann jede Medium oder Heavy Armor sein. Diese ist ausgestattet mit heiligen Insignien und geweiht an einem mächtigen Tempel. Sie verleiht dem Träger +1 auf alle Savingthrows und eine Resistance aus der Liste: Fire, Acid, Cold, Poison, Necrotic oder Radiant. Sie existiert auch mit höheren Stufen, die mit jeder Stufe +1 mehr auf alle Savingthrows bietet.</p>
         </description>
         <setters>
             <set name="category">Magic Armor</set>
@@ -205,6 +205,7 @@
             <set name="type" addition="equippable by a cleric or paladin">Armor</set>
             <set name="rarity">Rare</set>
             <set name="enhancement">1</set>
+            <set name="attunement">true</set>
             <set name="armor">ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
         </setters>
         <rules>
@@ -387,31 +388,31 @@
 
     <element name="Strength" type="Class Feature" source="Internal" id="ID_SIGIL_STRENGTH">
         <supports>limitless</supports>
-        <description>Dein Strength Wert steigt um +2 (limitbreak).</description>
+        <description>Dein Strength Wert steigt um dein PB (limitbreak).</description>
         <sheet display="false"/>
         <rules>
-            <stat name="strength" value="2" />
-            <stat name="strength:max" value="2"/>
+            <stat name="strength" value="proficiency" />
+            <stat name="strength:max" value="proficiency"/>
         </rules>
     </element>
 
     <element name="Dexterity" type="Class Feature" source="Internal" id="ID_SIGIL_DEXTERITY">
         <supports>limitless</supports>
-        <description>Dein Dexterity Wert steigt um +2 (limitbreak).</description>
+        <description>Dein Dexterity Wert steigt um dein PB (limitbreak).</description>
         <sheet display="false"/>
         <rules>
-            <stat name="dexterity" value="2" />
-            <stat name="dexterity:max" value="2"/>
+            <stat name="dexterity" value="proficiency" />
+            <stat name="dexterity:max" value="proficiency"/>
         </rules>
     </element>
 
     <element name="Constitution" type="Class Feature" source="Internal" id="ID_SIGIL_CONSTITUTION">
         <supports>limitless</supports>
-        <description>Dein Constitution Wert steigt um +2 (limitbreak).</description>
+        <description>Dein Constitution Wert steigt um dein PB (limitbreak).</description>
         <sheet display="false"/>
         <rules>
-            <stat name="constitution" value="2" />
-            <stat name="constitution:max" value="2"/>
+            <stat name="constitution" value="proficiency" />
+            <stat name="constitution:max" value="proficiency"/>
         </rules>
     </element>
 
