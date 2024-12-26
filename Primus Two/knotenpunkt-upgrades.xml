@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Knotenpunktupgrades</name>
+        <update version="0.1">
+            <file name="knotenpunkt-upgrades.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/knotenpunkt-upgrades.xml" />
+        </update>
+    </info>
+    <element name="Spell Save DC +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_KPU_DC">
+        <description>
+            <p>
+                <i>Increases your spell save DC by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="spellcasting:dc" value="1" alt="Spell Save DC Increase" />
+        </rules>
+    </element>
+
+    <element name="Spell Attack +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_KPU_SPELLATT">
+        <description>
+            <p>
+                <i>Increases your spell attack by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="spellcasting:attack" value="1" alt="Spell Attack Increase" />
+        </rules>
+    </element>
+
+    <element name="to hit +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_KPU_TO_HIT">
+        <description>
+            <p>
+                <i>You gain a +1 bonus to attack rolls.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="handaxe:attack" value="1" />
+            <stat name="battleaxe:attack" value="1" />
+            <stat name="greataxe:attack" value="1" />
+            <stat name="warhammer:attack" value="1" />
+            <stat name="maul:attack" value="1" />
+            <stat name="shortsword:attack" value="1" />
+            <stat name="longsword:attack" value="1" />
+            <stat name="scimitar:attack" value="1" />
+            <stat name="rapier:attack" value="1" />
+            <stat name="greatsword:attack" value="1" />
+            <stat name="flail:attack" value="1" />
+            <stat name="unarmed:attack" value="1" />
+            <stat name="spear:attack" value="1" />
+        </rules>
+    </element>
+
+    <element name="AC +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_KPU_AC">
+        <description>
+            <p>
+                <i>Increases your AC by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Sorcery Points Increase" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_KPU_SPI">
+        <description>
+            <p>
+                <i>Increases your amount of Sorcery Points by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="sorcery-points" value="1" />
+        </rules>
+    </element>
+</elements>

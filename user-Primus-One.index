@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.20">
+		<update version="0.0.21">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -60,6 +60,7 @@
 		<file name="feats.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/feats.xml" />
 		<file name="other-ability_check_improvements.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/other-ability_check_improvements.xml" />
 		<file name="martial_moves.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/martial_moves.xml" />
+		<file name="knotenpunkt-upgrades.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/knotenpunkt-upgrades.xml" />
 
 
 	</files>
