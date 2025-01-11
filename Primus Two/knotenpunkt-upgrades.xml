@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Knotenpunktupgrades</name>
-        <update version="0.1">
+        <update version="0.2">
             <file name="knotenpunkt-upgrades.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/knotenpunkt-upgrades.xml" />
         </update>
     </info>
@@ -95,6 +95,70 @@
         </setters>
         <rules>
             <stat name="sorcery-points" value="1" />
+        </rules>
+    </element>
+
+    <element name="Max HP +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_KPU_HP">
+        <description>
+            <p>
+                <i>Increases your maximal hitpoints by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="hp" value="1" />
+        </rules>
+    </element>
+
+    <element name="Max HP +2" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_KPU_HP_TWO">
+        <description>
+            <p>
+                <i>Increases your maximal hitpoints by 2.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="hp" value="2" />
+        </rules>
+    </element>
+
+    <element name="Max HP +5" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_KPU_HP_FIVE">
+        <description>
+            <p>
+                <i>Increases your maximal hitpoints by 5.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="hp" value="5" />
+        </rules>
+    </element>
+
+    <element name="Max HP +10" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_KPU_HP_TEN">
+        <description>
+            <p>
+                <i>Increases your maximal hitpoints by 10.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="hp" value="10" />
         </rules>
     </element>
 </elements>

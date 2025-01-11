@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
     <info>
-		<name>Neue Magic Items</name>
-		<update version="0.2">
-			<file name="neue-magic-items.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/neue-magic-items.xml" />
-		</update>
-	</info>
+        <name>Neue Magic Items</name>
+        <update version="0.3">
+            <file name="neue-magic-items.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/neue-magic-items.xml" />
+        </update>
+    </info>
     <element name="Astalos-Klinge" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_ASTALOS_KLINGE_SS">
         <description>
             <p>Kann ein Dagger oder Shortsword sein. Ist eine elektrifizierte +1 Waffe, die magisch ist und 1d6 zusätzlichen Lightningdamage verursacht.</p>
@@ -178,7 +178,7 @@
             <set name="rarity">rare</set>
             <set name="enhancement">2</set>
             <set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
-            <set name="name-format">{{parent}} +{{enhancement}}</set>
+            <set name="name-format">Masterweapon + {{parent}}</set>
         </setters>
     </element>
 
@@ -549,6 +549,142 @@
         <sheet display="false" />
         <rules>
             <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CHARISMA" />
+        </rules>
+    </element>
+
+
+
+    <element name="Krone des Lichts" type="Magic Item" source="Primus One" id="ID_PT_KRONE_DES_LICHTS">
+        <description>
+            <p>+3 auf alle Saving Throws und 2 Resistenzen deiner Wahl (außer piercing, slashing, bludgeoning und psychic)</p>
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="attunement">true</set>
+            <set name="rarity">Legendary</set>
+            <set name="slot">head</set>
+        </setters>
+        <rules>
+            <select name="Resistance" type="Class Feature" supports="Resist" number="2"/>
+
+            <stat name="strength:save:misc" value="3" />
+            <stat name="dexterity:save:misc" value="3" />
+            <stat name="constitution:save:misc" value="3" />
+            <stat name="intelligence:save:misc" value="3" />
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3" />
+        </rules>
+    </element>
+
+
+    <element name="Luftklinge" type="Magic Item" source="Primus One" id="ID_PT_LUFTKLINGE">
+        <description>
+            <p>+3 Shortsword mit einer reach von 120 feet</p>
+        </description>
+        <setters>
+            <set name="keywords">shortsword</set>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="type" addition="Shortsword">Weapon</set>
+            <set name="attunement">true</set>
+            <set name="rarity">Legendary</set>
+            <set name="enhancement">3</set>
+            <set name="weapon">Shortsword</set>
+            <set name="reach">120</set>
+        </setters>
+    </element>
+
+    <element name="Kette eines schönen Orts" type="Magic Item" source="Primus One" id="ID_PT_KETTE_EINES_SCHONEN_ORTS">
+        <description>
+            <p>1x pro Jahr kann man an einen schönen Ort reisen</p>
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="attunement">true</set>
+            <set name="rarity">Legendary</set>
+            <set name="slot">neck</set>
+        </setters>
+    </element>
+
+    <!--Resitances-->
+
+    <element name="Resistance (Acid)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_ACID">
+        <supports>Resist</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Cold)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_COLD">
+        <supports>Resist</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Fire)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_FIRE">
+        <supports>Resist</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Force)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_FORCE">
+        <supports>Resist</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FORCE"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Lightning)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_LIGHTNING">
+        <supports>Resist</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Necrotic)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_NECROTIC">
+        <supports>Resist</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Poison)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_POISON">
+        <supports>Resist</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Radiant)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_RADIANT">
+        <supports>Resist</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Thunder)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_THUNDER">
+        <supports>Resist</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER"/>
         </rules>
     </element>
 </elements>
