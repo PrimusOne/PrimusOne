@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Neue Magic Items</name>
-        <update version="0.3">
+        <update version="0.4">
             <file name="neue-magic-items.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/neue-magic-items.xml" />
         </update>
     </info>
@@ -127,7 +127,7 @@
             <set name="weight" lb="0">0 lb.</set>
             <set name="type" addition="shield">Armor</set>
             <set name="attunement">true</set>
-            <set name="enhancement">1</set>
+            <set name="enhancement">2</set>
             <set name="armor">shield</set>
         </setters>
     </element>
@@ -209,15 +209,69 @@
             <set name="armor">ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
         </setters>
         <rules>
-            <stat name="ac:armored:enhancement" value="1" bonus="enhancement" />
             <stat name="strength:save:misc" value="1" />
             <stat name="dexterity:save:misc" value="1" />
             <stat name="constitution:save:misc" value="1" />
             <stat name="intelligence:save:misc" value="1" />
             <stat name="wisdom:save:misc" value="1" />
             <stat name="charisma:save:misc" value="1" />
-            <select type="Class Feature" name="Divine Protector" supports="Resistanc"/>
+            <grant type="Class Feature" id="ID_PT_MAGIC_ITEM_DIVINE_PROTECTION"/>
+        </rules>
+    </element>
 
+    <element name="Divine Protector +2" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DIVINE_PROTECTOR2">
+        <description>
+            <p>Diese magische +2 Rüstung wird aus einem speziellen Metall gefertigt, das lange Zeit Weihwasser ausgesetzt war. Es kann jede Medium oder Heavy Armor sein. Diese ist ausgestattet mit heiligen Insignien und geweiht an einem mächtigen Tempel. Sie verleiht dem Träger +1 auf alle Savingthrows und eine Resistance aus der Liste: Fire, Acid, Cold, Poison, Necrotic oder Radiant. Sie existiert auch mit höheren Stufen, die mit jeder Stufe +1 mehr auf alle Savingthrows bietet.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="slot">body</set>
+            <set name="type" addition="equippable by a cleric or paladin">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="enhancement">2</set>
+            <set name="attunement">true</set>
+            <set name="armor">ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
+        </setters>
+        <rules>
+            <stat name="strength:save:misc" value="2" />
+            <stat name="dexterity:save:misc" value="2" />
+            <stat name="constitution:save:misc" value="2" />
+            <stat name="intelligence:save:misc" value="2" />
+            <stat name="wisdom:save:misc" value="2" />
+            <stat name="charisma:save:misc" value="2" />
+            <select type="Class Feature" name="Divine Protector" supports="Divine Protector"/>
+        </rules>
+    </element>
+
+    <element name="Divine Protector +3" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DIVINE_PROTECTOR3">
+        <description>
+            <p>Diese magische +3 Rüstung wird aus einem speziellen Metall gefertigt, das lange Zeit Weihwasser ausgesetzt war. Es kann jede Medium oder Heavy Armor sein. Diese ist ausgestattet mit heiligen Insignien und geweiht an einem mächtigen Tempel. Sie verleiht dem Träger +1 auf alle Savingthrows und eine Resistance aus der Liste: Fire, Acid, Cold, Poison, Necrotic oder Radiant. Sie existiert auch mit höheren Stufen, die mit jeder Stufe +1 mehr auf alle Savingthrows bietet.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="slot">body</set>
+            <set name="type" addition="equippable by a cleric or paladin">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="enhancement">3</set>
+            <set name="attunement">true</set>
+            <set name="armor">ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
+        </setters>
+        <rules>
+            <stat name="strength:save:misc" value="3" />
+            <stat name="dexterity:save:misc" value="3" />
+            <stat name="constitution:save:misc" value="3" />
+            <stat name="intelligence:save:misc" value="3" />
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3" />
+            <select type="Class Feature" name="Divine Protector" supports="Divine Protector"/>
+        </rules>
+    </element>
+
+    <element name="Divine Protection" type="Class Feature" source="internal" id="ID_PT_MAGIC_ITEM_DIVINE_PROTECTION">
+        <rules>
+            <select type="Class Feature" name="Divine Protection" supports="Divine Protector"/>
         </rules>
     </element>
 
@@ -471,7 +525,7 @@
     </element>
 
     <element name="Resistance (Acid)" type="Class Feature" source="Internal" id="ID_DIVINE_PROTECTOR_CONDITION_DAMAGE_RESISTANCE_ACID">
-        <supports>Resistanc</supports>
+        <supports>Divine Protector</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID"/>
@@ -479,7 +533,7 @@
     </element>
 
     <element name="Resistance (Cold)" type="Class Feature" source="Internal" id="ID_DIVINE_PROTECTOR_CONDITION_DAMAGE_RESISTANCE_COLD">
-        <supports>Resistanc</supports>
+        <supports>Divine Protector</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD"/>
@@ -487,7 +541,7 @@
     </element>
 
     <element name="Resistance (Fire)" type="Class Feature" source="Internal" id="ID_DIVINE_PROTECTOR_CONDITION_DAMAGE_RESISTANCE_FIRE">
-        <supports>Resistanc</supports>
+        <supports>Divine Protector</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE"/>
@@ -495,7 +549,7 @@
     </element>
 
     <element name="Resistance (Necrotic)" type="Class Feature" source="Internal" id="ID_DIVINE_PROTECTOR_CONDITION_DAMAGE_RESISTANCE_NECROTIC">
-        <supports>Resistanc</supports>
+        <supports>Divine Protector</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC"/>
@@ -503,7 +557,7 @@
     </element>
 
     <element name="Resistance (Poison)" type="Class Feature" source="Internal" id="ID_DIVINE_PROTECTOR_CONDITION_DAMAGE_RESISTANCE_POISON">
-        <supports>Resistanc</supports>
+        <supports>Divine Protector</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON"/>
@@ -511,7 +565,7 @@
     </element>
 
     <element name="Resistance (Radiant)" type="Class Feature" source="Internal" id="ID_DIVINE_PROTECTOR_CONDITION_DAMAGE_RESISTANCE_RADIANT">
-        <supports>Resistanc</supports>
+        <supports>Divine Protector</supports>
         <sheet display="false"/>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT"/>
@@ -569,7 +623,7 @@
             <set name="slot">head</set>
         </setters>
         <rules>
-            <select name="Resistance" type="Class Feature" supports="Resist" number="2"/>
+            <select name="Resistance Krone" type="Class Feature" supports="Resist" number="2"/>
 
             <stat name="strength:save:misc" value="3" />
             <stat name="dexterity:save:misc" value="3" />
@@ -579,7 +633,6 @@
             <stat name="charisma:save:misc" value="3" />
         </rules>
     </element>
-
 
     <element name="Luftklinge" type="Magic Item" source="Primus One" id="ID_PT_LUFTKLINGE">
         <description>
@@ -614,8 +667,175 @@
         </setters>
     </element>
 
-    <!--Resitances-->
+    <element name="Barbar Kleidung" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_BARBAR_KLEIDUNG">
+        <description>
+            <p>Die natürliche Rüstung eines Barbaren wird verbessert durch dieses Kleidungsstück. Der Barbar erhält +1 auf AC und Savingthrows.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type" addition="by a barbarian">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="cost" currency="gp"></set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="1" />
+            <stat name="strength:save:misc" value="1" />
+            <stat name="dexterity:save:misc" value="1" />
+            <stat name="constitution:save:misc" value="1" />
+            <stat name="intelligence:save:misc" value="1" />
+            <stat name="wisdom:save:misc" value="1" />
+            <stat name="charisma:save:misc" value="1" />
+        </rules>
+    </element>
 
+    <element name="Monk Kleidung" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MONK_KLEIDUNG">
+        <description>
+            <p>Die natürliche Rüstung eines Monks wird verbessert durch dieses Kleidungsstück. Monk erhält +1 auf AC und Savingthrows.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type" addition="by a monk">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="cost" currency="gp"></set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="1" />
+            <stat name="strength:save:misc" value="1" />
+            <stat name="dexterity:save:misc" value="1" />
+            <stat name="constitution:save:misc" value="1" />
+            <stat name="intelligence:save:misc" value="1" />
+            <stat name="wisdom:save:misc" value="1" />
+            <stat name="charisma:save:misc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Progressive Martial Enhancer" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_PROGRESSIVE_MARTIAL_ENHANCER">
+        <description>
+            <p>Dieses Tattoo verbessert die defensiven Kapazitäten von kampferprobten Kriegern, sich gegen allerlei Gefahren behaupten zu können. Dieses Tattoo verbindet sich mit der Lebenskraft des Besitzers und wächst mit dessen Kraft mit. Dieses Item ist, einmal angebracht, immens schwer zu deatunen. Beim Deatunen muss man einen DC30 Consave schaffen, ohne die Effekte des Items, bei Misserfolg erleidet man 5 Level an Exhaustion. Alle Savingthrows werden um +1 verbessert und man erhält eine Savingthrowproficiency zusätzlich. Ebenfalls erhält man gegen Savingthrows von Spells 1d4 zusätzlich.</p>
+            <p>Ab 10 Leveln in Martial Klassen steigt der Bonus auf +2 und der d4 wird zu einem d6. Darüber hinaus erhält man Magic Resistance.</p>
+            <p>Mit 15 Leveln in Martial Klassen steigt der Bonus auf +3 und der d6 wird zu einem d8. Zusätzlich erhält man 1x/Longrest eine Legendary Resistance.</p>
+            <p>Durch insgesamt 20 Level in Martial Klassen erreicht man das volle Potenzial. Der Bonus steigt auf +4 und der d8 wird zu einem d10. Man hat fortan 2x/Longrest die Legendary Resistance.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="attunement">true</set>
+            <set name="slot">Tattoo</set>
+        </setters>
+        <rules>
+            <stat name="strength:save:misc" value="1" />
+            <stat name="dexterity:save:misc" value="1" />
+            <stat name="constitution:save:misc" value="1" />
+            <stat name="intelligence:save:misc" value="1" />
+            <stat name="wisdom:save:misc" value="1" />
+            <stat name="charisma:save:misc" value="1" />
+            <select type="Class Feature" name="Progressive Martial Enhancer - Savingthrow Proficiency" supports="Progressive Martial Enhancer" />
+
+            <stat name="strength:save:misc" value="1" level="10"/>
+            <stat name="dexterity:save:misc" value="1" level="10"/>
+            <stat name="constitution:save:misc" value="1" level="10"/>
+            <stat name="intelligence:save:misc" value="1" level="10"/>
+            <stat name="wisdom:save:misc" value="1" level="10"/>
+            <stat name="charisma:save:misc" value="1" level="10"/>
+
+            <stat name="strength:save:misc" value="1" level="15"/>
+            <stat name="dexterity:save:misc" value="1" level="15"/>
+            <stat name="constitution:save:misc" value="1" level="15"/>
+            <stat name="intelligence:save:misc" value="1" level="15"/>
+            <stat name="wisdom:save:misc" value="1" level="15"/>
+            <stat name="charisma:save:misc" value="1" level="15"/>
+
+            <stat name="strength:save:misc" value="1" level="20"/>
+            <stat name="dexterity:save:misc" value="1" level="20"/>
+            <stat name="constitution:save:misc" value="1" level="20"/>
+            <stat name="intelligence:save:misc" value="1" level="20"/>
+            <stat name="wisdom:save:misc" value="1" level="20"/>
+            <stat name="charisma:save:misc" value="1" level="20"/>
+
+        </rules>
+    </element>
+
+    <!-- /Progressive Martial Enhancer -->
+    <element name="Progressive Martial Enhancer (Strength)" type="Class Feature" source="Primus Two" id="ID_PT_PROGRESSIVE_MARTIAL_ENHANCER_STRENGTH">
+        <compendium display="false" />
+        <supports>Progressive Martial Enhancer</supports>
+        <description>
+            <p>Your Strength increases by 1.</p>
+            <p>You gain proficiency with Strength saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" />
+        </rules>
+    </element>
+    <element name="Progressive Martial Enhancer (Dexterity)" type="Class Feature" source="Primus Two" id="ID_PT_PROGRESSIVE_MARTIAL_ENHANCER_DEXTERITY">
+        <compendium display="false" />
+        <supports>Progressive Martial Enhancer</supports>
+        <description>
+            <p>Your Dexterity increases by 1.</p>
+            <p>You gain proficiency with Dexterity saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" />
+        </rules>
+    </element>
+    <element name="Progressive Martial Enhancer (Constitution)" type="Class Feature" source="Primus Two" id="ID_PT_PROGRESSIVE_MARTIAL_ENHANCER_CONSTITUTION">
+        <compendium display="false" />
+        <supports>Progressive Martial Enhancer</supports>
+        <description>
+            <p>Your Constitution increases by 1.</p>
+            <p>You gain proficiency with Constitution saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CONSTITUTION" />
+        </rules>
+    </element>
+    <element name="Progressive Martial Enhancer (Intelligence)" type="Class Feature" source="Primus Two" id="ID_PT_PROGRESSIVE_MARTIAL_ENHANCER_INTELLIGENCE">
+        <compendium display="false" />
+        <supports>Progressive Martial Enhancer</supports>
+        <description>
+            <p>Your Intelligence increases by 1.</p>
+            <p>You gain proficiency with Intelligence saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE" />
+        </rules>
+    </element>
+    <element name="Progressive Martial Enhancer (Wisdom)" type="Class Feature" source="Primus Two" id="ID_PT_PROGRESSIVE_MARTIAL_ENHANCER_WISDOM">
+        <compendium display="false" />
+        <supports>Progressive Martial Enhancer</supports>
+        <description>
+            <p>Your Wisdom increases by 1.</p>
+            <p>You gain proficiency with Wisdom saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_WISDOM" />
+        </rules>
+    </element>
+    <element name="Progressive Martial Enhancer (Charisma)" type="Class Feature" source="Primus Two" id="ID_PT_PROGRESSIVE_MARTIAL_ENHANCER_CHARISMA">
+        <compendium display="false" />
+        <supports>Progressive Martial Enhancer</supports>
+        <description>
+            <p>Your Charisma increases by 1.</p>
+            <p>You gain proficiency with Charisma saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CHARISMA" />
+        </rules>
+    </element>
+    <!-- /Progressive Martial Enhancer -->
+
+    <!--Resitances Krone des Lichts-->
     <element name="Resistance (Acid)" type="Class Feature" source="Internal" id="ID_KRONE_DAMAGE_RESISTANCE_ACID">
         <supports>Resist</supports>
         <sheet display="false"/>
@@ -686,5 +906,1677 @@
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER"/>
         </rules>
+    </element>
+    <!--Resitances Krone des Lichts-->
+
+    <!--Neue Magic Items Liste 2-->
+    <element name="Nergigante-Zacken" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_NERGIGANTE_ZACKEN">
+        <description>
+            <p>Jede Piercingwaffe (Melee) kann aus diesem Material bestehen. Dieses spitze und äußerst harte Material ist geeignet für robuste Waffen. Sie sind +3 und verursachen 1d6 Piercingdamage zusätzlich, durch die kleinen Splitter im Zacken. Gegen Lebewesen, die Blut besitzen, verursacht die Waffe nochmal 1d6 zusätzlich. Besitzt das Ziel kein Blut oder ist physiologisch ungeeignet dafür, dann verursacht es keinen Extraschaden. Bei einer Natural 20 werden 3d6 Piercingdamage hinzugefügt.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Piercing Weapon">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">3</set>
+            <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_PIERCING</set>
+            <set name="name-format">Nergigante-Zacken + {{parent}}</set>
+        </setters>
+    </element>
+
+    <element name="Zornklingen Glavenus Klinge" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_ZORNKLINGEN_GLAVENUS_KLINGE">
+        <description>
+            <p>Jede Slashingwaffe kann aus diesem Material bestehen. Diese Waffen sind besonders scharf und entzündbar. Sie sind +3, verursachen 2d4 Feuerschaden zusätzlich und wenn bei einer Natural 20 explodiert die Waffe und verursacht 1d12 Fire und 1d12 Bludgeoning Damage zusätzlich.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Slashing Weapon">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">3</set>
+            <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_SLASHING</set>
+            <set name="name-format">Zornklingen Glavenus + {{parent}}</set>
+        </setters>
+    </element>
+
+    <element name="Ukanlos Kiefer" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_UKANLOS_KIEFER">
+        <description>
+            <p>Jede Bludgeoningwaffe kann aus diesem Material bestehen. Diese Waffen sind besonders schwer, weshalb sie nur mit einem Stärkewert von min. 22 geführt werden können. Dieser Waffe ist sehr ungenau zu schwingen, weshalb er -1 auf den Treffer hat. Dafür verursachen Einhandwaffen 2d6 Bludgeoningdamage und 1d6 Colddamage zusätzlich. Zweihändig geführte Waffen verursachen stattdessen 2d8 Bludgeoningdamage und 1d8 Colddamge. Bei einer Natural 20 muss das Ziel einen Strengthsave gegen 25 überbieten oder wird sonst Prone gehauen oder um 30ft linear weggestoßen – Kreaturen mit 2 Größen mehr, haben Advantage auf den Savingthrow, bei 3 Größen mehr, sind sie immun.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Piercing Weapon">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_BLUDGEONING</set>
+            <set name="name-format">Ukanlos Kiefer + {{parent}}</set>
+        </setters>
+    </element>
+
+    <element name="Des Magiers kleiner Helfer +2" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DES_MAGIERS_KLEINER_HELFER2">
+        <description>
+            <p>Dieser magische Stift besitzt besondere Qualitäten. Die Anzahl an Preparedspells steigt um +2. Ein Zauber, der mit diesem Stift in das Spellbook eingetragen wurde, kann 2x/Longrest, wenn er nicht prepared ist, trotzdem gecastet werden. Dabei verhält er sich, wie bei jedem Cast eines Zaubers, genau gleich. Die Qualität des Stiftes hat mehrere Grade. Von +1 bis +3 gibt es diese und mit jeder Stufe steigt die Anzahl an Preparedspells um +1, sowie die Anzahl an nicht preparedten Zaubern, die darüber gecastet werden dürfen. 2x/Longrest kann man als Reaction einen Spellslot (min. Level 3) opfern, um auf einem Leben stehen zu bleiben, wenn man ansonsten auf 0 Leben fallen würde und nicht direkt stirbt.</p>
+        </description>
+        <setters>
+            <set name="keywords"></set>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="wizard:spellcasting:prepare" value="2" />
+        </rules>
+    </element>
+
+    <element name="Sorcerer Enhancer +2" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_SORCERER_ENHANCER2">
+        <description>
+            <p>Dieser Orb wird gefertigt aus einem Teil der Lebenskraft des Sorcerers und einem hochwertigen Kristall. Der Sorcerer verliert 2 Statpunkte in zwei physischen Stats (Str./Dex./Con.) seiner Wahl. Dafür erhält er 6 Sorcery Points, +2 auf Spellattacks und Save DC und einen weiteren Zauber für die Spelllevel 1,2,3,4,5 und 6 aus der Sorcererspellliste. Es gibt höhere Stufen des Items (+2 und +3). Diese verbessern jeweils um weitere 3 Sorcery Points und +1 auf Spellattacks und Save DC. Bei +2 kann man noch jeweils einen weiteren Level 4, 5 und 6 Zauber mitnehmen und bei +3 für die Spelllevel 7, 8 und 9. Jedoch kosten die höheren Stufen immer einen Stat -2 zusätzlich (am Ende dann Str., Dex. und Con. -2). die höheren Stufen benötigen hochwertigere Kristalle und müssen neu erschaffen werden. Wenn man das Atunement beendet erholt man den Statverlust binnen 1d12 Monate.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Items</set>
+            <set name="rarity">Artifact</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <select name="Sorcerer Enhancer" type="Class Feature" supports="enhancer" number="2"/>
+        </rules>
+    </element>
+
+    <element name="Shield of Taunting +2" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_SHIELD_OF_TAUNTING2">
+        <description>
+            <p>Dieser mit Runen verzierte +2 Schild besitzt insgesamt 5 Charges, die sich nach einer Longrest wieder auffüllen. Als Bonusaktion kann man Gegner in 60ft. Reichweite einen Wisdomsavingthrow würfeln lassen (Save DC Con+PB+8). Bei Erfolg passiert nichts. Bei Misserfolg sind sie verlockt dich zu präferieren und nutzen ihre Runde, um ihre Angriffe auf dich zu konzentrieren. Hat der Gegner eine Intelligenz von 3 oder niedriger scheitert der Save automatisch. Besitzt er eine über 3 und unter 10 hat er Disadvantage. Ab einer Intelligenz von 10 ist es ein normaler Savingthrow. Ab 20 würfelt er mit Advantage. Bei den höheren Stufen des Schildes (+2 und +3) steigt die Reichweite immer um 30ft. und es kommen +2 Charges jeweils dazu. Bei +2 erhalten Gegner erst ab einer Intelligenz von 20 oder höher Advantage und ab +3 erhält niemand mehr Advantage und jeder unter 20 hat Disadvantage. Der Taunt funktioniert so, dass man in feindseliger Absicht dem Tauntenden schaden möchte und dabei von anderen Handlungen ablässt (AOE und ähnliches kann dennoch genutzt werden). Der Taunt hält bis zum Anfang der nächsten Runde des Casters an.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">3</set>
+            <set name="armor">shield</set>
+        </setters>
+    </element>
+
+    <element name="Seltener arkaner Splitter" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_SELTENER_ARKANER_SPLITTER">
+        <description>
+            <p>Du erhälst einen zusätzlichen Spellslot deines höchsten Spellslots (Selbe Fähigkeit wie die Vorstufe). Ergänzend dazu hast du eine 25% Chance bei einer Shortrest den höchsten verbrauchten Spellslot wieder zu bekommen. In der Nähe eines Knotenpunktes beträgt die Chance 100%! In magiearmen Gebieten sinkt die Chance auf 5%! Jeder seltene arkane Splitter besitzt die Chance einmalig dauerhaft verändert zu werden, durch die magische Kraft bestimmter Orte und zusätzliche Effekte geben (zB. besondere Knotenpunkte, Hex, etc.).</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Die edle Kleidung des Barden" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DIE_EDLE_KLEIDUNG_DES_BARDEN">
+        <description>
+            <p>Dieses Kleidungsstück vermag es den Barden in seiner Rolle noch besser zu unterstützen. In das Kunstwerk ist seine Magie eingewoben. Dieses Kleidungsstück kann statt einer Rüstung getragen werden und bietet einen AC von 12+Dex+Charisma. Er erhält Magic Resistance und besitzt in Höhe seines PB./Longrest ergänzende „Edle Bardic Inspirations“. Eine dieser edlen Inspirationen kann als Reaction benutzt werden, wenn jemand einen Savingthrow nicht schafft und dabei zusätzlich eine Bardic Inspiration mittransportieren. Die edle Inspiration verbessert das Ergebnis der dadurch genutzten Bardic Inspiration um einen zusätzlichen d6. Schafft das Ziel den Savingthrow dadurch, wird das Ziel um die gewürfelten Inspirations+Charisma geheilt. Falls der Barde keine Bardic Inspirations übrig hat und die Edlen benutzt, dann werten sich diese zu dem regulären Würfel auf (zB. 1d6 → 1d10).</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="type" addition="9 Level in Barde required:">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="ac:edle barden kleidung:base" value="12" />
+            <stat name="ac:edle barden kleidung:dexterity" value="dexterity:modifier" />
+            <stat name="ac:edle barden kleidung:charisma" value="charisma:modifier" />
+
+            <stat name="ac:edle barden kleidung" value="ac:edle barden kleidung:base" />
+            <stat name="ac:edle barden kleidung" value="ac:edle barden kleidung:dexterity" />
+            <stat name="ac:edle barden kleidung" value="ac:edle barden kleidung:charisma" />
+        </rules>
+    </element>
+
+    <element name="Bollwerk (Heavy Armor Proficiency)" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_BOLLWERK">
+        <description>
+            <p>Diese mächtige Plattenrüstung ist immens schwer. Ohne die Stärke von 22 reduziert sie den Movementspeed um 10ft. pro 2 Werte unter der Stärke 22. Neben Stealth erhält man darüber hinaus noch Disadvantage auf Dexteritysavingthrows. Diese Rüstung ist +3, bietet Magic Resistance, Fire Resistance, Cold Resistance, sowie Acid Resistance. Bewegst du dich min. 30ft. linear auf jemanden zu und greifst dann an, verleihst du dem Angriff besonders viel Gewicht und fügst 1d8 zusätzlichen Schaden zu.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="type">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="enhancement">3</set>
+            <set name="attunement">true</set>
+            <set name="armor">Plate</set>
+        </setters>
+        <rules>
+            <grant type="Grants" id="ID_INTERNAL_GRANTS_STEALTH_DISADVANTAGE" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+
+            <stat name="speed" value="-10" bonus="armor" requirements="!([str:22]||ID_INTERNAL_GRANT_ARMOR_IGNORE_STRENGTH_REQUIREMENT)" />
+            <stat name="speed" value="-20" bonus="armor" requirements="!([str:20]||ID_INTERNAL_GRANT_ARMOR_IGNORE_STRENGTH_REQUIREMENT)" />
+            <stat name="speed" value="-30" bonus="armor" requirements="!([str:18]||ID_INTERNAL_GRANT_ARMOR_IGNORE_STRENGTH_REQUIREMENT)" />
+            <stat name="speed" value="-40" bonus="armor" requirements="!([str:16]||ID_INTERNAL_GRANT_ARMOR_IGNORE_STRENGTH_REQUIREMENT)" />
+        </rules>
+    </element>
+
+    <element name="Staff of War" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_STAFF_OF_WAR">
+        <description>
+            <p>Dieser Stab nützt eher den Magiern, die oft kämpfen. SpellsaveDC und Spellattack +1. Jeder enthaltene Spell kann 1x/Longrest gecastet werden. Shield, Absorb Elements, Misty Step, Dimension Door und Fizbans Platinum Shield.</p>
+        </description>
+        <setters>
+            <set name="keywords">sorcerer, warlock, wizard</set>
+            <set name="category">Staffs</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="4">4 lb.</set>
+            <set name="slot">onehand</set>
+            <set name="weapon">Quarterstaff</set>
+            <set name="type">Staff</set>
+            <set name="attunement" addition="by sorcerer, warlock, or wizard">true</set>
+            <set name="rarity">Artifact</set>
+        </setters>
+        <rules>
+            <stat name="spellcasting:attack" value="1" />
+            <stat name="spellcasting:dc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Goodlight-Shield" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_GOODLIGHT_SHIELD">
+        <description>
+            <p>Dieser Schild kann nur von Personen mit einem nicht bösen Alignement getragen werden. Dieser +1 Schild besitzt mehrere integrierte Zauber, die regulär gecastet werden können (jeder Spell 1x/Longrest). Protection from Evil and Good, Heroism, Heal, Mass Healing Word, Mass Cure Wounds und Moonbeam (Level 5).</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="attunement" addition="11 Level in Cleric and non evil Alignement">true</set>
+            <set name="enhancement">2</set>
+            <set name="armor">shield</set>
+        </setters>
+    </element>
+
+    <element name="Darklight-Shield" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DARKLIGHT_SHIELD">
+        <description>
+            <p>Dieser Schild kann nur von Personen mit einem nicht guten Alignement getragen werden. Dieser +1 Schild besitzt mehrere integrierte Zauber, die regulär gecastet werden können (jeder Spell 1x/Longrest). Protection from Evil and Good, Heroism, Vampiric Touch (Level 5), Harm, Cloudkill und Blight.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="attunement" addition="11 Level in Cleric and non good Alignement">true</set>
+            <set name="enhancement">2</set>
+            <set name="armor">shield</set>
+        </setters>
+    </element>
+
+    <element name="Bessere Barbarenkleidung" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_BESSERE_BARBARENKLEIDUNG">
+        <description>
+            <p>Die Barbarenkleidung kann verbessert werden, durch das Einweben besonderer Stoffe von geübten Spezialisten. Der AC und die Savingthrows steigen auf +2 und je nach benutztem Material bieten sie auch eine Resistenz zusätzlich (alle möglich, außer Psychic). Je nach Design steigt entweder Performance oder Intimidation um +2. Der Movementspeed steigt um 10ft.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type" addition="by a barbarian">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="cost" currency="gp"></set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="2" />
+            <stat name="strength:save:misc" value="2" />
+            <stat name="dexterity:save:misc" value="2" />
+            <stat name="constitution:save:misc" value="2" />
+            <stat name="intelligence:save:misc" value="2" />
+            <stat name="wisdom:save:misc" value="2" />
+            <stat name="charisma:save:misc" value="2" />
+            <stat name="speed" value="10"/>
+
+            <select name="Bessere Barbarenkleidung Skillcheck Improvement" type="Class Feature" supports="Skill Kleidung"/>
+            <select name="Bessere Barbarenkleidung Resistance" type="Class Feature" supports="Resistance Kleidung"/>
+        </rules>
+    </element>
+
+
+    <element name="Bessere Monkkleidung" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_BESSERE_MONKKLEIDUNG">
+        <description>
+            <p>Die Monkkleidung kann verbessert werden, durch das Einweben besonderer Stoffe von geübten Spezialisten. Der AC und die Savingthrows steigen auf +2 und je nach benutztem Material bieten sie auch eine Resistenz zusätzlich (alle möglich, außer Psychic). Je nach Design steigt entweder Performance oder Intimidation um +2. Der Movementspeed steigt um 10ft.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type" addition="by a monk">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="cost" currency="gp"></set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="2" />
+            <stat name="strength:save:misc" value="2" />
+            <stat name="dexterity:save:misc" value="2" />
+            <stat name="constitution:save:misc" value="2" />
+            <stat name="intelligence:save:misc" value="2" />
+            <stat name="wisdom:save:misc" value="2" />
+            <stat name="charisma:save:misc" value="2" />
+            <stat name="speed" value="10"/>
+
+            <select name="Bessere Monkkleidung Skillcheck Improvement" type="Class Feature" supports="Skill Kleidung"/>
+            <select name="Bessere Monkkleidung Resistance" type="Class Feature" supports="Resistance Kleidung"/>
+        </rules>
+    </element>
+
+    <!--Bessere Kleidung-->
+    <element name="Performance" type="Class Feature" source="Internal" id="ID_PT_MAGIC_ITEM_BESSERE_KLEIDUNG_PERFORMANCE">
+        <supports>Skill Kleidung</supports>
+        <description>
+            <p>Performance increases by +2.</p>
+        </description>
+        <rules>
+            <stat name="performance:misc" value="2"/>
+        </rules>
+    </element>
+
+    <element name="Intimidation" type="Class Feature" source="Internal" id="ID_PT_MAGIC_ITEM_BESSERE_KLEIDUNG_INTIMIDATION">
+        <supports>Skill Kleidung</supports>
+        <description>
+            <p>Intimidation increases by +2.</p>
+        </description>
+        <rules>
+            <stat name="intimidation:misc" value="2"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Acid)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_ACID">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Cold)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_COLD">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Fire)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_FIRE">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Force)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_FORCE">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FORCE"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Lightning)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_LIGHTNING">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Necrotic)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_NECROTIC">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Poison)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_POISON">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Radiant)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_RADIANT">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Thunder)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_THUNDER">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Slashing)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_SLASHING">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Piercing)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_PIERCING">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PIERCING"/>
+        </rules>
+    </element>
+
+    <element name="Resistance (Bludgeoning)" type="Class Feature" source="Internal" id="ID_KLEIDUNG_DAMAGE_RESISTANCE_BLUDGEONING">
+        <supports>Resistance Kleidung</supports>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING"/>
+        </rules>
+    </element>
+    <!--Bessere Kleidung-->
+
+
+    <element name="Fighers Lucky Charm" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_FIGHTERS_LUCKY_CHARM">
+        <description>
+            <p>Dieser Gegenstand ist der Glücksbringer eines jeden Fighters. Oftmals sind es Gegenstände, die sie von klein auf an als Glücksbringer mit auf ihre Reise nehmen. Nach Jahren des Kämpfens und Grenzen Überschreitens, entfaltet sich nach und nach die Magie des Gegenstandes durch Bedeutung. Ein Fighters Charm bietet eine Reihe von Vorteilen:</p>
+            <ol>
+                <li>1er bei Second Wind können gererollt werden</li>
+                <li>1er bei Indomitable können gererollt werden</li>
+                <li>1x/Shortrest kann man bei einer Natural 1 beim Angreifen rerollen</li>
+                <li>1x/Shortrest kann man bei einer Natural 1 bei einem Skillcheck rerollen</li>
+            </ol>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Master of Elements" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MASTER_OF_ELEMENTS">
+        <description>
+            <p>Dieses lang ausgearbeitete Symbol enthält die Kraft der Natur und bedarf eines würdigen Druiden. Es gibt 4 Varianten dieses Gegenstandes. Jeder bietet eigenen Vorteile und besteht aus eigenen besonderen naturverbundenen magischen Materialien. Oftmals sind es Armbänder, Kopf- oder Halsschmuck. Jedes bietet bietet Resistenz gegenüber dem Element des Gegenstandes. Zusätzlich erhälst du eine zusätzliche Ladung von Wildshape, die sich auch per Shortrest auffüllt (Manuell eintragen!).</p>
+            <ol>
+                <li>Sommer: Wenn du Feuerzauber benutzt, verursachst du 1x pro Spell1 2d10 zusätzlichen Schaden.</li>
+                <li>Herbst: Wenn du Lightningdamage mit Spells verursachst, fügst du 2d8 1x pro Spell zusätzlich zu und nimmst Gegnern die Reaction, wenn sie den Dexsave gegen deinen SpellSaveDC nicht schaffen.</li>
+                <li>Winter: Wenn du Zauber benutzt, die Colddamge verursachen, verursachst du 1x pro Spell 2d8 zusätzlich Schaden und senkst den Movementspeed der getroffenen Ziele um 10ft, wenn sie gegen deinen SpellSaveDC den Consave scheitern.</li>
+                <li>Frühling: Wenn du Zauber benutzt, die Piercingdamage verursachen, kannst du 1x per Spell 2d10 zusätzlichen Schaden verursachen.</li>
+            </ol>
+            <p>In deiner Wildshape, wenn du dich in ein Tier verwandelst, erhälst du 5d12 TempHP, dein Wisdommodifier wird auf den AC gerechnet und die Angriffe der Beasts werden um den Zauberzusatzschaden verbessert (ZB. Der Bär greift mit flammenden Klauen an und verursacht 2d10 zusätzlichen Schaden). In der Wildshape erhälst du Expertise auf die Angriffe (also doppelten PB. beim to-hit Wert).</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="attunement" addition="11 Level in Druid required">true</set>
+        </setters>
+    </element>
+
+    <element name="Pact Emblem" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_PACT_EMBLEM">
+        <description>
+            <p>Für Warlocks, die ihrem Pakt treu ergeben sind, bieten Patrone ihren Untergebenen besondere magische Embleme, die ihren Bund repräsentieren. Diese können Ringe, Armbänder und Schmuck jeglicher Art sein. Sie bekommen dadurch Zugang zu stärkeren Kräften. Der SpellSaveDc und Spellattackbonus steigt um +2, sie erhalten einen weiteren Warlockspellslot (manuell eintragen!) und erhalten eine weitere Invocation.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="attunement" addition="11 Level in Warlock required">true</set>
+        </setters>
+        <rules>
+            <stat name="spellcasting:attack" value="2" />
+            <stat name="spellcasting:dc" value="2" />
+            <select type="Class Feature" name="Pact Emblem Invocation" supports="Eldritch Invocation"/>
+        </rules>
+    </element>
+
+    <element name="Magical Hunters Focus" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MAGICAL_HUNTERS_FOCUS">
+        <description>
+            <p>Dieser magische Fokus ist oftmals ein an die Waffe des Rangers angebrachtes Symbol, dass seine Verbundenheit mit der natürlichen Magie verknüpft. Wenn der Ranger ein Ziel mittels Hunters Mark neu markiert, erhält er in dieser Runde auf das Ziel Advantage. Darüber hinaus erhält der Ranger +1 auf Kritchance, wenn er sein mit Hunters Mark markiertes Ziel angreift. Besitzt der Ranger keine Spellslots mehr, und ein Kampf beginnt, erhält er seinen höchsten Rangerspellslot zurück 1x/Longrest.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="attunement" addition="9 Level in Ranger required">true</set>
+        </setters>
+    </element>
+
+    <element name="Silent Armor" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_SILENT_ARMOR">
+        <description>
+            <p>Dieses magisch präparierte leise Leder ist nur in geübten Händen besonders funktionsfähig. Das Leder passt sich dem Körper besonders gut an. Diese Lederrüstung bietet dir 15+Dexterity als AC. Zusätzlich verleiht es dir einen 1d6 auf Stealth Checks und Advantage auf Acrobatics Checks, wenn es darum geht, dich aus einer Situation zu befreien (Grappled, etc.).</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp"></set>
+            <set name="slot">body</set>
+            <set name="armor">Light</set>
+            <set name="armorClass">15 + Dex modifier</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="ac:armored:armor" value="15" />
+        </rules>
+    </element>
+
+    <element name="Amulet von Vulcos +1" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_AMULET_VON_VULCOS1">
+        <description>
+            <p>Dieses lavapulsierende Amulett verbessert Feuerzauber. In Höhe seines PBx/Longrest kann man, wenn der Träger jemanden mit einem Feuerzauberverletzt, das Ziel anzünden. Dieses Ziel muss einen Consave gegen den SaveDC würfeln, bei Misserfolg erhält es jede Runde 1d6 Fire Damage. Er muss eine Action nutzen, um das Feuer abzustellen oder andere Effekte, wie ins Wasser laufen, nutzen, um die Flammen löschen zu können. Darüber hinaus verbessert das Amulett den SaveDC und den Spellattackbonus, wenn man einen Feuerzauber wirkt, um +1. Eine +2 Version würde den Schaden auf 2d8 verbessern und lässt dich einmalig 1er bei Feuerzaubern neu würfeln. Die +3 Version erhöht den Burndamage auf 3d10 und bei der Schadensberechnung, darf man 1er und 2er einmalig neuwürfeln. 1x/Longrest kann man auch einen Schadenswurf eines Feuerzaubers maximieren! Dieses Item verbessert sich, indem man besonders mächtige Gegner besiegt, die eine starke Feuermagie/ -macht beherbergen (zB. Goldene Drachen, Elementare, etc).</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="slot">neck</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Amulet von Vulcos +2" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_AMULET_VON_VULCOS2">
+        <description>
+            <p>Dieses lavapulsierende Amulett verbessert Feuerzauber. In Höhe seines PBx/Longrest kann man, wenn der Träger jemanden mit einem Feuerzauberverletzt, das Ziel anzünden. Dieses Ziel muss einen Consave gegen den SaveDC würfeln, bei Misserfolg erhält es jede Runde 1d6 Fire Damage. Er muss eine Action nutzen, um das Feuer abzustellen oder andere Effekte, wie ins Wasser laufen, nutzen, um die Flammen löschen zu können. Darüber hinaus verbessert das Amulett den SaveDC und den Spellattackbonus, wenn man einen Feuerzauber wirkt, um +1. Eine +2 Version würde den Schaden auf 2d8 verbessern und lässt dich einmalig 1er bei Feuerzaubern neu würfeln. Die +3 Version erhöht den Burndamage auf 3d10 und bei der Schadensberechnung, darf man 1er und 2er einmalig neuwürfeln. 1x/Longrest kann man auch einen Schadenswurf eines Feuerzaubers maximieren! Dieses Item verbessert sich, indem man besonders mächtige Gegner besiegt, die eine starke Feuermagie/ -macht beherbergen (zB. Goldene Drachen, Elementare, etc).</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="slot">neck</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Amulet von Vulcos +3" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_AMULET_VON_VULCOS3">
+        <description>
+            <p>Dieses lavapulsierende Amulett verbessert Feuerzauber. In Höhe seines PBx/Longrest kann man, wenn der Träger jemanden mit einem Feuerzauberverletzt, das Ziel anzünden. Dieses Ziel muss einen Consave gegen den SaveDC würfeln, bei Misserfolg erhält es jede Runde 1d6 Fire Damage. Er muss eine Action nutzen, um das Feuer abzustellen oder andere Effekte, wie ins Wasser laufen, nutzen, um die Flammen löschen zu können. Darüber hinaus verbessert das Amulett den SaveDC und den Spellattackbonus, wenn man einen Feuerzauber wirkt, um +1. Eine +2 Version würde den Schaden auf 2d8 verbessern und lässt dich einmalig 1er bei Feuerzaubern neu würfeln. Die +3 Version erhöht den Burndamage auf 3d10 und bei der Schadensberechnung, darf man 1er und 2er einmalig neuwürfeln. 1x/Longrest kann man auch einen Schadenswurf eines Feuerzaubers maximieren! Dieses Item verbessert sich, indem man besonders mächtige Gegner besiegt, die eine starke Feuermagie/ -macht beherbergen (zB. Goldene Drachen, Elementare, etc).</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="slot">neck</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Cloak of the Deep +1" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_CLOAK_OF_THE_DEEP1">
+        <description>
+            <p>Der semifluide Umhang wurde gewoben aus schwerem Wasser. Es verleiht dem Träger Walking Speed = Swimmingspeed. Darüber hinaus kann man als Reaction (PBx/Longrest) eingehenden Schaden um 2d6 reduzieren. Zusätzlich verbessern sich alle Savingthrows um +1. Die +2 Variante verbessert die Savingthrows auf +2. und die Reaction verbessert sich auf 3d8. Shape Water wird der Spellliste hinzugefügt und kann als Bonusaktion genutzt werden. Eine +3 Variante verbessert die Savingthrows auf +3 und die Reaction steigert sich auf 4d10. Darüber hinaus kann 1x/Longrest semifluid werden und erhält für 1.Minute Resistance zu Slashing-, Bludgeoning- und Piercingdamage. Das Item verbessert sich durch das besiegen besonders mächtiger Wesen des Meeres (zB. Wasserelementare, Kraken, etc).</p>
+            <p class="indent"></p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="slot">shoulders</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="speed:swim" value="speed" bonus="base" />
+            <stat name="strength:save:misc" value="1" />
+            <stat name="dexterity:save:misc" value="1" />
+            <stat name="constitution:save:misc" value="1" />
+            <stat name="intelligence:save:misc" value="1" />
+            <stat name="wisdom:save:misc" value="1" />
+            <stat name="charisma:save:misc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Cloak of the Deep +2" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_CLOAK_OF_THE_DEEP2">
+        <description>
+            <p>Der semifluide Umhang wurde gewoben aus schwerem Wasser. Es verleiht dem Träger Walking Speed = Swimmingspeed. Darüber hinaus kann man als Reaction (PBx/Longrest) eingehenden Schaden um 2d6 reduzieren. Zusätzlich verbessern sich alle Savingthrows um +1. Die +2 Variante verbessert die Savingthrows auf +2. und die Reaction verbessert sich auf 3d8. Shape Water wird der Spellliste hinzugefügt und kann als Bonusaktion genutzt werden. Eine +3 Variante verbessert die Savingthrows auf +3 und die Reaction steigert sich auf 4d10. Darüber hinaus kann 1x/Longrest semifluid werden und erhält für 1.Minute Resistance zu Slashing-, Bludgeoning- und Piercingdamage. Das Item verbessert sich durch das besiegen besonders mächtiger Wesen des Meeres (zB. Wasserelementare, Kraken, etc).</p>
+            <p class="indent"></p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="slot">shoulders</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="speed:swim" value="speed" bonus="base" />
+            <stat name="strength:save:misc" value="2" />
+            <stat name="dexterity:save:misc" value="2" />
+            <stat name="constitution:save:misc" value="2" />
+            <stat name="intelligence:save:misc" value="2" />
+            <stat name="wisdom:save:misc" value="2" />
+            <stat name="charisma:save:misc" value="2" />
+        </rules>
+    </element>
+
+    <element name="Cloak of the Deep +3" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_CLOAK_OF_THE_DEEP3">
+        <description>
+            <p>Der semifluide Umhang wurde gewoben aus schwerem Wasser. Es verleiht dem Träger Walking Speed = Swimmingspeed. Darüber hinaus kann man als Reaction (PBx/Longrest) eingehenden Schaden um 2d6 reduzieren. Zusätzlich verbessern sich alle Savingthrows um +1. Die +2 Variante verbessert die Savingthrows auf +2. und die Reaction verbessert sich auf 3d8. Shape Water wird der Spellliste hinzugefügt und kann als Bonusaktion genutzt werden. Eine +3 Variante verbessert die Savingthrows auf +3 und die Reaction steigert sich auf 4d10. Darüber hinaus kann 1x/Longrest semifluid werden und erhält für 1.Minute Resistance zu Slashing-, Bludgeoning- und Piercingdamage. Das Item verbessert sich durch das besiegen besonders mächtiger Wesen des Meeres (zB. Wasserelementare, Kraken, etc).</p>
+            <p class="indent"></p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="slot">shoulders</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="speed:swim" value="speed" bonus="base" />
+            <stat name="strength:save:misc" value="3" />
+            <stat name="dexterity:save:misc" value="3" />
+            <stat name="constitution:save:misc" value="3" />
+            <stat name="intelligence:save:misc" value="3" />
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3" />
+        </rules>
+    </element>
+
+    <element name="Sturmsegelstiefel +1" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_STURMSEGELSTIEFEL1">
+        <description>
+            <p>Diese magischen Stiefel sind wolkenweich, federverziert und statisch geladen. Die Laufgeschwindigkeit und Jump Distance steigen um 5ft. Man kann komponentfrei Feather Fall in Höhe des PBx/Longrest casten. Die +2 Variante verbessert auf 10ft. und man erhält Advantage auf Acrobaticscheks und Dexsaves, wenn man in der Luft oder am Fallen ist. Die +3 Variante verbessert auf 20ft. und man kann sich 1x/Shortrest mit einem blitzartigen Einschlag um 100ft. teleportieren. Bei diesem Teleport müssen alle Personen in 10ft. um den Teleportzielpunkt herum einen Consave (8+PB+Dex) machen, sonst erleiden sie 5d10 Thunderdamage bei Misserfolg oder die Hälfte bei Erfolg. Der Knall ist über 300ft. laut hörbar. Das Item verbessert sich das Besiegen von starken fliegenden Kreaturen.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="innate speed" value="5" />
+        </rules>
+    </element>
+
+    <element name="Sturmsegelstiefel +2" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_STURMSEGELSTIEFEL2">
+        <description>
+            <p>Diese magischen Stiefel sind wolkenweich, federverziert und statisch geladen. Die Laufgeschwindigkeit und Jump Distance steigen um 5ft. Man kann komponentfrei Feather Fall in Höhe des PBx/Longrest casten. Die +2 Variante verbessert auf 10ft. und man erhält Advantage auf Acrobaticscheks und Dexsaves, wenn man in der Luft oder am Fallen ist. Die +3 Variante verbessert auf 20ft. und man kann sich 1x/Shortrest mit einem blitzartigen Einschlag um 100ft. teleportieren. Bei diesem Teleport müssen alle Personen in 10ft. um den Teleportzielpunkt herum einen Consave (8+PB+Dex) machen, sonst erleiden sie 5d10 Thunderdamage bei Misserfolg oder die Hälfte bei Erfolg. Der Knall ist über 300ft. laut hörbar. Das Item verbessert sich das Besiegen von starken fliegenden Kreaturen.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="innate speed" value="10" />
+        </rules>
+    </element>
+
+    <element name="Sturmsegelstiefel +3" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_STURMSEGELSTIEFEL3">
+        <description>
+            <p>Diese magischen Stiefel sind wolkenweich, federverziert und statisch geladen. Die Laufgeschwindigkeit und Jump Distance steigen um 5ft. Man kann komponentfrei Feather Fall in Höhe des PBx/Longrest casten. Die +2 Variante verbessert auf 10ft. und man erhält Advantage auf Acrobaticscheks und Dexsaves, wenn man in der Luft oder am Fallen ist. Die +3 Variante verbessert auf 20ft. und man kann sich 1x/Shortrest mit einem blitzartigen Einschlag um 100ft. teleportieren. Bei diesem Teleport müssen alle Personen in 10ft. um den Teleportzielpunkt herum einen Consave (8+PB+Dex) machen, sonst erleiden sie 5d10 Thunderdamage bei Misserfolg oder die Hälfte bei Erfolg. Der Knall ist über 300ft. laut hörbar. Das Item verbessert sich das Besiegen von starken fliegenden Kreaturen.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="innate speed" value="20" />
+        </rules>
+    </element>
+
+    <element name="Donnerherz-Tattoo +1" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DONNHERZ_TATTOO1">
+        <description>
+            <p>Dieses Tattoo kann man als Bonusaction 1x/Shortrest eine Waffe mit einem Blitz infusen. Dadurch verursacht die Waffe 1d4 Lightningdamage zusätzlich. Während der Infusion verbessert sich der Wert der Waffe um +1. Die +2 Variante verbessert auf 1d6 und +2. Zusätzlich kann man 1x/Longrest eine Natural 1 beim Attackroll rerollen, solange die Infusion besteht. Bei der +3 Variante steigert es sich auf 1d8 und +3. Darüber hinaus kann als Action 1x/Longrest das Tattoo nutzen, um eine elektrische Überladung vom Träger ausgehend zu erzeugen. Jeder m Umkreis von 30ft. muss einen Dexsave würfeln (8+PB+Dex/Str) und erleidet bei Misserfolg 8d10 Lightningdamage und verliert die Reaction bis zum Anfang nächsten eigenen Runde. Bei Erfolg kommt nur der halbe Schaden an, sonst passiert nichts weiter. Das Tattoo verbessert sich, indem man mächtige Kreaturen besiegt, die Lightning als Hauptelement nutzen.</p>
+        </description>
+        <setters>
+            <set name="keywords">tattoo</set>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Tattoo</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Donnerherz-Tattoo +2" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DONNHERZ_TATTOO2">
+        <description>
+            <p>Dieses Tattoo kann man als Bonusaction 1x/Shortrest eine Waffe mit einem Blitz infusen. Dadurch verursacht die Waffe 1d4 Lightningdamage zusätzlich. Während der Infusion verbessert sich der Wert der Waffe um +1. Die +2 Variante verbessert auf 1d6 und +2. Zusätzlich kann man 1x/Longrest eine Natural 1 beim Attackroll rerollen, solange die Infusion besteht. Bei der +3 Variante steigert es sich auf 1d8 und +3. Darüber hinaus kann als Action 1x/Longrest das Tattoo nutzen, um eine elektrische Überladung vom Träger ausgehend zu erzeugen. Jeder m Umkreis von 30ft. muss einen Dexsave würfeln (8+PB+Dex/Str) und erleidet bei Misserfolg 8d10 Lightningdamage und verliert die Reaction bis zum Anfang nächsten eigenen Runde. Bei Erfolg kommt nur der halbe Schaden an, sonst passiert nichts weiter. Das Tattoo verbessert sich, indem man mächtige Kreaturen besiegt, die Lightning als Hauptelement nutzen.</p>
+        </description>
+        <setters>
+            <set name="keywords">tattoo</set>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Tattoo</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Donnerherz-Tattoo +3" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DONNHERZ_TATTOO3">
+        <description>
+            <p>Dieses Tattoo kann man als Bonusaction 1x/Shortrest eine Waffe mit einem Blitz infusen. Dadurch verursacht die Waffe 1d4 Lightningdamage zusätzlich. Während der Infusion verbessert sich der Wert der Waffe um +1. Die +2 Variante verbessert auf 1d6 und +2. Zusätzlich kann man 1x/Longrest eine Natural 1 beim Attackroll rerollen, solange die Infusion besteht. Bei der +3 Variante steigert es sich auf 1d8 und +3. Darüber hinaus kann als Action 1x/Longrest das Tattoo nutzen, um eine elektrische Überladung vom Träger ausgehend zu erzeugen. Jeder m Umkreis von 30ft. muss einen Dexsave würfeln (8+PB+Dex/Str) und erleidet bei Misserfolg 8d10 Lightningdamage und verliert die Reaction bis zum Anfang nächsten eigenen Runde. Bei Erfolg kommt nur der halbe Schaden an, sonst passiert nichts weiter. Das Tattoo verbessert sich, indem man mächtige Kreaturen besiegt, die Lightning als Hauptelement nutzen.</p>
+        </description>
+        <setters>
+            <set name="keywords">tattoo</set>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Tattoo</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Frostsplitterring +1" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_FROSTSPLITTERRING1">
+        <description>
+            <p>Dieser kühle Ring verbessert den SaveDC und Spellattackbonus von Kältezaubern um +1. Zusätzlich erlaubt er dir, wenn du einen Kältezauber benutzt, ein Ziel auszuwählen. Dieses Ziel muss einen Consave würfeln und falls er misslingt, verliert er 10ft. Movementspeed. Bei Erfolg passiert nichts. Die +2 Variante ermöglicht dir, wenn du Kältezauber benutzt, einmalig 1er neu zu würfeln. Der Movementspeedverlust durch den Consave geht auf 20ft. hoch und du erhälst keine Nachteile mehr durch nonmagical Difficult Terrain im Eis. Die +3 Variante verbessert den Consave auf 30ft. und du kannst einmalig 1er und 2er neuwürfeln. Magical Difficult Terrain durch Eis gibt dir keine Nachteile mehr. Du kannst 1x/Longrest einen Schadenswurf eines Kältezaubers maximieren. Dieses Item wird stärker durch das Besiegen von Kreaturen, deren Hauptelement Cold ist.</p>
+        </description>
+        <setters>
+            <set name="category">Rings</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="slot">ring</set>
+            <set name="type">Ring</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Frostsplitterring +2" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_FROSTSPLITTERRING2">
+        <description>
+            <p>Dieser kühle Ring verbessert den SaveDC und Spellattackbonus von Kältezaubern um +1. Zusätzlich erlaubt er dir, wenn du einen Kältezauber benutzt, ein Ziel auszuwählen. Dieses Ziel muss einen Consave würfeln und falls er misslingt, verliert er 10ft. Movementspeed. Bei Erfolg passiert nichts. Die +2 Variante ermöglicht dir, wenn du Kältezauber benutzt, einmalig 1er neu zu würfeln. Der Movementspeedverlust durch den Consave geht auf 20ft. hoch und du erhälst keine Nachteile mehr durch nonmagical Difficult Terrain im Eis. Die +3 Variante verbessert den Consave auf 30ft. und du kannst einmalig 1er und 2er neuwürfeln. Magical Difficult Terrain durch Eis gibt dir keine Nachteile mehr. Du kannst 1x/Longrest einen Schadenswurf eines Kältezaubers maximieren. Dieses Item wird stärker durch das Besiegen von Kreaturen, deren Hauptelement Cold ist.</p>
+        </description>
+        <setters>
+            <set name="category">Rings</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="slot">ring</set>
+            <set name="type">Ring</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Frostsplitterring +3" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_FROSTSPLITTERRING3">
+        <description>
+            <p>Dieser kühle Ring verbessert den SaveDC und Spellattackbonus von Kältezaubern um +1. Zusätzlich erlaubt er dir, wenn du einen Kältezauber benutzt, ein Ziel auszuwählen. Dieses Ziel muss einen Consave würfeln und falls er misslingt, verliert er 10ft. Movementspeed. Bei Erfolg passiert nichts. Die +2 Variante ermöglicht dir, wenn du Kältezauber benutzt, einmalig 1er neu zu würfeln. Der Movementspeedverlust durch den Consave geht auf 20ft. hoch und du erhälst keine Nachteile mehr durch nonmagical Difficult Terrain im Eis. Die +3 Variante verbessert den Consave auf 30ft. und du kannst einmalig 1er und 2er neuwürfeln. Magical Difficult Terrain durch Eis gibt dir keine Nachteile mehr. Du kannst 1x/Longrest einen Schadenswurf eines Kältezaubers maximieren. Dieses Item wird stärker durch das Besiegen von Kreaturen, deren Hauptelement Cold ist.</p>
+        </description>
+        <setters>
+            <set name="category">Rings</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="slot">ring</set>
+            <set name="type">Ring</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Die Gärtnerwaffe" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_GAERTNERWAFFE">
+        <description>
+            <p>Dieser sicherlförmige Dagger (verursacht Slashingdamage) ist +1 und wird explizit gegen Plants benutzt. Plants sind immer vulnerabel gegen diese Waffe, es sei denn, sie sind resistent zu Slashingdamage, dann wird die Resistance nur ignoriert.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="dagger">Weapon</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Dagger</set>
+            <set name="enhancement">1</set>
+        </setters>
+    </element>
+
+    <element name="Stone-Tattoo" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_STONETATTOO">
+        <description>
+            <p>Dieses Tattoo erlaubt es dir, dich für 10 Minuten in einen Stein zu verwandeln. In dieser Form hast du 10ft. Tremorsense. Die einzigen Actions, die du benutzen kannst, sind: Perceptioncheck und zurückverwandeln in die ursprüngliche Form. Die Verwandlung bedarf einer Action und „Somatic Components“ - also Handbewegungen.</p>
+        </description>
+        <setters>
+            <set name="keywords">tattoo</set>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Tattoo</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Mentaler Stabilisator" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MENTALER_STABILISATOR">
+        <description>
+            <p>Diese Kopfbedeckung unterstützt den Blood Hunter in seinen Fähigkeiten:</p>
+            <ul>
+                <li>Er verleiht dem Blood Hunter einen zusätzlichen Use von Psychometry</li>
+                <li>Er erhält sehr schwache Sinneseindrücke von seinem gebrandeten Ziel, wenn das Ziel nicht in der Nähe sein sollte</li>
+                <li>Der niedrigste Stat das gebrandeten Ziels wird offfenbart</li>
+                <li>Man erhält +1 auf Intelligence-, Wisdom-, und Charismasavingthrows</li>
+                <li>1x/Longrest kann er sich als Reaction +5 auf einen Savingthrow geben</li>
+                <li>1x/Shortrest kann der Bloodhunter als Reaction sich für eine Schadensinstanz Resistance zu Psychic Damage geben</li>
+            </ul>
+            <p>Dieses Item verbessert sich durch das lange Tragen weiter. Ab 15 Leveln in Blood Hunter oder einer angemessenen Zeit, verändern sich die Verbesserungen zu:</p>
+            <ul>
+                <li>Er erhält 2 Uses von Psychometry</li>
+                <li>Die Sinneseindrücke des gebrandeten Ziels werden etwas klarer</li>
+                <li>Eine Vulnerabilität wird offenbart</li>
+                <li>Man erhält +2 auf Intelligence-, Wisdom-, und Charismasavingthrows</li>
+                <li>1x/Longrest erhält man eine Legendary Resistance</li>
+                <li>Als Reaction kann man 1x/Shortrest für eine Schadensinstanz immun zu Psychicdamage werden</li>
+            </ul>
+            <p>Wenn man versucht sich zu deattunen, nachdem das Item sich verbesserte, erhält man 2 Level an Exhaustion, da die mentale Bindung an den eigenen Körper so intensiv war. Man kann sich danach wieder mit demselben Gegenstand attunen, aber muss einen 25 Intsave schaffen. Bei Misserfolg erleidet man nach dem Attunen 1 Level an Exhaustion. Bei Erfolg klappt es.</p>
+        </description>
+        <sheet>
+            <description>
+                <p>Diese Kopfbedeckung unterstützt den Blood Hunter in seinen Fähigkeiten:</p>
+                <ul>
+                    <li>Er verleiht dem Blood Hunter einen zusätzlichen Use von Psychometry</li>
+                    <li>Er erhält sehr schwache Sinneseindrücke von seinem gebrandeten Ziel, wenn das Ziel nicht in der Nähe sein sollte</li>
+                    <li>Der niedrigste Stat das gebrandeten Ziels wird offfenbart</li>
+                    <li>Man erhält +1 auf Intelligence-, Wisdom-, und Charismasavingthrows</li>
+                    <li>1x/Longrest kann er sich als Reaction +5 auf einen Savingthrow geben</li>
+                    <li>1x/Shortrest kann der Bloodhunter als Reaction sich für eine Schadensinstanz Resistance zu Psychic Damage geben</li>
+                </ul>
+                <p>Dieses Item verbessert sich durch das lange Tragen weiter. Ab 15 Leveln in Blood Hunter oder einer angemessenen Zeit, verändern sich die Verbesserungen zu:</p>
+                <ul>
+                    <li>Er erhält 2 Uses von Psychometry</li>
+                    <li>Die Sinneseindrücke des gebrandeten Ziels werden etwas klarer</li>
+                    <li>Eine Vulnerabilität wird offenbart</li>
+                    <li>Man erhält +2 auf Intelligence-, Wisdom-, und Charismasavingthrows</li>
+                    <li>1x/Longrest erhält man eine Legendary Resistance</li>
+                    <li>Als Reaction kann man 1x/Shortrest für eine Schadensinstanz immun zu Psychicdamage werden</li>
+                </ul>
+            </description>
+        </sheet>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="slot">head</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="intelligence:save:misc" value="1" />
+            <stat name="wisdom:save:misc" value="1" />
+            <stat name="charisma:save:misc" value="1" />
+            <stat name="intelligence:save:misc" value="1" level="15"/>
+            <stat name="wisdom:save:misc" value="1" level="15"/>
+            <stat name="charisma:save:misc" value="1" level="15"/>
+        </rules>
+    </element>
+
+    <element name="Exzellente Barbarenkleidung" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_EXZELLENTE_BARBARENKLEIDUNG">
+        <description>
+            <p>Die Barbarenkleidung kann verbessert werden, durch das Einweben besonderer Stoffe von geübten Spezialisten. Der AC und die Savingthrows steigen auf +3 und je nach benutztem Material bieten sie auch eine Resistenz zusätzlich (alle möglich, außer Psychic). Je nach Design steigt entweder Performance oder Intimidation um +3. Die exzellente Rüstung bietet nicht mehr Movementspeed.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type" addition="by a barbarian">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="cost" currency="gp"></set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="3" />
+            <stat name="strength:save:misc" value="3" />
+            <stat name="dexterity:save:misc" value="3" />
+            <stat name="constitution:save:misc" value="3" />
+            <stat name="intelligence:save:misc" value="3" />
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3" />
+            <stat name="speed" value="10"/>
+
+            <select name="Exzellente Barbarenkleidung Skillcheck Improvement" type="Class Feature" supports="Exzellente Skill Kleidung" />
+            <select name="Exzellente Barbarenkleidung Resistance" type="Class Feature" supports="Resistance Kleidung"/>
+        </rules>
+    </element>
+
+    <element name="Exzellente Monkkleidung" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_EXZELLENTE_MONKKLEIDUNG">
+        <description>
+            <p>Die Monkkleidung kann verbessert werden, durch das Einweben  besonderer Stoffe von geübten Spezialisten. Der AC und die Savingthrows steigen auf +3 und je nach benutztem Material bieten sie auch eine Resistenz zusätzlich (alle möglich, außer Psychic). Je nach Design steigt entweder Performance oder Intimidation um +3. Die exzellente Rüstung bietet nicht mehr Movementspeed.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type" addition="by a monk">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="cost" currency="gp"></set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="3" />
+            <stat name="strength:save:misc" value="3"/>
+            <stat name="dexterity:save:misc" value="3"/>
+            <stat name="constitution:save:misc" value="3"/>
+            <stat name="intelligence:save:misc" value="3"/>
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3"/>
+            <stat name="speed" value="10"/>
+
+            <select name="Exzellente Monkkleidung Skillcheck Improvement" type="Class Feature" supports="Exzellente Skill Kleidung"/>
+            <select name="Exzellente Monkkleidung Resistance" type="Class Feature" supports="Resistance Kleidung"/>
+        </rules>
+    </element>
+
+    <!--Exzellente Kleidung-->
+    <element name="Performance" type="Class Feature" source="Internal" id="ID_PT_MAGIC_ITEM_EXZELLENTE_KLEIDUNG_PERFORMANCE">
+        <supports>Exzellente Skill Kleidung</supports>
+        <description>
+            <p>Performance increases by +3.</p>
+        </description>
+        <rules>
+            <stat name="performance:misc" value="3"/>
+        </rules>
+    </element>
+
+    <element name="Intimidation" type="Class Feature" source="Internal" id="ID_PT_MAGIC_ITEM_EXZELLENTE_KLEIDUNG_INTIMIDATION">
+        <supports>Exzellente Skill Kleidung</supports>
+        <description>
+            <p>Intimidation increases by +3.</p>
+        </description>
+        <rules>
+            <stat name="intimidation:misc" value="3"/>
+        </rules>
+    </element>
+
+    <element name="Staff of Enhanced War" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_STAFF_OF_ENHANCED_WAR">
+        <description>
+            <p>Der verbesserte Zauberstab gewährt SpellsaveDC und Spellattack +2. Man darf einen der enthaltenen Spells 1x/Longrest spellslotfrei casten. Shield, Absorb Elements, Misty Step, Dimension Door, Fizbans Platinum Shield und Counterspell! Ein Staff of War kann zu dieser Version upgegradet werden, indem er diesen ausgiebig in Kämpfen benutzt und viel Zeit in das Studieren der Magie investiert, Knotenpunkte bereist und mit den Herausforderungen wächst.</p>
+        </description>
+        <setters>
+            <set name="keywords">sorcerer, warlock, wizard</set>
+            <set name="category">Staffs</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="4">4 lb.</set>
+            <set name="slot">onehand</set>
+            <set name="weapon">Quarterstaff</set>
+            <set name="type">Staff</set>
+            <set name="attunement" addition="by sorcerer, warlock, or wizard">true</set>
+            <set name="rarity">Artifact</set>
+        </setters>
+        <rules>
+            <stat name="spellcasting:attack" value="2" />
+            <stat name="spellcasting:dc" value="2" />
+        </rules>
+    </element>
+
+    <element name="Donnerfürst-Zinogre" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DONNERFUERST_ZINOGRE">
+        <description>
+            <p>Diese magische +3 Waffe ist stark elektrisch geladen. Sie verursacht 2d10 Lightining Damage zusätzlich und erlaubt es dem Träger jede Runde, als Teil des Movements um 30ft. blitzartig zu teleportieren. Er kann dies nur 1x/per turn machen, zwischen 1ft. bis 30ft. bestimmen, wie weit genau das passieren soll.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Katana, Longsword or Shortsword">Weapon</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">3</set>
+            <set name="weapon">Katana||Longsword||Shortsword</set>
+            <set name="name-format">Donnerfürst-Zinogre + {{parent}}</set>
+        </setters>
+    </element>
+
+    <element name="Gold-Rathian Stachel" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DEATHSEEKER">
+        <description>
+            <p>Dieser +4 Dagger ist durchtränkt vom Gift der Goldrathian. Er verursacht 4d4 zusätzlichen Poison Damage. Bei einem Treffer muss das Ziel einen Consave gegen 30 würfeln, ist das Ziel kleiner als Large, hat es Disadvantage auf den Savingthrow. Misslingt der Savingthrow, verliert das Ziel jede Runde 3d10 HP (Poisondamage) zum Rundenbeginn. Am Ende der Runde des Betroffenen, kann er den Consave wiederholen.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="dagger">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Dagger</set>
+            <set name="enhancement">4</set>
+        </setters>
+    </element>
+
+    <element name="Lao Shan Panzerschuppen" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_LAO_SHAN_LUNG_PANZERSCHUPPEN">
+        <description>
+            <p>Jede Bludgeoningwaffe kann aus dem Material gefertigt werden. Diese schweren und extrem harten Waffen eignen sich besonders gut, um richtig zu knallen. Diese Waffen verursachen 3d8 Thunder Damage zusätzlich, sind allesamt +1 Waffen, verursachen gegen Objekte den doppelten Schaden und wenn ein Construct keine Bludgeoning Resistance besitzt, gilt er als vulnerabel zu dieser Waffe. Bei bestehender Resistance wird diese nur ignoriert.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Bludgeoning Waffe">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_BLUDGEONING</set>
+            <set name="name-format">Ukanlos Kiefer + {{parent}}</set>
+            <set name="enhancement">4</set>
+        </setters>
+    </element>
+
+    <element name="Mondlicht-Nargacuga Rüstung" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MONDLICHT_NARGACUGA_RUESTUNG">
+        <description>
+            <p>Diese +3 Studded Leather erlaubt dem Träger als Bonusaktion bis zum Beginn der nächsten Runde unsichtbar zu werden. Dafür darf kein gleißendes Sonnenlicht oder Spelllicht bestehen, ansonsten schlägt es fehl.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="type" addition="light">Armor</set>
+            <set name="rarity">Common</set>
+            <set name="armor">Studded Leather</set>
+            <set name="name-format">Mondlicht-Nargacuga {{parent}}</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">4</set>
+        </setters>
+    </element>
+
+    <element name="Shogun-Caenataur Klinge" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_SHOGUN_CAENATAUR_KLINGE">
+        <description>
+            <p>Dieses Großschwert besteht aus dem zackigen Fangarm eines großen Shogun- Ceanataur und ist bekannt für seine beachtliche Messerschärfe, welche auch härteste Materialien schneiden soll. Diese +3 Waffe ignoriert Slashingresistance und verursacht 2d4 Slashingdamage zusätzlich.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Greatsword">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">Greatsword</set>
+            <set name="enhancement">3</set>
+        </setters>
+    </element>
+
+    <element name="Agnaktor Schild - Feuer" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_AGNAKTOR_SCHILD_FEUER">
+        <description>
+            <p>Diesen +3 Schild gibt es in zwei Ausführungen. Die Feuervariante gewährt Coldresistance, die Eisvariante Fireresistance. Als Action kann man 1x/Longrest einen 100ft. langen und 5ft. breiten Laser des Elements abfeuern. Jedes Ziel in dieser Linie muss einen Dexsave gegen 22 schaffen, ansonsten erleiden sie 12d6 des Elements als Schaden. Bei Erfolg erleiden sie nur die Hälfte des Schadens. Bei weniger als 18 Strength haut die Wucht des Lasers den Anwender Prone.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">3</set>
+            <set name="armor">shield</set>
+        </setters>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD"/>
+        </rules>
+    </element>
+
+    <element name="Agnaktor Schild - Eis" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_AGNAKTOR_SCHILD_EIS">
+        <description>
+            <p>Diesen +3 Schild gibt es in zwei Ausführungen. Die Feuervariante gewährt Coldresistance, die Eisvariante Fireresistance. Als Action kann man 1x/Longrest einen 100ft. langen und 5ft. breiten Laser des Elements abfeuern. Jedes Ziel in dieser Linie muss einen Dexsave gegen 22 schaffen, ansonsten erleiden sie 12d6 des Elements als Schaden. Bei Erfolg erleiden sie nur die Hälfte des Schadens. Bei weniger als 18 Strength haut die Wucht des Lasers den Anwender Prone.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">3</set>
+            <set name="armor">shield</set>
+        </setters>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE"/>
+        </rules>
+    </element>
+
+    <element name="Radobaan Stachelkorsett" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_RADOBAAN_STACHELKORSETT">
+        <description>
+            <p>Diese +3 Halfplate besteht aus den Stacheln und dem Fleisch eines alten Radobaans. Diese Rüstung gewährt Resistance zu Slashing- und Bludgeoningdamage. 1x/Shortrest kann man die Stacheln einziehen und opportunityattackfrei für 20ft. wegrollen.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Item</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="slot">body</set>
+            <set name="type" addition="Half Plate">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="enhancement">3</set>
+            <set name="attunement">true</set>
+            <set name="armor">Half Plate</set>
+        </setters>
+    </element>
+
+    <element name="Dünnplattenrüstung" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DUENNPLATTENRUESTUNG">
+        <description>
+            <p>Diese +1 Plattenrüstung besteht aus der leichtesten noch harten Legierung. Sie gibt keinen Disadvantage auf Stealthchecks und bietet Resistance zu Fire, Cold, und Acid Damage und bietet Magic Resistance.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Item</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="slot">body</set>
+            <set name="type" addition="Plate">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="enhancement">1</set>
+            <set name="attunement">true</set>
+            <set name="armor">Plate</set>
+        </setters>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+        </rules>
+    </element>
+
+    <element name="Göttliches Recht" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_GOETTLICHES_RECHT">
+        <description>
+            <p>Diese Magic Items entspringen der individuellen Magie des jeweiligen Gottes. Sie können einzigartige Fähigkeiten verleihen und können nur attuned werden, wenn der jeweilige Gott oder ein, hochrangiger Vertrauter seiner Religion an einem geweihten Ort das Einverständnis gibt. Die meisten Effekte sind eine Action 1x/Longrest.</p>
+            <p class="indent"></p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Artifact</set>
+            <set name="slot">misc</set>
+            <set name="attunement" addition="13 level in Cleric, Paladin or Warlock">true</set>
+        </setters>
+    </element>
+
+    <element name="Schmuck des Barden" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_SCHMUCK_DES_BARDEN">
+        <description>
+            <p>Dieser Schmuck gibt dem Barden +2 auf alle Savingthrows und +2 auf alle charismabased Skillchecks. 1x/Shortrest kann der Barde, wenn er einem Ziel eine Bardic Inspiration gibt, 50 TempHP mitgeben. Wenn der Barde über keine Bardic Inspirations mehr verfügt, bekommt er 1x/Longrest 1d6 Inspirations zurück.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement">true</set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="strength:save:misc" value="2" />
+            <stat name="dexterity:save:misc" value="2" />
+            <stat name="constitution:save:misc" value="2" />
+            <stat name="intelligence:save:misc" value="2" />
+            <stat name="wisdom:save:misc" value="2" />
+            <stat name="charisma:save:misc" value="2" />
+
+            <stat name="performance:misc" value="2"/>
+            <stat name="intimidation:misc" value="2"/>
+            <stat name="deception:misc" value="2"/>
+            <stat name="persuasion:misc" value="2"/>
+        </rules>
+    </element>
+
+    <element name="Handschuh des Hüters" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_HANDSCHUH_DES_HUETERS">
+        <description>
+            <p>Dieser elegante Handschuh wird an der starken Hand getragen. Er verbessert des Rangers Kampfqualitäten. Sein tohit steigt generell um +1. Seine Waffe verursacht +2 mehr Schaden und jeder 1er beim Weapondamage kann generell gererollt werden. Das Rerollen gilt auch für alle Smitespells, Hunters Mark und Favoured Foe! Der Ranger erhält auf +5 auf Consaves, wenn es darum geht, Konzentration auf einen Spell zu halten.</p>
+        </description>
+        <setters>
+            <set name="slot">misc</set>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="13 Level in Ranger required">true</set>
+        </setters>
+    </element>
+
+    <element name="Magiephiole" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MAGIEPHIOLE">
+        <description>
+            <p>Nach einer Longrest kann man einen Spellslot seiner Wahl in diese besondere Phiole geben. Dieser gilt dann als verbraucht, kann aber durch gängige Methoden regeneriert werden. Im Kampf kann man als Bonusaction die Phiole öffnen, wird selbst in Höhe des Spellslots mit d12 multipliziert+Characterlevel geheilt. Diese Heilung basiert auf der eigenen arkanen Kraft und kann in jedem Zustand heilen! Diese Phiole kann man auch als Bombe nutzen und als Action bis zu 30ft weit werfen, während man mittels Inkantation das Siegel sprengt. Die Explosion betrifft jeden in 10ft Radius. Alle Ziele müssen einen Dexsave gegen den SpellsaveDC würfeln. Bei Misserfolg erleiden die Ziele Spellslot*d12 +Characterlevel als Forcedamage, bei Erfolg die Hälfte. Repariert wird die Phiole, indem ein Level 1 Spellslot mit 1. Minute Castingtime gechanted wird.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="13 Level in Spellcaster required">true</set>
+            <set name="slot">misc</set>
+        </setters>
+    </element>
+
+    <element name="Druidenwunder" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_DRUIDENWUNDER">
+        <description>
+            <p>Wenn der Druide lange genug bei einem passenden Naturheiligtum Zeit verbrachte (7 Tage), kann er sich mit einem geweihten Gegenstand des Ortes attunen. Das wird sein Druidenwunderitem. Dadurch wird ihm Zugang zur natürlichen Magie gewährt. Als Action 1x/Longrest kann er 1d100 würfeln. Unterbietet er das Characterlevel mit dem Wurf, kann er die Kräfte dieses Heiligtums temporär zu seinem Vorteil nutzen. Das ist des DMs Entscheidung, wie das funktioniert. Ist der Druide Level 20 und konnte den Status eines Erzdruiden verdienen, dann kann er ohne den d100 zu würfeln, auf die Kräfte zugreifen. Damit das Item nach einem erfolgreichen Einsatz erneut genutzt werden kann, müssen 7 Tage vergehen, aber dafür muss das Item attuned bleiben.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="13 Level in Druid required">true</set>
+            <set name="slot">misc</set>
+        </setters>
+    </element>
+
+    <element name="Blutkelch des Blood Hunters" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_BLUTKELCH_DES_BLOOD_HUNTERS">
+        <description>
+            <p>Dieser magische Kelch kann als Halskette getragen werden oder am Gürtel, Hauptsache offen sichtbar. Der Kelch ist äquivalent zur Stärke des tragenden Blood Hunters. Die maximale Instanzenmenge entspricht dem Characterlevel. Wenn der Blood Hunter sich selbst Schaden verursacht, durch die Hemocraft Dice, fließt der Gesamtschaden, als Lebenskraft in den Kelch. Jedes Würfelergebnis zählt als eine Instanz. Bis zum aktuellen Characterlevel kann man maximal Instanzen sammeln. Die Gesamtmenge kann man 1x/Longrest als Bonusaction trinken und sich in Höhe des Wertes heilen. Zusätzlich kann man 1x/Longrest die Blutmenge in einen Schutzschild umwandeln, der TempHP gibt. Ist mindestens einer der Uses verbraucht, entfaltet der Kelch seine innere Kraft und verleiht dem Blood Hunter für 1. Minute den Blesseffekt. Das klappt ebenfalls nur 1x/Longrest. Nach einer Longrest verfallen alle gespeicherten Instanzen.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="13 Level in Blood Hunter required">true</set>
+            <set name="slot">misc</set>
+        </setters>
+    </element>
+
+    <element name="Stab des Sturmbeschwörers" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_STAB_DES_STURMBESCHOERERS">
+        <description>
+            <p>Der in Stürmen geweihte und gezeichnete Stab ist metallener und blitzaffiner Natur. Er verleiht dem Nutzer einige stürmische Vorteile:</p>
+            <ol>
+                <li>Man kann 1x/Longrest Control Weather casten, aber nur einen blitzenden Sturm damit beschwören – auch ohne Konzentration zu halten, bleibt der Wettereffekt noch bis zu 1. Stunde da, außer in Ausnahmen</li>
+                <li>Call Lightning verursacht im Sturm noch 1d10 zusätzlich an Schaden</li>
+                <li>Spells, die Lightningdamage verursachen, haben +1 auf SaveDC und Spellattackbonus</li>
+                <li>Wenn ein Blitz in 90ft Reichweite einschlagen würde, kann der Nutzer als Reaction den Blitz zum Zauberstab umleiten (es gelten nur natürliche Blitze und sowas wie Call Lightning zählt nicht) und den Schaden annulieren</li>
+                <li>Er kann bis zu 3 Blitze gleichzeitig speichern – ein Blitz kann maximal 1. Minute gespeichert werden</li>
+                <li>Als Action kann er diese Blitze als Dexsave abfeuern (Vgl. mit Lightning Bolt) und nimmt dafür seinen SaveDC – entweder alle zusammen gebündelt oder einzeln pro Action abfeuern</li>
+                <li>Alternativ kann er 1x/Longrest, wenn der Stab alle 3 Blitze infusioniert hat, 1d6+3 würfeln und Spellslots in dieser Höhe regenerieren</li>
+            </ol>
+        </description>
+        <setters>
+            <set name="keywords">sorcerer, warlock, wizard</set>
+            <set name="category">Staffs</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="4">4 lb.</set>
+            <set name="slot">onehand</set>
+            <set name="weapon">Quarterstaff</set>
+            <set name="type">Staff</set>
+            <set name="attunement" addition="by sorcerer, warlock, or wizard">true</set>
+            <set name="rarity">Artifact</set>
+        </setters>
+        <rules>
+            <stat name="spellcasting:attack" value="1" />
+            <stat name="spellcasting:dc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Kulve Taroth Goldmantel" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_KULVE_TAROTH_GOLDMANTEL">
+        <description>
+            <p>Diese +3 Plattenrüstung besteht aus den semiharten Goldplatten einer Kulve Taroth. Dieses gleichsam biegsame, wie auch harte Material bietet idealen Schutz. Jeglicher Schaden wird zusätzlich um +3 reduziert!</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="slot">body</set>
+            <set name="type" addition="Plate">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="enhancement">3</set>
+            <set name="attunement">true</set>
+            <set name="armor">Plate</set>
+        </setters>
+    </element>
+
+    <element name="Adamantiumpanzer" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_ADAMANTIUMPANZER">
+        <description>
+            <p>Diese extrem schwere +3 Plattenrüstung gewährt Immunität zu kritischen Treffern. Besitzt man weniger als 24 Strength, verliert man für alle 2 Punkte 10ft Movementspeed.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="slot">body</set>
+            <set name="type" addition="Plate">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="enhancement">3</set>
+            <set name="attunement">true</set>
+            <set name="armor">Plate</set>
+        </setters>
+    </element>
+
+    <element name="Adamantiumschild" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_SHIELD_OF_TAUNTING1">
+        <description>
+            <p>Dieser extrem schwere +3 Schild gewährt Immunität zu kritischen Treffern. Besitzt man weniger als 24 Strength, verliert man für alle 2 Punkte 10ft Movementspeed.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="shield">Armor</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">3</set>
+            <set name="armor">shield</set>
+        </setters>
+    </element>
+
+    <element name="Chameleosumhang" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_CHAMELEOSUMHANG">
+        <description>
+            <p>Dieser kapuzierte Mantel bietet Poisonresistance, +2 auf Savingthrows und als Bonusaction umschlingt der Mantel den Körper und nimmt die Farbe der Umgebung an, wodurch man +10 auf Stealthchecks erhält. Diese Form der Tarnung wird nicht durch Truesight aufgedeckt. 1x/Longrest kann der Mantel als Reaction einen Nebel absondern, der im 30ft Radius um den Mantel Nebel produziert und den Ort „Heavily Obscured“. Der Nebel bleibt dort stationär, wird aber von Wind und Wetter beeinträchtigt.</p>
+            <p class="indent"></p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="slot">shoulders</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="strength:save:misc" value="2" />
+            <stat name="dexterity:save:misc" value="2" />
+            <stat name="constitution:save:misc" value="2" />
+            <stat name="intelligence:save:misc" value="2" />
+            <stat name="wisdom:save:misc" value="2" />
+            <stat name="charisma:save:misc" value="2" />
+        </rules>
+    </element>
+
+    <element name="Kod-Hex des Blood Hunters" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_KODHEX_DES_BLOOD_HUNTERS">
+        <description>
+            <p>Jede Bruderschaft besitzt ihren eigene Version des „Kod-Hex“, einer Art Geheimwaffe. Jede Bruderschaft fertigt sie hauseigen an, für die fähigsten ihrer Zunft. Um einen solchen Kod-Hex anzufertigen bedarf es des Blutes des Blood Hunters, das Blut einer Hexcreature und den intendierten Gegenstand. Nach einem langen Prozess des konzentrierten Einwirkens wird dieser Gegenstand spezifisch nur für diesen Blood Hunter attunebar. Von einer besonders mächtigen Klinge, einer harten Rüstung, bis zu einem Schild oder einem Accessoire kann da alles drin sein.</p>
+            <p>Bekannte Kod-Hex wären beispielsweise:</p>
+            <ol>
+                <li>Jorig Einzenz: Sein rechter Arm ist inzwischen eine Metallprothese seiner einstigen zerstörten Adamantiumrüstung. Sein Kod-Hex ist bekannt unter dem Namen „Härter als Knochen“. Er ging im hohen Alter dann dazu über, zum Faustkämpfer zu werden und verprügelt mit dieser Prothese seine Feinde. Die Prothese verbessert seinen AC um 3, da er auch damit blocken kann und verursacht mit dieser +3 Waffe auch 3d12 magical Bludgeoning Damage. 1x/Longrest kann er als Action einen vernichtenden Faustschlag abgeben, der alles in Schlagrichtung pulverisiert, wobei er die Hälfte des Schadens dann auch selbst erleidet.</li>
+                <li>Radion Marek: Seine Halskette ist untypischerweise eher ein Gegenstand, welchen die Venatier bevorzugen würden. Seine persönliche Vendetta mit dem Dämon War'Ragemir sorgte dafür, dass kaum etwas eine höhere Priorität genießt. Sein Amulett kann Blut speichern. Wenn das Wesen, zu dem das Blut gehört, in der Nähe ist, reagiert das Amulett und leuchtet auf. Dadurch konnte Radion nicht nur die Richtungen von War'Ragemir ermitteln (Branding), sondern auch seinen Umgebungsstandort, was Radions Schwäche, sein Ziel zu finden, ausgleichen konnte.</li>
+                <li>Tellerand de Manzose: Der wahnsinnige Tellerand entschied sich für etwas Abartiges und schnitt sich sein Auge heraus, um dieses zu verbessern. Sein linkes Auge wirkt zwar normal, aber vermittelt ihm jederzeit Informationen über den Grad an Magie, den eine Person nutzen kann. Durch Jahre der Beobachtung kann er auch erkennen, welches Zauberlevel jemand casten möchte. Er kann auf die Art auch das winzige bisschen Hex in einem jeden Blood Hunter ermitteln. Dadurch wurde er auch zu einem der besten Dämonenjäger, da sie oftmals auch in gewandelter Gestalt noch Resthex enthalten.</li>
+                <li>Wenn ein Blitz in 90ft Reichweite einschlagen würde, kann der Nutzer als Reaction den Blitz zum Zauberstab umleiten (es gelten nur natürliche Blitze und sowas wie Call Lightning zählt nicht) und den Schaden annulieren</li>
+                <li>Delorius van Hellsing: Aus den Tagen vor seinem Sündenfall ist noch bekannt, dass sein Kod-Hex sein Mantel wurde. Delorius kann das vergossene Blut seiner Feinde vom Schlachtfeld an diesem Mantel haften lassen. Bei Bedarf kann er das Blut in Form von kleinen schnellen Schrapnellgeschossen von ihm abfeuern oder für seine anderen sanguinischen Fähigkeiten nutzen. Delorius spezialisierte sich darauf, gegen eine große Gruppe an Gegnern kämpfen zu können.</li>
+            </ol>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="13 Level in Blood Hunter required">true</set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <grant type="Class Feature" id="ID_PT_MAGIC_ITEM_KODHEX"/>
+        </rules>
+    </element>
+
+    <element name="Kod-Hex" type="Class Feature" source="internal" id="ID_PT_MAGIC_ITEM_KODHEX">
+        <rules>
+            <select name="Kod-Hex" type="Class Feature" supports="KodHex"/>
+        </rules>
+    </element>
+
+    <element name="Jorig Einzenz" type="Class Feature" source="internal" id="ID_PT_MAGIC_ITEM_KODHEX_JORIG_EINZENZ">
+        <supports>KodHex</supports>
+        <rules>
+            <stat name="ac:misc" value="3" />
+        </rules>
+    </element>
+
+    <element name="Radion Marek" type="Class Feature" source="internal" id="ID_PT_MAGIC_ITEM_KODHEX_RADION_MAREK">
+        <supports>KodHex</supports>
+    </element>
+
+    <element name="Tellerand de Manzose" type="Class Feature" source="internal" id="ID_PT_MAGIC_ITEM_KODHEX_TELLERAND_DE_MANZOSE">
+        <supports>KodHex</supports>
+    </element>
+
+    <element name="Delorius van Hellsing" type="Class Feature" source="internal" id="ID_PT_MAGIC_ITEM_KODHEX_DELORIUS_VAN_HELLSING">
+        <supports>KodHex</supports>
+    </element>
+
+    <element name="Mastered Halfplate" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MASTERED_HALFPLATE">
+        <description>
+            <p>Diese elegant ausgearbeitete +4 Halfplate bietet enormen Komfort. Die Mythrillegierung sorgt dafür, dass sie keinen Disadvantage auf Stealth Checks bietet. Zusätzlich bietet sie Resistance zu Bludgeoning, Slashing und Piercingdamage.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="slot">body</set>
+            <set name="type" addition="Half Plate">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="enhancement">4</set>
+            <set name="attunement">true</set>
+            <set name="armor">Half Plate</set>
+        </setters>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PIERCING" />
+        </rules>
+    </element>
+
+    <element name="Amulett des Überlebenden" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_AMULET_DES_UEBERLEBENDEN">
+        <description>
+            <p>Das nächste mal, wenn du sterben solltest, stirbst du nicht, regenerierst 10d10 HP und dann wird das Amulett zu Staub und du kannst das Item nie wieder nutzen (der Attunementslot wird dann auch direkt wieder frei).</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="slot">neck</set>
+            <set name="attunement" addition="Mindestens einmal gestorben required">true</set>
+        </setters>
+    </element>
+
+    <element name="Mystical Bard Magic" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MYSTICAL_BARD_MAGIC">
+        <description>
+            <p>Wenn der Barde alle Bedingungen erfüllt, erhält er einen 5. Attunementslot und darf nur dieses Item damit dann attunen. Dieses Item kann jeder nichtmagische Gegenstand sein, den der Barde gerne mag und er ihn regelmäßig bei sich hat. Die besondere bardische und vielseitige Magie fließt hinein. Seine Reisen, seine Erfolge und seine Misserfolge bilden die Quelle der Kraft dieses Items. Er erhält Zugang zum großen Quell der Magie und erhält folgende Effekte:</p>
+            <ol>
+                <li>Er bekommt 3 weitere Magical Secrets</li>
+                <li>Er kann als Action einen Spellslot aufbrauchen und die Höhe des Spellslots in Bardic Inspirations umwandeln</li>
+                <li>Er kann als Reaction 1x/Longrest einen ihn betreffenden Spell absorbieren und in Bardic Inspirations umwandeln (in Höhe des Spelllevels)</li>
+                <li>Während Countercharm aktiv ist, erhält jeder Betroffene Advantage auf alle Savingthrows</li>
+            </ol>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="Mystical Conflux, 17 Level in Bard, Hut, Schmuck und Kleidung des Barden gleichzeitig attuned required">true</set>
+            <set name="slot">misc</set>
+        </setters>
+    </element>
+
+    <element name="True Servant Emblem" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_TRUE_SERVANT_EMBLEM">
+        <description>
+            <p>Wenn der Warlock das Item Pact Emblem attuned hat, verbessert es sich zu diesem Item (die Effekte werden nicht addiert, sondern nur zu dieser Version upgegradet). Es wird nur den würdigsten Diener des jeweiligen Patrons gewährt. Es bietet folgende Vorteile:</p>
+            <ol>
+                <li>+3 auf Spellattack und SaveDc</li>
+                <li>Er erhält 2 Warlockspellslots</li>
+                <li>Er erhält 2 Invocations</li>
+                <li>Er erhält 2 Spells, die seinem Patron entsprechen</li>
+            </ol>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="17 Level in Warlock und Pact Emblem attuned required">true</set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="spellcasting:attack" value="3" />
+            <stat name="spellcasting:dc" value="3" />
+            <select type="Class Feature" name="True Servant Emblem" supports="Eldritch Invocation" number="2" />
+        </rules>
+    </element>
+
+    <element name="Valstraxklingen" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_VALSTRAXKLINGEN">
+        <description>
+            <p>Jede Slashingweapon kann aus dem Flügelgewebe des legendären Valstrax bestehen. Diese +4 Waffen verursachen einen weiteren Damage Die zusätzlich an Schaden, ignorieren Slashingresistance und können dem Träger die Fähigkeit verleihen, zu Fliegen. Ein starker energiereicher Ausstoß drakonischer Kräfte verleiht den Schuppen an den Klingen Schubkraft. Der Träger hat dann fixe 120ft Flying Speed und der Flug gilt nicht als geräuschlos! 1x/Longrest kann man unfallfrei abstürzen und den Schaden umlenken auf ein Ziel und es dadurch angreifen. Bei einem erfolgreichen Treffer erleidet es den Fallschaden als zusätzlichen Slashingdamage (mit dem Maximum von 20d6). Bei Misserfolg erleidet der Träger seinen Fallschaden selbst und ist Prone!</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Slashing Weapon">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">4</set>
+            <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_SLASHING</set>
+            <set name="name-format">Valstraxklingen + {{parent}}</set>
+        </setters>
+        <rules>
+            <stat name="speed:fly" value="120"/>
+        </rules>
+    </element>
+
+    <element name="Teostrabrecher" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_TEOSTRABRECHER">
+        <description>
+            <p>Jede Bludgeoningwaffe kann aus dem explosiven Material des Teostra gefertigt werden. Diese Waffen sind +0 und nicht wirklich zum direkten Angreifen gedacht. Als „Part of the Attackaction“ kann man den explosiven Staub der Waffe auf ein Ziel in Waffenreichweite streuen. Das Ziel muss einen Dexsave würfeln (18+Alchemytoolproficiencybonus). Bei Misserfolg erleidet das Ziel 5d12+Alchemytoolproficiencybonus an Bludgeoningdamage. Bei Erfolg nur den halben Schaden. 1x/Longrest kann man die gewaltige explosive Kraft entfesseln und jedes Ziel in einem 90ft Cone den Dexsave würfeln lassen. Bei Misserfolg erleiden sie 10d12+Alchemytoolproficiencybonus als Schaden, bei Erfolg nur die Hälfte. Grundsätzlich verursacht diese Waffe doppelten Schaden gegen Objekte.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Bludgeoning Weapon">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_BLUDGEONING</set>
+            <set name="name-format">Teostrabrecher + {{parent}}</set>
+        </setters>
+    </element>
+
+    <element name="Tattoo of Highest Magic" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_TATTOO_OF_HIGHEST_MAGIC">
+        <description>
+            <p>Das Tattoo bietet einen weiteren Level 9 Spellslot.</p>
+        </description>
+        <setters>
+            <set name="keywords">tattoo</set>
+            <set name="category">Wondrous Items</set>
+            <set name="type">Tattoo</set>
+            <set name="rarity">Uncommon</set>
+            <set name="attunement">true</set>
+        </setters>
+    </element>
+
+    <element name="Horn des Oroshi-Kirin" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_HORN_DES_OROSHI_KIRIN">
+        <description>
+            <p>Jede Melee Piercingwaffe kann aus diesem Horn gefertigt sein. Es entstammt aus einer seltenen Kirinart, welche in der Lage ist, sich blitzartig fortzubewegen. Diese +5 Waffe verursacht zusätzliche 1d6 Piercingdamage und 1d6 Lightningdamage. In Höhe von PBx/Longrest kann der Träger, wenn er Ziel eines Angriffs wurde und getroffen werden würde, um bis zu 30ft wegteleportieren, um dem Angriff auszuweichen. Zusätzlich kann er sich entscheiden, anstatt sein Movement zu benutzen, zu einem Punkt in Movementspeedreichweite zu teleportieren. Diese Teleportation, ganz gleich, wie viel er sich bewegt, verbraucht sein gesamtes Movement, das noch übrig ist.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Piercing Weapon">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">5</set>
+            <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_PIERCING</set>
+            <set name="name-format">Oroshi-Kirin + {{parent}}</set>
+        </setters>
+    </element>
+
+    <element name="Kushala Daora Sturmrüstung" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_KUSHALA_DAORA_STRUMRUESTUNG">
+        <description>
+            <p>Diese einzigartige Rüstung bietet dem Träger 22AC, jeder ist automatisch proficient mit dieser Rüstung und sie produziert die Winde des Kushala Daora aus den Schuppen. Dadurch erhalten alle Ranged Attacks auf dich Disadvantage, da sie vom Wind abgelenkt werden können. Ein Nachteil vom ewigen Wind: um in Touchrange kommen zu können, muss die Person einen Strengthsave gegen 24 schaffen, sonst schiebt der Winddruck die Person weg..</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="slot">body</set>
+            <set name="type" addition="Plate">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+        </setters>
+        <rules>
+            <stat name="ac:armored:armor" value="22" />
+        </rules>
+    </element>
+
+
+    <element name="Adera Ganta" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_ADERA_GANTA">
+        <description>
+            <p>Die Adera Ganta sind besondere Geistwesen, in die ein Druide oder Ranger sich wildshapen kann. Es gibt insgesamt 4 Stück: Land, Wasser, Luft und Feuer. Wenn man einen Kristall findet, kann man diesen attunen und erhält eine Wildshapeoption 1x/Longrest. Diese Kristalle entstammen der untergegangenen Welt Koyans und sind daher immens selten geworden. Nur Legenden vermögen genaueres über diese Wesen und diese Kristalle auszusagen. Sie gelten als die Personifizierung der Natur, da sie nur von Naturverbundenen genutzt werden!</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="17 Level in Druid oder Ranger required">true</set>
+            <set name="slot">misc</set>
+        </setters>
+    </element>
+
+    <element name="Wizard Matrix" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_WIZARD_MATRIX">
+        <description>
+            <p>Dieses komplexe Item verlangt zum attunen einen 40er Arcana Check zum Ende der Short-/Longrest. Bei Misserfolg misslingt es ihm sich zu attunen und er muss in einer anderen Rast es erneut versuchen. Einmal attuned mit der Matrix optimiert sie das Potenzial des Wizards. Die Matrix ist ein komplexes magisches Phänomen, welches in einer Glaskugel eingesperrt wurde. Heutzutage weiß man nicht, wie man früher so etwas herstellen konnte – das Wissen scheint untergegangen zu sein. Es verleiht dem Wizard folgende Eigenschaften:</p>
+            <ol>
+                <li>Er kann einen Spell kontrolliert zum Explodieren bringen, wodurch er den doppelten Schaden verursacht (gilt nur für eine Schadensinstanz, also Multihitzauber wie Scorching Ray sind ausgenommen) – dafür muss er einen weiteren Spellslot aufbrauchen, der gleich hoch oder höher ist (bei Cantrips bedarf es mindestens eines Level 1 Spellslots)</li>
+                <li>Er kann seinen SaveDC für einzelne Zauber manipulieren, indem er einen zusätzlichen Spellslot aufwendet und das halbe Spellevel aufgerundet auf den SaveDC addiert (zB. Level 5 Spellslot = +3 auf SaveDC)</li>
+                <li>Er erhält 1x/Longrest 1. Legendary Resistance</li>
+                <li>Er erhält +3 auf alle Savingthrows</li>
+                <li>Als Action kann der Wizard 1x/Longrest seine Preparedspells komplett neu umsortieren</li>
+            </ol>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="17 Level in Wizard required">true</set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="strength:save:misc" value="3" />
+            <stat name="dexterity:save:misc" value="3" />
+            <stat name="constitution:save:misc" value="3" />
+            <stat name="intelligence:save:misc" value="3" />
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3" />
+        </rules>
+    </element>
+
+    <element name="Magical Defender" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MAGICAL_DEFENDER">
+        <description>
+            <p> Die Magical Defender Rüstung gibt es in jeder Ausführung eines jeden Rüstungstyps und ist grundsätzlich +4. Diese Rüstung wird über einen langen Zeitraum spezielle magisch an einem Knotenpunkt angereichert und bietet Magic Resistance, +3 auf alle Savingthrows und 1x/Longrest eine Legendary Resistance.</p>
+        </description>
+        <setters>
+            <set name="category">Magic Armor</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="slot">body</set>
+            <set name="type" addition="die relevante Armorproficiency">Armor</set>
+            <set name="rarity">Rare</set>
+            <set name="enhancement">4</set>
+            <set name="attunement">true</set>
+            <set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT||ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
+            <set name="name-format">Magical Defender + {{parent}}</set>
+        </setters>
+        <rules>
+            <stat name="strength:save:misc" value="3" />
+            <stat name="dexterity:save:misc" value="3" />
+            <stat name="constitution:save:misc" value="3" />
+            <stat name="intelligence:save:misc" value="3" />
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3" />
+        </rules>
+    </element>
+
+    <element name="Sorcerer Supreme" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_SORCERER_SUPREME">
+        <description>
+            <p>Das Item Sorcerer Supreme ist äußerst selten und entstammt, wie die Wizard Matrix, aus einer Zeit, in der sowas hergestellt werden konnte. Heutzutage kann niemand mehr dieses Juwel anfertigen. Wenn ein Sorcerer sich damit attunen möchte, muss er am Ende der Short-/Longrest einen Charismasavingthrow gegen 30 schaffen. Bis Misserfolg kann er sich damit nicht attunen. Bei Erfolg attunet er sich damit und erhält folgende Benefits:</p>
+            <ol>
+                <li>Er erhält +3 auf Savingthrows</li>
+                <li>Er erhält 1x/Longrest 1. Legendary Resistance</li>
+                <li>Er erwirbt die Metamagie „Master of the Arcane“</li>
+                <li>Sie kostet 20 Metamagiepunkte, kann nur 1x/Longrest genutzt werden und bietet folgende Vorteile für 1. Minute:
+                    1. Wenn man unarmored ist, erhält man 20+Charismamodifier als AC 
+                    2. Jedes mal, wenn man einen Spellslot aufbraucht, regeneriert man 2d4 Metamagiepunkte – in diesem Zustand gibt es kein Maximum für Metamagiepunkte und nach dem Ende des Effekts werden alle Punkte auf das eigentliche Maximum reduziert, falls es überschritten wurde</li>
+                    3. Jedes mal, wenn man einen Spellslot aufbraucht, regeneriert man
+                    2d12HP – wenn man bei max. HP ist, dann bekommt man 2d12 Temp HP
+                    4. Man erhält 120ft Flying Speed
+                    5. Jeder Zauber erhält einen zusätzlichen Würfel pro Zauber und nicht
+                    für mehrere Instanzen des selben Zaubers
+                    6. Man kann 2 Zauber in der Runde benutzen, wobei einer der Zauber
+                    nicht über Level 5 sein darf (zB. für Quickened Spell)
+                    7. Wenn man bewusstlos werden würde, bricht der Effekt ab und die
+                    verbliebenen Runden werden mit d6 multipliziert+Charismamodifier und
+                    heilen den Sorcerer sofort gegen, sodass er nicht bewusstlos wird
+                    8. Man erhält 120ft Truesight
+            </ol>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type">Wondrous Item</set>
+            <set name="rarity">Common</set>
+            <set name="attunement" addition="17 Level in Wizard required">true</set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="strength:save:misc" value="3" />
+            <stat name="dexterity:save:misc" value="3" />
+            <stat name="constitution:save:misc" value="3" />
+            <stat name="intelligence:save:misc" value="3" />
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3" />
+        </rules>
+    </element>
+
+    <element name="Barbarentracht" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_BARBARENTRACHT">
+        <description>
+            <p>Die letzte Stufe der Barbarenkleidung ist die Barbarentracht, eine Kleidung, welche den Werdegang reflektieren soll. Sie kann nur gefertigt werden, indem der Barbar sich einer monumentalen Herausforderung gestellt hat, die ihn an seine Grenzen brachte. Die meisten Träger dieser Tracht bekämpften die mächtigsten Kreaturen, Weltbosse und die schlimmsten Feinde. Dieser Kleidung wird dann ein spezieller Effekt hinzugefügt, der aus dem Material des Gegners gefertigt wird.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type" addition="by a barbarian">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="cost" currency="gp"></set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="3" />
+            <stat name="strength:save:misc" value="3" />
+            <stat name="dexterity:save:misc" value="3" />
+            <stat name="constitution:save:misc" value="3" />
+            <stat name="intelligence:save:misc" value="3" />
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3" />
+            <stat name="speed" value="10"/>
+
+            <select name="Barbarentracht Skillcheck Improvement" type="Class Feature" supports="Exzellente Skill Kleidung" />
+            <select name="Barbarentracht Resistance" type="Class Feature" supports="Resistance Kleidung"/>
+        </rules>
+    </element>
+
+    <element name="Mönchstracht" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_MOENCHSTRACHT">
+        <description>
+            <p>Die letzte Stufe der Mönchskleidung ist die Mönchstracht, eine Kleidung, welche den Werdegang reflektieren soll. Sie kann nur gefertigt werden, indem der Monk sich einer monumentalen Herausforderung gestellt hat, die ihn an seine Grenzen brachte. Die meisten Träger dieser Tracht bekämpften die mächtigsten Kreaturen, Weltbosse und die schlimmsten Feinde. Dieser Kleidung wird dann ein spezieller Effekt hinzugefügt, der aus dem Material des Gegners gefertigt wird.</p>
+        </description>
+        <setters>
+            <set name="category">Wondrous Items</set>
+            <set name="type" addition="by a monk">Wondrous Items</set>
+            <set name="rarity">Rare</set>
+            <set name="attunement">true</set>
+            <set name="cost" currency="gp"></set>
+            <set name="slot">misc</set>
+        </setters>
+        <rules>
+            <stat name="ac:misc" value="3" />
+            <stat name="strength:save:misc" value="3"/>
+            <stat name="dexterity:save:misc" value="3"/>
+            <stat name="constitution:save:misc" value="3"/>
+            <stat name="intelligence:save:misc" value="3"/>
+            <stat name="wisdom:save:misc" value="3" />
+            <stat name="charisma:save:misc" value="3"/>
+            <stat name="speed" value="10"/>
+
+            <select name="Mönchstracht Monkkleidung Skillcheck Improvement" type="Class Feature" supports="Exzellente Skill Kleidung"/>
+            <select name="Mönchstracht Monkkleidung Resistance" type="Class Feature" supports="Resistance Kleidung"/>
+        </rules>
+    </element>
+
+    <element name="Velkhanas Ice" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_HELKHANAS_ICE">
+        <description>
+            <p>Der Griff besteht aus illusischem Eiskristall, die Waffe selbst aus den Eiskristallen des Velkhana. Jede Melee Waffengattung kann damit hergestellt werden. Diese Waffen sind +4 und verursachten 2d12 Colddamage zusätzlich und ignorieren Coldresistance. 1x/Longrest kann man die innere Kälte auf ein Ziel in 5ft Reichweite als Bonusaktion entladen. Das Ziel muss einen Consave schaffen. Bei Misserfolg erleidet es 10d8 Colddamge und wird restrained, bis es eine Action aufwendet um sich mittels eines Strengthsaves gegen 30 zu befreien oder auf eine andere Art das äußerst harte Eis zu vernichten (zB. Disintegrate).</p>
+        </description>
+        <setters>
+            <set name="category">Magic Weapons</set>
+            <set name="cost" currency="gp">0</set>
+            <set name="weight" lb="0">0 lb.</set>
+            <set name="type" addition="Piercing Weapon">Weapon</set>
+            <set name="rarity">Very Rare</set>
+            <set name="attunement">true</set>
+            <set name="enhancement">4</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE</set>
+            <set name="name-format">Oroshi-Kirin + {{parent}}</set>
+        </setters>
     </element>
 </elements>

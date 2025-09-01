@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Feats</name>
-        <update version="0.1">
+        <update version="0.2">
             <file name="feats.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/feats.xml" />
         </update>
     </info>
@@ -470,6 +470,393 @@
         <sheet action="Reaction" usage="{{proficiency}}/Longrest">
             <description>Wenn du Schaden erleidest, der nicht von Radiant, Acid oder Psychic Damage her rührt, kannst du als Reaction den Schaden um Weapon Die(+Rarität)+{{constitution:modifier}}+{{proficiency}} reduzieren, durch eine gezielte Parierung.</description>
         </sheet>
+    </element>
+
+    <element name="Trained Skillster" type="Feat" source="Primus Two" id="ID_PT_FEAT_TRAINED_SKILLSTER">
+        <description>Wähle 3 Skillchecks deiner Wahl aus, in denen du proficient bist. Du kannst jeden dieser Skillchecks um +1 verbessern. Zusätzlich kannst du einen Stat um +1 verbessern.</description>
+        <prerequisite>Level 8 und Skill Expert Feat</prerequisite>
+        <requirements>ID_WOTC_TCOE_FEAT_SKILL_EXPERT, [level:8]</requirements>
+        <sheet display="false" />
+        <rules>
+            <select name="Skillcheck Increase" type="Feat Feature" supports="Skilled Expert Skillcheck" number="3"/>
+            <select name="Ability Score Increase" type="Feat Feature" supports="Skilled Expert Ability"/>
+        </rules>
+    </element>
+
+    <element name="Masterful Skillster" type="Feat" source="Primus Two" id="ID_PT_FEAT_MASTERFUL_SKILLSTER">
+        <description>Wähle 3 Skillchecks deiner Wahl aus, in denen du proficient bist. Du kannst jeden dieser Skillchecks um +1 verbessern. Das müssen nicht die in dem vorherigen Feat ausgewählten Skillchecks sein. Zusätzlich kannst du einen Stat um +1 verbessern.</description>
+        <prerequisite>Level 12 und Skill Expert Feat</prerequisite>
+        <requirements>ID_PT_FEAT_TRAINED_SKILLSTER, [level:12]</requirements>
+        <sheet display="false" />
+        <rules>
+            <select name="Skillcheck Increase" type="Feat Feature" supports="Skilled Expert Skillcheck" number="3"/>
+            <select name="Ability Score Increase" type="Feat Feature" supports="Skilled Expert Ability"/>
+        </rules>
+    </element>
+
+    <element name="Perfect Skillster" type="Feat" source="Primus Two" id="ID_PT_FEAT_PERFECT_SKILLSTER">
+        <description>Wähle 3 Skillchecks deiner Wahl aus, in denen du proficient bist. Du kannst jeden dieser Skillchecks um +1 verbessern. Das müssen nicht die in dem vorherigen Feat ausgewählten Skillchecks sein. Zusätzlich kannst du einen Stat um +1 verbessern.</description>
+        <prerequisite>Level 16 und Skill Expert Feat</prerequisite>
+        <requirements>ID_PT_FEAT_TRAINED_SKILLSTER, [level:12]</requirements>
+        <sheet display="false" />
+        <rules>
+            <select name="Skillcheck Increase" type="Feat Feature" supports="Skilled Expert Skillcheck" number="3"/>
+            <select name="Ability Score Increase" type="Feat Feature" supports="Skilled Expert Ability"/>
+        </rules>
+    </element>
+
+    <element name="Taver Brawler Reworked" type="Feat" source="Primus Two" id="ID_PT_FEAT_TAVERN_BRAWLER_REWORKED">
+        <description>Du kannst Strength oder Constitution um +1 verbessern. Du wirst proficient mit „Improvised Weapons“. Wenn du mit einer improvised Weapon angreifst, kannst du als Bonusaktion das Ziel versuchen zu grappeln. Die improvised Weaponattacks werden mit der Zeit stärker: 1d6 zu Beginn, ab Level 5 dann 1d8, ab Level 11 dann 1d10 und ab Level 17 dann 1d12.</description>
+        <sheet>
+            Wenn du mit einer improvised Weapon angreifst, kannst du als Bonusaktion das Ziel versuchen zu grappeln. Die improvised Weaponattacks werden mit der Zeit stärker: 1d6 zu Beginn, ab Level 5 dann 1d8, ab Level 11 dann 1d10 und ab Level 17 dann 1d12.
+        </sheet>
+        <rules>
+			<select type="Ability Score Improvement" name="Ability Score Increase (Tavern Brawler)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_CONSTITUTION" />
+        </rules>
+    </element>
+
+    <element name="Athlete Reworked" type="Feat" source="Primus Two" id="ID_PT_FEAT_ATHLETE_REWORKED">
+		<description>
+			<p>You have undergone extensive physical training to gain the following benefits:</p>
+			<ul>
+				<li>Increase your Strength or Dexterity score by 1, to a maximum of 20.</li>
+				<li>Climbing doesn’t cost you extra movement.</li>
+				<li>You can make a running long jump or a running high jump after moving only 5 feet on foot, rather than 10 feet.</li>
+  				<li>Aufstehen nach Prone kostet dich nur das halbe Movement, statt eines festen Wertes. Dieser Effekt ist stapelbar mit dem Feat Exceptionally Mobile, sodass, wenn man beide besitzt, die Person danach keinen Movementspeedverlust beim Aufstehen erleidet.</li>
+			</ul>
+		</description>
+		<sheet>
+			<description>
+			Climbing doesn’t cost you extra movement.
+			You can make a running long jump or a running high jump after moving only 5 feet on foot, rather than 10 feet.
+            Aufstehen nach Prone kostet dich nur das halbe Movement, statt eines festen Wertes. 
+            </description>
+		</sheet>
+		<rules>
+			<select type="Ability Score Improvement" name="Athlete" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+		</rules>
+    </element>
+
+    <!-- Skilled Expert Skillchecks -->
+    <element name="Skillcheck Increase (Acrobatics)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_ACROBATICS">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_ACROBATICS</requirements>
+        <description>
+            <p>Acrobatics increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_ACROBATICS" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="acrobatics:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Animal Handling)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_ANIMALHANDLING">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_ANIMALHANDLING</requirements>
+        <description>
+            <p>Animal Handling increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_ANIMALHANDLING" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="animal handling:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Arcana)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_ARCANA">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_ARCANA</requirements>
+        <description>
+            <p>Arcana increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_ARCANA" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="arcana:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Athletics)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_ATHLETICS">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_ATHLETICS</requirements>
+        <description>
+            <p>Athletics increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_ATHLETICS" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="athletics:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Deception)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_DECEPTION">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_DECEPTION</requirements>
+        <description>
+            <p>Deception increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_DECEPTION" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="deception:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (History)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_HISTORY">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_HISTORY</requirements>
+        <description>
+            <p>History increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_HISTORY" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="history:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Insight)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_INSIGHT">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_INSIGHT</requirements>
+        <description>
+            <p>Insight increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_INSIGHT" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="insight:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Intimidation)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_INTIMIDATION">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_INTIMIDATION</requirements>
+        <description>
+            <p>Intimidation increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="intimidation:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Investigation)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_INVESTIGATION">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_INVESTIGATION</requirements>
+        <description>
+            <p>Investigation increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="investigation:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Medicine)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_MEDICINE">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_MEDICINE</requirements>
+        <description>
+            <p>Medicine increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_MEDICINE" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="medicine:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Nature)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_NATURE">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_NATURE</requirements>
+        <description>
+            <p>Nature increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_NATURE" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="nature:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Perception)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_PERCEPTION">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_PERCEPTION</requirements>
+        <description>
+            <p>Perception increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_PERCEPTION" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="perception:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Performance)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_PERFORMANCE">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_PERFORMANCE</requirements>
+        <description>
+            <p>Performance increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="performance:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Persuasion)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_PERSUASION">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_PERSUASION</requirements>
+        <description>
+            <p>Persuasion increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_PERSUASION" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="persuasion:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Religion)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_RELIGION">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_RELIGION</requirements>
+        <description>
+            <p>Religion increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_RELIGION" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="religion:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Sleight of Hand)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_SLEIGHTOFHAND">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_SLEIGHTOFHAND</requirements>
+        <description>
+            <p>Sleight of Hand increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_SLEIGHTOFHAND" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="sleight of hand:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Stealth)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_STEALTH">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_STEALTH</requirements>
+        <description>
+            <p>Stealth increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_STEALTH" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="stealth:proficiency" value="1" />
+        </rules>
+    </element>
+    <element name="Skillcheck Increase (Survival)" type="Class Feature" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_SURVIVAL">
+        <supports>Skilled Expert Skillcheck</supports>
+        <requirements>ID_PROFICIENCY_SKILL_SURVIVAL</requirements>
+        <description>
+            <p>Survival increases by 1.</p>
+            <div class="reference">
+                <div element="ID_PROFICIENCY_SKILL_SURVIVAL" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="survival:proficiency" value="1" />
+        </rules>
+    </element>
+
+    <!--Skilled Expert Ability Score Increase-->
+    <element name="Ability Score Increase (Strength)" type="Racial Trait" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_STRENGTH">
+        <compendium display="false" />
+        <supports>Skilled Expert Ability</supports>
+        <description>
+            <p>Your Strength score increases by 1.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="strength" value="1" />
+        </rules>
+    </element>
+    <element name="Ability Score Increase (Dexterity)" type="Racial Trait" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_DEXTERITY">
+        <compendium display="false" />
+        <supports>Skilled Expert Ability</supports>
+        <description>
+            <p>Your Dexterity score increases by 1.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="dexterity" value="1" />
+        </rules>
+    </element>
+    <element name="Ability Score Increase (Constitution)" type="Racial Trait" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_CONSTITUTION">
+        <compendium display="false" />
+        <supports>Skilled Expert Ability</supports>
+        <description>
+            <p>Your Constitution score increases by 1.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="constitution" value="1" />
+        </rules>
+    </element>
+    <element name="Ability Score Increase (Intelligence)" type="Racial Trait" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_INTELLIGENCE">
+        <compendium display="false" />
+        <supports>Skilled Expert Ability</supports>
+        <description>
+            <p>Your Intelligence score increases by 1.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="intelligence" value="1" />
+        </rules>
+    </element>
+    <element name="Ability Score Increase (Wisdom)" type="Racial Trait" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_WISDOM">
+        <compendium display="false" />
+        <supports>Skilled Expert Ability</supports>
+        <description>
+            <p>Your Wisdom score increases by 1.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="wisdom" value="1" />
+        </rules>
+    </element>
+    <element name="Ability Score Increase (Charisma)" type="Racial Trait" source="Primus Two" id="ID_FEAT_SKILED_EXPERT_CHARISMA">
+        <compendium display="false" />
+        <supports>Skilled Expert Ability</supports>
+        <description>
+            <p>Your Charisma score increases by 1.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="charisma" value="1" />
+        </rules>
     </element>
 
     <!--Resitances-->

@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Knotenpunktupgrades</name>
-        <update version="0.2">
+        <update version="0.3">
             <file name="knotenpunkt-upgrades.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/knotenpunkt-upgrades.xml" />
         </update>
     </info>
@@ -159,6 +159,102 @@
         </setters>
         <rules>
             <stat name="hp" value="10" />
+        </rules>
+    </element>
+
+    <element name="Charisma save +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_CHARISMA_SAVE1">
+        <description>
+            <p>
+                <i>Increases your Charisma Savingthrow by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="charisma:save:misc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Strength save +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_STRENGTH_SAVE1">
+        <description>
+            <p>
+                <i>Increases your Strength Savingthrow by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="strength:save:misc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Dexterity save +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_DEXTERITY_SAVE1">
+        <description>
+            <p>
+                <i>Increases your Dexterity Savingthrow by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="dexterity:save:misc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Wisdom save +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_WISDOM_SAVE1">
+        <description>
+            <p>
+                <i>Increases your Wisdom Savingthrow by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="wisdom:save:misc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Constitution save +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_CONSTITUTION_SAVE1">
+        <description>
+            <p>
+                <i>Increases your Constitution Savingthrow by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="constitution:save:misc" value="1" />
+        </rules>
+    </element>
+
+    <element name="Intelligence save +1" type="Item" source="Primus Two" id="ID_PRIMUS_TWO_INTELLIGENCE_SAVE1">
+        <description>
+            <p>
+                <i>Increases your Intelligence Savingthrow by 1.</i>
+            </p>
+        </description>
+        <setters>
+            <set name="category">Knotenpunktupgrades</set>
+            <set name="slot">misc</set>
+            <set name="inventory-hidden">true</set>
+        </setters>
+        <rules>
+            <stat name="intelligence:save:misc" value="1" />
         </rules>
     </element>
 </elements>
