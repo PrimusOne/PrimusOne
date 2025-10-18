@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Neue Magic Items</name>
-        <update version="0.4">
+        <update version="0.5">
             <file name="neue-magic-items.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/neue-magic-items.xml" />
         </update>
     </info>
@@ -216,6 +216,7 @@
             <stat name="wisdom:save:misc" value="1" />
             <stat name="charisma:save:misc" value="1" />
             <grant type="Class Feature" id="ID_PT_MAGIC_ITEM_DIVINE_PROTECTION"/>
+            <stat name="ac:armored:enhancement" value="1" bonus="enhancement" />
         </rules>
     </element>
 
@@ -241,6 +242,7 @@
             <stat name="wisdom:save:misc" value="2" />
             <stat name="charisma:save:misc" value="2" />
             <select type="Class Feature" name="Divine Protector" supports="Divine Protector"/>
+            <stat name="ac:armored:enhancement" value="2" bonus="enhancement" />
         </rules>
     </element>
 
@@ -266,6 +268,7 @@
             <stat name="wisdom:save:misc" value="3" />
             <stat name="charisma:save:misc" value="3" />
             <select type="Class Feature" name="Divine Protector" supports="Divine Protector"/>
+            <stat name="ac:armored:enhancement" value="3" bonus="enhancement" />
         </rules>
     </element>
 
