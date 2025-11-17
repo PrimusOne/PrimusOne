@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<element name="The Naturalist" type="Archetype" source="Primus Two"
+    id="ID_PT_ARCHETYPE_THE_NATURALIST">
+    <supports>Roguish Archetype</supports>
+    <description>
+        <p>Manche Rogues folgen dem Weg der Natur. Sie
+            trainieren in der Wildnis, in Mönchsklöstern, in
+            Druidnezirkeln und kombinieren eine Reihe an diverse
+            Techniken. Sie gelten als naturnah, kämpferisch und
+            trickreich. Sie sind Thirdcaster, wie der Arcane
+            Trickster, nur nutzen sie statt Intleligence Wisdom als
+            Basiswert.</p>
+        <p class="indent"></p>
+        <div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_TRAINED_BY_NATURE" />
+        <div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_GUIDANCE" />
+        <div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_WARRIOR_OF_NATURE" />
+        <div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_CHOSEN" />
+    </description>
+    <sheet display="false">
+        <description></description>
+    </sheet>
+    <rules>
+        <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_TRAINED_BY_NATURE" level="3" />
+        <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_GUIDANCE" level="9" />
+        <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_WARRIOR_OF_NATURE" level="13" />
+        <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_CHOSEN" level="17" />
+    </rules>
+
+    	<element name="Spellcasting" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_TRAINED_BY_NATURE">
+		<description>
+			<p>Beginnend mit Level 3 erhält der Rogue Zugang zur Druidenmagie, sowie Ritualcasting. Er profitiert auch von Naturheiligtümern. Sein Spellcastingmodifier ist Wisdom.</p>
+            <p>Zusätzlich erhält er Proficiency für Medium Armor, Quarterstaffs und Clubs, kann Sneackattack mit Quarterstaffs, sowie Clubs nutzen und bekommt den Shillelagh Cantrip.</p>
+			<center>
+				<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier</p>
+				<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</p>
+			</center>
+			<h5 class="caption">THE NATURALIST SPELLCASTING</h5>
+			<table class="class-features">
+				<thead>
+					<tr><td class="col-10">Rogue Level</td><td class="col-10">Cantrips Known</td><td class="col-10">Spells Known</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td></tr>
+				</thead>
+				<tr><td> 3rd</td><td>2</td><td> 3</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 4th</td><td>2</td><td> 4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 5th</td><td>2</td><td> 4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 6th</td><td>2</td><td> 4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 7th</td><td>2</td><td> 5</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td> 8th</td><td>2</td><td> 6</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td> 9th</td><td>2</td><td> 6</td><td>4</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td>10th</td><td>3</td><td> 7</td><td>4</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>11th</td><td>3</td><td> 8</td><td>4</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>12th</td><td>3</td><td> 9</td><td>4</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>13th</td><td>3</td><td> 9</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>14th</td><td>3</td><td>10</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>15th</td><td>3</td><td>10</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>16th</td><td>3</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
+				<tr><td>17th</td><td>3</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
+				<tr><td>18th</td><td>3</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
+				<tr><td>19th</td><td>3</td><td>12</td><td>4</td><td>3</td><td>3</td><td>1</td></tr>
+				<tr><td>20th</td><td>3</td><td>13</td><td>4</td><td>3</td><td>3</td><td>1</td></tr>
+			</table>				
+		</description>
+		<sheet display="false" />
+		<spellcasting name="The Naturalist" ability="Wisdom" allowReplace="true">
+			<list>Druid</list>
+		</spellcasting>
+		<rules>
+			<stat name="the naturalist:spellcasting:slots:1" value="2" level="3" />
+			<stat name="the naturalist:spellcasting:slots:1" value="1" level="4" />
+			<stat name="the naturalist:spellcasting:slots:1" value="1" level="7" />
+			<stat name="the naturalist:spellcasting:slots:2" value="2" level="7" />
+			<stat name="the naturalist:spellcasting:slots:2" value="1" level="10" />
+			<stat name="the naturalist:spellcasting:slots:3" value="2" level="13" />
+			<stat name="the naturalist:spellcasting:slots:3" value="1" level="16" />
+			<stat name="the naturalist:spellcasting:slots:4" value="1" level="19" />
+			<select type="Spell" name="Cantrip (The Naturalist)" supports="Wizard, 0" level="3" number="2" spellcasting="the naturalist" />
+			<select type="Spell" name="Cantrip (The Naturalist)" supports="Wizard, 0" level="10" number="1" spellcasting="the naturalist" />
+			<select type="Spell" name="Spell (The Naturalist)" supports="Wizard, 1" level="3" number="1" spellcasting="the naturalist" />
+			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), 1" level="3" number="2" spellcasting="the naturalist" />
+			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="4" spellcasting="the naturalist"/>
+			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="7" spellcasting="the naturalist"/>
+			<select type="Spell" name="Spell (The Naturalist)" supports="(Wizard||$(spellcasting:list)), $(spellcasting:slots)" level="8" spellcasting="the naturalist"/>
+			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="10" spellcasting="the naturalist"/>
+			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="11" spellcasting="the naturalist"/>
+			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="13" spellcasting="the naturalist"/>
+			<select type="Spell" name="Spell (The Naturalist)" supports="(Wizard||$(spellcasting:list)), $(spellcasting:slots)" level="14" spellcasting="the naturalist"/>
+			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="16" spellcasting="the naturalist"/>
+			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="19" spellcasting="the naturalist"/>
+			<select type="Spell" name="Spell (The Naturalist)" supports="(Wizard||$(spellcasting:list)), $(spellcasting:slots)" level="20" spellcasting="the naturalist"/>
+		</rules>
+	</element>
+</element>
