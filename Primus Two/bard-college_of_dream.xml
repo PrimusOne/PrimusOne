@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>College of Dream</name>
-        <update version="0.1">
+        <update version="0.2">
             <file name="bard-college_of_dream.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/bard-college_of_dream.xml" />
         </update>
     </info>
@@ -13,11 +13,23 @@
             <p class="indent">Level Progression</p>
             <table>
                 <thead>
-                    <tr><td>Class Level</td><td>Feature</td></tr>
+                    <tr>
+                        <td>Class Level</td>
+                        <td>Feature</td>
+                    </tr>
                 </thead>
-                <tr><td>3</td><td>Dreamers Kit</td></tr>
-                <tr><td>6</td><td>Dreamer Magic</td></tr>
-                <tr><td>14</td><td>Dream Wanderer</td></tr>
+                <tr>
+                    <td>3</td>
+                    <td>Dreamers Kit</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Dreamer Magic</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Dream Wanderer</td>
+                </tr>
             </table>
             <div element="ID_PT_ARCHETYPE_COLLEGE_OF_DREAM_DREAMERS_KIT" />
             <div element="ID_PT_ARCHETYPE_COLLEGE_OF_DREAM_DREAMERS_MAGIC" />
@@ -83,3 +95,4 @@
             </rules>
         </element>
     </element>
+</elements>
