@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.24">
+		<update version="0.0.25">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -20,6 +20,11 @@
 		<file name="artificer-mastermaker.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/artificer-mastermaker.xml" />
 		<file name="warlord-tactician_revised.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/classes/warlord-tactician_revised.xml" />
 		<file name="class-bloodhunterPT.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/class-bloodhunterPT.xml" />
+		<file name="the-naturalist.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/rogue-the_naturalist.xml" />
+		<file name="cleric-freedom_domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/cleric-freedom_domain.xml" />
+		<file name="path_of_the_dragon.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/barbarian-path_of_the_dragon.xml" />
+		<file name="bard-college_of_dream.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/bard-college_of_dream.xml" />
+
 
 		<!--spells-->
 

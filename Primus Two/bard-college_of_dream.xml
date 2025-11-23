@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <name>College of Dream</name>
+        <update version="0.1">
+            <file name="bard-college_of_dream.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/bard-college_of_dream.xml" />
+        </update>
+    </info>
+    <element name="College of Dream" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_COLLEGE_OF_DREAM">
+        <supports>Bard College</supports>
+        <description>
+            <p>Die Traumtänzer sind eine elitäre und bekannte Gruppe an Zauberwirkenden, welche sich der Spionage, Informationsbeschaffung und vieler weiterer aufregenden Aktivitäten verschrieben hat. Ihre Traummagie ist besonders und vielschichtig.</p>
+            <p class="indent">Level Progression</p>
+            <table>
+                <thead>
+                    <tr><td>Class Level</td><td>Feature</td></tr>
+                </thead>
+                <tr><td>3</td><td>Dreamers Kit</td></tr>
+                <tr><td>6</td><td>Dreamer Magic</td></tr>
+                <tr><td>14</td><td>Dream Wanderer</td></tr>
+            </table>
+            <div element="ID_PT_ARCHETYPE_COLLEGE_OF_DREAM_DREAMERS_KIT" />
+            <div element="ID_PT_ARCHETYPE_COLLEGE_OF_DREAM_DREAMERS_MAGIC" />
+            <div element="ID_PT_ARCHETYPE_COLLEGE_OF_DREAM_DREAM_WANDERER" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_COLLEGE_OF_DREAM_DREAMERS_KIT" level="3" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_COLLEGE_OF_DREAM_DREAMERS_MAGIC" level="6" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_COLLEGE_OF_DREAM_DREAM_WANDERER" level="14" />
+        </rules>
+
+
+        <element name="Dreamers Kit" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_DREAMERS_KIT">
+            <description>
+                <p>Mit Level 3 wird der Barde in die geheimen Techniken der Traumtänzer eingeweiht. Er bekommt Proficiency im Herbalism Kit und kann nun die richtigen Schlafkräuter einwandfrei präparieren und magisch bearbeiten. Der Barde kann auf diese Kräuter einen Level 1 Spellslot einwirken, sodass sie besonders traumintensiv wirken. Auf diese Art erlebt man Erinnerungen aus der Vergangeneheit - mal schöne, mal aber auch verdrängtes!</p>
+                <p>Zusätzlich kann der Barde 2x/Shortrest, wenn er einen Spell wirkt, ein betroffenes Ziel zusätzlich einen Consave würfeln lassen. Bei Misserfolg wird ein Bardic Inspirationwürfel genommen und in Höhe des Ergebnisses an Runden erhält das Ziel die Sleep Condition.</p>
+            </description>
+            <sheet>
+                <description>
+                    <p>Du kannst einwandfrei Schlafkräuter präparieren und magisch bearbeiten. Du kannst einen Level 1 Zauberslot auf diese Kräuter wirken, sodass sie besonders traumintensiv wirken. Auf diese Art erlebt man Erinnerungen aus der Vergangenheit - mal schöne, mal aber auch verdrängtes!</p>
+                    <p>Zusätzlich kannst du 2x/Shortrest, wenn du einen Zauber wirkst, ein betroffenes Ziel zusätzlich einen Consave würfeln lassen. Bei Misserfolg wird ein Bardic Inspirationwürfel genommen und in Höhe des Ergebnisses an Runden erhält das Ziel die Sleep Condition.</p>
+                </description>
+            </sheet>
+            <rules>
+                <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+            </rules>
+        </element>
+
+        <element name="Dreamer Magic" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_DREAMER_MAGIC">
+            <description>
+                <p>Ab Level 6 kann der Barde 1x/Shortrest den Dreamspell spellslotfrei nutzen. Der Spell wird zur Spellliste zusätzlich hinzugefügt. Darüber hinaus erhält der Barde Expertise für sein Herbalism Kit und in einem Skill in dem er bereits proficient ist.</p>
+                <p>Er kann nun 3x/Shortrest Ziele einschläfern.</p>
+            </description>
+            <sheet>
+                <description>
+                    <p>Du kannst 1x/Shortrest den Dreamspell spellslotfrei nutzen. Der Spell wird zur Spellliste zusätzlich hinzugefügt. Darüber hinaus erhältst du Expertise für dein Herbalism Kit und in einem Skill in dem du bereits proficient bist.</p>
+                    <p>Du kannst nun 3x/Shortrest Ziele einschläfern.</p>
+                </description>
+            </sheet>
+            <rules>
+                <select type="Spell" name="Magical Secrets" supports="(0)||($(spellcasting:slots))" number="2" spellcasting="Bard"/>
+                <select name="Expertise" type="Class Feature" supports="Expertise,Skill"/>
+            </rules>
+        </element>
+
+        <element name="Dream Wanderer" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_DREAM_WANDERER">
+            <description>
+                <p>Wenn der Barde den Spell Dream nutzt kann er in Träume anderer eintauchen, die in einem erweiterten Umkreis um das Ziel herum stattfinden. Je mehr Personen in der Umgebung träumen, desto kleiner ist der Radius (in Städten also geringere Reichweite, als in der Wildnis).</p>
+                <p>In den Träumen anderer lernte der Barde die Geheimnisse der Magie zu ergründen, daher erhält 2 zusätzliche Magical Secrets und eine zusätzliche Sprache.</p>
+            </description>
+            <sheet>
+                <description>
+                    <p>Wenn du den Spell Dream nutzt kannst du in Träume anderer eintauchen, die in einem erweiterten Umkreis um das Ziel herum stattfinden. Je mehr Personen in der Umgebung träumen, desto kleiner ist der Radius (in Städten also geringere Reichweite, als in der Wildnis).</p>
+                    <p>In den Träumen anderer lernte du die Geheimnisse der Magie zu ergründen, daher erhältst du 2 zusätzliche Magical Secrets und eine zusätzliche Sprache.</p>
+                </description>
+            </sheet>
+            <rules>
+                <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
+
+            </rules>
+        </element>
+    </element>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <name>Freedom Domain</name>
+        <update version="0.1">
+            <file name="cleric-freedom_domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/cleric-freedom_domain.xml" />
+        </update>
+    </info>
+    <element name="Freedom Domain" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN">
+        <supports>Divine Domain</supports>
+        <description>
+            <p>Freedom Domain Clerics lieben die Freiheit. Sie sind entweder selbst eigensinnige Freigeister oder kämpfen gegen Unterdrücker und gefährliche Autoritäten. Jeder hat ein Recht auf Freiheit, darin stimmen alle über ein. Diese Freiheit muss entweder erhalten bleiben oder für andere hart erkämpft werden! Ob das in offener Rebellion oder im Geheimen stattfinden soll, das entscheidet jeder für sich selbst.</p>
+            <p class="indent">Domain Spells</p>
+            <table>
+                <thead>
+                    <tr><td>Class Level</td><td>Spells</td></tr>
+                </thead>
+                <tr><td>1</td><td>Sanctuary, Expeditious Retreat</td></tr>
+                <tr><td>3</td><td>Pass without Trace, Knock</td></tr>
+                <tr><td>5</td><td>Catnap, Fly</td></tr>
+                <tr><td>7</td><td>Dimension Door, Freedom of Movement</td></tr>
+                <tr><td>9</td><td>Passwall, Far Step</td></tr>
+            </table>
+            <p class="indent">Level Progression</p>
+            <table>
+                <thead>
+                    <tr><td>Class Level</td><td>Features</td></tr>
+                </thead>
+                <tr><td>1</td><td>Express the Freedom</td></tr>
+                <tr><td>2</td><td>Channel Freedom</td></tr>
+                <tr><td>6</td><td>Sanction the Oppressor</td></tr>
+                <tr><td>8</td><td>Potent Spellcasting</td></tr>
+                <tr><td>18</td><td>Protect or Attack</td></tr>
+            </table>
+            <div element="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_EXPRESS_THE_FREEDOM" />
+            <div element="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_CHANNEL_FREEDOM" />
+            <div element="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_SANCTION_THE_OPRESSOR" />
+            <div element="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_POTENT_SPELLCASTING" />
+            <div element="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_PROTECT_OR_ATTACK" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_EXPRESS_THE_FREEDOM" level="1" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_CHANNEL_FREEDOM" level="2" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_SANCTION_THE_OPRESSOR" level="6" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_POTENT_SPELLCASTING" level="8" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_PROTECT_OR_ATTACK" level="17" />
+        </rules>
+    </element>
+
+    <element name="Domain Spells" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_FREEDOM_DOMAIN_SPELLS">
+        <description>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Cleric Level</td>
+                        <td>Spells</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>1st</td>
+                    <td>
+                        <em>Sanctuary, Expeditious Retreat</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3rd</td>
+                    <td>
+                        <em>Pass without Trace, Knock</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>
+                        <em>Catnap, Fly</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7th</td>
+                    <td>
+                        <em>Dimension Door, Freedom of Movement</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9th</td>
+                    <td>
+                        <em>Passwall, Far Step</em>
+                    </td>
+                </tr>
+            </table>
+        </description>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_SANCTUARY" level="1" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_EXPEDITIOUS_RETREAT" level="1" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_PASS_WITHOUT_TRACE" level="3" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_KNOCK" level="3" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_CATNAP" level="5" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FLY" level="5" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DIMENSION_DOOR" level="7" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT" level="7" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_PASSWALL" level="9" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_FAR_STEP" level="9" spellcasting="Cleric" prepared="true" />
+        </rules>
+    </element>
+
+    <element name="Express the Freedom" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_EXPRESS_THE_FREEDOM">
+        <description>
+            <p>Mit Level 1 erhält der Kleriker 1 weitere Sprache und 1 weitere Skill Proficiency. Er kann sich einen Charismaskill aussuchen und diesen fortan statt Charisma zu benutzen, mit Wisdom einsetzen.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DRACONIC|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN"/>
+            <select type="Proficiency" name="Skill Proficiency" supports="Skill" />
+            <select name="Express the Freedom" type="Archetype Feature" supports="Express the Freedom" />
+        </rules>
+    </element>
+
+    <element name="Deception" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_EXPRESS_THE_FREEDOM_DECEPTION">
+        <supports>Express the Freedom</supports>
+        <description>
+            <p>description</p>
+        </description>
+        <sheet display="false">
+            <description>description</description>
+        </sheet>
+        <rules>
+            <stat name="deception:misc" value="-wisdom:modifier" />
+            <stat name="deception:misc" value="charisma:modifier" />
+        </rules>
+    </element>
+
+    <element name="Intimidation" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_EXPRESS_THE_FREEDOM_INTIMIDATION">
+        <supports>Express the Freedom</supports>
+        <description>
+            <p>description</p>
+        </description>
+        <sheet display="false">
+            <description>description</description>
+        </sheet>
+        <rules>
+            <stat name="intimidation:misc" value="-wisdom:modifier" />
+            <stat name="intimidation:misc" value="charisma:modifier" />
+        </rules>
+    </element>
+
+    <element name="Performance" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_EXPRESS_THE_FREEDOM_PERFORMANCE">
+        <supports>Express the Freedom</supports>
+        <description>
+            <p>description</p>
+        </description>
+        <sheet display="false">
+            <description>description</description>
+        </sheet>
+        <rules>
+            <stat name="performance:misc" value="-wisdom:modifier" />
+            <stat name="performance:misc" value="charisma:modifier" />
+        </rules>
+    </element>
+
+    <element name="Persuasion" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_EXPRESS_THE_FREEDOM_PERSUASION">
+        <supports>Express the Freedom</supports>
+        <description>
+            <p>description</p>
+        </description>
+        <sheet display="false">
+            <description>description</description>
+        </sheet>
+        <rules>
+            <stat name="persuasion:misc" value="-wisdom:modifier" />
+            <stat name="persuasion:misc" value="charisma:modifier" />
+        </rules>
+    </element>
+
+    <element name="Channel Divinity: Channel Freedom" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_CHANNEL_FREEDOM">
+        <description>
+            <p>Durch Level 2 erhält der Kleriker die Channel Divinity: Channel Freedom. Als Action kann man einem Ziel in Touchrange für 1. Minute Advantange auf jeden Savingthrow geben, der eine immobilisierende Kondition (zB. Prone, Restrain, Stunned, etc.) und verstandbeeinflussenden Effekten (zB. Charmed, Frightened, etc.) verursacht. Ist das Ziel bereits immobilisiert worden, wird der Effekt sofort beendet. Während die Channel Divinity anhält kann die Person die Dashaction als Bonusaction nutzen.</p>
+        </description>
+        <sheet alt="Channel Freedom" action="Action" usage="Channel Divinity">
+            <description>
+                <p>Du kannst einem Ziel in Touchrange für 1 Minute Advantange auf jeden Savingthrow geben, der eine immobilisierende Kondition (zB. Prone, Restrain, Stunned, etc.) und verstandbeeinflussenden Effekten (zB. Charmed, Frightened, etc.) verursacht. Ist das Ziel bereits immobilisiert worden, wird der Effekt sofort beendet. Während die Channel Divinity anhält kann die Person die Dashaction als Bonusaction nutzen.</p>
+            </description>
+        </sheet>
+    </element>
+
+
+    <element name="Sanction the Oppressor" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_SANCTION_THE_OPRESSOR">
+        <description>
+            <p>Wenn ein Gegner einen Verbündeten mit einem Attackroll angreift, kann der Kleriker als Reaktion den Angreifer einen Wisdomsave gegen den eigenen SpellsaveDC würfeln lassen. Die Reaction funktioniert nur, wenn der Angriff gelingt, aber bevor der Schaden ausgewürfelt wurde. Bei Erfolg passiert nichts, bei Misserfolg erleidet der Gegner die Hälfte des Gesamtschadens als Psychic Damage.</p>
+        </description>
+        <sheet>
+            <description usage="Reaction">
+                <p>Wenn ein Gegner einen Verbündeten mit einem Attackroll angreift, kannst du als Reaktion den Angreifer einen Wisdomsave gegen DC{{spellcasting:dc}} würfeln lassen. Die Reaction funktioniert nur, wenn der Angriff gelingt, aber bevor der Schaden ausgewürfelt wurde. Bei Erfolg passiert nichts, bei Misserfolg erleidet der Gegner die Hälfte des Gesamtschadens als Psychic Damage.</p>
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Potent Spellcasting" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_POTENT_SPELLCASTING">
+        <description>
+            <p>Ab Level 8 verursachen Clericcantrips den Wisdommodifier zusätzlich zum Schaden.</p>
+        </description>
+        <sheet>
+            <description>Alle Clericcantrips verursachen den Wisdommodifier zusätzlich zum Schaden.</description>
+        </sheet>
+    </element>
+
+    <element name="Protect or Attack" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FREEDOM_DOMAIN_PROTECT_OR_ATTACK">
+        <description>
+            <p>Mit dem Erreichen von Level 17kann der Kleriker sich einen der beiden Effekte aussuchen und kann diesen fortan benutzen. Es symbolisiert seine Art des Kämpfens für die Freiheit:</p>
+            <ol>
+                <li>Protect: Wenn ein Verbündeter in 60ft Reichweite down gehen würde und du das siehst, kannst du als Reaction ihn um 10d10+Wisdommodifier heilen. Wenn du das tust, kann das Ziel sich danach um 30ft teleportieren und erhält Sanctuary. Der Effekt ist 1x/Longrest nutzbar. Danach kann man ihn erneut benutzen, jedoch kostet das dann mindestens einen Level 6 Spellslot.</li>
+                <li>Attack: Als Action kann man ein Ziel in 60ft Reichweite auswählen und es einen Wisdomsavingthrow würfeln lassen. Bei Misserfolg erleidet es 10d10+Wisdommodifier an Psychic Damage und bekommt Disadvantage auf Savingthrows und Attackrolls bis zum Ende des nächsten Klerikerzuges. Bei Erfolg kommt der halbe Schaden ohne Sondereffekte an. Der Effekt ist 1x/Longrest nutzbar und kann erneut genutzt werden, indem mindestens ein Level 6 Spellslot aufgewendet wird.</li>
+            </ol>
+        </description>
+        <sheet>
+            <description>
+                <p>Du kannst dir einen der beiden Effekte aussuchen und kannst diesen fortan benutzen. Es symbolisiert deine Art des Kämpfens für die Freiheit:</p>
+                <ol>
+                    <li>Protect: Wenn ein Verbündeter in 60ft Reichweite down gehen würde und du das siehst, kannst du als Reaction ihn um 10d10+{{wisdom:modifier}} heilen. Wenn du das tust, kann das Ziel sich danach um 30ft teleportieren und erhält Sanctuary. Der Effekt ist 1x/Longrest nutzbar. Danach kann man ihn  erneut benutzen, jedoch kostet das dann  einen Level 6 Spellslot.</li>
+                    <li>Attack: Als Action kannst du ein Ziel in 60ft Reichweite auswählen und es einen Wisdomsavingthrow gegen DC{{spellcasting:dc}} würfeln lassen. Bei Misserfolg erleidet es 10d10+{{wisdom:modifier}} an Psychic Damage und bekommt Disadvantage auf Savingthrows und Attackrolls bis zum Ende des nächsten Klerikerzuges. Bei Erfolg kommt der halbe Schaden ohne Sondereffekte an. Der Effekt ist 1x/Longrest nutzbar und kann erneut genutzt werden, indem mindestens ein Level 6 Spellslot aufgewendet wird.</li>
+                </ol>
+            </description>
+        </sheet> 
+    </element>
+</elements>

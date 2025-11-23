@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <name>Path of the Dragon</name>
+        <update version="0.1">
+            <file name="path_of_the_dragon.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/barbarian-path_of_the_dragon.xml" />
+        </update>
+    </info>
+    <element name="Path of the Dragon" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON">
+        <supports>Primal Path</supports>
+        <description>
+            <p>Wer kennt sie nicht? Drachen sind furiose und furchteinflößende Kreaturen, die ganze Ökosysteme beeinflussen können. Diejenigen, die sich diesem Pfad verschreiben, sind Barbaren, die das mächtige drakonische Potenzial nutzen wollen. Sie lernen und leben zumeist bei einem oder mehreren Drachen und lassen sich auf deren Macht ein. Ihre tiefe Bindung sorgt für eine Metamorphose, sodass die Barbaren die natürlichen Waffen der Drachen nutzen können....</p>
+            <p class="indent"></p>
+            <div element="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_DRACONIC_RAGE" />
+            <div element="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_EVOLVING" />
+            <div element="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_BECOMING_DRAGON" />
+            <div element="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_EMBODIMENT_OF_THE_DRAGON" />
+            <b>Chromatic Power</b>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Dragon</td>
+                        <td>Element</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Red</td>
+                    <td>Fire</td>
+                </tr>
+                <tr>
+                    <td>Blue</td>
+                    <td>Lightning</td>
+                </tr>
+                <tr>
+                    <td>Green</td>
+                    <td>Poison</td>
+                </tr>
+                <tr>
+                    <td>White</td>
+                    <td>Cold</td>
+                </tr>
+                <tr>
+                    <td>Black</td>
+                    <td>Acid</td>
+                </tr>
+            </table>
+            <b>Metallic Power</b>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Dragon</td>
+                        <td>Element</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Gold</td>
+                    <td>Fire</td>
+                </tr>
+                <tr>
+                    <td>Silver</td>
+                    <td>Cold</td>
+                </tr>
+                <tr>
+                    <td>Copper</td>
+                    <td>Acid</td>
+                </tr>
+                <tr>
+                    <td>Bronze</td>
+                    <td>Lightning</td>
+                </tr>
+                <tr>
+                    <td>Brass</td>
+                    <td>Fire</td>
+                </tr>
+            </table>
+            <b>Gem Power</b>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Dragon</td>
+                        <td>Element</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Amethyst</td>
+                    <td>Force</td>
+                </tr>
+                <tr>
+                    <td>Topaz</td>
+                    <td>Necrotic</td>
+                </tr>
+                <tr>
+                    <td>Emerald</td>
+                    <td>Psychic</td>
+                </tr>
+                <tr>
+                    <td>Crystal</td>
+                    <td>Radiant</td>
+                </tr>
+                <tr>
+                    <td>Sapphire</td>
+                    <td>Thunder</td>
+                </tr>
+            </table>
+            <b>Rare Power</b>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Dragon</td>
+                        <td>Element</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Wind</td>
+                    <td>Slashing</td>
+                </tr>
+                <tr>
+                    <td>Sand</td>
+                    <td>Piercing</td>
+                </tr>
+                <tr>
+                    <td>Shadow</td>
+                    <td>Psychic</td>
+                </tr>
+                <tr>
+                    <td>Platinum</td>
+                    <td>Radiant</td>
+                </tr>
+                <tr>
+                    <td>Steel</td>
+                    <td>Bludgeoning</td>
+                </tr>
+            </table>
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_DRACONIC_RAGE" level="3" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_EVOLVING" level="6" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_BECOMING_DRAGON" level="10" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_EMBODIMENT_OF_THE_DRAGON" level="14" />
+            <select type="Archetype Feature" supports="Draconic Path" />
+            <select type="Language" supports="ID_LANGUAGE_DRACONIC" />
+        </rules>
+    </element>
+
+    <element name="Chromatic - Red" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_CHROMATIC_RED">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist rot.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist fire</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_FIRE" level="14" />
+        </rules>
+    </element>
+    <element name="Chromatic - Blue" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_CHROMATIC_BLUE">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist blau.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist lightning</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_LIGHTNING" level="14" />
+        </rules>
+    </element>
+    <element name="Chromatic - Green" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_CHROMATIC_GREEN">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist grün.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist poison</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_POISON" level="14" />
+        </rules>
+    </element>
+    <element name="Chromatic - White" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_CHROMATIC_WHITE">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist weiß.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist cold</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_COLD" level="14" />
+        </rules>
+    </element>
+    <element name="Chromatic - Black" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_CHROMATIC_BLACK">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist schwarz.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist acid</description>
+        </sheet>
+    </element>
+
+    <element name="Metallic - Gold" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_METALLIC_GOLD">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist gold.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist fire</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_FIRE" level="14" />
+        </rules>
+    </element>
+    <element name="Metallic - Silver" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_METALLIC_SILVER">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist silber.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist cold</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_COLD" level="14" />
+        </rules>
+    </element>
+    <element name="Metallic - Copper" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_METALLIC_COPPER">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist kupfer.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist acid</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_ACID" level="14" />
+        </rules>
+    </element>
+    <element name="Metallic - Bronze" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_METALLIC_BRONZE">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist bronze.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist lightning</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_LIGHTNING" level="14" />
+        </rules>
+    </element>
+    <element name="Metallic - Brass" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_METALLIC_BRASS">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist messing.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist fire</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_FIRE" level="14" />
+        </rules>
+    </element>
+
+    <element name="Gem - Amethyst" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_GEM_AMETHYST">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist amethyst.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist force</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FORCE" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_FORCE" level="14" />
+        </rules>
+    </element>
+    <element name="Gem - Topaz" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_GEM_TOPAZ">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist topas.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist necrotic</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_NECROTIC" level="14" />
+        </rules>
+    </element>
+    <element name="Gem - Emerald" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_GEM_EMERALD">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist smaragd.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist psychic</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_PSYCHIC" level="14" />
+        </rules>
+    </element>
+    <element name="Gem - Crystal" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_GEM_CRYSTAL">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist kristall.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist radiant</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_RADIANT" level="14" />
+        </rules>
+    </element>
+    <element name="Gem - Sapphire" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_GEM_SAPPHIRE">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist saphir.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist thunder</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_THUNDER" level="14" />
+        </rules>
+    </element>
+
+    <element name="Rare - Wind" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_RARE_WIND">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist wind.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist slashing</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_SLASHING" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_SLASHING" level="14" />
+        </rules>
+    </element>
+    <element name="Rare - Sand" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_RARE_SAND">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist sand.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist piercing</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PIERCING" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_PIERCING" level="14" />
+        </rules>
+    </element>
+    <element name="Rare - Shadow" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_RARE_SHADOW">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist schatten.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist psychic</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_PSYCHIC" level="14" />
+        </rules>
+    </element>
+    <element name="Rare - Platin" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_RARE_PLATIN">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist platin.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist radiant</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_RADIANT" level="14" />
+        </rules>
+    </element>
+    <element name="Rare - Steel" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_RARE_STEEL">
+        <supports>Draconic Path</supports>
+        <description>
+            <p>Dein drakonischer Ursprung ist stahl.</p>
+        </description>
+        <sheet>
+            <description>Dein Draconic Power Element ist bludgeoning</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" level="6" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_BLUDGEONING" level="14" />
+        </rules>
+    </element>
+
+    <element name="Draconic Rage" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_DRACONIC_RAGE">
+        <description>
+            <p>Ab Level 3 lernt er Draconic, Rage verändert sich und wird zu Draconic Rage. Wenn der Rage beginnt, wachsen enorme und scharfe Klauen. Diese Klauen verursachen 1d6 Slashingdamage und 1d6 des Draconic Power Elements. Wenn ihm diese Klauen wachsen werden seine Hände ungeeignet für Schilde! </p>
+            <p>Generell ändert er auch sein Aussehen. Ihm wachsen Schuppen und erhält sein Element auch als Resistenz. Diese Schuppen machen ihn resilienter und verändern seine Natural Armor. Sie wird zu Strength+Con+10!</p>
+        </description>
+        <sheet>
+            <description>
+                Wenn der Rage beginnt, wachsen enorme und scharfe Klauen. Diese Klauen verursachen 1d6 Slashingdamage und 1d6 des Draconic Power Elements. Schilde können nicht genutzt werden.
+                Während des Rages steigt der AC auf {{draconicAC}}.
+            </description>
+        </sheet>
+        <rules>
+            <stat name="draconicAC" value="strength:modifier"/>
+            <stat name="draconicAC" value="constitution:modifier"/>
+            <stat name="draconicAC" value="10"/>
+        </rules>
+    </element>
+
+    <element name="Evolving" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_EVOLVING">
+        <description>
+            <p>Beginnend mit Level 6 verbessert sich der Draconic Rage zu 1d8 Slashingdamage und 1d8 Elementdamage. Seine Klauen zählen fortan als magisch. Die Schuppen wachsen stärker und härter, er erhält +1 auf Damagereduction gegen alles (ausgenommen Psychicdamage)</p>
+        </description>
+        <sheet>
+            <description>
+                Während des Rages verursachen die Klauen 1d8 Slashingdamage und 1d8 des Draconic Power Elements. Die Klauen zählen als magisch. Der Barbar erhält +1 auf Damagereduction gegen alles (außer Psychicdamage).
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Becoming Dragon" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_BECOMING_DRAGON">
+        <description>
+            <p>Mit Level 10 wachsen dem Barbaren Flügel, die sich noch voll entwickeln müssen. Er erhält 30ft Flying Speed. Sein Draconic Rage verbessert sich auf 1d10 Slashing und 1d10 Element. Seine Schuppen werden erneut härter und der Bonus steigt auf +2 und seine Resistenz wird zur Immunität während des Rages!</p>
+        </description>
+        <sheet>
+            <description>
+                Während des Rages verursachen die Klauen 1d10 Slashingdamage und 1d10 des Draconic Power Elements. Der Barbar erhält +2 auf Damagereduction gegen alles (außer Psychicdamage) und seine Resistenz wird zur Immunität.
+            </description>
+        </sheet>
+        <rules>
+            <stat name="speed:fly" value="30"/>
+        </rules>
+    </element>
+
+    <element name="Embodiment of the Dragon" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_EMBODIMENT_OF_THE_DRAGON">
+        <description>
+            <p>Durch Level 14 reift der Barbar zu seiner Höchstform. Die Flügel sind massiv geworden und bieten nun Flyingspeed = Walkingspeed. Der Draconic Rage verbessert sich auf 1d12 Slashing und 1d12 Element.</p>
+            <p>Die Schuppen bedecken den ganzen Körper und bieten +3 Damagereduction. Fortan besitzt der Barbar auch außerhalb des Rages die Immunität!</p>
+            <p>1x/Shortrest kann der Barbar einen Rageuse aufbrauchen und seine geballte Kraft entfesseln. Er kann den eigenen Special Martial Move "Dragons Rampage" benutzen. Er entsendet eine elementare Schockwelle von seinen Klauen aus. Als Action kann er jedes Ziel in einem 60ft Cone einen Strengthsave (SaveDC = PB+8+Strength+Ragebonus) würfeln lassen. Bei Misserfolg erleiden die Ziele 2d12 Slashingdamage und 4d12 Elementaldamage und werden um 10ft nach hinten gestoßen und Prone geworfen. Bei Erfolg erleiden sie nur die Hälfte des Schadens ohne Effekte.</p>
+        </description>
+        <sheet>
+            <description>
+                Während des Rages verursachen die Klauen 1d12 Slashingdamage und 1d12 des Draconic Power Elements. Der Barbar erhält +3 auf Damagereduction gegen alles (außer Psychicdamage) und seine Resistenz wird zur Immunität auch außerhalb des Rages.
+                1x/Shortrest kann der Barbar den Special Martial Move "Dragons Rampage" benutzen. Als Action kann er jedes Ziel in einem 60ft Cone einen Strengthsave {{embodiment_of_the_dragon_save}} würfeln lassen. Bei Misserfolg erleiden die Ziele 2d12 Slashingdamage und 4d12 Elementaldamage und werden um 10ft nach hinten gestoßen und Prone geworfen. Bei Erfolg erleiden sie nur die Hälfte des Schadens ohne Effekte.
+            </description>
+        </sheet>
+        <rules>
+            <stat name="speed:fly" value="speed"/>
+            <stat name="embodiment_of_the_dragon_save" value="proficiency"/>
+            <stat name="embodiment_of_the_dragon_save" value="8"/>
+            <stat name="embodiment_of_the_dragon_save" value="strength:modifier"/>
+            <stat name="embodiment_of_the_dragon_save" value="barbarian rage:damage"/>
+        </rules>
+    </element>
+</elements>

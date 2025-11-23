@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<element name="The Naturalist" type="Archetype" source="Primus Two"
-    id="ID_PT_ARCHETYPE_THE_NATURALIST">
-    <supports>Roguish Archetype</supports>
-    <description>
-        <p>Manche Rogues folgen dem Weg der Natur. Sie
+<elements>
+	<info>
+		<name>The Naturalist</name>
+		<update version="0.1">
+			<file name="the-naturalist.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/rogue-the_naturalist.xml" />
+		</update>
+	</info>
+	<element name="The Naturalist" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_THE_NATURALIST">
+		<supports>Roguish Archetype</supports>
+		<description>
+			<p>Manche Rogues folgen dem Weg der Natur. Sie
             trainieren in der Wildnis, in Mönchsklöstern, in
             Druidnezirkeln und kombinieren eine Reihe an diverse
             Techniken. Sie gelten als naturnah, kämpferisch und
             trickreich. Sie sind Thirdcaster, wie der Arcane
             Trickster, nur nutzen sie statt Intleligence Wisdom als
             Basiswert.</p>
-        <p class="indent"></p>
-        <div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_TRAINED_BY_NATURE" />
-        <div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_GUIDANCE" />
-        <div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_WARRIOR_OF_NATURE" />
-        <div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_CHOSEN" />
-    </description>
-    <sheet display="false">
-        <description></description>
-    </sheet>
-    <rules>
-        <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_TRAINED_BY_NATURE" level="3" />
-        <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_GUIDANCE" level="9" />
-        <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_WARRIOR_OF_NATURE" level="13" />
-        <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_CHOSEN" level="17" />
-    </rules>
+			<p class="indent"></p>
+			<div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_TRAINED_BY_NATURE" />
+			<div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_GUIDANCE" />
+			<div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_WARRIOR_OF_NATURE" />
+			<div element="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_CHOSEN" />
+		</description>
+		<sheet display="false">
+			<description></description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_TRAINED_BY_NATURE" level="3" />
+			<grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_GUIDANCE" level="9" />
+			<grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_WARRIOR_OF_NATURE" level="13" />
+			<grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_CHOSEN" level="17" />
+		</rules>
+	</element>
 
-    	<element name="Spellcasting" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_TRAINED_BY_NATURE">
+	<element name="Trained by Nature" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_TRAINED_BY_NATURE">
 		<description>
 			<p>Beginnend mit Level 3 erhält der Rogue Zugang zur Druidenmagie, sowie Ritualcasting. Er profitiert auch von Naturheiligtümern. Sein Spellcastingmodifier ist Wisdom.</p>
-            <p>Zusätzlich erhält er Proficiency für Medium Armor, Quarterstaffs und Clubs, kann Sneackattack mit Quarterstaffs, sowie Clubs nutzen und bekommt den Shillelagh Cantrip.</p>
+			<p>Zusätzlich erhält er Proficiency für Medium Armor, Quarterstaffs und Clubs, kann Sneackattack mit Quarterstaffs, sowie Clubs nutzen und bekommt den Shillelagh Cantrip.</p>
 			<center>
-				<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier</p>
-				<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</p>
+				<p>
+					<strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier</p>
+				<p>
+					<strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</p>
 			</center>
 			<h5 class="caption">THE NATURALIST SPELLCASTING</h5>
 			<table class="class-features">
@@ -57,35 +66,88 @@
 				<tr><td>18th</td><td>3</td><td>11</td><td>4</td><td>3</td><td>3</td><td>—</td></tr>
 				<tr><td>19th</td><td>3</td><td>12</td><td>4</td><td>3</td><td>3</td><td>1</td></tr>
 				<tr><td>20th</td><td>3</td><td>13</td><td>4</td><td>3</td><td>3</td><td>1</td></tr>
-			</table>				
+			</table>	
 		</description>
-		<sheet display="false" />
-		<spellcasting name="The Naturalist" ability="Wisdom" allowReplace="true">
-			<list>Druid</list>
+		<sheet display="false"/>
+		<spellcasting name="thenaturalist" ability="Wisdom" prepare="true">
+			<list known="true">Druid</list>
 		</spellcasting>
 		<rules>
-			<stat name="the naturalist:spellcasting:slots:1" value="2" level="3" />
-			<stat name="the naturalist:spellcasting:slots:1" value="1" level="4" />
-			<stat name="the naturalist:spellcasting:slots:1" value="1" level="7" />
-			<stat name="the naturalist:spellcasting:slots:2" value="2" level="7" />
-			<stat name="the naturalist:spellcasting:slots:2" value="1" level="10" />
-			<stat name="the naturalist:spellcasting:slots:3" value="2" level="13" />
-			<stat name="the naturalist:spellcasting:slots:3" value="1" level="16" />
-			<stat name="the naturalist:spellcasting:slots:4" value="1" level="19" />
-			<select type="Spell" name="Cantrip (The Naturalist)" supports="Wizard, 0" level="3" number="2" spellcasting="the naturalist" />
-			<select type="Spell" name="Cantrip (The Naturalist)" supports="Wizard, 0" level="10" number="1" spellcasting="the naturalist" />
-			<select type="Spell" name="Spell (The Naturalist)" supports="Wizard, 1" level="3" number="1" spellcasting="the naturalist" />
-			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), 1" level="3" number="2" spellcasting="the naturalist" />
-			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="4" spellcasting="the naturalist"/>
-			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="7" spellcasting="the naturalist"/>
-			<select type="Spell" name="Spell (The Naturalist)" supports="(Wizard||$(spellcasting:list)), $(spellcasting:slots)" level="8" spellcasting="the naturalist"/>
-			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="10" spellcasting="the naturalist"/>
-			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="11" spellcasting="the naturalist"/>
-			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="13" spellcasting="the naturalist"/>
-			<select type="Spell" name="Spell (The Naturalist)" supports="(Wizard||$(spellcasting:list)), $(spellcasting:slots)" level="14" spellcasting="the naturalist"/>
-			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="16" spellcasting="the naturalist"/>
-			<select type="Spell" name="Spell (The Naturalist)" supports="$(spellcasting:list), $(spellcasting:slots)" level="19" spellcasting="the naturalist"/>
-			<select type="Spell" name="Spell (The Naturalist)" supports="(Wizard||$(spellcasting:list)), $(spellcasting:slots)" level="20" spellcasting="the naturalist"/>
+			<grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_FULL" requirements="ID_INTERNAL_GRANT_MULTICLASS"/>
+			<grant type="Grants" id="ID_INTERNAL_RITUAL_CASTING" />
+			<stat name="thenaturalist:spellcasting:slots:1" value="2" level="3" />
+			<stat name="thenaturalist:spellcasting:slots:1" value="1" level="4" />
+			<stat name="thenaturalist:spellcasting:slots:1" value="1" level="7" />
+			<stat name="thenaturalist:spellcasting:slots:2" value="2" level="7" />
+			<stat name="thenaturalist:spellcasting:slots:2" value="1" level="10" />
+			<stat name="thenaturalist:spellcasting:slots:3" value="2" level="13" />
+			<stat name="thenaturalist:spellcasting:slots:3" value="1" level="16" />
+			<stat name="thenaturalist:spellcasting:slots:4" value="1" level="19" />
+			<stat name="thenaturalist:spellcasting:prepare" value="3" />	
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="4"/>
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="7"/>
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="8"/>
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="10"/>	
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="11"/>
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="12"/>
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="14"/>
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="16"/>
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="19"/>
+			<stat name="thenaturalist:spellcasting:prepare" value="1" level="20"/>
+			<select type="Spell" name="Cantrip (The Naturalist)" supports="Druid, 0" level="3" number="2" spellcasting="thenaturalist" />
+			<select type="Spell" name="Cantrip (The Naturalist)" supports="Druid, 0" level="10" number="1" spellcasting="thenaturalist" />
 		</rules>
 	</element>
-</element>
+
+	<element name="Nature's Guidance" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_GUIDANCE">
+		<description>
+			<p>Ab Level 9, wenn der Rogue sich in der Natur aufhält, kann er 1x/Longrest ein einstündiges Ritual performen. Danach erhält jeder, der daran partizipiert, 1d6 auf Skillchecks für die nächsten 8 Stunden. An einem Naturheiligtum gelingt das Ritual in 10 Minuten. Nach dem Ritual erhält der Rogue einen Hinweis darüber, ob etwas Merkwürdiges in der Natur vor sich geht...</p>
+		</description>
+		<sheet usage="1/long rest">
+			<description>
+				Du kannst ein einstündiges Ritual durchführen, um dir und allen Partizierenden einen Bonus von 1d6 auf Skillchecks für die nächsten 8 Stunden zu gewähren. In Naturheiligtümern gelingt das Ritual in 10 Minuten. Nach dem Ritual erhältst du einen Hinweis darauf, ob etwas Merkwürdiges in der Natur vor sich geht...
+			</description>
+		</sheet>
+	</element>
+
+	<element name="Warrior of Nature" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_WARRIOR_OF_NATURE">
+		<description>
+			<p>Mit Level 13, während Shillelagh aktiv ist, verursacht der Rogue 2d6 Sneackattack Damage zusätzlich. Auf Level 18 steigt es auf 3d6 zusätzlich.</p>
+		</description>
+		<sheet>
+			<description>
+				Während Shillelagh aktiv ist, verursacht du 2d6 Sneackattack Damage zusätzlich.
+			</description>
+			<description level="18">
+				Während Shillelagh aktiv ist, verursacht du 3d6 Sneackattack Damage zusätzlich.
+			</description>
+		</sheet>
+	</element>
+
+	<element name="Nature's Chosen" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_THE_NATURALIST_NATURES_CHOSEN">
+		<description>
+			<p>Durch das Erreichen von Level 17 erwirbt der Rogue die Fähigkeit, die Kräfte der Natur zu bündeln. Der Rogue wird (mit eigenem Flavour) durch die Kräfte der Natur verbessert. Er kann sich nach jeder Short- oder Longrest eine der folgenden Optionen aussuchen:</p>
+			<ol>
+				<li>Der AC und Savingthrows steigen um +2</li>
+				<li>Der Movementspeed steigt um 40ft</li>
+				<li>Er erhält Flyingspeed = Walkingspeed</li>
+				<li>Er erhält Swimmingspeed = Walkingspeed</li>
+				<li>Er erhält Poison, Fire und Cold Resistance</li>
+			</ol>
+			<p>1x/Longrest kann er auch als Bonusaction alle Effekte für 10 Minuten gleichzeitig aktivieren!</p>
+		</description>
+		<sheet>
+			<description>
+				Nach jeder Short- oder Longrest kannst du eine der folgenden Optionen wählen:
+				<ol>
+					<li>Dein AC und deine Savingthrows steigen um +2</li>
+					<li>Dein Movementspeed steigt um 40ft</li>
+					<li>Du erhältst Flyingspeed = Walkingspeed</li>
+					<li>Du erhältst Swimmingspeed = Walkingspeed</li>
+					<li>Du erhältst Poison, Fire und Cold Resistance</li>
+				</ol>
+				1x/Longrest kannst du als Bonusaction alle Effekte für 10 Minuten gleichzeitig aktivieren!
+			</description>
+		</sheet>
+	</element>
+</elements>
