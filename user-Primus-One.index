@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Primus One</name>
-		<update version="0.0.25">
+		<update version="0.0.26">
 			<file name="user-Primus-One.index" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/user-Primus-One.index" />
 		</update>
 	</info>
@@ -24,6 +24,7 @@
 		<file name="cleric-freedom_domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/cleric-freedom_domain.xml" />
 		<file name="path_of_the_dragon.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/barbarian-path_of_the_dragon.xml" />
 		<file name="bard-college_of_dream.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/bard-college_of_dream.xml" />
+		<file name="cleric-Dragon_Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusTwo/cleric-Dragon-Domain.xml" />
 
 
 		<!--spells-->
@@ -59,6 +60,7 @@
 		<file name="item-Kartoffelbrei.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Kartoffelbrei.xml" />
 		<file name="item-Das_gleissende_Licht.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Homebrew/items/item-Das_gleissende_Licht.xml" />
 		<file name="neue-magic-items.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/neue-magic-items.xml" />
+
 
 		<!--other-->
 		<file name="backgrounds.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/backgrounds.xml" />

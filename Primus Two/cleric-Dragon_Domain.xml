@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>cleric-Dragon_Domain</name>
+        <update version="0.1">
+            <file name="cleric-Dragon_Domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusTwo/cleric-Dragon-Domain.xml" />
+        </update>
+    </info>
+    <element name="Dragon Domain" type="Archetype" source="Primus Two" id="ID_PT_ARCHETYPE_DRAGON_DOMAIN">
+        <supports>Divine Domain</supports>
+        <description>
+            <p>Kleriker der Drachendomäne sind eifrige Adepten der großartigen Drachen, ihrer Kultur, den Göttern, ihrer Ästhetik und ihrer puren und immensen Macht! Drachen teilen sich mit Engeln und Dämonen den obersten Platz einer jeden Nahrungskette. Sie verkörpern Macht, Wachstum und Langlebigkeit. Aus der Weltgeschichte sind sie nicht wegzudenken - so auch ihre Anhänger und Priester!</p>
+            <div element="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_SPELLS"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_CHANNEL_DIVINITY"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_FOLLOWING_THEIR_STEPS"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_POTENT_SPELLCASTING"/>
+            <div element="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_RELEASE_THE_DRAGON"/>
+        </description>
+        <rules>
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_SPELLS" level="1" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS" level="1" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_CHANNEL_DIVINITY" level="2" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_FOLLOWING_THEIR_STEPS" level="6" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_POTENT_SPELLCASTING" level="8" />
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_RELEASE_THE_DRAGON" level="17" />
+        </rules>
+    </element>
+
+    <element name="Domain Spells" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_SPELLS">
+        <description>
+            <p class="indent">Domain Spells Kobrachnid</p>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Cleric Level</td>
+                        <td>Spells</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>1st</td>
+                    <td>
+                        <em>Chromatic Orb, Absorb Elements</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3rd</td>
+                    <td>
+                        <em>Scorching Ray, Dragon Breath</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>
+                        <em>Fireball, Lightning Bolt</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7th</td>
+                    <td>
+                        <em>Ice Storm, Vitriolic Sphere</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9th</td>
+                    <td>
+                        <em>Cone of Cold, Cloudkill</em>
+                    </td>
+                </tr>
+            </table>
+
+            <p class="indent">Domain Spells Paxarion</p>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Cleric Level</td>
+                        <td>Spells</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>1st</td>
+                    <td>
+                        <em>Sanctuary, Shield of Faith</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3rd</td>
+                    <td>
+                        <em>Zone of Truth, Darkness</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>
+                        <em>Dispel Magic, Sending</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7th</td>
+                    <td>
+                        <em>Divination, Locate Creature</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9th</td>
+                    <td>
+                        <em>Reincarnate, Contact other Plane</em>
+                    </td>
+                </tr>
+            </table>
+
+            <p class="indent">Level Progression</p>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Class Level</td>
+                        <td>Feature</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <em>2 Dragons - 2 Aspects</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <em>Channel Divinity</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>
+                        <em>Following their Steps</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>
+                        <em>Potent Spellcasting</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>
+                        <em>Release the Dragon</em>
+                    </td>
+                </tr>
+            </table>
+        </description>
+        <sheet display="false"/>
+    </element>
+
+    <element name="2 Dragons - 2 Aspects" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS">
+        <description>
+            <p>
+                Beginnend mit Level 1 folgt man einem der beiden Drachengötter: Kobrachnid oder Paxarion! Der Kleriker lernt Draconic, kann er die Sprache bereits, kann er sich eine andere aussuchen. Er erhält Proficiency in Persuasion und Intimidation, wenn er bereits einen oder beide bereits besitzt, kann er sich andere Skill Proficiencys aussuchen.
+            </p>
+            <p>Folgt er Paxarion erhält er Expertise in Persuasion und Intimidation.</p>
+            <p>Folgt er Kobrachnid erhält er die Fähigkeit jeden Damage type seiner Cleric spells in Acid umzuwandeln.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <select name ="NUR WENN PERSUASION ODER INTIMIDATION SCHON VORHANDEN IST!" type="Proficiency" supports="Skill" number="2" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION"/>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION"/>
+            <grant type="Language" id="ID_LANGUAGE_DRACONIC" requirements="!ID_LANGUAGE_DRACONIC"/>
+            <select type="Language" supports="ID_LANGUAGE_AARAKOCRA|ID_LANGUAGE_ABYSSAL|ID_BDPC_LANGUAGE_ASTRAN|ID_LANGUAGE_CELESTIAL|ID_LANGUAGE_COMMON|ID_LANGUAGE_DEEP_SPEECH|ID_LANGUAGE_DWARVISH|ID_LANGUAGE_ELVISH|ID_LANGUAGE_GIANT|ID_LANGUAGE_GITH|ID_LANGUAGE_GNOMISH|ID_LANGUAGE_GOBLIN|ID_OGA_LANGUAGE_GRUNG|ID_LANGUAGE_HALFLING|ID_LANGUAGE_INFERNAL|ID_WOTC_MOOT_LANGUAGE_LEONIN|ID_GGTR_LANGUAGE_LOXODON|ID_WOTC_PSZ_LANGUAGE_MERFOLK|ID_GGTR_LANGUAGE_MINOTAUR|ID_WOTC_ALSOH_LANGUAGE_NETHERESE|ID_LANGUAGE_ORC|ID_LANGUAGE_PRIMORDIAL|ID_GGTR_LANGUAGE_SPHINX|ID_LANGUAGE_SYLVAN|ID_LANGUAGE_UNDERCOMMON|ID_WOTC_PSI_LANGUAGE_VAMPIRE|ID_WOTC_PHB_LANGUAGE_THIEVES_CANT|ID_MM_LANGUAGE_IGNAN|ID_MM_LANGUAGE_AURAN|ID_MM_LANGUAGE_TERRAN|ID_MM_LANGUAGE_AQUAN" requirements="ID_LANGUAGE_DRACONIC"/>
+            <select name="Drachengott" type="Archetype Feature" supports="Drachengott"/>
+        </rules>
+    </element>
+
+    <element name="Paxarion" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_PAXARION">
+        <supports>Drachengott</supports>
+        <sheet>
+            <description>Du hast Expertise in Persuasion und Intimidation</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_EXPERTISE_SKILL_PERSUASION" />
+            <grant type="Proficiency" id="ID_EXPERTISE_SKILL_INTIMIDATION" />
+            <grant type="Spell" id="ID_PHB_SPELL_CHROMATIC_ORB" level="1" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" level="1" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="3" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_DRAGONS_BREATH" level="3" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="5" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_BOLT" level="5" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_ICE_STORM" level="7" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_VITRIOLIC_SPHERE" level="7" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_CONE_OF_COLD" level="9" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_CLOUDKILL" level="9" spellcasting="Cleric" prepared="true" />
+        </rules>
+    </element>
+
+    <element name="Kobrachnid" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_KOBRACHNID">
+        <supports>Drachengott</supports>
+        <sheet>
+            <description>Du kannst jeden Damagetyp deine Clericspells in Acid umwandeln</description>
+        </sheet>
+        <rules>
+
+            <grant type="Spell" id="ID_PHB_SPELL_SANCTUARY" level="1" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SHIELD_OF_FAITH" level="1" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_ZONE_OF_TRUTH" level="3" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DARKNESS" level="3" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DISPEL_MAGIC" level="5" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SENDING" level="5" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DIVINATION" level="7" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" level="7" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_REINCARNATE" level="9" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_CONTACT_OTHER_PLANE" level="9" spellcasting="Cleric" prepared="true" />
+        </rules>
+    </element>
+
+    <element name="Channel Divinity" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_CHANNEL_DIVINITY">
+        <description>
+            <p>Mit Level 2 erhält man abhängig vom eigenen Gott eine Channel Divinity.</p>
+            <p>Kobrachnid: Wenn du einen Spell castest, der Aciddamage verursacht, kannst du, statt Schaden zu würfeln, den Schaden maximieren. Das gilt für 1. Würfelwurf (AOE > Scorching Ray und Co)</p>
+            <p>Paxarion: Wenn du einen Persuasion oder Intimidationcheck würfelst oder einen Intelligence-, Wisdom- oder Charismasavingthrow, dann kannst du dir +10 auf das Ergebnis geben. Würde es dadurch immer noch misslingen wird der Use nicht verbraucht! Wird der Wurf durch die +10 erfolgreich, kannst du ein Sanctuary unter normalen Castingbedingungen an ein Ziel deiner Wahl verteilen.</p>
+        </description>
+        <sheet display="false"/>
+        <rules>
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_CHANNEL_DIVINITY_KOBRACHNID" requirements="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_KOBRACHNID"/>
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_CHANNEL_DIVINITY_PAXARION" requirements="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_PAXARION"/>
+        </rules>
+    </element>
+
+    <element name="Channel Divinity: Kobrachnid" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_CHANNEL_DIVINITY_KOBRACHNID">
+        <description>
+        </description>
+
+        <sheet action="Bei Damageroll" usage="Channel Divinity">
+            <description>Wenn du einen Spell castest, der Aciddamage verursacht, kannst du, statt Schaden zu würfeln, den Schaden maximieren. Das gilt für 1. Würfelwurf (AOE > Scorching Ray und Co)</description>
+        </sheet>
+    </element>
+
+    <element name="Channel Divinity: Paxarion" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_CHANNEL_DIVINITY_PAXARION">
+        <sheet action="Bei Persuasion oder Intimidation oder Intelligence- ,Wisdom- oder Charismasavingthrow" usage="Channel Divinity">
+            <description>
+                Wenn du einen Persuasion oder Intimidationcheck würfelst oder einen Intelligence-, Wisdom- oder Charismasavingthrow, dann kannst du dir +10 auf das Ergebnis geben. Würde es dadurch immer noch misslingen wird der Use nicht verbraucht! Wird der Wurf durch die +10 erfolgreich, kannst du ein Sanctuary unter normalen Castingbedingungen an ein Ziel deiner Wahl verteilen.
+            </description>
+        </sheet>
+    </element>
+
+    <element name="Following their Steps" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_FOLLOWING_THEIR_STEPS">
+        <description>
+            <p>Durch das Erreichen von Level 6 erhalten die Kleriker neue Fähigkeiten:</p>
+            <p>Kobrachnid: Der Kleriker erhält Acid Resistance. Wenn er einen Spell castet, ignoriert er Acid Resistance, außer die eigene.</p>
+            <p>Paxarion: Der Kleriker erhält Necrotic Resistance. Er kann in Höhe seines PBx/Longrest die eigenen Domain Spells spellslotfrei casten.</p>
+        </description>
+        <sheet>
+            <description requirements="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_KOBRACHNID">
+                <p>Du erhältst Acid Resistance. Wenn du einen Spell castest, ignorierst du Acid Resistance, außer die eigene.</p>
+            </description>
+            <description requirements="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_PAXARION">
+                <p>Du kannst {{proficiency}}/Longrest die eigenen Domain Spells spellslotfrei casten.</p>
+            </description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" requirements="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_KOBRACHNID"/>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" requirements="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_PAXARION"/>
+        </rules>
+    </element>
+
+    <element name="Potent Spellcasting" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_POTENT_SPELLCASTING">
+        <description>
+            <p>Ab Level 8 verursachen alle Clericcantrips den Wisdommodifier zusätzlich an Schaden.</p>
+        </description>
+        <sheet>
+            <description>Du fügst deinen Clericcantrips deinen Wisdom Modifikator zusätzlich an Schaden hinzu.</description>
+        </sheet>
+    </element>
+
+    <element name="Release the Dragon" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_RELEASE_THE_DRAGON">
+        <description>
+            <p>Durch Level 17 wird dem Kleriker die besonders mächtigen Drachenkräfte übertragen.</p>
+            <p>Kobrachnid: 1x/Longrest kann man magisch eine spektrale Gestalt des Kobrachnid beschwören und in einem 90ft Cone jeden einen Consave würfeln lassen gegen den eigenen SaveDC. Bei Misserfolg kommen 5d6 Force, 6d6 Acid, 5d6 Psychic, 5d6 Radiant und 5d6 Colddamage an. Bei Erfolg nur die Hälfte des Gesamtschadens.</p>
+            <p>Paxarion: 1x/Longrest kann man magisch eine spektrale Gestalt des Paxarion beschwören und in einem 90ft Cone jeden einen Consave würfeln lassen gegen den eigenen SaveDC. Bei Misserfolg verursacht sie 13d6 Necrotic und 13d6 Psychic Damage. Bei Erfolg nur die Hälfte des Gesamtschadens.</p>
+        </description>
+        <sheet display="false"/>
+
+        <rules>
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_RELEASE_THE_DRAGON_KOBRACHNID" requirements="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_KOBRACHNID"/>
+            <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_RELEASE_THE_DRAGON_PAXARION" requirements="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_PAXARION"/>
+        </rules>
+    </element>
+
+    <element name="Release the Dragon Kobrachnid" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_RELEASE_THE_DRAGON_KOBRACHNID">
+        <sheet usage="1/Longrest" action="Action">
+            <description>Du kannst magisch eine spektrale Gestalt des Kobrachnid beschwören und in einem 90ft Cone jeden einen Consave würfeln lassen gegen deinen eigenen SaveDC. Bei Misserfolg kommen 5d6 Force, 6d6 Acid, 5d6 Psychic, 5d6 Radiant und 5d6 Colddamage an. Bei Erfolg nur die Hälfte des Gesamtschadens.</description>
+        </sheet>
+    </element>
+
+    <element name="Release the Dragon Paxarion" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_RELEASE_THE_DRAGON_PAXARION">
+        <sheet usage="1/Longrest" action="Action">
+            <description>Du kannst magisch eine spektrale Gestalt des Paxarion beschwören und in einem 90ft Cone jeden einen Consave würfeln lassen gegen deinen eigenen SaveDC. Bei Misserfolg verursacht sie 13d6 Necrotic und 13d6 Psychic Damage. Bei Erfolg nur die Hälfte des Gesamtschadens.</description>
+        </sheet>
+    </element>
+
+</elements>

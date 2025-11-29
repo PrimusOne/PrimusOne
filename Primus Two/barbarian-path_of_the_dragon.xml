@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Path of the Dragon</name>
-        <update version="0.1">
+        <update version="0.2">
             <file name="path_of_the_dragon.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/barbarian-path_of_the_dragon.xml" />
         </update>
     </info>
@@ -141,7 +141,7 @@
             <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_BECOMING_DRAGON" level="10" />
             <grant type="Archetype Feature" id="ID_PT_ARCHETYPE_PATH_OF_THE_DRAGON_EMBODIMENT_OF_THE_DRAGON" level="14" />
             <select type="Archetype Feature" supports="Draconic Path" />
-            <select type="Language" supports="ID_LANGUAGE_DRACONIC" />
+            <grant type="Language" supports="ID_LANGUAGE_DRACONIC" />
         </rules>
     </element>
 
