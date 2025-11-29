@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
     <info>
-        <name>cleric-Dragon_Domain</name>
+        <name>cleric-dragon_domain</name>
         <update version="0.2">
             <file name="cleric-dragon_domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusTwo/cleric-dragon_domain.xml" />
         </update>
