@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>cleric-dragon_domain</name>
-        <update version="0.2">
+        <update version="0.3">
             <file name="cleric-dragon_domain.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusTwo/cleric-dragon_domain.xml" />
         </update>
     </info>
@@ -179,28 +179,6 @@
             <description>Du hast Expertise in Persuasion und Intimidation</description>
         </sheet>
         <rules>
-            <grant type="Proficiency" id="ID_EXPERTISE_SKILL_PERSUASION" />
-            <grant type="Proficiency" id="ID_EXPERTISE_SKILL_INTIMIDATION" />
-            <grant type="Spell" id="ID_PHB_SPELL_CHROMATIC_ORB" level="1" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" level="1" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="3" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" id="ID_XGTE_SPELL_DRAGONS_BREATH" level="3" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="5" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_BOLT" level="5" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_ICE_STORM" level="7" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" id="ID_XGTE_SPELL_VITRIOLIC_SPHERE" level="7" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_CONE_OF_COLD" level="9" spellcasting="Cleric" prepared="true" />
-            <grant type="Spell" id="ID_PHB_SPELL_CLOUDKILL" level="9" spellcasting="Cleric" prepared="true" />
-        </rules>
-    </element>
-
-    <element name="Kobrachnid" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_KOBRACHNID">
-        <supports>Drachengott</supports>
-        <sheet>
-            <description>Du kannst jeden Damagetyp deine Clericspells in Acid umwandeln</description>
-        </sheet>
-        <rules>
-
             <grant type="Spell" id="ID_PHB_SPELL_SANCTUARY" level="1" spellcasting="Cleric" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_SHIELD_OF_FAITH" level="1" spellcasting="Cleric" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_ZONE_OF_TRUTH" level="3" spellcasting="Cleric" prepared="true" />
@@ -211,6 +189,27 @@
             <grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" level="7" spellcasting="Cleric" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_REINCARNATE" level="9" spellcasting="Cleric" prepared="true" />
             <grant type="Spell" id="ID_PHB_SPELL_CONTACT_OTHER_PLANE" level="9" spellcasting="Cleric" prepared="true" />
+            <grant type="Proficiency" id="ID_EXPERTISE_SKILL_PERSUASION" />
+            <grant type="Proficiency" id="ID_EXPERTISE_SKILL_INTIMIDATION" />
+        </rules>
+    </element>
+
+    <element name="Kobrachnid" type="Archetype Feature" source="Primus Two" id="ID_PT_ARCHETYPE_FEATURE_CLERIC_DRAGON_DOMAIN_2_DRAGONS_2_ASPECTS_KOBRACHNID">
+        <supports>Drachengott</supports>
+        <sheet>
+            <description>Du kannst jeden Damagetyp deine Clericspells in Acid umwandeln</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_CHROMATIC_ORB" level="1" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" level="1" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="3" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_DRAGONS_BREATH" level="3" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="5" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_BOLT" level="5" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_ICE_STORM" level="7" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_VITRIOLIC_SPHERE" level="7" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_CONE_OF_COLD" level="9" spellcasting="Cleric" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_CLOUDKILL" level="9" spellcasting="Cleric" prepared="true" />
         </rules>
     </element>
 
