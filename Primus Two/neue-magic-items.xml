@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Neue Magic Items</name>
-        <update version="0.8">
+        <update version="0.9">
             <file name="neue-magic-items.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/neue-magic-items.xml" />
         </update>
     </info>
@@ -1834,7 +1834,7 @@
             <set name="type" addition="Katana, Longsword or Shortsword">Weapon</set>
             <set name="attunement">true</set>
             <set name="enhancement">3</set>
-            <set name="weapon">ID_WIKI_WEAPON_LIGHT_KATANA||ID_WIKI_WEAPON_KATANA||ID_WOTC_PHB_WEAPON_LONGSWORD||ID_WOTC_PHB_WEAPON_SHORTSWORD</set>
+            <set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE, ID_INTERNAL_WEAPON_GROUP_SWORDS</set>
             <set name="name-format">Donnerfürst-Zinogre {{parent}}</set>
         </setters>
     </element>
@@ -1884,9 +1884,11 @@
             <set name="armor">Studded Leather</set>
             <set name="name-format">Mondlicht-Nargacuga {{parent}}</set>
             <set name="attunement">true</set>
+            <set name="enhancement">3</set>
+
         </setters>
         <rules>
-            <stat name="ac:misc" value="3" />
+            <stat name="ac:armored:enhancement" value="3" bonus="enhancement" />
         </rules>
     </element>
 
