@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Neue Magic Items</name>
-        <update version="0.6">
+        <update version="0.7">
             <file name="neue-magic-items.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/neue-magic-items.xml" />
         </update>
     </info>
@@ -1834,8 +1834,8 @@
             <set name="type" addition="Katana, Longsword or Shortsword">Weapon</set>
             <set name="attunement">true</set>
             <set name="enhancement">3</set>
-            <set name="weapon">Katana||Longsword||Shortsword</set>
-            <set name="name-format">Donnerfürst-Zinogre + {{parent}}</set>
+            <set name="weapon">Katana, Finesse||Katana||Longsword||Shortsword</set>
+            <set name="name-format">Donnerfürst-Zinogre {{parent}}</set>
         </setters>
     </element>
 
@@ -1867,8 +1867,8 @@
             <set name="rarity">Very Rare</set>
             <set name="attunement">true</set>
             <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_BLUDGEONING</set>
-            <set name="name-format">Ukanlos Kiefer + {{parent}}</set>
-            <set name="enhancement">4</set>
+            <set name="name-format">Lao Shan {{parent}}</set>
+            <set name="enhancement">1</set>
         </setters>
     </element>
 
@@ -1881,10 +1881,10 @@
             <set name="cost" currency="gp">0</set>
             <set name="type" addition="light">Armor</set>
             <set name="rarity">Common</set>
-            <set name="armor">Studded Leather</set>
+            <set name="armor">ID_WOTC_ARMOR_LIGHT_STUDDED_LEATHER</set>
             <set name="name-format">Mondlicht-Nargacuga {{parent}}</set>
             <set name="attunement">true</set>
-            <set name="enhancement">4</set>
+            <set name="enhancement">1</set>
         </setters>
     </element>
 
@@ -1919,6 +1919,7 @@
         </setters>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD"/>
+            <stat name="ac:shield" value="3" bonus="enhancement" />
         </rules>
     </element>
 
@@ -1937,6 +1938,7 @@
         </setters>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE"/>
+            <stat name="ac:shield" value="3" bonus="enhancement" />
         </rules>
     </element>
 
@@ -2329,7 +2331,7 @@
             <set name="attunement">true</set>
             <set name="enhancement">4</set>
             <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_SLASHING</set>
-            <set name="name-format">Valstraxklingen + {{parent}}</set>
+            <set name="name-format">Valstraxklingen {{parent}}</set>
         </setters>
         <rules>
             <stat name="speed:fly" value="120"/>
@@ -2348,7 +2350,7 @@
             <set name="rarity">Very Rare</set>
             <set name="attunement">true</set>
             <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_BLUDGEONING</set>
-            <set name="name-format">Teostrabrecher + {{parent}}</set>
+            <set name="name-format">Teostrabrecher {{parent}}</set>
         </setters>
     </element>
 
@@ -2378,7 +2380,7 @@
             <set name="attunement">true</set>
             <set name="enhancement">5</set>
             <set name="weapon">ID_INTERNAL_DAMAGE_TYPE_PIERCING</set>
-            <set name="name-format">Oroshi-Kirin + {{parent}}</set>
+            <set name="name-format">Oroshi-Kirin {{parent}}</set>
         </setters>
     </element>
 
@@ -2458,7 +2460,7 @@
             <set name="enhancement">4</set>
             <set name="attunement">true</set>
             <set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT||ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
-            <set name="name-format">Magical Defender + {{parent}}</set>
+            <set name="name-format">Magical Defender {{parent}}</set>
         </setters>
         <rules>
             <stat name="strength:save:misc" value="3" />
@@ -2579,7 +2581,7 @@
             <set name="attunement">true</set>
             <set name="enhancement">4</set>
             <set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE</set>
-            <set name="name-format">Oroshi-Kirin + {{parent}}</set>
+            <set name="name-format">Oroshi-Kirin {{parent}}</set>
         </setters>
     </element>
 </elements>
