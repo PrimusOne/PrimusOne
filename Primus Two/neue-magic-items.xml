@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Neue Magic Items</name>
-        <update version="0.7">
+        <update version="0.8">
             <file name="neue-magic-items.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/neue-magic-items.xml" />
         </update>
     </info>
@@ -1834,7 +1834,7 @@
             <set name="type" addition="Katana, Longsword or Shortsword">Weapon</set>
             <set name="attunement">true</set>
             <set name="enhancement">3</set>
-            <set name="weapon">Katana, Finesse||Katana||Longsword||Shortsword</set>
+            <set name="weapon">ID_WIKI_WEAPON_LIGHT_KATANA||ID_WIKI_WEAPON_KATANA||ID_WOTC_PHB_WEAPON_LONGSWORD||ID_WOTC_PHB_WEAPON_SHORTSWORD</set>
             <set name="name-format">Donnerfürst-Zinogre {{parent}}</set>
         </setters>
     </element>
@@ -1881,11 +1881,13 @@
             <set name="cost" currency="gp">0</set>
             <set name="type" addition="light">Armor</set>
             <set name="rarity">Common</set>
-            <set name="armor">ID_WOTC_ARMOR_LIGHT_STUDDED_LEATHER</set>
+            <set name="armor">Studded Leather</set>
             <set name="name-format">Mondlicht-Nargacuga {{parent}}</set>
             <set name="attunement">true</set>
-            <set name="enhancement">1</set>
         </setters>
+        <rules>
+            <stat name="ac:misc" value="3" />
+        </rules>
     </element>
 
     <element name="Shogun-Caenataur Klinge" type="Magic Item" source="Primus Two" id="ID_PT_MAGIC_ITEM_SHOGUN_CAENATAUR_KLINGE">
