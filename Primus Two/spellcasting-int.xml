@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <name>spellcasting-int</name>
+        <update version="0.1">
+            <file name="spellcasting-int.xml" url="https://raw.githubusercontent.com/PrimusOne/PrimusOne/master/Primus%20Two/spellcasting-int.xml" />
+        </update>
+    </info>
+
+    <element name="Spellcasting Intelligence" type="Magic Item" source="Primus Two" id="ID_PT_SPELLCASTING_INTELLIGENCE">
+        <description>
+            <p>Adds Intelligence to spellcasting.</p>
+        </description>
+        <spellcasting name="Spellcasting Intelligence" ability="Intelligence" prepare="false">
+        </spellcasting>
+        <setters>
+			<set name="category">Optional Class Features</set>
+			<set name="slot">misc</set>
+			<set name="inventory-hidden">true</set>
+        </setters>
+    </element>
+</elements>
