@@ -19,4 +19,68 @@
 			<set name="inventory-hidden">true</set>
         </setters>
     </element>
+
+    	<element name="Intelligence: Rod of the Pact Keeper, +1" type="Magic Item" source="Dungeon Master’s Guide" id="ID_PT_SPELLCASTING_INTELLIGENCE_1">
+		<description>
+			<p>While holding this rod, you gain a +1 bonus spell attack rolls and to the saving throw DCs of your warlock spells.</p>
+			<p class="indent">In addition, you can regain one warlock spell slot as an action while holding the rod. You can’t use this property again until you finish a long rest.</p>
+		</description>
+		<setters>
+			<set name="keywords">warlock</set>
+			<set name="category">Rods</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="2">2 lb.</set>
+			<set name="type">Rod</set>
+			<set name="slot">onehand</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Uncommon</set>
+			<set name="enhancement">1</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="1" bonus="Intelligence: rod of the pact keeper" />
+			<stat name="spellcasting:dc" value="1" bonus="Intelligence: rod of the pact keeper" />
+		</rules>
+	</element>
+	<element name="Intelligence: Rod of the Pact Keeper, +2" type="Magic Item" source="Dungeon Master’s Guide" id="ID_PT_SPELLCASTING_INTELLIGENCE_2">
+		<description>
+			<p>While holding this rod, you gain a +2 bonus spell attack rolls and to the saving throw DCs of your warlock spells.</p>
+			<p class="indent">In addition, you can regain one warlock spell slot as an action while holding the rod. You can’t use this property again until you finish a long rest.</p>
+		</description>
+		<setters>
+			<set name="keywords">warlock</set>
+			<set name="category">Rods</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="2">2 lb.</set>
+			<set name="type">Rod</set>
+			<set name="slot">onehand</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Rare</set>
+			<set name="enhancement">2</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="2" bonus="Intelligence: rod of the pact keeper" />
+			<stat name="spellcasting:dc" value="2" bonus="Intelligence: rod of the pact keeper" />
+		</rules>
+	</element>
+	<element name="Intelligence: Rod of the Pact Keeper, +3" type="Magic Item" source="Dungeon Master’s Guide" id="ID_PT_SPELLCASTING_INTELLIGENCE_3">
+		<description>
+			<p>While holding this rod, you gain a +3 bonus spell attack rolls and to the saving throw DCs of your warlock spells.</p>
+			<p class="indent">In addition, you can regain one warlock spell slot as an action while holding the rod. You can’t use this property again until you finish a long rest.</p>
+		</description>
+		<setters>
+			<set name="keywords">warlock</set>
+			<set name="category">Rods</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="2">2 lb.</set>
+			<set name="type">Rod</set>
+			<set name="slot">onehand</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+			<set name="enhancement">3</set>
+		</setters>
+		<rules>
+			<stat name="spellcasting:attack" value="3" bonus="Intelligence: rod of the pact keeper" />
+			<stat name="spellcasting:dc" value="3" bonus="Intelligence: rod of the pact keeper" />
+		</rules>
+	</element>
 </elements>
